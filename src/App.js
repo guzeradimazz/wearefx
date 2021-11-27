@@ -18,7 +18,8 @@ function App() {
     <div className='App'>
       {
         isLoading ? <Preloader/>
-        : <MainPage/>
+        : 
+        <MainPage/>
       }
     </div>
   );

@@ -1,0 +1,50 @@
+.showreel{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -10;
+    background-image: url('../../images/Showreel.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main{
+    background-color: hsla(0, 0%, 0%, 0.199);
+    padding: 60px;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    color: #fff;
+}
+.main__logo{
+    background-image: url('../../images/Logo.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 52px;
+    height: 60px;
+}
+.main__top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.main__bottom{
+    align-items: center;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.typing__text{
+    font-weight: 200;
+}
+.main__bottom__video{
+    height: .5px;
+    width: 30%;
+    border: none;
+    background-color: #fff;
+}

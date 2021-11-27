@@ -2,6 +2,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    /* cursor: url('../images/Cursor.svg'),pointer; */
+    font-family: 'Outfit', sans-serif;
 }
 a{
     text-decoration: none;
@@ -9,3 +11,4 @@ a{
 li{
     list-style: none;
 }
+
