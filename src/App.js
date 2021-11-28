@@ -20,6 +20,7 @@ function App() {
         isLoading ? <Preloader/>
         : 
         <MainPage/>
+
       }
     </div>
   );
