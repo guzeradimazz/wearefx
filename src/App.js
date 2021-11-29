@@ -13,8 +13,8 @@ function App() {
     }, 2000);
   }, [])
 
-  // if(isLoading) return (<Preloader/>)
-  // else{
+  if(isLoading) return (<Preloader/>)
+  else{
     return (
       <div className='App'>
         {
@@ -22,7 +22,7 @@ function App() {
         }
       </div>
     );
-  // }
+  }
 }
 
 export default App;
