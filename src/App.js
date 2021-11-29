@@ -13,8 +13,22 @@ function App() {
     }, 2000);
   }, [])
 
-  if(isLoading) return (<Preloader/>)
+  if(isLoading){
+    let canvas = document.getElementById('overlay');
+    canvas.classList.add('displayNone')
+    canvas = document.getElementById('overlay2');
+    canvas.classList.add('displayNone')
+    canvas = document.getElementById('overlay3');
+    canvas.classList.add('displayNone')
+    return (<Preloader/>)
+  } 
   else{
+    let canvas = document.getElementById('overlay');
+    canvas.classList.remove('displayNone')
+    canvas = document.getElementById('overlay2');
+    canvas.classList.remove('displayNone')
+    canvas = document.getElementById('overlay3');
+    canvas.classList.remove('displayNone')
     return (
       <div className='App'>
         {

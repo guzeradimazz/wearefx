@@ -17,7 +17,6 @@ const MainPageButton = () => {
       setRect(ref.current.getBoundingClientRect())
   },[]);
     const canvas = document.getElementById('overlay');
-    canvas.classList.remove('displayNone')
     canvas.width = canvas.clientWidth;
     canvas.height = canvas.clientHeight;
     const mouseCoords = {x: 0, y: 0};
