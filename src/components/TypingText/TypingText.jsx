@@ -1,35 +1,29 @@
-import React,{ useState,useEffect } from 'react';
+import React,{ useState,useEffect,useRef } from 'react';
+import Typed from 'typed.js';
+import './TypingText.css'
 
-const TypingText = (props) => {
-    const [state, setState] = useState({typed:''})
+const TypingText = () => {
+  const element = useRef(null)
 
-    useEffect(() => {
-      typeWord(
-        props.inputStrings[0],
-        [].concat(props.inputStrings)
-      );
-    }, [])
+  useEffect(() => {
+    const typed = new Typed (element.current,{
+      strings: ["Welcome to WeareFX, creative studio with big ideas",
+      "Where beauty and function are crafted together",
+      "Working across all media channels & platforms"
+    ],
+      startDelay: 300,
+      typeSpeed: 80,
+      backSpeed: 60,
+      backDelay: 300,
+      loop:true
+    });
+    return()=>typed.destroy()
+  }, [])
 
-    function typeWord(word, words) {
-      typeWriter(word, words);
-    }
-
-    function typeWriter(string, words) {
-      if (string.length === 0) {
-        words = words.slice(1);
-        words[0] && typeWriter(words[0], words);
-      } else {
-        setState((state) => ({
-          typed: state.typed.concat(string[0])
-        }));
-  
-        setTimeout(() => typeWriter(string.slice(1), words), 300);
-      }
-    }
 
     return (
         <div className='typing__text'>
-            {state.typed}
+          <span className='typing__text' ref={element}></span>
         </div>
     );
 };

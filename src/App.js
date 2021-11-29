@@ -13,17 +13,16 @@ function App() {
     }, 2000);
   }, [])
 
-
-  return (
-    <div className='App'>
-      {
-        isLoading ? <Preloader/>
-        : 
-        <MainPage
-        />
-      }
-    </div>
-  );
+  // if(isLoading) return (<Preloader/>)
+  // else{
+    return (
+      <div className='App'>
+        {
+          <MainPage/>
+        }
+      </div>
+    );
+  // }
 }
 
 export default App;

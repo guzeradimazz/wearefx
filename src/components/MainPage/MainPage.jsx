@@ -17,7 +17,7 @@ const MainPage = () => {
             <MainPageButton3 />
             <div className='main'>
                 <div className="main__top">
-                    <TypingText inputStrings={["WeareFX,сreative studio with big ideas"]}/> 
+                    <TypingText /> 
                     <div className='main__logo'/>
                 </div>
                 <div className="main__bottom">
