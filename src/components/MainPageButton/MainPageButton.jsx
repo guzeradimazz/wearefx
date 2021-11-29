@@ -1,7 +1,7 @@
 import React,{useEffect,useRef,useState} from 'react';
 import './MainPageButton.css'
 
-const MainPageButton = () => {  
+const MainPageButton = () => {
   const circleButtons =[
     {
         text:'cases',
@@ -16,8 +16,8 @@ const MainPageButton = () => {
   useEffect(() => {
       setRect(ref.current.getBoundingClientRect())
   },[]);
-    
     const canvas = document.getElementById('overlay');
+    canvas.classList.remove('displayNone')
     canvas.width = canvas.clientWidth;
     canvas.height = canvas.clientHeight;
     const mouseCoords = {x: 0, y: 0};

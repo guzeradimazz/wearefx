@@ -19,8 +19,8 @@ function App() {
       {
         isLoading ? <Preloader/>
         : 
-        <MainPage/>
-
+        <MainPage
+        />
       }
     </div>
   );

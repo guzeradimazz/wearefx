@@ -51,7 +51,7 @@ const MainPageButton2 = () => {
         requestAnimationFrame(draw);
       }
       requestAnimationFrame(draw);
-    }
+    }    
     drawAnimLine2(canvas2, 150);
     window.addEventListener('mousemove', onMove2);
 

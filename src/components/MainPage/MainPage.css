@@ -34,6 +34,12 @@
     pointer-events: none;
     z-index: 9998;
 }
+.displayNone{
+    z-index: -1000;
+    width: 0vw;
+    height: 0vh;
+    display: none !important;
+}
 .main{
     background-position: center;
     background-repeat: no-repeat;

@@ -7,19 +7,17 @@ import './MainPage.css'
 
 const MainPage = () => {
 
-
-    
     return (
          <div >     
             <div className='showreel'>
                 {/* video */}
             </div>
-            <MainPageButton/>
-            <MainPageButton2/>
-            <MainPageButton3/>
+            <MainPageButton />
+            <MainPageButton2 />
+            <MainPageButton3 />
             <div className='main'>
                 <div className="main__top">
-                    <TypingText/>
+                    <TypingText inputStrings={["WeareFX,сreative studio with big ideas"]}/> 
                     <div className='main__logo'/>
                 </div>
                 <div className="main__bottom">
