@@ -1,4 +1,4 @@
-.showreel{
+.showreel {
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -7,7 +7,7 @@
     background-repeat: no-repeat;
     background-position: center;
 }
-#overlay{
+#overlay1 {
     position: fixed;
     top: 0;
     left: 0;
@@ -16,7 +16,7 @@
     pointer-events: none;
     z-index: 9999;
 }
-#overlay2{
+#overlay2 {
     position: fixed;
     top: 0;
     left: 0;
@@ -25,7 +25,7 @@
     pointer-events: none;
     z-index: 9998;
 }
-#overlay3{
+#overlay3 {
     position: fixed;
     top: 0;
     left: 0;
@@ -34,16 +34,16 @@
     pointer-events: none;
     z-index: 9998;
 }
-.displayNone{
+.displayNone {
     z-index: -1000;
     width: 0vw;
     height: 0vh;
     display: none !important;
 }
-.main{
+.main {
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 170%;
     background-image: url('../../images/noise.svg');
     padding: 60px;
     position: relative;
@@ -54,7 +54,7 @@
     height: 100vh;
     color: #fff;
 }
-.main__logo{
+.main__logo {
     background-image: url('../../images/Logo.svg');
     background-repeat: no-repeat;
     background-position: center;
@@ -62,20 +62,17 @@
     width: 52px;
     height: 60px;
 }
-.main__top{
+.main__top {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.main__bottom{
+.main__bottom {
     align-items: center;
-    text-transform: uppercase;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    padding-bottom: 10px;
 }
-.main__bottom__video{
-    height: .5px;
+.main__bottom__video {
+    height: 0.5px;
     width: 30%;
     margin: auto;
     border: none;

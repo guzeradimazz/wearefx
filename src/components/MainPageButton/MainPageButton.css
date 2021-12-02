@@ -1,6 +1,7 @@
-.MainPageButton{
+.MainPageButton {
+    position: relative;
     text-transform: uppercase;
-    transition: .3s ease-in;
+    transition: 0.3s ease-in;
     width: 80px;
     height: 80px;
     display: flex;
@@ -10,36 +11,141 @@
     padding: 15px;
     font-size: 13px;
     color: #fff;
+    -o-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
 }
-.MainPageButton:hover::before{
-    transition: .3s ease-in;
+.MainPageButton:hover::before {
+    transition: 0.3s ease-in;
     width: 100px;
     height: 100px;
     content: '';
     position: absolute;
     border-radius: 50%;
-    border: .5px solid #fff;
+    border: 0.5px solid #fff;
 }
-.MainPageButton:hover{
-    transition: .3s ease-in;
+.MainPageButton:hover {
+    transition: 0.3s ease-in;
     background-color: rgba(255, 255, 255, 0.12);
 }
-.firstCircle{
+.firstCircle {
     position: absolute;
     top: 60px;
-    left:50%;
+    left: 50%;
     z-index: 1000;
-    transform:translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
-.secondCircle{
+.firstCircle:hover {
+    transition: all 0.3s ease;
+}
+.secondCircle:hover {
+    transition: all 0.3s ease;
+}
+.thirdCircle:hover {
+    transition: all 0.3s ease;
+}
+.secondCircle {
     position: absolute;
-    bottom: 60px;
+    bottom: 40px;
     left: 60px;
     z-index: 1000;
 }
-.thirdCircle{
+.thirdCircle {
     position: absolute;
-    bottom: 60px;
+    bottom: 40px;
     right: 60px;
     z-index: 1000;
+}
+.MainPageButton:hover .first__dot {
+    display: block;
+    transition: all 0.3s ease;
+    animation: firstDotAnim 0.3s;
+}
+.MainPageButton:hover .second__dot {
+    display: block;
+    transition: all 0.3s ease;
+    animation: secondDotAnim 0.3s;
+}
+.MainPageButton:hover .third__dot {
+    display: block;
+    transition: all 0.3s ease;
+    animation: thirdDotAnim 0.3s;
+}
+@keyframes firstDotAnim {
+    0% {
+        transform: translateX(-10px);
+        -webkit-transform: translateX(-10px);
+        -o-transform: translateX(-10px);
+        -moz-transform: translateX(-10px);
+        transition: all 0.3s ease-in-out;
+    }
+    100% {
+        transform: translateX(0px);
+        transition: all 0.3s ease-in-out;
+    }
+}
+@keyframes secondDotAnim {
+    0% {
+        transform: translateY(10px);
+        -webkit-transform: translateY(10px);
+        -o-transform: translateY(10px);
+        -moz-transform: translateY(10px);
+        transition: all 0.3s ease-in-out;
+    }
+    100% {
+        transform: translateY(0px);
+        transition: all 0.3s ease-in-out;
+    }
+}
+@keyframes thirdDotAnim {
+    0% {
+        transform: translateY(-10px);
+        -webkit-transform: translateY(-10px);
+        -o-transform: translateY(-10px);
+        -moz-transform: translateY(-10px);
+        transition: all 0.3s ease-in-out;
+    }
+    100% {
+        transform: translateY(0px);
+        transition: all 0.3s ease-in-out;
+    }
+}
+.first__dot {
+    display: none;
+    top: 0px;
+    left: calc(50% - 1px);
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 10000000;
+    transition: all 2s ease-in-out;
+}
+.second__dot {
+    display: none;
+    bottom: 20px;
+    left: calc(6% - 1px);
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 10000000;
+    transition: 0.3s ease;
+}
+.third__dot {
+    display: none;
+    bottom: 20px;
+    left: calc(96% - 1px);
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 10000000;
+    transition: 3s ease;
+}
+.MainPageButton span {
+    transition: 3s ease;
 }

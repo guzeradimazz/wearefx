@@ -1,33 +1,168 @@
-import React from 'react';
-import MainPageButton from '../MainPageButton/MainPageButton';
-import MainPageButton2 from '../MainPageButton/MainPageButton2';
-import MainPageButton3 from '../MainPageButton/MainPageButton3';
-import TypingText from '../TypingText/TypingText';
+import React, { useEffect, useState, useRef } from 'react'
+import { MainPageButton } from '../MainPageButton/MainPageButton'
+import TypingText from '../TypingText/TypingText'
 import './MainPage.css'
 
+const applyLayout = (canvas) => {
+    canvas.width = canvas.clientWidth
+    canvas.height = canvas.clientHeight
+}
+
 const MainPage = () => {
+    const [buttonsCoords, setButtonsCoords] = useState([])
+
+    const [is1BtnHovered, setIs1BtnHovered] = useState(false)
+    const [is2BtnHovered, setIs2BtnHovered] = useState(false)
+    const [is3BtnHovered, setIs3BtnHovered] = useState(false)
+
+    const btn1Ref = useRef(null)
+    const btn2Ref = useRef(null)
+    const btn3Ref = useRef(null)
+
+    const canvas1 = document.getElementById('overlay1')
+    const canvas2 = document.getElementById('overlay2')
+    const canvas3 = document.getElementById('overlay3')
+
+    const on1BtnEnter = () => {
+        setIs1BtnHovered(true)
+        canvas1.classList.add('displayNone')
+    }
+    const on1BtnLeave = () => {
+        canvas1.classList.remove('displayNone')
+        setIs1BtnHovered(false)
+    }
+
+    const on2BtnEnter = () => {
+        canvas2.classList.add('displayNone')
+        setIs2BtnHovered(true)
+    }
+    const on2BtnLeave = () => {
+        canvas2.classList.remove('displayNone')
+        setIs2BtnHovered(false)
+    }
+
+    const on3BtnEnter = () => {
+        canvas3.classList.add('displayNone')
+        setIs3BtnHovered(true)
+    }
+    const on3BtnLeave = () => {
+        canvas3.classList.remove('displayNone')
+        setIs3BtnHovered(false)
+    }
+
+    const joinPoints = (ctx, from, to) => {
+        const stroke = ctx.createLinearGradient(from.x, from.y, to.x, to.y)
+        stroke.addColorStop(0, 'rgba(255, 255, 255, 0)')
+        stroke.addColorStop(0.4, 'rgba(255, 255, 255, 0.2)')
+        stroke.addColorStop(0.5, 'white')
+        stroke.addColorStop(1, 'rgba(255, 255, 255, 0)')
+
+        ctx.strokeStyle = stroke
+        ctx.lineWidth = 1
+
+        ctx.beginPath()
+        ctx.moveTo(from.x + 40, from.y + 40)
+        if (is1BtnHovered) {
+            ctx.lineTo(buttonsCoords[0].x + 40, buttonsCoords[0].y + 22)
+        } else if (is2BtnHovered) {
+            ctx.lineTo(buttonsCoords[1].x - 17, buttonsCoords[1].y + 60)
+        } else if (is3BtnHovered) {
+            ctx.lineTo(buttonsCoords[2].x + 100, buttonsCoords[2].y + 60)
+        } else {
+            ctx.lineTo(to.x, to.y)
+        }
+        ctx.stroke()
+    }
+
+    function drawAnimLine(canvas, mouseCoords, elementCoords) {
+        const ctx = canvas.getContext('2d')
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height)
+            const x1 = elementCoords.x - window.scrollX
+            const y1 = elementCoords.y - window.scrollY
+            joinPoints(ctx, { x: x1, y: y1 }, mouseCoords)
+        }
+        requestAnimationFrame(draw)
+    }
+
+    const onMove = (e) => {
+        if (!buttonsCoords.length) return
+
+        drawAnimLine(canvas1, { x: e.clientX, y: e.clientY }, buttonsCoords[0])
+        drawAnimLine(canvas2, { x: e.clientX, y: e.clientY }, buttonsCoords[1])
+        drawAnimLine(canvas3, { x: e.clientX, y: e.clientY }, buttonsCoords[2])
+    }
+
+    useEffect(() => {
+        applyLayout(canvas1)
+        applyLayout(canvas2)
+        applyLayout(canvas3)
+
+        btn1Ref.current.addEventListener('mouseover', on1BtnEnter)
+        btn1Ref.current.addEventListener('mouseleave', on1BtnLeave)
+
+        btn2Ref.current.addEventListener('mouseover', on2BtnEnter)
+        btn2Ref.current.addEventListener('mouseleave', on2BtnLeave)
+
+        btn3Ref.current.addEventListener('mouseover', on3BtnEnter)
+        btn3Ref.current.addEventListener('mouseleave', on3BtnLeave)
+
+        if (!buttonsCoords.length) {
+            setButtonsCoords([
+                btn1Ref.current?.getBoundingClientRect(),
+                btn2Ref.current?.getBoundingClientRect(),
+                btn3Ref.current?.getBoundingClientRect(),
+            ])
+        }
+        window.addEventListener('mousemove', onMove)
+
+        return () => {
+            window.removeEventListener('mousemove', onMove)
+
+            btn1Ref.current.removeEventListener('mouseover', on1BtnEnter)
+            btn1Ref.current.removeEventListener('mouseleave', on1BtnLeave)
+
+            btn2Ref.current.removeEventListener('mouseover', on2BtnEnter)
+            btn2Ref.current.removeEventListener('mouseleave', on2BtnLeave)
+
+            btn3Ref.current.removeEventListener('mouseover', on3BtnEnter)
+            btn3Ref.current.removeEventListener('mouseleave', on3BtnLeave)
+        }
+    }, [buttonsCoords.length, is1BtnHovered, is2BtnHovered, is3BtnHovered])
 
     return (
-         <div >     
-            <div className='showreel'>
-                {/* video */}
-            </div>
-            <MainPageButton />
-            <MainPageButton2 />
-            <MainPageButton3 />
-            <div className='main'>
+        <div>
+            <div className="showreel">{/* video */}</div>
+            <MainPageButton
+                isHovered={is1BtnHovered}
+                title="cases"
+                className="firstCircle"
+                ref={btn1Ref}
+            />
+            <MainPageButton
+                isHovered={is2BtnHovered}
+                title="story"
+                className="secondCircle"
+                ref={btn2Ref}
+            />
+            <MainPageButton
+                isHovered={is3BtnHovered}
+                title="hire us"
+                className="thirdCircle"
+                ref={btn3Ref}
+            />
+
+            <div className="main">
                 <div className="main__top">
-                    <TypingText /> 
-                    <div className='main__logo'/>
+                    <TypingText />
+                    <div className="main__logo" />
                 </div>
                 <div className="main__bottom">
-                    <hr className='main__bottom__video'/>
+                    <hr className="main__bottom__video" />
                 </div>
             </div>
-
         </div>
-    );
-    
-};
+    )
+}
 
-export default MainPage;
+export default MainPage
