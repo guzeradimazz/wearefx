@@ -4,6 +4,7 @@
     height: 100vh;
     z-index: -10;
     background-image: url('../../images/Showreel.svg');
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -43,7 +44,7 @@
 .main {
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 170%;
+    background-size: cover;
     background-image: url('../../images/noise.svg');
     padding: 60px;
     position: relative;

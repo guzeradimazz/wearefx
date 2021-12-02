@@ -63,7 +63,7 @@ const MainPage = () => {
         ctx.beginPath()
         ctx.moveTo(from.x + 40, from.y + 40)
         if (is1BtnHovered) {
-            ctx.lineTo(buttonsCoords[0].x + 40, buttonsCoords[0].y + 22)
+            ctx.lineTo(buttonsCoords[0].x + 41, buttonsCoords[0].y + 22)
         } else if (is2BtnHovered) {
             ctx.lineTo(buttonsCoords[1].x - 17, buttonsCoords[1].y + 60)
         } else if (is3BtnHovered) {
