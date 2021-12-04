@@ -15,7 +15,7 @@
     width: 100vw;
     height: 100vh;
     pointer-events: none;
-    z-index: 9999;
+    z-index: 9998;
 }
 #overlay2 {
     position: fixed;
@@ -36,7 +36,7 @@
     z-index: 9998;
 }
 .displayNone {
-    z-index: -1000;
+    z-index: -10000;
     width: 0vw;
     height: 0vh;
     display: none !important;

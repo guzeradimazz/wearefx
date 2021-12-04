@@ -1,0 +1,42 @@
+.hireLayout{
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    clip-path: polygon(0 0, 83% 0, 95% 92%, 0 100%);
+    z-index: 2000;
+    background-color: #000;
+}
+.gradientBtn{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    text-transform: uppercase;
+    background-color: rgb(117, 117, 99);
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: 
+    linear-gradient(to right, transparent, rgb(103,76,220)),    
+    linear-gradient(to left, rgb(185,148,9),rgb(103,76,220), rgb(185,148,9));
+    background-size: 100% 100%, 2000% 100%;
+    animation: move 5s infinite;
+    box-shadow: 0 0 7px 3px rgba(230, 211, 143, 0.466);
+}
+@keyframes move {
+    from {background-position: top left, left center;}
+    to {background-position: bottom right, right center;}
+}
+.gradientBtn:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+}
+.hireBtn{    
+    padding-top: 17px;
+    top: 60px;
+    left: 60px;
+}

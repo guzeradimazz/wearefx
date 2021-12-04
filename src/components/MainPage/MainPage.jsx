@@ -1,5 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react'
+import { Cases } from '../Cases/Cases'
+import { Hire } from '../Hire/Hire'
 import { MainPageButton } from '../MainPageButton/MainPageButton'
+import { Story } from '../Story/Story'
 import TypingText from '../TypingText/TypingText'
 import './MainPage.css'
 
@@ -23,33 +26,47 @@ const MainPage = () => {
     const canvas2 = document.getElementById('overlay2')
     const canvas3 = document.getElementById('overlay3')
 
+    const [isCasesClicked, setIsCasesClicked] = useState(false)
+    const [isCasesEntered, setIsCasesEntered] = useState(false)
+
+    const [isStoryClicked, setIsStoryClicked] = useState(false)
+    const [isStoryEntered, setIsStoryEntered] = useState(false)
+
+    const [isHireClicked, setIsHireClicked] = useState(false)
+    const [isHireEntered, setIsHireEntered] = useState(false)
+
+    const [isCanvasesHidded, setIsCanvasesHidded] = useState(false)
+
     const on1BtnEnter = () => {
         setIs1BtnHovered(true)
+        setIsCasesEntered(true)
         canvas1.classList.add('displayNone')
     }
     const on1BtnLeave = () => {
+        setIsCasesEntered(false)
         canvas1.classList.remove('displayNone')
         setIs1BtnHovered(false)
     }
-
     const on2BtnEnter = () => {
+        setIsStoryEntered(true)
         canvas2.classList.add('displayNone')
         setIs2BtnHovered(true)
     }
     const on2BtnLeave = () => {
+        setIsStoryEntered(false)
         canvas2.classList.remove('displayNone')
         setIs2BtnHovered(false)
     }
-
     const on3BtnEnter = () => {
+        setIsHireEntered(true)
         canvas3.classList.add('displayNone')
         setIs3BtnHovered(true)
     }
     const on3BtnLeave = () => {
+        setIsHireEntered(false)
         canvas3.classList.remove('displayNone')
         setIs3BtnHovered(false)
     }
-
     const joinPoints = (ctx, from, to) => {
         const stroke = ctx.createLinearGradient(from.x, from.y, to.x, to.y)
         stroke.addColorStop(0, 'rgba(255, 255, 255, 0)')
@@ -73,7 +90,6 @@ const MainPage = () => {
         }
         ctx.stroke()
     }
-
     function drawAnimLine(canvas, mouseCoords, elementCoords) {
         const ctx = canvas.getContext('2d')
         function draw() {
@@ -84,15 +100,12 @@ const MainPage = () => {
         }
         requestAnimationFrame(draw)
     }
-
     const onMove = (e) => {
         if (!buttonsCoords.length) return
-
         drawAnimLine(canvas1, { x: e.clientX, y: e.clientY }, buttonsCoords[0])
         drawAnimLine(canvas2, { x: e.clientX, y: e.clientY }, buttonsCoords[1])
         drawAnimLine(canvas3, { x: e.clientX, y: e.clientY }, buttonsCoords[2])
     }
-
     useEffect(() => {
         applyLayout(canvas1)
         applyLayout(canvas2)
@@ -130,26 +143,61 @@ const MainPage = () => {
         }
     }, [buttonsCoords.length, is1BtnHovered, is2BtnHovered, is3BtnHovered])
 
+    const casesClicked = () => {
+        setIsCanvasesHidded(!isCanvasesHidded)
+        setIsCasesClicked(!isCasesClicked)
+    }
+    const storyClicked = () => {
+        setIsCanvasesHidded(!isCanvasesHidded)
+        setIsStoryClicked(!isStoryClicked)
+    }
+    const hireClicked = () => {
+        setIsCanvasesHidded(!isCanvasesHidded)
+        setIsHireClicked(!isHireClicked)
+    }
+
     return (
         <div>
             <div className="showreel">{/* video */}</div>
             <MainPageButton
+                onClick={casesClicked}
                 isHovered={is1BtnHovered}
                 title="cases"
                 className="firstCircle"
                 ref={btn1Ref}
             />
             <MainPageButton
+                onClick={storyClicked}
                 isHovered={is2BtnHovered}
                 title="story"
                 className="secondCircle"
                 ref={btn2Ref}
             />
             <MainPageButton
+                onClick={hireClicked}
                 isHovered={is3BtnHovered}
                 title="hire us"
                 className="thirdCircle"
                 ref={btn3Ref}
+            />
+            <Cases
+                isCasesEntered={isCasesEntered}
+                isCanvasesHidded={isCanvasesHidded}
+                canvases={[canvas1, canvas2, canvas3]}
+                isClicked={isCasesClicked}
+            />
+            <Story
+                isStoryEntered={isStoryEntered}
+                isCanvasesHidded={isCanvasesHidded}
+                canvases={[canvas1, canvas2, canvas3]}
+                isClicked={isStoryClicked}
+            />
+            <Hire
+                isHireEntered={isHireEntered}
+                isCanvasesHidded={isCanvasesHidded}
+                canvases={[canvas1, canvas2, canvas3]}
+                isClicked={isHireClicked}
+                setIsClicked={setIsHireClicked}
             />
 
             <div className="main">

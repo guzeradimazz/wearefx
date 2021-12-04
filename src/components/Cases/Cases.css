@@ -1,0 +1,15 @@
+.casesLayout {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 86vh;
+    clip-path: polygon(50% 0%, 100% 35%, 100% 100%, 0 100%, 0 45%);
+    z-index: 2000;
+    background-color: #000;
+}
+.casesBtn{
+    padding-top: 10px;
+    position: absolute;
+    bottom: 60px;
+    right: 60px;
+}

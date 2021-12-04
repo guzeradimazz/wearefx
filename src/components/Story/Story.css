@@ -1,0 +1,16 @@
+.storyLayout{
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    clip-path: polygon(25% 0, 100% 0, 100% 100%, 10% 86%);
+    z-index: 2000;
+    background-color: #000;
+}
+.storyBtn{ 
+    font-size: 13px;
+    padding-top: 9px;
+    position: absolute;
+    top: 60px;
+    right: 60px;
+}
