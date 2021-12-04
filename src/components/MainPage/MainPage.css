@@ -45,7 +45,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('../../images/noise.svg');
+    opacity: 0.05;
+    background-image: url('../../images/bg-noise.gif');
     padding: 60px;
     position: relative;
     z-index: 5;
