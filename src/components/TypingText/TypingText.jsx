@@ -12,9 +12,9 @@ const TypingText = () => {
       "Working across all media channels & platforms"
     ],
       startDelay: 300,
-      typeSpeed: 80,
-      backSpeed: 60,
-      backDelay: 300,
+      typeSpeed: 10,
+      backSpeed: 10,
+      backDelay: 900,
       loop:true
     });
     return()=>typed.destroy()

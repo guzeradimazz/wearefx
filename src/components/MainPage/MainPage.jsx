@@ -199,7 +199,6 @@ const MainPage = () => {
                 isClicked={isHireClicked}
                 setIsClicked={setIsHireClicked}
             />
-
             <div className="main">
                 <div className="main__top">
                     <TypingText />
