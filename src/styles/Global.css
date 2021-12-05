@@ -11,4 +11,9 @@ a{
 li{
     list-style: none;
 }
-
+html{
+    overflow-x: hidden;
+}
+body{
+    overflow-x: hidden;
+}

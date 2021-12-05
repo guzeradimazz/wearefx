@@ -42,11 +42,6 @@
     display: none !important;
 }
 .main {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* opacity: 0.05;
-    background-image: url('../../images/bg-noise.gif'); */
     padding: 60px;
     position: relative;
     z-index: 5;
@@ -55,6 +50,18 @@
     justify-content: space-between;
     height: 100vh;
     color: #fff;
+}
+.main::before{
+    content: '';
+    z-index: 6;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    opacity: 0.05;
+    left: 0;
+    background-image: url('../../images/bg-noise.gif');
+    position: absolute;
+    background-size: cover;
 }
 .main__logo {
     background-image: url('../../images/Logo.svg');

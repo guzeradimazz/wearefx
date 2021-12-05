@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
 import { Cases } from '../Cases/Cases'
+import CursorProvider from '../CursorProvider/CursorProvider'
 import { Hire } from '../Hire/Hire'
 import { MainPageButton } from '../MainPageButton/MainPageButton'
 import { Story } from '../Story/Story'
@@ -78,13 +79,13 @@ const MainPage = () => {
         ctx.lineWidth = 1
 
         ctx.beginPath()
-        ctx.moveTo(from.x + 40, from.y + 40)
+        ctx.moveTo(from.x, from.y)
         if (is1BtnHovered) {
-            ctx.lineTo(buttonsCoords[0].x + 41, buttonsCoords[0].y + 22)
+            ctx.lineTo(buttonsCoords[0].x, buttonsCoords[0].y - 15)
         } else if (is2BtnHovered) {
-            ctx.lineTo(buttonsCoords[1].x - 17, buttonsCoords[1].y + 60)
+            ctx.lineTo(buttonsCoords[1].x - 60, buttonsCoords[1].y + 20)
         } else if (is3BtnHovered) {
-            ctx.lineTo(buttonsCoords[2].x + 100, buttonsCoords[2].y + 60)
+            ctx.lineTo(buttonsCoords[2].x + 65, buttonsCoords[2].y + 21)
         } else {
             ctx.lineTo(to.x, to.y)
         }
@@ -157,58 +158,78 @@ const MainPage = () => {
     }
 
     return (
-        <div>
-            <div className="showreel">{/* video */}</div>
-            <MainPageButton
-                onClick={casesClicked}
-                isHovered={is1BtnHovered}
-                title="cases"
-                className="firstCircle"
-                ref={btn1Ref}
-            />
-            <MainPageButton
-                onClick={storyClicked}
-                isHovered={is2BtnHovered}
-                title="story"
-                className="secondCircle"
-                ref={btn2Ref}
-            />
-            <MainPageButton
-                onClick={hireClicked}
-                isHovered={is3BtnHovered}
-                title="hire us"
-                className="thirdCircle"
-                ref={btn3Ref}
-            />
-            <Cases
-                isCasesEntered={isCasesEntered}
-                isCanvasesHidded={isCanvasesHidded}
-                canvases={[canvas1, canvas2, canvas3]}
-                isClicked={isCasesClicked}
-            />
-            <Story
-                isStoryEntered={isStoryEntered}
-                isCanvasesHidded={isCanvasesHidded}
-                canvases={[canvas1, canvas2, canvas3]}
-                isClicked={isStoryClicked}
-            />
-            <Hire
-                isHireEntered={isHireEntered}
-                isCanvasesHidded={isCanvasesHidded}
-                canvases={[canvas1, canvas2, canvas3]}
-                isClicked={isHireClicked}
-                setIsClicked={setIsHireClicked}
-            />
-            <div className="main">
-                <div className="main__top">
-                    <TypingText />
-                    <div className="main__logo" />
-                </div>
-                <div className="main__bottom">
-                    <hr className="main__bottom__video" />
+        <CursorProvider>
+            <div>
+                <div className="showreel">{/* video */}</div>
+                <MainPageButton
+                    canvas={canvas1}
+                    onClick={casesClicked}
+                    isHovered={is1BtnHovered}
+                    title="cases"
+                    isClicked={isCasesClicked}
+                    className={
+                        isCasesClicked
+                            ? 'clickedCases firstCircle'
+                            : 'firstCircle'
+                    }
+                    ref={btn1Ref}
+                />
+                <MainPageButton
+                    canvas={canvas2}
+                    onClick={storyClicked}
+                    isHovered={is2BtnHovered}
+                    title="story"
+                    ref={btn2Ref}
+                    isClicked={isStoryClicked}
+                    className={
+                        isStoryClicked
+                            ? 'clickedStory secondCircle'
+                            : 'secondCircle'
+                    }
+                />
+                <MainPageButton
+                    canvas={canvas3}
+                    onClick={hireClicked}
+                    isHovered={is3BtnHovered}
+                    title="hire us"
+                    ref={btn3Ref}
+                    isClicked={isHireClicked}
+                    className={
+                        isHireClicked
+                            ? 'clickedHire thirdCircle'
+                            : 'thirdCircle'
+                    }
+                />
+                <Cases
+                    isCasesEntered={isCasesEntered}
+                    isCanvasesHidded={isCanvasesHidded}
+                    canvases={[canvas1, canvas2, canvas3]}
+                    isClicked={isCasesClicked}
+                />
+                <Story
+                    isStoryEntered={isStoryEntered}
+                    isCanvasesHidded={isCanvasesHidded}
+                    canvases={[canvas1, canvas2, canvas3]}
+                    isClicked={isStoryClicked}
+                />
+                <Hire
+                    isHireEntered={isHireEntered}
+                    isCanvasesHidded={isCanvasesHidded}
+                    canvases={[canvas1, canvas2, canvas3]}
+                    isClicked={isHireClicked}
+                    setIsClicked={setIsHireClicked}
+                />
+                <div className="main">
+                    <div className="main__top">
+                        <TypingText />
+                        <div className="main__logo" />
+                    </div>
+                    <div className="main__bottom">
+                        <hr className="main__bottom__video" />
+                    </div>
                 </div>
             </div>
-        </div>
+        </CursorProvider>
     )
 }
 

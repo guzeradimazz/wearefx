@@ -1,7 +1,13 @@
-import React, { useEffect }  from 'react';
+import React, { useEffect } from 'react'
 import './Story.css'
+import 'animate.css'
 
-export const Story = ({ isClicked, canvases, isCanvasesHidded, isStoryEntered }) => {
+export const Story = ({
+    isClicked,
+    canvases,
+    isCanvasesHidded,
+    isStoryEntered,
+}) => {
     const offCanvases = () => {
         canvases.map((i) => i.classList.add('displayNone'))
     }
@@ -14,16 +20,23 @@ export const Story = ({ isClicked, canvases, isCanvasesHidded, isStoryEntered })
     }, [isCanvasesHidded])
 
     useEffect(() => {
-        if(!isStoryEntered && isCanvasesHidded) canvases[1].classList.add('displayNone')
+        if (!isStoryEntered && isCanvasesHidded)
+            canvases[1].classList.add('displayNone')
         else canvases[1].classList.remove('displayNone')
     }, [isStoryEntered])
 
     if (isClicked) {
-        return <div className="storyLayout">
-            <div className="storyBtn gradientBtn">
-                <p>View our<br />expertise &<br />technologies</p>
+        return (
+            <div className="storyLayout">
+                <div className="storyBtn gradientBtn">
+                    <p>
+                        View our
+                        <br />
+                        expertise &<br />
+                        technologies
+                    </p>
+                </div>
             </div>
-        </div>
+        )
     } else return null
-};
-
+}

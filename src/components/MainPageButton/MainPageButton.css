@@ -1,40 +1,42 @@
 .MainPageButton {
     position: relative;
     text-transform: uppercase;
-    transition: 0.3s ease-in;
-    width: 80px;
-    height: 80px;
+    width: 85px;
+    height: 85px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    padding: 15px;
     font-size: 13px;
     z-index: 2001;
     color: #fff;
-    -o-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
+    transition: all .3s ease-in-out;
+    animation: showMainPageBtn .4s;
 }
 .MainPageButton:hover::before {
+    padding: 10px;
     transition: 0.3s ease-in;
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     content: '';
+    z-index: 2000;
     position: absolute;
     border-radius: 50%;
-    border: 5px solid #fff;
+    border: 7px solid #fff;
+    animation: showMainPageBtn .4s;
+    transition: all .3s ease-in-out;
+    transform: scale(1);
 }
 .MainPageButton:hover {
-    transition: 0.3s ease-in;
+    transition: all .3s ease-in-out;
+    animation: showMainPageBtn .4s;
     background-color: rgba(255, 255, 255, 0.12);
 }
 .firstCircle {
     position: absolute;
-    top: 60px;
-    left: 50%;
+    top: 40px;
+    left: calc(47%);
     z-index: 1000;
-    transform: translate(-50%, -50%);
 }
 .firstCircle:hover {
     transition: all 0.3s ease;
@@ -116,8 +118,8 @@
     top: 0px;
     left: calc(50% - 1px);
     position: absolute;
-    width: 3px;
-    height: 3px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
     background-color: #fff;
     z-index: 10000000;
@@ -126,10 +128,10 @@
 .second__dot {
     display: none;
     bottom: 20px;
-    left: calc(6% - 1px);
+    left: calc(7% - 1px);
     position: absolute;
-    width: 3px;
-    height: 3px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
     background-color: #fff;
     z-index: 10000000;
@@ -138,10 +140,10 @@
 .third__dot {
     display: none;
     bottom: 20px;
-    left: calc(96% - 1px);
+    left: calc(90% - 1px);
     position: absolute;
-    width: 3px;
-    height: 3px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
     background-color: #fff;
     z-index: 10000000;
@@ -149,4 +151,83 @@
 }
 .MainPageButton span {
     transition: 3s ease;
+}
+@keyframes showMainPageBtn {
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+.clickedCases {
+    background-color: #7344f4;
+    width: 85px;
+    height: 85px;
+    background-image: url('../../images/CloseWhite.svg');
+    background-size: 35%;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2002;
+    position: absolute;
+    top: 40px;
+    left: calc(47%);
+    border: none !important;
+    animation: showMainPageBtn .4s;
+}
+.clickedCases:hover::before{
+    border: none !important;
+}
+.clickedStory:hover::before{
+    border: none !important;
+}
+.clickedHire:hover::before{
+    border: none !important;
+}
+.clickedCases:hover {
+    border: none !important;
+    background-color: #fff;
+    background-image: url('../../images/CloseBlack.svg');
+}
+.clickedStory {
+    transition: all .3s ease-in-out;
+    background-color: #7344f4;
+    width: 85px;
+    height: 85px;
+    background-image: url('../../images/CloseWhite.svg');
+    background-size: 35%;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2002;
+    position: absolute;
+    border: none !important;
+    bottom: 40px;
+    left: 60px;
+    border: none;
+}
+.clickedStory:hover {
+    border: none;
+    background-color: #fff !important;
+    background-image: url('../../images/CloseBlack.svg');
+}
+.clickedHire {
+    transition: all .3s ease-in-out;
+    background-color: #7344f4;
+    width: 85px;
+    height: 85px;
+    background-image: url('../../images/CloseWhite.svg');
+    background-size: 35%;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2002;
+    position: absolute;
+    border: none !important;
+    bottom: 40px;
+    right: 60px;
+    border: none;
+}
+.clickedHire:hover {
+    border: none;
+    background-color: #fff !important;
+    background-image: url('../../images/CloseBlack.svg');
 }

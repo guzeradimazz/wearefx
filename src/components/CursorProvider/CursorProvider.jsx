@@ -34,7 +34,9 @@ const CursorProvider = ({ children }) => {
     }
 
     return (
-        <CursorContext.Provider value={{ onCursor, onHideCursor, onVisibleCursor }}>
+        <CursorContext.Provider
+            value={{ onCursor, onHideCursor, onVisibleCursor }}
+        >
             <ins
                 className={cx(cursor && 'movable', {
                     active: !!cursor,

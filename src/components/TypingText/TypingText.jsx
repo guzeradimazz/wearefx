@@ -12,11 +12,12 @@ const TypingText = () => {
                 'Where beauty and function are crafted together',
                 'Working across all media channels & platforms',
             ],
-            startDelay: 300,
-            typeSpeed: 30,
-            backSpeed: 10,
-            backDelay: 900,
+            startDelay: 1000,
+            typeSpeed: 24,
+            backSpeed: 24,
+            backDelay: 1000,
             loop: true,
+            showBlink:true,
         })
         return () => typed.destroy()
     }, [])

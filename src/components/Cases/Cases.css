@@ -3,11 +3,22 @@
     bottom: 0;
     width: 100vw;
     height: 86vh;
-    clip-path: polygon(50% 0%, 100% 35%, 100% 100%, 0 100%, 0 45%);
+    clip-path: polygon(50% 0%, 100% 15%, 100% 100%, 0 100%, 0 30%);
     z-index: 2000;
     background-color: #000;
+    animation: showLayout;
+    animation-duration: .3s;
+    transition: all .2s ease-in-out;
 }
-.casesBtn{
+@keyframes showLayout {
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+.casesBtn {
     padding-top: 10px;
     position: absolute;
     bottom: 60px;

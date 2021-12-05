@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import './Hire.css'
+import 'animate.css'
 
 export const Hire = ({
     isClicked,
@@ -24,12 +25,16 @@ export const Hire = ({
         else canvases[2].classList.remove('displayNone')
     }, [isHireEntered])
 
-   
     if (isClicked) {
-        return (<div className="hireLayout">
-            <div className="hireBtn gradientBtn">
-                <p>chat with us<br /> in telegram</p>
+        return (
+            <div className="hireLayout">
+                <div className="hireBtn gradientBtn">
+                    <p>
+                        chat with us
+                        <br /> in telegram
+                    </p>
+                </div>
             </div>
-        </div>)
+        )
     } else return null
 }

@@ -3,9 +3,10 @@
     bottom: 0;
     width: 100vw;
     height: 100vh;
-    clip-path: polygon(25% 0, 100% 0, 100% 100%, 10% 86%);
+    clip-path: polygon(18% 0, 100% 0, 100% 100%, 7% 92%);
     z-index: 2000;
     background-color: #000;
+    animation: fadeInTopRight .3s;
 }
 .storyBtn{ 
     font-size: 13px;
