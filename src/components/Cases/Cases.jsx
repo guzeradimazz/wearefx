@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import './Cases.css'
-import 'animate.css';
+import 'animate.css'
 
 export const Cases = ({
     isClicked,
