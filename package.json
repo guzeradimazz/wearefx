@@ -4,6 +4,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@react-three/cannon": "^4.2.0",
+    "@react-three/drei": "^7.26.1",
+    "@react-three/fiber": "^7.0.21",
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
@@ -43,6 +46,7 @@
   },
   "devDependencies": {
     "gh-pages": "^3.2.3",
-    "prettier": "^2.5.0"
+    "prettier": "^2.5.0",
+    "three": "^0.135.0"
   }
 }

@@ -8,6 +8,15 @@
     background-repeat: no-repeat;
     background-position: center;
 }
+#polyline{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9998;
+}
 #overlay1 {
     position: fixed;
     top: 0;
@@ -57,7 +66,7 @@
     width: 100vw;
     height: 100vh;
     top: 0;
-    opacity: 0.05;
+    opacity: 0.04;
     left: 0;
     background-image: url('../../images/bg-noise.gif');
     position: absolute;

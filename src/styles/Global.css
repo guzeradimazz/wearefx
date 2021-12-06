@@ -13,6 +13,21 @@ li{
 }
 html{
     overflow-x: hidden;
+    animation: unFocusFocus 2s;
+}
+@keyframes unFocusFocus {
+    0%{
+        filter: blur(1.2rem);
+    }
+    25%{
+        filter: blur(.6rem);
+    }
+    50%{
+        filter: blur(1.2rem);
+    }
+    100%{
+        filter: blur(0px);
+    }
 }
 body{
     overflow-x: hidden;
