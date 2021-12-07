@@ -1,4 +1,4 @@
-.hireLayout{
+.hireLayout {
     position: absolute;
     bottom: 0;
     width: 100vw;
@@ -6,9 +6,9 @@
     clip-path: polygon(0 0, 85% 0, 94% 92%, 0 100%);
     z-index: 2000;
     background-color: #000;
-    animation: fadeInTopLeft .3s;
+    animation: fadeInTopLeft 0.3s;
 }
-.gradientBtn{
+.gradientBtn {
     width: 110px;
     height: 110px;
     border-radius: 50%;
@@ -20,19 +20,30 @@
     font-size: 14px;
     display: inline-block;
     vertical-align: middle;
-    background: radial-gradient(at right top, #dbcb91, #ebd27a,  #7850e4, #7344f47c);
+    background: radial-gradient(#ebd27a, #8a60ff94);
     animation: gradient 5s infinite linear;
     background-size: 400%;
 }
 @keyframes gradient {
     0% {
-        background-position: 80% 40%;
+        background-position: 90% 30%;
+        -webkit-box-shadow: -1px 5px 7px 2px rgba(242, 255, 212, 0.12);
+        box-shadow: -1px 18px 7px 2px rgba(242, 255, 212, 0.12);
+    }
+    25% {
+        background-position: 20% 95%;
+        -webkit-box-shadow: -15px -4px 10px 2px rgba(242, 255, 212, 0.12);
+        box-shadow: -15px -4px 10px 2px rgba(242, 255, 212, 0.12);
     }
     50% {
-        background-position: 40% 90%;
+        background-position: 60% 60%;
+        -webkit-box-shadow: 2px 0px 9px 2px rgba(242, 255, 212, 0.12);
+        box-shadow: 2px 0px 9px 2px rgba(242, 255, 212, 0.12);
     }
     100% {
-        background-position: 80% 40%;
+        background-position: 90% 30%;
+        -webkit-box-shadow: -1px 5px 7px 2px rgba(242, 255, 212, 0.12);
+        box-shadow: -1px 5px 7px 2px rgba(242, 255, 212, 0.12);
     }
 }
 .gradientBtn:before {
@@ -40,8 +51,105 @@
     display: inline-block;
     vertical-align: middle;
 }
-.hireBtn{    
+.hireBtn {
     padding-top: 17px;
     top: 60px;
     left: 60px;
+}
+.hireBLock {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    width: 60%;
+    margin-top: 150px;
+    height: 450px;
+    color: #fff !important;
+}
+.hireBLock__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.hireBLock__left__top a {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-right: 30px;
+}
+.hireBLock__left__middle {
+    color: #dae0f2;
+    text-transform: uppercase;
+    font-weight: 300;
+    width: 400px;
+    margin-top: 30px;
+}
+.hireBLock__left__bottom{
+    font-size: 35px;
+    font-weight: 300;
+    padding-bottom: 30px;
+}
+.hireBLock__right {
+    display: flex;
+    flex-direction: column;
+}
+.hireBLock__right__top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #dae0f2;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.hireBLock__right__top p {
+    margin-right: 30px;
+}
+.hireBLock__right__top a {
+    color: #dae0f2;
+    font-weight: 300;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.hireBLock__right__middle {
+    margin-top: 115px;
+}
+.hireBLock__right__middle p {
+    color: #dae0f2;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.hireBLock__right__middle h3 {
+    font-size: 30px;
+}
+.hireBLock__right__bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 100px;
+    font-size: 18px;
+}
+.contact p:nth-child(1) {
+    color: #dae0f2;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-bottom: 5px;
+    opacity: .5;
+}
+.contact p:nth-child(2) {
+    color: #eebf1b;
+    opacity: .5;
+    font-weight: bold;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+.contact__tel p{
+    color: #fff;
+    opacity: 1 !important;
+    text-transform: lowercase !important;
+    font-size: 20px;
+}
+.contact__tel a{
+    font-size: 20px;
+    color: #fff;
 }

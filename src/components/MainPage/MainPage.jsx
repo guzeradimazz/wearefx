@@ -13,6 +13,14 @@ const applyLayout = (canvas) => {
 }
 
 const MainPage = () => {
+    const [isMc, setisMc] = useState('')
+    const [isPuma, setisPuma] = useState('')
+    const [isFlint, setisFlint] = useState('')
+    const [isBig, setisBig] = useState('')
+    const [isPm, setisPm] = useState('')
+    const [isNavi, setisNavi] = useState('')
+
+
     const [buttonsCoords, setButtonsCoords] = useState([])
 
     const [is1BtnHovered, setIs1BtnHovered] = useState(false)
@@ -198,9 +206,22 @@ const MainPage = () => {
                         isHireClicked
                             ? 'clickedHire thirdCircle'
                             : 'thirdCircle'
-                    }
+                    }x
                 />
                 <Cases
+                    isMc={isMc}
+                    setisMc={setisMc}
+                    isPuma={isPuma}
+                    setisPuma={setisPuma}
+                    isFlint={isFlint}
+                    setisFlint={setisFlint}
+                    isBig={isBig}
+                    setisBig={setisBig}
+                    isPm={isPm}
+                    setisPm={setisPm}
+                    isNavi={isNavi}
+                    setisNavi={setisNavi}
+
                     isCasesEntered={isCasesEntered}
                     isCanvasesHidded={isCanvasesHidded}
                     canvases={[canvas1, canvas2, canvas3]}
@@ -219,7 +240,7 @@ const MainPage = () => {
                     isClicked={isHireClicked}
                     setIsClicked={setIsHireClicked}
                 />
-                <div className="main">
+                <div className={` ${isMc} ${isPuma} ${isFlint} ${isBig} ${isPm} ${isNavi} main`}>
                     <div className="main__top">
                         <TypingText />
                         <div className="main__logo" />

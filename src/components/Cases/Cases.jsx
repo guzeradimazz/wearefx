@@ -3,6 +3,18 @@ import './Cases.css'
 import 'animate.css'
 
 export const Cases = ({
+    setisMc,
+    isMc,
+    isPuma,
+    setisPuma,
+    isFlint,
+    setisFlint,
+    isBig,
+    setisBig,
+    isPm,
+    setisPm,
+    isNavi,
+    setisNavi,
     isClicked,
     canvases,
     isCanvasesHidded,
@@ -31,6 +43,68 @@ export const Cases = ({
     const [bigStateHovered, setBigStateHovered] = useState(false)
     const [pmStateHovered, setPMStateHovered] = useState(false)
     const [naviStateHovered, setNaviStateHovered] = useState(false)
+
+    const [mcBack, setMcBack] = useState('')
+    const [pumaBack, setPumaBack] = useState('')
+    const [flintBack, setFlintBack] = useState('')
+    const [bigBack, setBigBack] = useState('')
+    const [pmBack, setPmBack] = useState('')
+    const [naviBack, setNaviBack] = useState('')
+
+    useEffect(() => {
+        if (mcStateHovered) {
+            setisMc('black')
+            setMcBack('mcBack')
+        } else {
+            setisMc('')
+            setMcBack('')
+        }
+    }, [mcStateHovered, isMc])
+    useEffect(() => {
+        if (pumaStateHovered) {
+            setisPuma('black')
+            setPumaBack('pumaBack')
+        } else {
+            setisPuma('')
+            setPumaBack('')
+        }
+    }, [pumaStateHovered, isPuma])
+    useEffect(() => {
+        if (flintStateHovered) {
+            setisFlint('black')
+            setFlintBack('flintBack')
+        } else {
+            setisFlint('')
+            setFlintBack('')
+        }
+    }, [flintStateHovered, isFlint])
+    useEffect(() => {
+        if (bigStateHovered) {
+            setisBig('black')
+            setBigBack('bigBack')
+        } else {
+            setisBig('')
+            setBigBack('')
+        }
+    }, [bigStateHovered, isBig])
+    useEffect(() => {
+        if (pmStateHovered) {
+            setisPm('black')
+            setPmBack('pmBack')
+        } else {
+            setisPm('')
+            setPmBack('')
+        }
+    }, [pmStateHovered, isPm])
+    useEffect(() => {
+        if (naviStateHovered) {
+            setisNavi('black')
+            setNaviBack('naviBack')
+        } else {
+            setisNavi('')
+            setNaviBack('')
+        }
+    }, [naviStateHovered, isNavi])
 
     const onMcEnter = () => {
         setMcStateHovered(true)
@@ -104,7 +178,9 @@ export const Cases = ({
 
     if (isClicked) {
         return (
-            <div className="animate__animated animate__slideInUp casesLayout">
+            <div
+                className={`${mcBack} ${pumaBack} ${flintBack} ${bigBack} ${pmBack} ${naviBack} noise animate__animated animate__slideInUp casesLayout`}
+            >
                 <div className="casesTextBlock">
                     <div className="casesArrow" />
                     <p>

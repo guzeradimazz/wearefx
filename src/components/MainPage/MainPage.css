@@ -72,6 +72,17 @@
     position: absolute;
     background-size: cover;
 }
+.noise::before{
+    content: '';
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    opacity: 0.04;
+    left: 0;
+    background-image: url('../../images/bg-noise.gif');
+    position: absolute;
+    background-size: cover;
+}
 .main__logo {
     background-image: url('../../images/Logo.svg');
     background-repeat: no-repeat;

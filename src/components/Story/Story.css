@@ -28,6 +28,7 @@
 .storyBlock h3{
     font-size: 40px;
     margin-right: 20px;
+    font-weight:300;
 }
 .storyBlock a, .storyBlock p{
     margin: 20px 0 10px 0;

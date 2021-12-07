@@ -10,6 +10,10 @@
     animation-duration: 0.3s;
     transition: all 0.2s ease-in-out;
 }
+.black{
+    background: #000;
+    transition: 0.2s ease-in-out;
+}
 @keyframes showLayout {
     from {
         transform: scale(0);
@@ -54,6 +58,14 @@
     align-items: center;
     transition: 0.3s ease-in-out;
     padding-left: 5px;
+}
+.arrowToTop{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+    width: 24px;
+    height: 24px;
+    background-image: url('../../images/▼arrowTop.svg');
 }
 .casesArrow {
     background-repeat: no-repeat;
@@ -181,3 +193,39 @@
     background-size: 100%;
     background-position: center;
 }
+.mcBack{
+    background-image: url('../../images/Showreel.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.pumaBack{
+    background-image: url('../../images/pumaback.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* .flintBack{
+    background-image: url('../../images/flintback.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bigBack{
+    background-image: url('../../images/bigback.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.pmBack{
+    background-image: url('../../images/pmback.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.naviBack{
+    background-image: url('../../images/naviback.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
