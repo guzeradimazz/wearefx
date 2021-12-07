@@ -183,7 +183,6 @@ export const Cases = ({
             <div
                 className={`${mcBack} ${pumaBack} ${flintBack} ${bigBack} ${pmBack} ${naviBack} noise animate__animated animate__slideInUp casesLayout`}
             >
-                <Line color={'#7344F4'}/>
                 <div className="casesTextBlock">
                     <div className="casesArrow" />
                     <p>

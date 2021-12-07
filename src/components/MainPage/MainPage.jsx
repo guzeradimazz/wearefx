@@ -5,6 +5,7 @@ import { Hire } from '../Hire/Hire'
 import { MainPageButton } from '../MainPageButton/MainPageButton'
 import { Story } from '../Story/Story'
 import TypingText from '../TypingText/TypingText'
+import {Link} from 'react-router-dom'
 import './MainPage.css'
 
 const applyLayout = (canvas) => {
@@ -168,6 +169,7 @@ const MainPage = () => {
     return (
         <CursorProvider>
             <div>
+            <Link to='/story'> STORY PAGE </Link>
                 <div className="showreel">{/* video */}</div>
                 <MainPageButton
                     canvas={canvas1}
