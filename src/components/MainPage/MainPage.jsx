@@ -167,7 +167,6 @@ const MainPage = () => {
     }
 
     return (
-        <CursorProvider>
             <div>
             <Link to='/story'> STORY PAGE </Link>
                 <div className="showreel">{/* video */}</div>
@@ -252,7 +251,6 @@ const MainPage = () => {
                     </div>
                 </div>
             </div>
-        </CursorProvider>
     )
 }
 
