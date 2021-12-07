@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/wearefx/static/css/main.3da54484.chunk.css",
-    "main.js": "/wearefx/static/js/main.fc21cf3b.chunk.js",
-    "main.js.map": "/wearefx/static/js/main.fc21cf3b.chunk.js.map",
+    "main.js": "/wearefx/static/js/main.0b002db8.chunk.js",
+    "main.js.map": "/wearefx/static/js/main.0b002db8.chunk.js.map",
     "runtime-main.js": "/wearefx/static/js/runtime-main.a95c827a.js",
     "runtime-main.js.map": "/wearefx/static/js/runtime-main.a95c827a.js.map",
     "static/css/2.a1596f27.chunk.css": "/wearefx/static/css/2.a1596f27.chunk.css",
-    "static/js/2.60cc7c9e.chunk.js": "/wearefx/static/js/2.60cc7c9e.chunk.js",
-    "static/js/2.60cc7c9e.chunk.js.map": "/wearefx/static/js/2.60cc7c9e.chunk.js.map",
+    "static/js/2.120643b6.chunk.js": "/wearefx/static/js/2.120643b6.chunk.js",
+    "static/js/2.120643b6.chunk.js.map": "/wearefx/static/js/2.120643b6.chunk.js.map",
     "index.html": "/wearefx/index.html",
     "static/css/2.a1596f27.chunk.css.map": "/wearefx/static/css/2.a1596f27.chunk.css.map",
     "static/css/main.3da54484.chunk.css.map": "/wearefx/static/css/main.3da54484.chunk.css.map",
-    "static/js/2.60cc7c9e.chunk.js.LICENSE.txt": "/wearefx/static/js/2.60cc7c9e.chunk.js.LICENSE.txt",
+    "static/js/2.120643b6.chunk.js.LICENSE.txt": "/wearefx/static/js/2.120643b6.chunk.js.LICENSE.txt",
     "static/media/StoryBottom.css": "/wearefx/static/media/storyEllipse.3aee60d4.svg",
     "static/media/MainPageButton.css": "/wearefx/static/media/CloseWhite.049dfdf0.svg",
     "static/media/CursorProvider.css": "/wearefx/static/media/Cursor.d6df8213.svg",
@@ -24,8 +24,8 @@
   "entrypoints": [
     "static/js/runtime-main.a95c827a.js",
     "static/css/2.a1596f27.chunk.css",
-    "static/js/2.60cc7c9e.chunk.js",
+    "static/js/2.120643b6.chunk.js",
     "static/css/main.3da54484.chunk.css",
-    "static/js/main.fc21cf3b.chunk.js"
+    "static/js/main.0b002db8.chunk.js"
   ]
 }
