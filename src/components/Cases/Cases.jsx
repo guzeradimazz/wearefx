@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react'
 import './Cases.css'
 import 'animate.css'
+import { Line } from '../Line/Line'
 
 export const Cases = ({
     setisMc,
@@ -176,11 +177,14 @@ export const Cases = ({
         },
     ]
 
+
+
     if (isClicked) {
         return (
             <div
                 className={`${mcBack} ${pumaBack} ${flintBack} ${bigBack} ${pmBack} ${naviBack} noise animate__animated animate__slideInUp casesLayout`}
             >
+                <Line color={'#7344F4'}/>
                 <div className="casesTextBlock">
                     <div className="casesArrow" />
                     <p>
