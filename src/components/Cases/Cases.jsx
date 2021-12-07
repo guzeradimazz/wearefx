@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
 import './Cases.css'
 import 'animate.css'
-import { Line } from '../Line/Line'
 
 export const Cases = ({
     setisMc,
