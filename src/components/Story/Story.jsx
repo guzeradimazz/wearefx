@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import './Story.css'
 import 'animate.css'
+import Cube from '../Cube/Cube'
 
 export const Story = ({
     isClicked,
@@ -27,7 +28,8 @@ export const Story = ({
 
     if (isClicked) {
         return (
-            <div className="storyLayout">
+            <div className="storyLayout noise">
+                <Cube/>
                 <div className="storyBlock">
                     <h3>We are full-service experiential VFX production studio based in Ukraine inspired by the creative potential of emerging technologies. 😎</h3>
                     <div>

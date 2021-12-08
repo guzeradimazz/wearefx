@@ -13,37 +13,29 @@
     height: 110px;
     border-radius: 50%;
     text-transform: uppercase;
-    background-color: rgb(117, 117, 99);
     position: absolute;
     color: #fff;
     text-align: center;
     font-size: 14px;
     display: inline-block;
     vertical-align: middle;
-    background: radial-gradient(#ebd27a, #8a60ff94);
-    animation: gradient 5s infinite linear;
-    background-size: 400%;
+    background: linear-gradient(125deg, #7344f4 10%, #eec01b 50%, #7344f4 90%);
+    background-size: 600% 600%;
+    box-shadow: 0 0 0 0 #eec01b;
+    animation: gradient 5s ease infinite;
 }
 @keyframes gradient {
     0% {
-        background-position: 90% 30%;
-        -webkit-box-shadow: -1px 5px 7px 2px rgba(242, 255, 212, 0.12);
-        box-shadow: -1px 18px 7px 2px rgba(242, 255, 212, 0.12);
-    }
-    25% {
-        background-position: 20% 95%;
-        -webkit-box-shadow: -15px -4px 10px 2px rgba(242, 255, 212, 0.12);
-        box-shadow: -15px -4px 10px 2px rgba(242, 255, 212, 0.12);
+        background-position: 0% 14%;
+        box-shadow: 0 0 0 0 rgb(238, 192, 27,0.7);
     }
     50% {
-        background-position: 60% 60%;
-        -webkit-box-shadow: 2px 0px 9px 2px rgba(242, 255, 212, 0.12);
-        box-shadow: 2px 0px 9px 2px rgba(242, 255, 212, 0.12);
+        background-position: 100% 87%;
+        box-shadow: 0 0 0 10px rgb(238, 192, 27,0);
     }
     100% {
-        background-position: 90% 30%;
-        -webkit-box-shadow: -1px 5px 7px 2px rgba(242, 255, 212, 0.12);
-        box-shadow: -1px 5px 7px 2px rgba(242, 255, 212, 0.12);
+        background-position: 0% 14%;
+        box-shadow: 0 0 0 0 rgb(238, 192, 27,0);
     }
 }
 .gradientBtn:before {
@@ -57,6 +49,7 @@
     left: 60px;
 }
 .hireBLock {
+    z-index: 2000;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -67,6 +60,7 @@
     color: #fff !important;
 }
 .hireBLock__left {
+    z-index: 2000;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -84,12 +78,13 @@
     width: 400px;
     margin-top: 30px;
 }
-.hireBLock__left__bottom{
+.hireBLock__left__bottom {
     font-size: 35px;
     font-weight: 300;
     padding-bottom: 30px;
 }
 .hireBLock__right {
+    z-index: 2000;
     display: flex;
     flex-direction: column;
 }
@@ -134,22 +129,22 @@
     text-transform: uppercase;
     font-weight: bold;
     padding-bottom: 5px;
-    opacity: .5;
+    opacity: 0.5;
 }
 .contact p:nth-child(2) {
     color: #eebf1b;
-    opacity: .5;
+    opacity: 0.5;
     font-weight: bold;
     padding-bottom: 10px;
     text-transform: uppercase;
 }
-.contact__tel p{
+.contact__tel p {
     color: #fff;
     opacity: 1 !important;
     text-transform: lowercase !important;
     font-size: 20px;
 }
-.contact__tel a{
+.contact__tel a {
     font-size: 20px;
     color: #fff;
 }

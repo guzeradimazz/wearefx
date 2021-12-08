@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react'
 import './Cases.css'
 import 'animate.css'
+import Cube from '../Cube/Cube'
 
 export const Cases = ({
     setisMc,
@@ -183,6 +184,7 @@ export const Cases = ({
             <div
                 className={`${mcBack} ${pumaBack} ${flintBack} ${bigBack} ${pmBack} ${naviBack} noise animate__animated animate__slideInUp casesLayout`}
             >
+                <Cube/>
                 <div className="casesTextBlock">
                     <div className="casesArrow" />
                     <p>

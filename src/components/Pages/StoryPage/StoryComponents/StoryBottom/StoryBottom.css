@@ -8,7 +8,7 @@
     width: 100vw;
     height: 100vh;
     top: 0;
-    opacity: 0.04;
+    opacity: 0.02;
     left: 0;
     background-image: url('../../../../../images/bg-noise.gif');
     position: absolute;
@@ -126,12 +126,12 @@
 .marquee-div {
     display: flex;
     width: 200vw;
-    animation: marquee 10s linear infinite;
+    animation: marquee 18s linear infinite;
 }
 .marquee-div-reverse {
     display: flex;
     width: 200vw;
-    animation: marquee-reverse 10s linear infinite;
+    animation: marquee-reverse 18s linear infinite;
 }
 .story-bottom-marquee span {
     align-items: center;

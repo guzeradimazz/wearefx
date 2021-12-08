@@ -13,9 +13,11 @@
     padding-top: 9px;
     position: absolute;
     top: 60px;
+    z-index: 2000;
     right: 60px;
 }
 .storyBlock{
+    z-index: 2000;
     margin: auto;
     color: #fff;
     width: 50%;
@@ -26,18 +28,19 @@
     margin-top: 10%;
 }
 .storyBlock h3{
+    z-index: 2000;
     font-size: 40px;
     margin-right: 20px;
     font-weight:300;
 }
 .storyBlock a, .storyBlock p{
+    z-index: 2000;
     margin: 20px 0 10px 0;
     color: #fff;
     text-transform: uppercase;
 }
 .storyBlock div{
+    z-index: 2000;
     display: flex;
     flex-direction: column;
-}
-.storyBlock a:nth-child(2){
 }

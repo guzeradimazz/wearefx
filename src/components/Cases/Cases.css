@@ -10,9 +10,10 @@
     animation-duration: 0.3s;
     transition: all 0.2s ease-in-out;
 }
-.black{
+.black {
     background: #000;
     transition: 0.2s ease-in-out;
+    z-index: 2000;
 }
 @keyframes showLayout {
     from {
@@ -23,12 +24,14 @@
     }
 }
 .casesBtn {
+    z-index: 2000;
     padding-top: 10px;
     position: absolute;
     bottom: 60px;
     right: 60px;
 }
 .casesTextBlock {
+    z-index: 2000;
     position: absolute;
     bottom: 60px;
     left: 60px;
@@ -59,7 +62,8 @@
     transition: 0.3s ease-in-out;
     padding-left: 5px;
 }
-.arrowToTop{
+.arrowToTop {
+    z-index: 2000;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 70%;
@@ -68,6 +72,7 @@
     background-image: url('../../images/▼arrowTop.svg');
 }
 .casesArrow {
+    z-index: 2000;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 70%;
@@ -92,11 +97,13 @@
     transition: 0.3s ease-in-out;
 }
 .mcDonalds:hover {
+    z-index: 2000;
     background-color: #f1bb00;
     color: #000;
     transition: 0.3s ease-in-out;
 }
 .mcDonalds:hover::before {
+    z-index: 2000;
     position: absolute;
     transition: 0.3s ease-in-out;
     left: -36px;
@@ -109,11 +116,13 @@
     background-position: center;
 }
 .puma:hover {
+    z-index: 2000;
     background-color: #000;
     color: #fff;
     transition: 0.3s ease-in-out;
 }
 .puma:hover::before {
+    z-index: 2000;
     position: absolute;
     transition: 0.3s ease-in-out;
     left: -36px;
@@ -126,11 +135,13 @@
     background-position: center;
 }
 .flint:hover {
+    z-index: 2000;
     background-color: #000;
     color: #fff;
     transition: 0.3s ease-in-out;
 }
 .flint:hover::before {
+    z-index: 2000;
     position: absolute;
     transition: 0.3s ease-in-out;
     left: -36px;
@@ -143,11 +154,13 @@
     background-position: center;
 }
 .littleBig:hover {
+    z-index: 2000;
     background-color: #fff;
     color: #000;
     transition: 0.3s ease-in-out;
 }
 .littleBig:hover::before {
+    z-index: 2000;
     position: absolute;
     transition: 0.3s ease-in-out;
     left: -36px;
@@ -160,11 +173,13 @@
     background-position: center;
 }
 .parimatch:hover {
+    z-index: 2000;
     background-color: #fff;
     color: #000;
     transition: 0.3s ease-in-out;
 }
 .parimatch:hover::before {
+    z-index: 2000;
     position: absolute;
     transition: 0.3s ease-in-out;
     left: -36px;
@@ -177,11 +192,13 @@
     background-position: center;
 }
 .navi:hover {
+    z-index: 2000;
     background-color: #f1bb00;
     color: #000;
     transition: 0.3s ease-in-out;
 }
 .navi:hover::before {
+    z-index: 2000;
     position: absolute;
     transition: 0.3s ease-in-out;
     left: -36px;
@@ -193,17 +210,20 @@
     background-size: 100%;
     background-position: center;
 }
-.mcBack{
+.mcBack {
     background-image: url('../../images/Showreel.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    z-index: 2000;
 }
-.pumaBack{
+.pumaBack {
+    z-index: 2000;
     background-image: url('../../images/pumaback.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    z-index: 1;
 }
 /* .flintBack{
     background-image: url('../../images/flintback.svg');

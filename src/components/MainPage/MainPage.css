@@ -66,7 +66,7 @@
     width: 100vw;
     height: 100vh;
     top: 0;
-    opacity: 0.04;
+    opacity: 0.02;
     left: 0;
     background-image: url('../../images/bg-noise.gif');
     position: absolute;
@@ -79,6 +79,8 @@
     top: 0;
     opacity: 0.04;
     left: 0;
+    z-index: 1999;
+    background: #00000007;
     background-image: url('../../images/bg-noise.gif');
     position: absolute;
     background-size: cover;

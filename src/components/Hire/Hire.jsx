@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import './Hire.css'
 import 'animate.css'
+import Cube from '../Cube/Cube'
 
 export const Hire = ({
     isClicked,
@@ -27,7 +28,8 @@ export const Hire = ({
 
     if (isClicked) {
         return (
-            <div className="hireLayout">
+            <div className="hireLayout noise">
+                <Cube/>
                 <div className="hireBLock">
                     <div className="hireBLock__left">
                         <div className="hireBLock__left__top">
