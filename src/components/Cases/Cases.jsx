@@ -45,6 +45,8 @@ export const Cases = ({
     const [pmStateHovered, setPMStateHovered] = useState(false)
     const [naviStateHovered, setNaviStateHovered] = useState(false)
 
+    const [showCube, setShowCube] = useState('')
+
     const [mcBack, setMcBack] = useState('')
     const [pumaBack, setPumaBack] = useState('')
     const [flintBack, setFlintBack] = useState('')
@@ -56,54 +58,66 @@ export const Cases = ({
         if (mcStateHovered) {
             setisMc('black')
             setMcBack('mcBack')
+            setShowCube('displayNone')
         } else {
             setisMc('')
             setMcBack('')
+            setShowCube('')
         }
     }, [mcStateHovered, isMc])
     useEffect(() => {
         if (pumaStateHovered) {
             setisPuma('black')
             setPumaBack('pumaBack')
+            setShowCube('displayNone')
         } else {
             setisPuma('')
             setPumaBack('')
+            setShowCube('')
         }
     }, [pumaStateHovered, isPuma])
     useEffect(() => {
         if (flintStateHovered) {
             setisFlint('black')
             setFlintBack('flintBack')
+            setShowCube('displayNone')
         } else {
             setisFlint('')
             setFlintBack('')
+            setShowCube('')
         }
     }, [flintStateHovered, isFlint])
     useEffect(() => {
         if (bigStateHovered) {
             setisBig('black')
             setBigBack('bigBack')
+            setShowCube('displayNone')
         } else {
             setisBig('')
             setBigBack('')
+            setShowCube('')
         }
     }, [bigStateHovered, isBig])
     useEffect(() => {
         if (pmStateHovered) {
             setisPm('black')
             setPmBack('pmBack')
+            setShowCube('displayNone')
         } else {
             setisPm('')
             setPmBack('')
+            setShowCube('')
         }
     }, [pmStateHovered, isPm])
     useEffect(() => {
         if (naviStateHovered) {
             setisNavi('black')
             setNaviBack('naviBack')
+            setShowCube('displayNone')
         } else {
             setisNavi('')
             setNaviBack('')
+            setShowCube('')
         }
     }, [naviStateHovered, isNavi])
 
@@ -177,14 +191,12 @@ export const Cases = ({
         },
     ]
 
-
-
     if (isClicked) {
         return (
             <div
                 className={`${mcBack} ${pumaBack} ${flintBack} ${bigBack} ${pmBack} ${naviBack} noise animate__animated animate__slideInUp casesLayout`}
             >
-                <Cube/>
+                <Cube showCube={`${showCube}`} />
                 <div className="casesTextBlock">
                     <div className="casesArrow" />
                     <p>

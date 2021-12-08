@@ -114,6 +114,6 @@ export default class Cube extends Component {
     }
 
     render() {
-        return <div className="cube" ref={(ref) => (this.mount = ref)} />
+        return <div className={`${this.props.showCube} cube`} ref={(ref) => (this.mount = ref)} />
     }
 }
