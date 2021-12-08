@@ -10,11 +10,6 @@
     animation-duration: 0.3s;
     transition: all 0.2s ease-in-out;
 }
-.black {
-    background: #000;
-    transition: 0.2s ease-in-out;
-    z-index: 2000;
-}
 @keyframes showLayout {
     from {
         transform: scale(0);
@@ -219,33 +214,36 @@
 }
 .pumaBack {
     z-index: 2000;
-    background-image: url('../../images/pumaback.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 1;
-}
-/* .flintBack{
-    background-image: url('../../images/flintback.svg');
+    background-image: url('../../images/Showreel.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.bigBack{
-    background-image: url('../../images/bigback.svg');
+.flintBack {
+    z-index: 2000;
+    background-image: url('../../images/Showreel.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.pmBack{
-    background-image: url('../../images/pmback.svg');
+.bigBack {
+    z-index: 2000;
+    background-image: url('../../images/Showreel.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.naviBack{
-    background-image: url('../../images/naviback.svg');
+.pmBack {
+    z-index: 2000;
+    background-image: url('../../images/Showreel.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-} */
+}
+.naviBack {
+    z-index: 2000;
+    background-image: url('../../images/Showreel.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

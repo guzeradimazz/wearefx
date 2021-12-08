@@ -1,0 +1,55 @@
+.cases-page {
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    overflow: hidden;
+}
+.cases-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.storyHeader {
+    position: absolute;
+}
+.cases-Array {
+    color: #fff;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    height: 350px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    width: 420px;
+    bottom: 60px;
+    font-weight: 300;
+    left: calc(50%);
+}
+.casesArrayItem {
+    font-size: 30px;
+    width: 250px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    z-index: 2000;
+    height: 36px;
+}
+.casesArrayItem:hover{
+    z-index: 2000;
+    background-color: rgb(255, 243, 79);
+    color: rgb(228, 113, 79);
+    transition: 0.3s ease-in-out;
+}
+.casesArrayItem:hover::before {
+    z-index: 2000;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+    left: -36px;
+    content: '';
+    width: 36px;
+    height: 36px;
+    background-image: url('../../../images/McDonalds.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}

@@ -6,6 +6,8 @@
     top: 0;
     width: 100%;
     background: transparent;
+    z-index: 100;
+    position: absolute;
 }
 .header-left {
     display: flex;
@@ -29,7 +31,7 @@
 .header-left div:nth-child(2) {
     display: flex;
     justify-content: space-between;
-    width: 150px;
+    width: 200px;
 }
 .header-left div:nth-child(2) a {
     color: #fff;

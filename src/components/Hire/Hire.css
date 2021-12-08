@@ -56,6 +56,7 @@
     margin: auto;
     width: 60%;
     margin-top: 150px;
+    font-weight: 300;
     height: 450px;
     color: #fff !important;
 }
@@ -77,6 +78,9 @@
     font-weight: 300;
     width: 400px;
     margin-top: 30px;
+}
+.hireBLock__right__middle h3 ,.contact__tel , .hireBLock a{
+    font-weight: 400 !important;
 }
 .hireBLock__left__bottom {
     font-size: 35px;

@@ -18,13 +18,13 @@ export const Story = ({
     useEffect(() => {
         if (isCanvasesHidded) offCanvases()
         else onCanvases()
-    }, [isCanvasesHidded])
+    }, [isCanvasesHidded,offCanvases,onCanvases])
 
     useEffect(() => {
         if (!isStoryEntered && isCanvasesHidded)
             canvases[1].classList.add('displayNone')
         else canvases[1].classList.remove('displayNone')
-    }, [isStoryEntered])
+    }, [isStoryEntered,isCanvasesHidded])
 
     if (isClicked) {
         return (

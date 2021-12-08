@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Cases.css'
 import 'animate.css'
 import Cube from '../Cube/Cube'
@@ -30,13 +30,13 @@ export const Cases = ({
     useEffect(() => {
         if (isCanvasesHidded) offCanvases()
         else onCanvases()
-    }, [isCanvasesHidded])
+    }, [isCanvasesHidded, offCanvases, onCanvases])
 
     useEffect(() => {
         if (!isCasesEntered && isCanvasesHidded)
             canvases[0].classList.add('displayNone')
         else canvases[0].classList.remove('displayNone')
-    }, [isCasesEntered])
+    }, [isCasesEntered, isCanvasesHidded])
 
     const [mcStateHovered, setMcStateHovered] = useState(false)
     const [pumaStateHovered, setPumaStateHovered] = useState(false)
@@ -205,52 +205,32 @@ export const Cases = ({
                         before.
                     </p>
                 </div>
-                <div
-                    className={
-                        mcStateHovered ? 'casesMain' : 'casesMain displayNone'
-                    }
-                >
+                <div className={mcStateHovered ? 'casesMain' : ' displayNone'}>
                     <h1>McDonald's</h1>
                     <p>Granding, VFX, motion</p>
                 </div>
                 <div
-                    className={
-                        pumaStateHovered ? 'casesMain' : 'casesMain displayNone'
-                    }
+                    className={pumaStateHovered ? 'casesMain' : ' displayNone'}
                 >
                     <h1>Puma Ukraine</h1>
                     <p>VFX, motion</p>
                 </div>
                 <div
-                    className={
-                        flintStateHovered
-                            ? 'casesMain'
-                            : 'casesMain displayNone'
-                    }
+                    className={flintStateHovered ? 'casesMain' : ' displayNone'}
                 >
                     <h1>Flint</h1>
                     <p>Granding, VFX, motion</p>
                 </div>
-                <div
-                    className={
-                        bigStateHovered ? 'casesMain' : 'casesMain displayNone'
-                    }
-                >
+                <div className={bigStateHovered ? 'casesMain' : ' displayNone'}>
                     <h1>Little big</h1>
                     <p>Granding, VFX, motion</p>
                 </div>
-                <div
-                    className={
-                        pmStateHovered ? 'casesMain' : 'casesMain displayNone'
-                    }
-                >
+                <div className={pmStateHovered ? 'casesMain' : ' displayNone'}>
                     <h1>Parimatch</h1>
                     <p>Granding, VFX, motion</p>
                 </div>
                 <div
-                    className={
-                        naviStateHovered ? 'casesMain' : 'casesMain displayNone'
-                    }
+                    className={naviStateHovered ? 'casesMain' : ' displayNone'}
                 >
                     <h1>Navi</h1>
                     <p>Granding, VFX, motion</p>

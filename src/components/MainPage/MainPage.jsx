@@ -167,8 +167,10 @@ const MainPage = () => {
     }
 
     return (
-            <div>
+            <div >
             <Link to='/story'> STORY PAGE </Link>
+            <Link to='/cases'> CASES PAGE </Link>
+            <Link to='/hire'> HIRE PAGE </Link>
                 <div className="showreel">{/* video */}</div>
                 <MainPageButton
                     canvas={canvas1}

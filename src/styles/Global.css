@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     cursor: none;
-    font-family: 'Family108', sans-serif;
+    font-family: 'Futura PT';
 }
 a{
     text-decoration: none;
@@ -40,4 +40,7 @@ body{
     height: 100vh;
     pointer-events: none;
     z-index: 0;
+}
+.undefined{
+    color: #000;
 }
