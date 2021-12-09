@@ -3,6 +3,7 @@ import StoryHeader from '../StoryPage/StoryComponents/StoryHeader/StoryHeader'
 import Cube from '../../Cube/Cube'
 import './CasesPage.css'
 import CursorProvider from '../../CursorProvider/CursorProvider'
+import { CasesSlider } from './CasesSlider/CasesSlider'
 
 export const CasesPage = () => {
     useEffect(() => {
@@ -86,6 +87,7 @@ export const CasesPage = () => {
         },
     ]
 
+    const [currentPage, setCurrentPage] = useState(1)
     const [isHoveredBackground, setIsHoveredBackground] = useState('')
 
     const onMouseEnterCase = (element) => {
@@ -106,12 +108,11 @@ export const CasesPage = () => {
                         menu1={'our story'}
                         menu2={'hire us'}
                     />
-
                     <div className="cases-Array">
                         {casesArray.map((item) => (
                             <div
-                                onMouseEnter={()=>onMouseEnterCase(item)}
-                                onMouseLeave={()=>onMouseLeaveCase()}
+                                onMouseEnter={() => onMouseEnterCase(item)}
+                                onMouseLeave={() => onMouseLeaveCase()}
                                 className={
                                     item.isHovered
                                         ? `${item.personalClass} casesArrayItem`
@@ -123,7 +124,11 @@ export const CasesPage = () => {
                             </div>
                         ))}
                     </div>
-
+                    <CasesSlider
+                        state={currentPage}
+                        setState={setCurrentPage}
+                    />
+                    
                     <div style={{ width: '18%' }} className="casesTextBlock">
                         <div className="casesArrow" />
                         <p>

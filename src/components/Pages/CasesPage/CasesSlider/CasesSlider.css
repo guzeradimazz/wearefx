@@ -1,0 +1,32 @@
+.cases-page-slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 140px;
+    bottom: 60px;
+    left: calc(30%);
+    z-index: 2000;
+    position: absolute;
+}
+.slider-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.slider-back,
+.slider-next {
+    content: '';
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.13);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.slider-back {
+    background-position: center left;
+    background-image: url('../images/Ellipse\ 33left.svg');
+}
+.slider-next {
+    background-position: center right;
+    background-image: url('../images/Ellipse\ 33right.svg');
+}
