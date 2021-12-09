@@ -140,14 +140,18 @@ const MainPage = ({is1BtnHovered,is2BtnHovered,is3BtnHovered,setIs3BtnHovered,se
         return () => {
             window.removeEventListener('mousemove', onMove)
 
-            btn1Ref.current.removeEventListener('mouseover', on1BtnEnter)
-            btn1Ref.current.removeEventListener('mouseleave', on1BtnLeave)
-
-            btn2Ref.current.removeEventListener('mouseover', on2BtnEnter)
-            btn2Ref.current.removeEventListener('mouseleave', on2BtnLeave)
-
-            btn3Ref.current.removeEventListener('mouseover', on3BtnEnter)
-            btn3Ref.current.removeEventListener('mouseleave', on3BtnLeave)
+            try {
+                btn1Ref.current.removeEventListener('mouseover', on1BtnEnter)
+                btn1Ref.current.removeEventListener('mouseleave', on1BtnLeave)
+    
+                btn2Ref.current.removeEventListener('mouseover', on2BtnEnter)
+                btn2Ref.current.removeEventListener('mouseleave', on2BtnLeave)
+    
+                btn3Ref.current.removeEventListener('mouseover', on3BtnEnter)
+                btn3Ref.current.removeEventListener('mouseleave', on3BtnLeave)
+            } catch (error) {
+                console.error(error)
+            }
         }
     }, [
         buttonsCoords.length,

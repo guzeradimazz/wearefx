@@ -97,7 +97,7 @@
     top: 0;
     opacity: 0.04;
     left: 0;
-    z-index: 1999;
+    z-index: 2000;
     background: #00000007;
     background-image: url('../../images/bg-noise.gif');
     position: absolute;

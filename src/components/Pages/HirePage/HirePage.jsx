@@ -2,8 +2,8 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Cube from '../../Cube/Cube'
 import CursorProvider from '../../CursorProvider/CursorProvider'
-import StoryHeader from '../StoryPage/StoryComponents/StoryHeader/StoryHeader'
 import './HirePage.css'
+import '../StoryPage/StoryComponents/StoryHeader/StoryHeader.css'
 
 const HirePage = () => {
     useEffect(() => {
@@ -16,12 +16,19 @@ const HirePage = () => {
         <CursorProvider>
             <div className="noise">
                 <Cube />
-                <StoryHeader
-                    titleW={'Hire'}
-                    titleY={'us'}
-                    menu1={'cases'}
-                    menu2={'our storyv'}
-                />
+                <div className="story-header">
+                    <div className="header-left">
+                        <div>
+                            <h1>Hire</h1>
+                            <h1>us</h1>
+                        </div>
+                        <div>
+                            <Link to="/cases">Cases</Link>
+                            <Link to="/hire">our story</Link>
+                        </div>
+                    </div>
+                    <div className="header-right"></div>
+                </div>
                 <div className="hireBLock">
                     <div className="hireBLock__left">
                         <div className="hireBLock__left__top">

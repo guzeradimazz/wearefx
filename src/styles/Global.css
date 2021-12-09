@@ -13,7 +13,7 @@ li{
 }
 html{
     overflow-x: hidden;
-    animation: unFocusFocus 2s;
+    /* animation: unFocusFocus 2s; */
 }
 @keyframes unFocusFocus {
     0%{
