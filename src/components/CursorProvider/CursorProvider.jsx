@@ -5,11 +5,15 @@ export const CursorContext = React.createContext('cursorContext')
 
 const SUPPORTED_CURSORS = [false, 'pointer', 'right', 'left']
 
-const CursorProvider = ({ children }) => {
+const CursorProvider = ({ children,hoveredCursor,hoveredCursor1,hoveredCursor2 }) => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
     const [cursor, setCursor] = useState(true)
 
-    const onHideCursor = () => setCursor(false)
+    const onHideCursor = () => {
+        setTimeout(() => {
+            setCursor(false)
+        }, 400)
+    }
     const onVisibleCursor = () => setCursor(true)
 
     const onMouseMove = (event) => {
@@ -36,9 +40,13 @@ const CursorProvider = ({ children }) => {
     return (
         <CursorContext.Provider
             value={{ onCursor, onHideCursor, onVisibleCursor }}
+            className={hoveredCursor ? 'hoveredCursor' : ''}
         >
             <ins
-                className={cx(cursor && 'movable', {
+                className={hoveredCursor || hoveredCursor1 || hoveredCursor2 ? cx(cursor && 'hoveredCursor movable', {
+                    active: !!cursor,
+                    [`cursor-${cursor}`]: !!cursor,
+                }) : cx(cursor && 'movable', {
                     active: !!cursor,
                     [`cursor-${cursor}`]: !!cursor,
                 })}

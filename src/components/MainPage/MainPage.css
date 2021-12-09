@@ -3,10 +3,23 @@
     width: 100vw;
     height: 100vh;
     z-index: -10;
-    background-image: url('../../images/Showreel.svg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+}
+.toner {
+    background: rgb(255, 255, 255);
+    background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(0, 0, 0, 0.8432948179271709) 100%
+    );
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -9;
+    left: 0;
+    top: 0;
 }
 #polyline {
     position: fixed;
@@ -52,7 +65,7 @@
     transform: translate(9999px);
     opacity: 0;
 }
-.black{
+.black {
     background-color: #000;
 }
 .main {

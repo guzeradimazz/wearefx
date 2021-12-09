@@ -206,33 +206,33 @@ export const Cases = ({
                     </p>
                 </div>
                 <div className={mcStateHovered ? 'casesMain' : ' displayNone'}>
-                    <h1>McDonald's</h1>
+                    <p>McDonald's</p>
                     <p>Granding, VFX, motion</p>
                 </div>
                 <div
                     className={pumaStateHovered ? 'casesMain' : ' displayNone'}
                 >
-                    <h1>Puma Ukraine</h1>
+                    <p>Puma Ukraine</p>
                     <p>VFX, motion</p>
                 </div>
                 <div
                     className={flintStateHovered ? 'casesMain' : ' displayNone'}
                 >
-                    <h1>Flint</h1>
+                    <p>Flint</p>
                     <p>Granding, VFX, motion</p>
                 </div>
                 <div className={bigStateHovered ? 'casesMain' : ' displayNone'}>
-                    <h1>Little big</h1>
+                    <p>Little big</p>
                     <p>Granding, VFX, motion</p>
                 </div>
                 <div className={pmStateHovered ? 'casesMain' : ' displayNone'}>
-                    <h1>Parimatch</h1>
+                    <p>Parimatch</p>
                     <p>Granding, VFX, motion</p>
                 </div>
                 <div
                     className={naviStateHovered ? 'casesMain' : ' displayNone'}
                 >
-                    <h1>Navi</h1>
+                    <p>Navi</p>
                     <p>Granding, VFX, motion</p>
                 </div>
                 <div className="casesArray">

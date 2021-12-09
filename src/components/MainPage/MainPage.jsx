@@ -5,8 +5,10 @@ import { Hire } from '../Hire/Hire'
 import { MainPageButton } from '../MainPageButton/MainPageButton'
 import { Story } from '../Story/Story'
 import TypingText from '../TypingText/TypingText'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './MainPage.css'
+
+import videoPower from './video/videoPower.mp4'
 
 const applyLayout = (canvas) => {
     canvas.width = canvas.clientWidth
@@ -20,7 +22,6 @@ const MainPage = () => {
     const [isBig, setisBig] = useState('')
     const [isPm, setisPm] = useState('')
     const [isNavi, setisNavi] = useState('')
-
 
     const [buttonsCoords, setButtonsCoords] = useState([])
 
@@ -151,7 +152,18 @@ const MainPage = () => {
             btn3Ref.current.removeEventListener('mouseover', on3BtnEnter)
             btn3Ref.current.removeEventListener('mouseleave', on3BtnLeave)
         }
-    }, [buttonsCoords.length, is1BtnHovered, is2BtnHovered, is3BtnHovered])
+    }, [
+        buttonsCoords.length,
+        is1BtnHovered,
+        is2BtnHovered,
+        is3BtnHovered,
+        on1BtnEnter,
+        on1BtnLeave,
+        on2BtnEnter,
+        on2BtnLeave,
+        on3BtnEnter,
+        on3BtnLeave,
+    ])
 
     const casesClicked = () => {
         setIsCanvasesHidded(!isCanvasesHidded)
@@ -167,11 +179,19 @@ const MainPage = () => {
     }
 
     return (
-            <div >
-            <Link to='/story'> STORY PAGE </Link>
-            <Link to='/cases'> CASES PAGE </Link>
-            <Link to='/hire'> HIRE PAGE </Link>
-                <div className="showreel">{/* video */}</div>
+        <CursorProvider
+            hoveredCursor={is1BtnHovered}
+            hoveredCursor1={is2BtnHovered}
+            hoveredCursor2={is3BtnHovered}
+        >
+            <video className='showreel' autoPlay loop muted>
+                <source src={videoPower} type="video/mp4" />
+            </video>
+            <div className='toner'/>
+            <div>
+                {/* <Link to="/story"> STORY PAGE </Link>
+                <Link to="/cases"> CASES PAGE </Link>
+                <Link to="/hire"> HIRE PAGE </Link> */}
                 <MainPageButton
                     canvas={canvas1}
                     onClick={casesClicked}
@@ -180,7 +200,7 @@ const MainPage = () => {
                     isClicked={isCasesClicked}
                     className={
                         isCasesClicked
-                            ? 'clickedCases firstCircle'
+                            ? 'clickedCases firstCircle '
                             : 'firstCircle'
                     }
                     ref={btn1Ref}
@@ -209,7 +229,8 @@ const MainPage = () => {
                         isHireClicked
                             ? 'clickedHire thirdCircle'
                             : 'thirdCircle'
-                    }x
+                    }
+                    x
                 />
                 <Cases
                     isMc={isMc}
@@ -224,7 +245,6 @@ const MainPage = () => {
                     setisPm={setisPm}
                     isNavi={isNavi}
                     setisNavi={setisNavi}
-
                     isCasesEntered={isCasesEntered}
                     isCanvasesHidded={isCanvasesHidded}
                     canvases={[canvas1, canvas2, canvas3]}
@@ -243,7 +263,9 @@ const MainPage = () => {
                     isClicked={isHireClicked}
                     setIsClicked={setIsHireClicked}
                 />
-                <div className={` ${isMc} ${isPuma} ${isFlint} ${isBig} ${isPm} ${isNavi} main`}>
+                <div
+                    className={` ${isMc} ${isPuma} ${isFlint} ${isBig} ${isPm} ${isNavi} main`}
+                >
                     <div className="main__top">
                         <TypingText />
                         <div className="main__logo" />
@@ -253,6 +275,7 @@ const MainPage = () => {
                     </div>
                 </div>
             </div>
+        </CursorProvider>
     )
 }
 

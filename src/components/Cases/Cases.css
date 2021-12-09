@@ -247,3 +247,19 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.casesMain {
+    font-weight: 600;
+    animation: translateX .1s ease-in-out;
+}
+.casesMain p:nth-child(1) {
+    font-size: 70px !important;
+}
+@keyframes translateX {
+    0% {
+        transform: translateX(-300px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}

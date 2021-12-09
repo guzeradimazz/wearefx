@@ -56,9 +56,9 @@ export const Hire = ({
                     <div className="hireBLock__right">
                         <div className="hireBLock__right__top">
                             <p>
-                                Wearefx © 2021 by<a href="#"> Brāh lab</a>
+                                Wearefx © 2021 by<a className='violet_on_hover' href="#"> Brāh lab ﹤</a>
                             </p>
-                            <a href="#">Privacy Policy</a>
+                            <a className='violet_on_hover' href="#">Privacy Policy ﹤</a>
                         </div>
                         <div className="hireBLock__right__middle">
                             <p>For general inquiries & new projects </p>
