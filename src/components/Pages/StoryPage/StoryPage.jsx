@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import './StoryPage.css'
 import StoryMain from './StoryComponents/StoryMain/StoryMain'
 import StoryBottom from './StoryComponents/StoryBottom/StoryBottom'
+import CursorProvider from '../../CursorProvider/CursorProvider'
 
 export const StoryPage = () => {
     useEffect(() => {
@@ -10,9 +11,11 @@ export const StoryPage = () => {
         document.getElementById('overlay3').classList.add('displayNone')
     }, [])
     return (
-        <div>
-            <StoryMain />
-            <StoryBottom />
-        </div>
+        <CursorProvider>
+            <div>
+                <StoryMain />
+                <StoryBottom />
+            </div>
+        </CursorProvider>
     )
 }

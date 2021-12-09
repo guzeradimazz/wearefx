@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
 import { Cases } from '../Cases/Cases'
-import CursorProvider from '../CursorProvider/CursorProvider'
 import { Hire } from '../Hire/Hire'
 import { MainPageButton } from '../MainPageButton/MainPageButton'
 import { Story } from '../Story/Story'
@@ -15,7 +14,7 @@ const applyLayout = (canvas) => {
     canvas.height = canvas.clientHeight
 }
 
-const MainPage = () => {
+const MainPage = ({is1BtnHovered,is2BtnHovered,is3BtnHovered,setIs3BtnHovered,setIs2BtnHovered,setIs1BtnHovered}) => {
     const [isMc, setisMc] = useState('')
     const [isPuma, setisPuma] = useState('')
     const [isFlint, setisFlint] = useState('')
@@ -25,9 +24,7 @@ const MainPage = () => {
 
     const [buttonsCoords, setButtonsCoords] = useState([])
 
-    const [is1BtnHovered, setIs1BtnHovered] = useState(false)
-    const [is2BtnHovered, setIs2BtnHovered] = useState(false)
-    const [is3BtnHovered, setIs3BtnHovered] = useState(false)
+
 
     const btn1Ref = useRef(null)
     const btn2Ref = useRef(null)
@@ -177,21 +174,17 @@ const MainPage = () => {
         setIsCanvasesHidded(!isCanvasesHidded)
         setIsHireClicked(!isHireClicked)
     }
-
+    
     return (
-        <CursorProvider
-            hoveredCursor={is1BtnHovered}
-            hoveredCursor1={is2BtnHovered}
-            hoveredCursor2={is3BtnHovered}
-        >
-            <video className='showreel' autoPlay loop muted>
+        <div>
+            <video className="showreel" autoPlay loop muted>
                 <source src={videoPower} type="video/mp4" />
             </video>
-            <div className='toner'/>
+            <div className="toner" />
             <div>
-                {/* <Link to="/story"> STORY PAGE </Link>
+                <Link to="/story"> STORY PAGE </Link>
                 <Link to="/cases"> CASES PAGE </Link>
-                <Link to="/hire"> HIRE PAGE </Link> */}
+                <Link to="/hire"> HIRE PAGE </Link>
                 <MainPageButton
                     canvas={canvas1}
                     onClick={casesClicked}
@@ -271,11 +264,13 @@ const MainPage = () => {
                         <div className="main__logo" />
                     </div>
                     <div className="main__bottom">
-                        <hr className="main__bottom__video" />
+                        <div className="main__bottom__video">
+                            <div className="progress-done"></div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </CursorProvider>
+        </div>
     )
 }
 

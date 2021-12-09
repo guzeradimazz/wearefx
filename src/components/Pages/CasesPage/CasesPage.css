@@ -34,7 +34,7 @@
     z-index: 2000;
     height: 36px;
 }
-.casesArrayItem:hover{
+.casesArrayItem:hover {
     z-index: 2000;
     background-color: rgb(255, 243, 79);
     color: rgb(228, 113, 79);
@@ -51,5 +51,17 @@
     background-image: url('../../../images/McDonalds.svg');
     background-repeat: no-repeat;
     background-size: 100%;
+    background-position: center;
+}
+.mcHoveredBack {
+    position: absolute;
+    top: 0;
+    z-index: 22000;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../../images/Showreel.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
 }

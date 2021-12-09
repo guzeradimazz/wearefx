@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import './Hire.css'
 import 'animate.css'
 import Cube from '../Cube/Cube'
+import { Link } from 'react-router-dom'
 
 export const Hire = ({
     isClicked,
@@ -29,7 +30,7 @@ export const Hire = ({
     if (isClicked) {
         return (
             <div className="hireLayout noise">
-                <Cube/>
+                <Cube />
                 <div className="hireBLock">
                     <div className="hireBLock__left">
                         <div className="hireBLock__left__top">
@@ -56,9 +57,15 @@ export const Hire = ({
                     <div className="hireBLock__right">
                         <div className="hireBLock__right__top">
                             <p>
-                                Wearefx © 2021 by<a className='violet_on_hover' href="#"> Brāh lab ﹤</a>
+                                Wearefx © 2021 by
+                                <a className="violet_on_hover" href="#">
+                                    {' '}
+                                    Brāh lab ﹤
+                                </a>
                             </p>
-                            <a className='violet_on_hover' href="#">Privacy Policy ﹤</a>
+                            <a className="violet_on_hover" href="#">
+                                Privacy Policy ﹤
+                            </a>
                         </div>
                         <div className="hireBLock__right__middle">
                             <p>For general inquiries & new projects </p>
@@ -88,12 +95,14 @@ export const Hire = ({
                         </div>
                     </div>
                 </div>
-                <div className="hireBtn gradientBtn">
-                    <p>
-                        chat with us
-                        <br /> in telegram
-                    </p>
-                </div>
+                <Link to='/hire'>
+                    <div className="hireBtn gradientBtn">
+                        <p>
+                            chat with us
+                            <br /> in telegram
+                        </p>
+                    </div>
+                </Link>
             </div>
         )
     } else return null

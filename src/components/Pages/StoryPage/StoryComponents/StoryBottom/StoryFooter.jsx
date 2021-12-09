@@ -14,9 +14,9 @@ const StoryFooter = () => {
             <div className="story-footer-right">
                 <div>
                     <p>Wearefx © 2021 by </p>
-                    <p> Brāh lab</p>
+                    <p className='violet_on_hover'> Brāh lab ﹤</p>
                 </div>
-                <p>Privacy Policy</p>
+                <p className='violet_on_hover'>Privacy Policy ﹤</p>
             </div>
         </div>
     )
