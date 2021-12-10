@@ -253,7 +253,7 @@
     animation: translateX .1s ease-in-out;
 }
 .casesMain p:nth-child(1) {
-    font-size: 70px !important;
+    font-size: 70px;
 }
 @keyframes translateX {
     0% {

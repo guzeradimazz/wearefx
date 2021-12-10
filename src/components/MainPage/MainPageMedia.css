@@ -1,0 +1,130 @@
+@media (min-width: 2560px) {
+    .main__logo {
+        width: 100px;
+        height: 100px;
+    }
+    .MainPageButton {
+        font-size: 25px;
+        width: 100px;
+        height: 100px;
+    }
+    .MainPageButton:hover::before {
+        width: 120px;
+        height: 120px;
+    }
+    .clickedCases {
+        background-size: 50%;
+        width: 120px;
+        height: 120px;
+    }
+    .casesLayout {
+        height: 92vh;
+    }
+    .main {
+        padding: 80px;
+    }
+    .firstCircle {
+        top: 80px;
+    }
+    .secondCircle {
+        bottom: 80px;
+        left: 80px;
+    }
+    .thirdCircle {
+        bottom: 80px;
+        right: 80px;
+    }
+    .typing__text {
+        font-size: 30px;
+    }
+    .main__bottom {
+        margin-bottom: 60px;
+    }
+    .gradientBtn {
+        width: 120px;
+        height: 120px;
+    }
+    .casesBtn {
+        right: 80px;
+        bottom: 80px;
+    }
+    .casesTextBlock {
+        bottom: 80px;
+        left: 80px;
+        font-size: 25px;
+    }
+    .casesArrow {
+        width: 30px;
+        height: 30px;
+    }
+    .casesArray {
+        bottom: 80px;
+        font-size: 55px;
+    }
+    .casesArray div {
+        margin-top: 40px;
+        height: 50px;
+        width: 265px;
+    }
+    .mcDonalds:hover::before {
+        width: 50px;
+        height: 50px;
+        left: -50px;
+    }
+    .casesMain {
+        top: calc(40%);
+    }
+    .casesMain p:nth-child(1) {
+        font-size: 100px;
+    }
+    .casesMain p:nth-child(2) {
+        font-size: 35px;
+    }
+    .storyLayout {
+        clip-path: polygon(18% 0, 100% 0, 100% 100%, 6% 93%);
+    }
+    .storyBlock {
+        margin-top: 20%;
+    }
+    .storyBlock h3 {
+        font-size: 55px;
+    }
+    .storyBlock div {
+        font-size: 22px;
+    }
+    .hireLayout {
+        clip-path: polygon(0 0, 85% 0, 95% 93%, 0 100%);
+    }
+    .hireBLock {
+        width: 50%;
+        margin-top: 20%;
+    }
+    .hireBLock__left__top,
+    .hireBLock__left__middle {
+        font-size: 22px;
+        width: 500px;
+    }
+    .hireBLock__left__bottom {
+        font-size: 45px;
+    }
+    .hireBLock__right {
+        font-size: 22px;
+    }
+    .hireBLock__right__bottom {
+        font-size: 25px;
+    }
+}
+@media (min-width: 1440px) {
+    .casesLayout{
+        height: 89vh;
+    }
+    .casesMain{
+        margin-top: 20%;
+    }
+    .storyBlock{
+        margin-top: 17%;
+    }
+    .hireBLock{
+        margin-top: 17%;
+    }
+}

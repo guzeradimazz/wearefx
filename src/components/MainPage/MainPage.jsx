@@ -6,6 +6,7 @@ import { Story } from '../Story/Story'
 import TypingText from '../TypingText/TypingText'
 import { Link } from 'react-router-dom'
 import './MainPage.css'
+import './MainPageMedia.css'
 
 import videoPower from './video/videoPower.mp4'
 
