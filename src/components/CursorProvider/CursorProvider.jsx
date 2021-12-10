@@ -13,12 +13,12 @@ const CursorProvider = ({
 }) => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
     const [cursor, setCursor] = useState(true)
-    // const [classBulean, setClassBulean] = useState(false)
+    const [classBulean, setClassBulean] = useState(false)
 
     const onHideCursor = () => {
-        // setTimeout(() => {
+        setTimeout(() => {
             setCursor(false)
-        // }, 400)
+        }, 300)
     }
     const onVisibleCursor = () => setCursor(true)
 
@@ -43,24 +43,25 @@ const CursorProvider = ({
         setCursor(cursorType)
     }
 
-    // useEffect(() => {
-    //     if (hoveredCursor) setClassBulean(true)
-    //     else if (hoveredCursor1) setClassBulean(true)
-    //     else if (hoveredCursor2) setClassBulean(true)
-    //     else setClassBulean(false)
-    // }, [hoveredCursor, hoveredCursor1, hoveredCursor2])
+    useEffect(() => {
+        if (hoveredCursor) setClassBulean(true)
+        else if (hoveredCursor1) setClassBulean(true)
+        else if (hoveredCursor2) setClassBulean(true)
+        else setClassBulean(false)
+    }, [hoveredCursor, hoveredCursor1, hoveredCursor2])
+
     return (
         <CursorContext.Provider
             value={{ onCursor, onHideCursor, onVisibleCursor }}
         >
             <ins
                 className={
-                    // classBulean
-                    //     ? cx(cursor && 'hoveredCursor movable', {
-                    //           active: !!cursor,
-                    //           [`cursor-${cursor}`]: !!cursor,
-                    //       })
-                    //     :
+                    classBulean
+                        ? cx(cursor && 'hoveredCursorClass movable', {
+                              active: !!cursor,
+                              [`cursor-${cursor}`]: !!cursor,
+                          })
+                        :
                          cx(cursor && 'movable', {
                               active: !!cursor,
                               [`cursor-${cursor}`]: !!cursor,

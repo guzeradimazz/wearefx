@@ -14,7 +14,7 @@ const HirePage = () => {
 
     return (
         <CursorProvider>
-            <div className="noise">
+            <div>
                 <Cube />
                 <div className="story-header">
                     <div className="header-left">

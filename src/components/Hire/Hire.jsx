@@ -29,7 +29,7 @@ export const Hire = ({
 
     if (isClicked) {
         return (
-            <div className="hireLayout noise">
+            <div className="hireLayout">
                 <Cube />
                 <div className="hireBLock">
                     <div className="hireBLock__left">

@@ -11,3 +11,26 @@
     border-radius: 50%;
     pointer-events: none;
 }
+.hoveredCursorClass{
+    animation: hoveredCurs .3s ease-in;
+    transition: .2s ease-in;
+    transform: scale(7);
+    background-image: url('../../images/Cursoranim.svg');
+}
+@keyframes hoveredCurs {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.movable::before {
+    position: absolute;
+    transform: translate(+61%, +56%);
+    content: '';
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.226);
+}

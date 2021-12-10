@@ -29,7 +29,7 @@ export const Story = ({
 
     if (isClicked) {
         return (
-                <div className="storyLayout noise">
+                <div className="storyLayout">
                     <Cube />
                     <div className="storyBlock">
                         <h3>

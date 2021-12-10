@@ -195,7 +195,7 @@ export const Cases = ({
     if (isClicked) {
         return (
                 <div
-                    className={`${mcBack} ${pumaBack} ${flintBack} ${bigBack} ${pmBack} ${naviBack} noise animate__animated animate__slideInUp casesLayout`}
+                    className={`${mcBack} ${pumaBack} ${flintBack} ${bigBack} ${pmBack} ${naviBack} animate__animated animate__slideInUp casesLayout`}
                 >
                     <Cube showCube={`${showCube}`} />
                     <div className="casesTextBlock">

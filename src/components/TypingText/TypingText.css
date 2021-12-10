@@ -1,5 +1,8 @@
 .typing__text{
-    max-width: 130px !important;
-    font-weight: 200;
+    max-width: 90px !important;
+    font-weight: 100;
+    line-height: 23,04px;
+    font-size: 24px;
+    color: #dae0f2a9;
     font-size: 24px;
 }
