@@ -84,7 +84,7 @@
     width: 100vw;
     height: 100vh;
     top: 0;
-    opacity: 0.04;
+    opacity: 0.06;
     left: 0;
     background-image: url('../../images/bg-noise.gif');
     position: absolute;
@@ -96,7 +96,7 @@
     width: 100vw;
     height: 100vh;
     top: 0;
-    opacity: 0.04;
+    opacity: 0.06;
     left: 0;
     z-index: 2000;
     background: #00000007;
