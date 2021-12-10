@@ -238,18 +238,6 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'Futura PT';
-    src: url('10886.otf');
-    src: local('Futura PT Light'), local('FuturaPT-Light'),
-        url('FuturaPT-Light.eot?#iefix') format('embedded-opentype'),
-        url('FuturaPT-Light.woff2') format('woff2'),
-        url('FuturaPT-Light.woff') format('woff'),
-        url('FuturaPT-Light.ttf') format('truetype');
-    font-weight: 100;
-    font-style: normal;
-}
-
 
 @font-face {
     font-family: 'Futura PT';

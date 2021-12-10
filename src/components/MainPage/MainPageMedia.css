@@ -115,16 +115,109 @@
     }
 }
 @media (min-width: 1440px) {
-    .casesLayout{
+    .casesLayout {
         height: 89vh;
     }
-    .casesMain{
+    .casesMain {
         margin-top: 20%;
     }
-    .storyBlock{
+    .storyBlock {
         margin-top: 17%;
     }
-    .hireBLock{
+    .hireBLock {
         margin-top: 17%;
+    }
+}
+@media (max-width: 1024px) {
+    .casesLayout {
+        height: 89vh;
+        clip-path: polygon(51% 0%, 100% 15%, 100% 100%, 0 100%, 0 30%);
+    }
+    .casesArray {
+        bottom: 265px;
+        left: calc(75%);
+    }
+    .storyBlock {
+        margin-top: 15%;
+    }
+    .hireBLock {
+        height: 490px;
+        margin-top: 18%;
+        margin-left: 12%;
+    }
+}
+@media (max-width: 768px) {
+    .casesArray {
+        bottom: 210px;
+    }
+    .casesMain {
+        margin-top: 190px;
+    }
+    .storyLayout {
+        clip-path: polygon(18% 0, 100% 0, 100% 100%, 12% 89%);
+    }
+    .storyBlock h3 {
+        font-size: 24px;
+    }
+    .storyBlock div {
+        font-size: 12px;
+    }
+    .hireBLock__left {
+        font-size: 15px;
+    }
+    .hireBLock__left__middle {
+        margin-top: 0;
+        width: 300px;
+    }
+    .hireBLock {
+        margin-top: 19%;
+        margin-left: 8%;
+    }
+    .hireBtn {
+        top: 20px;
+        left: 20px;
+    }
+    .hireBLock__right__middle {
+        margin-top: 50px;
+    }
+    .hireBLock__right__bottom {
+        margin-top: 85px;
+    }
+    .hireBLock__right__bottom .contact:nth-child(1) {
+        margin-right: 10px;
+    }
+    .hireLayout {
+        clip-path: polygon(0 0, 85% 0, 91% 90%, 0 100%);
+    }
+}
+@media (max-width: 425px) {
+    #overlay1,
+    #overlay2,
+    #overlay3 {
+        display: none;
+    }
+    .main {
+        padding: 20px;
+    }
+    .main__logo {
+        top: 20px;
+        right: 20px;
+    }
+    .main__bottom__video {
+        content: '';
+        width: 100%;
+        transform: rotate(-90deg);
+    }
+    .main__bottom {
+        position: absolute;
+        width: 170px;
+        content: '';
+        height: 35px;
+        left: calc(-11%);
+        bottom: 20px;
+        margin-bottom: 60px;
+    }
+    .progress-done{
+        margin: 0;
     }
 }

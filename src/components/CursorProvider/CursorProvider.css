@@ -1,21 +1,20 @@
 .movable {
     width: 40px;
     height: 40px;
-    background-image: url('../../images/Cursor.svg');
     background-repeat: no-repeat;
+    background-image: url('../../images/Cursor.svg');
     background-position: center;
     background-size: 100%;
     position: absolute;
     z-index: 999999999;
     transform: translate(-50%, -50%);
-    border-radius: 50%;
     pointer-events: none;
+    
 }
 .hoveredCursorClass{
     animation: hoveredCurs .3s ease-in;
     transition: .2s ease-in;
-    transform: scale(7);
-    background-image: url('../../images/Cursoranim.svg');
+    transform: scale(5);
 }
 @keyframes hoveredCurs {
     0%{

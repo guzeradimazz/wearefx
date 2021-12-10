@@ -11,16 +11,10 @@
     z-index: 2001;
     color: #fff;
     animation: showMainPageBtn 0.4s;
-    transition: ease-in-out 0.4s all;
     transform: translate(0);
-    opacity: 1;
-}
-.MainPageButton::before {
-    transition: ease-in-out 0.4s all;
 }
 .MainPageButton:hover::before {
     padding: 10px;
-    transition: 0.3s ease-in;
     width: 90px;
     height: 90px;
     content: '';
@@ -29,16 +23,8 @@
     border-radius: 50%;
     border: 1px solid #fff;
     animation: showMainPageBtn 0.4s;
-    transition: all 0.3s ease-in-out;
-    transform: scale(1);
-}
-.hoveredCursor {
-    transition: 0.3s ease-in;
-    transform: rotate(180deg) scale(2);
 }
 .MainPageButton:hover {
-    transition: all 0.3s ease-in-out;
-    animation: showMainPageBtn 0.4s;
     background-color: rgba(255, 255, 255, 0.12);
 }
 .firstCircle {
@@ -165,7 +151,7 @@
     0% {
         transform: scale(0);
     }
-    100% {
+    100% {  
         transform: scale(1);
     }
 }

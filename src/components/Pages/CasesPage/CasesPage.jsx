@@ -30,7 +30,6 @@ export const CasesPage = () => {
             title: `McDonald's`,
             casesArrayItemBack: 'mcHoveredBack',
             personalClass: 'hush-MC',
-
             page: 1,
         },
         {

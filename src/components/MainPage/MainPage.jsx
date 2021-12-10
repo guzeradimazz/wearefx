@@ -25,6 +25,8 @@ const MainPage = ({is1BtnHovered,is2BtnHovered,is3BtnHovered,setIs3BtnHovered,se
 
     const [buttonsCoords, setButtonsCoords] = useState([])
 
+
+
     const btn1Ref = useRef(null)
     const btn2Ref = useRef(null)
     const btn3Ref = useRef(null)
@@ -76,10 +78,10 @@ const MainPage = ({is1BtnHovered,is2BtnHovered,is3BtnHovered,setIs3BtnHovered,se
     }
     const joinPoints = (ctx, from, to) => {
         const stroke = ctx.createLinearGradient(from.x, from.y, to.x, to.y)
-        stroke.addColorStop(0, 'rgba(237, 245, 252, 0)')
-        stroke.addColorStop(0.4, 'rgba(237, 245, 252, 0.1)')
-        stroke.addColorStop(0.5, 'rgba(237, 245, 252, 0.4)')
-        stroke.addColorStop(1, 'rgba(237, 245, 252, 0)')
+        stroke.addColorStop(0, 'rgba(255, 255, 255, 0)')
+        stroke.addColorStop(0.4, 'rgba(255, 255, 255, 0.2)')
+        stroke.addColorStop(0.5, 'white')
+        stroke.addColorStop(1, 'rgba(255, 255, 255)')
 
         ctx.strokeStyle = stroke
         ctx.lineWidth = 1
@@ -109,9 +111,9 @@ const MainPage = ({is1BtnHovered,is2BtnHovered,is3BtnHovered,setIs3BtnHovered,se
     }
     const onMove = (e) => {
         if (!buttonsCoords.length) return
-        drawAnimLine(canvas1, { x: e.clientX, y: e.clientY-11 }, buttonsCoords[0])
+        drawAnimLine(canvas1, { x: e.clientX, y: e.clientY-10 }, buttonsCoords[0])
         drawAnimLine(canvas2, { x: e.clientX-9, y: e.clientY+4 }, buttonsCoords[1])
-        drawAnimLine(canvas3, { x: e.clientX+9, y: e.clientY+4 }, buttonsCoords[2])
+        drawAnimLine(canvas3, { x: e.clientX+8, y: e.clientY+4 }, buttonsCoords[2])
     }
     useEffect(() => {
         applyLayout(canvas1)
