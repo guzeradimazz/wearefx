@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/wearefx/static/css/main.760569fb.chunk.css",
-    "main.js": "/wearefx/static/js/main.45e5c572.chunk.js",
-    "main.js.map": "/wearefx/static/js/main.45e5c572.chunk.js.map",
+    "main.css": "/wearefx/static/css/main.3ef03854.chunk.css",
+    "main.js": "/wearefx/static/js/main.7c746435.chunk.js",
+    "main.js.map": "/wearefx/static/js/main.7c746435.chunk.js.map",
     "runtime-main.js": "/wearefx/static/js/runtime-main.a95c827a.js",
     "runtime-main.js.map": "/wearefx/static/js/runtime-main.a95c827a.js.map",
     "static/css/2.a1596f27.chunk.css": "/wearefx/static/css/2.a1596f27.chunk.css",
@@ -10,13 +10,13 @@
     "static/js/2.bee401cb.chunk.js.map": "/wearefx/static/js/2.bee401cb.chunk.js.map",
     "index.html": "/wearefx/index.html",
     "static/css/2.a1596f27.chunk.css.map": "/wearefx/static/css/2.a1596f27.chunk.css.map",
-    "static/css/main.760569fb.chunk.css.map": "/wearefx/static/css/main.760569fb.chunk.css.map",
+    "static/css/main.3ef03854.chunk.css.map": "/wearefx/static/css/main.3ef03854.chunk.css.map",
     "static/js/2.bee401cb.chunk.js.LICENSE.txt": "/wearefx/static/js/2.bee401cb.chunk.js.LICENSE.txt",
-    "static/media/stylesheet.css": "/wearefx/static/media/FuturaPTCond-MediumObl.f61a3fb9.woff",
     "static/media/StoryBottom.css": "/wearefx/static/media/storyEllipse.3aee60d4.svg",
     "static/media/HirePage.css": "/wearefx/static/media/CloseWhite.049dfdf0.svg",
-    "static/media/CursorProvider.css": "/wearefx/static/media/Cursoranim.ddbf3c82.svg",
+    "static/media/CursorProvider.css": "/wearefx/static/media/Cursor.46e38e07.svg",
     "static/media/CasesSlider.css": "/wearefx/static/media/Ellipse 33right.2c10d67c.svg",
+    "static/media/stylesheet.css": "/wearefx/static/media/FuturaPTCond-MediumObl.f61a3fb9.woff",
     "static/media/Cases.css": "/wearefx/static/media/▼arrowTop.6f5ac776.svg",
     "static/media/MainPage.css": "/wearefx/static/media/bg-noise.1087c988.gif",
     "static/media/CasesPage.css": "/wearefx/static/media/Showreel.9f905eb1.svg",
@@ -27,7 +27,7 @@
     "static/js/runtime-main.a95c827a.js",
     "static/css/2.a1596f27.chunk.css",
     "static/js/2.bee401cb.chunk.js",
-    "static/css/main.760569fb.chunk.css",
-    "static/js/main.45e5c572.chunk.js"
+    "static/css/main.3ef03854.chunk.css",
+    "static/js/main.7c746435.chunk.js"
   ]
 }
