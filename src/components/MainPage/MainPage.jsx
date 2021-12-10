@@ -111,7 +111,7 @@ const MainPage = ({is1BtnHovered,is2BtnHovered,is3BtnHovered,setIs3BtnHovered,se
     }
     const onMove = (e) => {
         if (!buttonsCoords.length) return
-        drawAnimLine(canvas1, { x: e.clientX, y: e.clientY }, buttonsCoords[0])
+        drawAnimLine(canvas1, { x: e.clientX-10, y: e.clientY-10 }, buttonsCoords[0])
         drawAnimLine(canvas2, { x: e.clientX, y: e.clientY }, buttonsCoords[1])
         drawAnimLine(canvas3, { x: e.clientX, y: e.clientY }, buttonsCoords[2])
     }
