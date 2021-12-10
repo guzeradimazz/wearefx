@@ -190,7 +190,7 @@
         clip-path: polygon(0 0, 85% 0, 91% 90%, 0 100%);
     }
 }
-@media (max-width: 425px) {
+@media (min-width: 320px) {
     #overlay1,
     #overlay2,
     #overlay3 {
