@@ -4,6 +4,8 @@ import StoryMain from './StoryComponents/StoryMain/StoryMain'
 import StoryBottom from './StoryComponents/StoryBottom/StoryBottom'
 import CursorProvider from '../../CursorProvider/CursorProvider'
 
+import './StoryPageMedia.css'
+
 export const StoryPage = () => {
     useEffect(() => {
         document.getElementById('overlay1').classList.add('displayNone')
