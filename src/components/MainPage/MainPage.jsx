@@ -182,7 +182,7 @@ const MainPage = ({is1BtnHovered,is2BtnHovered,is3BtnHovered,setIs3BtnHovered,se
     
     return (
         <div>
-            <video className="showreel" autoPlay='' loop muted>
+            <video className="showreel" autoplay="true" loop muted>
                 <source src={videoPower} type="video/mp4" />
             </video>
             <div className="toner" />

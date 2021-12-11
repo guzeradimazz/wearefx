@@ -191,6 +191,9 @@
     }
 }
 @media (min-width: 320px) {
+    .movable{
+        display: none;
+    }
     #overlay1,
     #overlay2,
     #overlay3 {
