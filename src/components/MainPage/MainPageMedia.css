@@ -220,4 +220,21 @@
     .progress-done{
         margin: 0;
     }
+     .secondCircle, .thirdCircle ,.firstCircle{
+        left: calc(65%);
+    }
+    .firstCircle{
+        top: 60%;
+    }
+    .secondCircle{
+        bottom: 45%;
+    }
+    .MainPageButton{
+        border-radius: 0px;
+        height: 36px;
+        width: 90px;
+    }
+    .MainPageButton:hover::before , .first__dot ,.second__dot ,.third__dot{
+        display: none !important;
+    }
 }
