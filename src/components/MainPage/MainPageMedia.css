@@ -191,10 +191,7 @@
     }
 }
 @media (max-width: 425px) {
-    /* .only__desktop {
-        display: none;
-    } */
-    /* .only__mobile {
+    .showreel {
         top: 0 ;
         left: 0 ;
         background-size: cover;
@@ -206,7 +203,7 @@
         content: '';
         z-index: -9;
         background-image: url('../MainPage/video/videoPower.gif');
-    } */
+    }
     .movable {
         display: none;
     }
