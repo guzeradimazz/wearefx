@@ -290,6 +290,8 @@
     .storyLayout,
     .hireLayout,
     .casesLayout {
+        position: absolute;
+        top: 0;left: 0;
         height: 100vh;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
