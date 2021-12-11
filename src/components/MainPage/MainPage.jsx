@@ -182,9 +182,10 @@ const MainPage = ({is1BtnHovered,is2BtnHovered,is3BtnHovered,setIs3BtnHovered,se
     
     return (
         <div>
-            <video className="only__desktop showreel" preload="auto" no-controls autoplay loop playsinline muted>
+            <video className="only__desktop" preload="auto" no-controls autoplay loop playsinline muted>
                 <source src={videoPower} type="video/mp4" />
             </video>
+            <div className="only__mobile"></div>
             <div className="toner" />
             <div>
                 {/* <Link to="/story"> STORY PAGE </Link>
