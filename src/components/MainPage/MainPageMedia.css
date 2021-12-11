@@ -1,4 +1,10 @@
 @media (min-width: 2560px) {
+    .showreel__mobile {
+        display: none;
+    }
+    .showreel {
+        display: block;
+    }
     .main__logo {
         width: 100px;
         height: 100px;
@@ -115,6 +121,12 @@
     }
 }
 @media (min-width: 1440px) {
+    .showreel__mobile {
+        display: none;
+    }
+    .showreel {
+        display: block;
+    }
     .casesLayout {
         height: 89vh;
     }
@@ -129,6 +141,12 @@
     }
 }
 @media (max-width: 1024px) {
+    .showreel__mobile {
+        display: none;
+    }
+    .showreel {
+        display: block;
+    }
     .casesLayout {
         height: 89vh;
         clip-path: polygon(51% 0%, 100% 15%, 100% 100%, 0 100%, 0 30%);
@@ -147,6 +165,12 @@
     }
 }
 @media (max-width: 768px) {
+    .showreel__mobile {
+        display: none;
+    }
+    .showreel {
+        display: block;
+    }
     .casesArray {
         bottom: 210px;
     }
@@ -192,13 +216,17 @@
 }
 @media (max-width: 425px) {
     .showreel {
-        top: 0 ;
-        left: 0 ;
+        display: none;
+    }
+    .showreel__mobile {
+        display: block;
+        top: 0;
+        left: 0;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         width: 100vw;
-        height: 100vh; 
+        height: 100vh;
         position: absolute !important;
         content: '';
         z-index: -9;
