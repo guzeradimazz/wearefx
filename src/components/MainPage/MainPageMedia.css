@@ -147,6 +147,7 @@
     }
 }
 @media (max-width: 768px) {
+
     .casesArray {
         bottom: 210px;
     }
@@ -191,6 +192,12 @@
     }
 }
 @media (min-width: 320px) {
+    .only__desktop{
+        display: none;
+    }
+    .showreel{
+        background-image: url('../MainPage/video/videoPower.gif');
+    }
     .movable{
         display: none;
     }
