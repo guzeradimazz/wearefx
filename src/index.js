@@ -12,9 +12,9 @@ ReactDOM.render(
             <BrowserRouter>
                 <Routes>
                     <Route exact path="/wearefx" element={<App />} />
-                    <Route path="/story" element={<StoryPage />} />
-                    <Route path="/cases" element={<CasesPage />} />
-                    <Route path="/hire" element={<HirePage />} />
+                    <Route exact path="/story" element={<StoryPage />} />
+                    <Route exact path="/cases" element={<CasesPage />} />
+                    <Route exact path="/hire" element={<HirePage />} />
                 </Routes>
             </BrowserRouter>
     </React.StrictMode>,

@@ -22,13 +22,13 @@
     top: 0;
 }
 #polyline {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     pointer-events: none;
-    z-index: 9998;
+    z-index: 1000000;
 }
 #overlay1 {
     position: fixed;

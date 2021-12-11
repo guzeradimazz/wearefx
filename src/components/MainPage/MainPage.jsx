@@ -9,6 +9,7 @@ import './MainPage.css'
 import './MainPageMedia.css'
 
 import videoPower from './video/videoPower.mp4'
+import LineComp from '../line/LineComp'
 
 const applyLayout = (canvas) => {
     canvas.width = canvas.clientWidth
@@ -182,7 +183,7 @@ const MainPage = ({is1BtnHovered,is2BtnHovered,is3BtnHovered,setIs3BtnHovered,se
     
     return (
         <div>
-            <video className="only__desktop" preload="auto" no-controls autoplay loop playsinline muted>
+            <video className="only__desktop showreel"  autoPlay loop muted>
                 <source src={videoPower} type="video/mp4" />
             </video>
             <div className="only__mobile"></div>
@@ -265,6 +266,7 @@ const MainPage = ({is1BtnHovered,is2BtnHovered,is3BtnHovered,setIs3BtnHovered,se
                 <div
                     className={` ${isMc} ${isPuma} ${isFlint} ${isBig} ${isPm} ${isNavi} main`}
                 >
+                    {/* <LineComp/> */}
                     <div className="main__top">
                         <TypingText isClicked={isCasesClicked}/>
                         <div className="main__logo" />
