@@ -100,15 +100,11 @@ const MainPage = ({
 
         ctx.beginPath()
         ctx.moveTo(from.x, from.y)
-        if (is1BtnHovered) {
-            ctx.lineTo(buttonsCoords[0].x, buttonsCoords[0].y - 15)
-        } else if (is2BtnHovered) {
-            ctx.lineTo(buttonsCoords[1].x - 60, buttonsCoords[1].y + 20)
-        } else if (is3BtnHovered) {
-            ctx.lineTo(buttonsCoords[2].x + 65, buttonsCoords[2].y + 21)
-        } else {
-            ctx.lineTo(to.x, to.y)
-        }
+
+        if(isCasesEntered)ctx.lineTo(to.x+4, to.y-17)
+        if(isStoryEntered)ctx.lineTo(to.x-30, to.y+12)
+        if(isHireEntered)ctx.lineTo(to.x+40, to.y+12)
+        else ctx.lineTo(to.x, to.y)
         ctx.stroke()
     }
     function drawAnimLine(canvas, mouseCoords, elementCoords) {
@@ -218,7 +214,7 @@ const MainPage = ({
                 <MainPageButton
                     canvas={canvas1}
                     onClick={casesClicked}
-                    isHovered={is1BtnHovered}
+                    isHovered={isCasesEntered}
                     title="cases"
                     isClicked={isCasesClicked}
                     className={

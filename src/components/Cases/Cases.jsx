@@ -198,7 +198,7 @@ export const Cases = ({
             <div
                 className={`${mcBack} ${pumaBack} ${flintBack} ${bigBack} ${pmBack} ${naviBack} animate__animated animate__slideInUp casesLayout`}
             >
-                <SwiperSLider/>
+                <SwiperSLider />
                 <Cube showCube={`${showCube}`} />
                 <div className="casesTextBlock">
                     <div className="casesArrow" />

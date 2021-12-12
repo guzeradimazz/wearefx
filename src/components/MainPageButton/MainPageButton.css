@@ -24,9 +24,9 @@
     border: 1px solid #fff;
     animation: showMainPageBtn 0.4s;
 } */
-.MainPageButton:hover {
+/* .MainPageButton:hover {
     background-color: rgba(255, 255, 255, 0.12);
-}
+} */
 .firstCircle {
     position: absolute;
     top: 40px;
@@ -54,7 +54,7 @@
     right: 60px;
     z-index: 1000;
 }
-.MainPageButton:hover .first__dot {
+/* .MainPageButton:hover .first__dot {
     display: block;
     transition: all 0.3s ease;
     animation: firstDotAnim 0.3s;
@@ -68,8 +68,8 @@
     display: block;
     transition: all 0.3s ease;
     animation: thirdDotAnim 0.3s;
-}
-@keyframes firstDotAnim {
+} */
+/* @keyframes firstDotAnim {
     0% {
         transform: translateX(-20px);
         -webkit-transform: translateX(-20px);
@@ -143,10 +143,10 @@
     background-color: #fff;
     z-index: 10000000;
     transition: 3s ease;
-}
-.MainPageButton span {
+} */
+/* .MainPageButton span {
     transition: 3s ease;
-}
+} */
 @keyframes showMainPageBtn {
     0% {
         transform: scale(0);

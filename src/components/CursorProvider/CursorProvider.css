@@ -11,13 +11,10 @@
     transform: translate(-50%, -50%);
     pointer-events: none;
 }
-.MainPageButton:hover + .movable::before{
-    display: none;
-}
 .hoveredCursorClass{
     animation: hoveredCurs .2s ease-in-out;
     transition: .1s ease;
-    transform: scale(4);
+    transform: scale(4) translate(-10%, -10%);
     background-image: url('../../images/CursorHovered.svg');
 }
 @keyframes hoveredCurs {
@@ -26,16 +23,7 @@
         transform: scale(1);
     }
     100%{
-        transform: scale(4);
+        transform: scale(4) rotate(179deg);
         opacity: 0;
     }
-}
-.movable::before {
-    position: absolute;
-    transform: translate(+61%, +56%);
-    content: '';
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.226);
 }
