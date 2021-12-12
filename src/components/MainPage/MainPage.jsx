@@ -16,7 +16,14 @@ const applyLayout = (canvas) => {
     canvas.height = canvas.clientHeight
 }
 
-const MainPage = ({is1BtnHovered,is2BtnHovered,is3BtnHovered,setIs3BtnHovered,setIs2BtnHovered,setIs1BtnHovered}) => {
+const MainPage = ({
+    is1BtnHovered,
+    is2BtnHovered,
+    is3BtnHovered,
+    setIs3BtnHovered,
+    setIs2BtnHovered,
+    setIs1BtnHovered,
+}) => {
     const [isMc, setisMc] = useState('')
     const [isPuma, setisPuma] = useState('')
     const [isFlint, setisFlint] = useState('')
@@ -25,8 +32,6 @@ const MainPage = ({is1BtnHovered,is2BtnHovered,is3BtnHovered,setIs3BtnHovered,se
     const [isNavi, setisNavi] = useState('')
 
     const [buttonsCoords, setButtonsCoords] = useState([])
-
-
 
     const btn1Ref = useRef(null)
     const btn2Ref = useRef(null)
@@ -112,9 +117,21 @@ const MainPage = ({is1BtnHovered,is2BtnHovered,is3BtnHovered,setIs3BtnHovered,se
     }
     const onMove = (e) => {
         if (!buttonsCoords.length) return
-        drawAnimLine(canvas1, { x: e.clientX, y: e.clientY-10 }, buttonsCoords[0])
-        drawAnimLine(canvas2, { x: e.clientX-9, y: e.clientY+4 }, buttonsCoords[1])
-        drawAnimLine(canvas3, { x: e.clientX+8, y: e.clientY+4 }, buttonsCoords[2])
+        drawAnimLine(
+            canvas1,
+            { x: e.clientX, y: e.clientY - 10 },
+            buttonsCoords[0]
+        )
+        drawAnimLine(
+            canvas2,
+            { x: e.clientX - 9, y: e.clientY + 4 },
+            buttonsCoords[1]
+        )
+        drawAnimLine(
+            canvas3,
+            { x: e.clientX + 8, y: e.clientY + 4 },
+            buttonsCoords[2]
+        )
     }
     useEffect(() => {
         applyLayout(canvas1)
@@ -145,10 +162,10 @@ const MainPage = ({is1BtnHovered,is2BtnHovered,is3BtnHovered,setIs3BtnHovered,se
             try {
                 btn1Ref.current.removeEventListener('mouseover', on1BtnEnter)
                 btn1Ref.current.removeEventListener('mouseleave', on1BtnLeave)
-    
+
                 btn2Ref.current.removeEventListener('mouseover', on2BtnEnter)
                 btn2Ref.current.removeEventListener('mouseleave', on2BtnLeave)
-    
+
                 btn3Ref.current.removeEventListener('mouseover', on3BtnEnter)
                 btn3Ref.current.removeEventListener('mouseleave', on3BtnLeave)
             } catch (error) {
@@ -180,10 +197,10 @@ const MainPage = ({is1BtnHovered,is2BtnHovered,is3BtnHovered,setIs3BtnHovered,se
         setIsCanvasesHidded(!isCanvasesHidded)
         setIsHireClicked(!isHireClicked)
     }
-    
+
     return (
         <div>
-            <video className="showreel"  autoPlay loop muted>
+            <video className="showreel" autoPlay loop muted>
                 <source src={videoPower} type="video/mp4" />
             </video>
             <div className="showreel__mobile"></div>
@@ -268,7 +285,7 @@ const MainPage = ({is1BtnHovered,is2BtnHovered,is3BtnHovered,setIs3BtnHovered,se
                 >
                     {/* <LineComp/> */}
                     <div className="main__top">
-                        <TypingText isClicked={isCasesClicked}/>
+                        <TypingText isClicked={isCasesClicked} />
                         <div className="main__logo" />
                     </div>
                     <div className="main__bottom">

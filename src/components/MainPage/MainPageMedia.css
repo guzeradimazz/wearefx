@@ -1,5 +1,6 @@
 @media (min-width: 2560px) {
-    .showreel__mobile {
+    .showreel__mobile,
+    .swiper__mobile {
         display: none;
     }
     .showreel {
@@ -121,7 +122,8 @@
     }
 }
 @media (min-width: 1440px) {
-    .showreel__mobile {
+    .showreel__mobile,
+    .swiper__mobile {
         display: none;
     }
     .showreel {
@@ -141,7 +143,8 @@
     }
 }
 @media (max-width: 1024px) {
-    .showreel__mobile {
+    .showreel__mobile,
+    .swiper__mobile {
         display: none;
     }
     .showreel {
@@ -165,7 +168,8 @@
     }
 }
 @media (max-width: 768px) {
-    .showreel__mobile {
+    .showreel__mobile,
+    .swiper__mobile {
         display: none;
     }
     .showreel {
@@ -232,6 +236,25 @@
         z-index: -9;
         background-image: url('../MainPage/video/videoPower.gif');
     }
+    .swiper__mobile {
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        position: absolute !important;
+        z-index: 1;
+        overflow-y: hidden;
+    }
+    .swiper__slide{
+        background-color: #fff;
+        font-size: 30px;
+        height: 100vh;
+        z-index: 2;
+        position: relative;
+        width: 100vw;
+        overflow-y: hidden;
+    }
     .movable {
         display: none;
     }
@@ -291,7 +314,8 @@
     .hireLayout,
     .casesLayout {
         position: absolute;
-        top: 0;left: 0;
+        top: 0;
+        left: 0;
         height: 100vh;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }

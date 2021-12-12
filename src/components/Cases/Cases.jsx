@@ -3,8 +3,7 @@ import './Cases.css'
 import 'animate.css'
 import Cube from '../Cube/Cube'
 import { Link } from 'react-router-dom'
-import { Line } from 'three'
-import LineComp from '../line/LineComp'
+import SwiperSLider from '../MainPage/Swiper/SwiperSLider'
 
 export const Cases = ({
     setisMc,
@@ -199,6 +198,7 @@ export const Cases = ({
             <div
                 className={`${mcBack} ${pumaBack} ${flintBack} ${bigBack} ${pmBack} ${naviBack} animate__animated animate__slideInUp casesLayout`}
             >
+                <SwiperSLider/>
                 <Cube showCube={`${showCube}`} />
                 <div className="casesTextBlock">
                     <div className="casesArrow" />
