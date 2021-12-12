@@ -10,6 +10,7 @@ import './MainPageMedia.css'
 
 import videoPower from './video/videoPower.mp4'
 import LineComp from '../line/LineComp'
+import CursorProvider from '../CursorProvider/CursorProvider'
 
 const applyLayout = (canvas) => {
     canvas.width = canvas.clientWidth

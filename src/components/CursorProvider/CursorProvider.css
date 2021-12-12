@@ -10,20 +10,22 @@
     opacity: .9;
     transform: translate(-50%, -50%);
     pointer-events: none;
+    transition:.3s;
+    animation: hoveredCurs .3s ease-in;
 }
 .hoveredCursorClass{
-    animation: hoveredCurs .2s ease-in-out;
-    transition: .1s ease;
+    /* animation: hoveredCurs .8s ease-in-out; */
+    transition: .2s ease;
     transform: scale(4) translate(-10%, -10%);
     background-image: url('../../images/CursorHovered.svg');
 }
 @keyframes hoveredCurs {
     0%{
         opacity: 1;
-        transform: scale(1);
+        transform: none;
     }
     100%{
-        transform: scale(4) rotate(179deg);
+        transform: scale(4);
         opacity: 0;
     }
 }
