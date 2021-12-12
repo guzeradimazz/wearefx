@@ -7,20 +7,26 @@
     background-size: 100%;
     position: absolute;
     z-index: 999999999;
+    opacity: .9;
     transform: translate(-50%, -50%);
     pointer-events: none;
-    
+}
+.MainPageButton:hover + .movable::before{
+    display: none;
 }
 .hoveredCursorClass{
-    animation: hoveredCurs .3s ease-in;
-    transition: .2s ease-in;
-    transform: scale(5);
+    animation: hoveredCurs .2s ease-in-out;
+    transition: .1s ease;
+    transform: scale(4);
+    background-image: url('../../images/CursorHovered.svg');
 }
 @keyframes hoveredCurs {
     0%{
         opacity: 1;
+        transform: scale(1);
     }
     100%{
+        transform: scale(4);
         opacity: 0;
     }
 }

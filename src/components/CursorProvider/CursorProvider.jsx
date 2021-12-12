@@ -17,7 +17,7 @@ const CursorProvider = ({
 
     const onHideCursor = () => {
         setTimeout(() => {
-            setCursor(false)
+            setCursor(true)
         }, 300)
     }
     const onVisibleCursor = () => setCursor(true)

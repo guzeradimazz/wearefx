@@ -84,11 +84,17 @@ const MainPage = ({
     }
     const joinPoints = (ctx, from, to) => {
         const stroke = ctx.createLinearGradient(from.x, from.y, to.x, to.y)
-        stroke.addColorStop(0, 'rgba(255, 255, 255, 0)')
-        stroke.addColorStop(0.4, 'rgba(255, 255, 255, 0.2)')
-        stroke.addColorStop(0.5, 'white')
-        stroke.addColorStop(1, 'rgba(255, 255, 255)')
-
+        if (isCasesEntered || isStoryEntered || isHireEntered) {
+            stroke.addColorStop(0, 'rgba(255, 255, 255, 0)')
+            stroke.addColorStop(0.4, 'rgba(255, 255, 255, 0.2)')
+            stroke.addColorStop(0.5, 'rgba(255, 255, 255, 0.9)')
+            stroke.addColorStop(1, 'rgba(255, 255, 255, 0)')
+        } else {
+            stroke.addColorStop(0, 'rgba(255, 255, 255, 0)')
+            stroke.addColorStop(0.4, 'rgba(255, 255, 255, 0.2)')
+            stroke.addColorStop(0.5, 'white')
+            stroke.addColorStop(1, 'rgba(255, 255, 255)')
+        }
         ctx.strokeStyle = stroke
         ctx.lineWidth = 1
 
