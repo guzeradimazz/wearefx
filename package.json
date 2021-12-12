@@ -8,6 +8,7 @@
     "@react-three/cannon": "^4.2.0",
     "@react-three/drei": "^7.26.1",
     "@react-three/fiber": "^7.0.21",
+    "@react-yuki/ui": "^0.0.43",
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
@@ -19,6 +20,9 @@
     "react-id-swiper": "^4.0.0",
     "react-router-dom": "^6.0.2",
     "react-scripts": "4.0.3",
+    "react-slick": "^0.28.1",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^7.3.1",
     "typed.js": "^2.0.12",
     "web-vitals": "^1.1.2"
   },
