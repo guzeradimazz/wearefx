@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import './Hire.css'
-import 'animate.css'
 import Cube from '../Cube/Cube'
 import { Link } from 'react-router-dom'
 

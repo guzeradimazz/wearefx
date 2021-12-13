@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import './Cases.css'
-import 'animate.css'
 import Cube from '../Cube/Cube'
 import { Link } from 'react-router-dom'
 import SwiperSLider from '../MainPage/Swiper/SwiperSLider'
+import LineComp from '../Line/LineComp'
 
 export const Cases = ({
     setisMc,
@@ -196,8 +196,9 @@ export const Cases = ({
     if (isClicked) {
         return (
             <div
-                className={`${mcBack} ${pumaBack} ${flintBack} ${bigBack} ${pmBack} ${naviBack} animate__animated animate__slideInUp casesLayout`}
+                className={`${mcBack} ${pumaBack} ${flintBack} ${bigBack} ${pmBack} ${naviBack} casesLayout`}
             >
+                {/* <LineComp/> */}
                 <SwiperSLider />
                 <Cube showCube={`${showCube}`} />
                 <div className="casesTextBlock">

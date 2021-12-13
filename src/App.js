@@ -37,6 +37,7 @@ function App() {
         <div className="App">
             {
                 <CursorProvider
+                    classNameTest={' '}
                     hoveredCursor={is1BtnHovered}
                     hoveredCursor1={is2BtnHovered}
                     hoveredCursor2={is3BtnHovered}

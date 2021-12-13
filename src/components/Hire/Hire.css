@@ -6,7 +6,8 @@
     clip-path: polygon(0 0, 85% 0, 94% 92%, 0 100%);
     z-index: 2000;
     background-color: #000;
-    animation: fadeInTopLeft 0.3s;
+    animation: showLayout2;
+    animation-duration: 0.4s;
 }
 .gradientBtn {
     width: 110px;
@@ -27,24 +28,24 @@
 @keyframes gradient {
     0% {
         background-position: 0% 14%;
-        box-shadow: 0 0 0 0 rgb(238, 192, 27,0.7);
+        box-shadow: 0 0 0 0 rgb(238, 192, 27, 0.7);
     }
     50% {
         background-position: 100% 87%;
-        box-shadow: 0 0 0 20px rgb(238, 192, 27,0);
+        box-shadow: 0 0 0 20px rgb(238, 192, 27, 0);
     }
     100% {
         background-position: 0% 14%;
-        box-shadow: 0 0 0 0 rgb(238, 192, 27,0);
+        box-shadow: 0 0 0 0 rgb(238, 192, 27, 0);
     }
 }
-.violet_on_hover:hover{
-    color: #fff ;
-    transition: ease-in-out .3s all;
-    background-color: #7344F4;
+.violet_on_hover:hover {
+    color: #fff;
+    transition: ease-in-out 0.3s all;
+    background-color: #7344f4;
 }
-.violet_on_hover{
-    transition: ease-in-out .3s all;
+.violet_on_hover {
+    transition: ease-in-out 0.3s all;
 }
 .gradientBtn:before {
     content: '';
@@ -87,7 +88,9 @@
     width: 400px;
     margin-top: 30px;
 }
-.hireBLock__right__middle h3 ,.contact__tel , .hireBLock a{
+.hireBLock__right__middle h3,
+.contact__tel,
+.hireBLock a {
     font-weight: 400 !important;
 }
 .hireBLock__left__bottom {

@@ -9,7 +9,7 @@ import './MainPage.css'
 import './MainPageMedia.css'
 
 import videoPower from './video/videoPower.mp4'
-import LineComp from '../line/LineComp'
+import LineComp from '../Line/LineComp'
 import CursorProvider from '../CursorProvider/CursorProvider'
 
 const applyLayout = (canvas) => {
@@ -203,6 +203,7 @@ const MainPage = ({
 
     return (
         <div>
+            {/* <CursorProvider classNameTest='movable-transition'/> */}
             <video className="showreel" autoPlay loop muted>
                 <source src={videoPower} type="video/mp4" />
             </video>

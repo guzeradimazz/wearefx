@@ -10,10 +10,12 @@ const CursorProvider = ({
     hoveredCursor,
     hoveredCursor1,
     hoveredCursor2,
+    classNameTest,
 }) => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
     const [cursor, setCursor] = useState(true)
     const [classBulean, setClassBulean] = useState(false)
+    const [cursClass, setCursClass] = useState('hoveredCursorClass')
 
     const onHideCursor = () => {
         setTimeout(() => {
@@ -44,11 +46,14 @@ const CursorProvider = ({
     }
 
     useEffect(() => {
-        if (hoveredCursor) setClassBulean(true)
-        else if (hoveredCursor1) setClassBulean(true)
+        if (hoveredCursor) {
+            setClassBulean(true)
+        } else if (hoveredCursor1) setClassBulean(true)
         else if (hoveredCursor2) setClassBulean(true)
-        else setClassBulean(false)
-    }, [hoveredCursor, hoveredCursor1, hoveredCursor2])
+        else {
+            setClassBulean(false)
+        }
+    }, [hoveredCursor, hoveredCursor1, hoveredCursor2, classNameTest,cursClass])
 
     return (
         <CursorContext.Provider
@@ -57,12 +62,11 @@ const CursorProvider = ({
             <ins
                 className={
                     classBulean
-                        ? cx(cursor && 'hoveredCursorClass movable', {
+                        ? cx(cursor && ` ${cursClass} movable`, {
                               active: !!cursor,
                               [`cursor-${cursor}`]: !!cursor,
                           })
-                        :
-                         cx(cursor && 'movable', {
+                        : cx(cursor && `  movable `, {
                               active: !!cursor,
                               [`cursor-${cursor}`]: !!cursor,
                           })
