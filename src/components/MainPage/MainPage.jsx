@@ -212,6 +212,7 @@ const MainPage = ({
                 {/* <Link to="/story"> STORY PAGE </Link>
                 <Link to="/cases"> CASES PAGE </Link>
                 <Link to="/hire"> HIRE PAGE </Link> */}
+                <Link to='/pesonal'>VIDEO</Link>
                 <MainPageButton
                     canvas={canvas1}
                     onClick={casesClicked}
