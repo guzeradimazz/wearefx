@@ -23,7 +23,9 @@ export const VideoPersonal = () => {
     const handleProgress = (e) => {
         setVideoState({ ...videoState, ...e })
     }
-    const handleProgressTrack = () => {}
+    const handleProgressTrack = (e) => {
+        refPlayer.current.seekTo(Number(e))
+    }
     return (
         <div className="video-object">
             <div className="video-toner" />

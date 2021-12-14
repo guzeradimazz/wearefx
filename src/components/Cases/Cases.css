@@ -97,12 +97,12 @@
     z-index: 2000;
     background-color: #f1bb00;
     color: #000;
-    transition: 0.3s ease-in-out;
+    transition: ease-in-out;
 }
 .mcDonalds:hover::before {
     z-index: 2000;
     position: absolute;
-    transition: 0.3s ease-in-out;
+    transition: ease-in-out;
     left: -36px;
     content: '';
     width: 36px;
@@ -213,6 +213,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 2000;
+    transition: background-image .3s ease;
+    transition: all ease-in;
 }
 .pumaBack {
     z-index: 2000;

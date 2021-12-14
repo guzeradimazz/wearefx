@@ -42,3 +42,40 @@
     font-weight: lighter;
     color: #edf5fc;
 }
+.text-block {
+    width: 100vw;
+    background-image: url('../../../images/X.svg');
+    background-repeat: space;
+    background-position: center;
+    background-size: 8%;
+    background-color: #071013;
+    color: #edf5fc;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.text-block div{
+    display: flex;
+    padding: 10% 0;
+}
+.text-block p {
+    width: 30%;
+    margin: auto;
+    font-size: 24px;
+}
+.text-block p:nth-child(2) {
+    font-weight: lighter;
+}
+.text-block p:nth-child(1) {
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.personal-image{
+    content: '';
+    width: 100vw;
+    height: 80vh;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../../../images/personal.svg');
+}

@@ -24,7 +24,7 @@ const VideoControls = ({
                         max={loadedSeconds}
                         min={0}
                         step={1}
-                        onChange={() => handleProgressTrack()}
+                        onChange={(e) => handleProgressTrack(e.target.value)}
                     />
                     <div className="play-mute">
                         <button

@@ -30,6 +30,9 @@
     width: 100%;
     background-color: transparent;
 }
+.video-video video{
+    object-fit: cover;
+}
 .video-center{
     align-items: center;
     display: flex;
@@ -100,8 +103,7 @@ input[type='range']::-webkit-slider-thumb {
     margin-top: -4px;
     box-shadow: -1000px 0px 0px -1000px #eebf1b;
 }
-input[type='range']::-moz-range-track {
-    height: 7px;
+/* input[type='range']::-moz-range-track {
     background-color: rgb(237, 245, 252, 0.24);
 }
 input[type='range']::-moz-range-thumb {
@@ -113,4 +115,4 @@ input[type='range']::-moz-range-thumb {
     box-shadow: -1000px 0px 0px -1000px #eebf1b;
     padding: 0px;
     margin: 0px;
-}
+} */
