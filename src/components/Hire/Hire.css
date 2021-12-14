@@ -5,9 +5,19 @@
     height: 100vh;
     clip-path: polygon(0 0, 85% 0, 94% 92%, 0 100%);
     z-index: 2000;
+    transition: ease-in-out;
     background-color: #000;
-    animation: showLayout2;
+    animation: hireShow;
+    animation-fill-mode: forwards;
     animation-duration: 0.4s;
+}
+@keyframes hireShow {
+    0%{
+        clip-path: polygon(51% 72%, 80% 71%, 94% 92%, 60% 93%);
+    }
+    100%{
+        clip-path: polygon(0 0, 85% 0, 94% 92%, 0 100%);
+    }
 }
 .gradientBtn {
     width: 110px;

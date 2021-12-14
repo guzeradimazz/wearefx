@@ -1,8 +1,8 @@
 .MainPageButton {
     position: relative;
     text-transform: uppercase;
-    width: 85px;
-    height: 85px;
+    width: 100px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,6 +10,7 @@
     font-size: 18px;
     z-index: 2001;
     color: #fff;
+    transition: .3s ease-in-out;
     animation: showMainPageBtn 0.4s;
     transform: translate(0);
 }

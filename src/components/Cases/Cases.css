@@ -1,13 +1,16 @@
 .casesLayout {
+    display: block;
     position: absolute;
     bottom: 0;
     width: 100vw;
     height: 86vh;
-    clip-path: polygon(50% 0%, 100% 15%, 100% 100%, 0 100%, 0 30%);
     z-index: 2000;
     background-color: #000;
     animation: showLayout;
     animation-duration: 0.4s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    clip-path: polygon(50% 0%, 55% 5%, 51% 8%, 48% 9%, 43% 6%);
 }
 @keyframes showLayout {
     0% {
@@ -15,14 +18,6 @@
     }
     100% {
         clip-path: polygon(50% 0%, 100% 15%, 100% 100%, 0 100%, 0 30%);
-    }
-} 
-@keyframes showLayout2 {
-    0% {
-        clip-path: polygon(74% 42%, 87% 64%, 90% 89%, 63% 91%, 56% 54%);
-    }
-    100% {
-        clip-path: polygon(0 0, 85% 0, 94% 92%, 0 100%);
     }
 }
 .casesBtn {

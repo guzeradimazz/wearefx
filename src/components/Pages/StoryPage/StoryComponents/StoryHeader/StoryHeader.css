@@ -37,7 +37,7 @@
     color: #fff;
     text-transform: uppercase;
 }
-.header-right {
+.header-right, .personal-right{
     content: '';
     right: 0;
     background-image: url('../../../../../images/Logo.svg');

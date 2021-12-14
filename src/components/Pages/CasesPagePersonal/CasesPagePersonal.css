@@ -1,0 +1,44 @@
+.personal-page {
+    width: 100vw;
+    background-color: #071013;
+}
+.personal-header {
+    display: flex;
+    padding: 60px 60px 0;
+    justify-content: space-between;
+}
+.personal-left,
+.personal-left div {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+.personal-left {
+    justify-content: space-between;
+    width: 50%;
+}
+.personal-left h1:nth-child(1) {
+    margin-right: 7px;
+}
+.personal-left div:nth-child(1) h1,
+.link {
+    font-weight: normal;
+    color: #edf5fc;
+    font-size: 18px;
+    line-height: 23.04px;
+}
+.link:nth-child(2) {
+    margin-left: 35px;
+}
+.header-title {
+    padding: 60px 0 0 60px;
+    font-size: 70px;
+    color: #edf5fc;
+    font-weight: normal;
+}
+.header-desc {
+    padding: 0 0 60px 60px;
+    font-size: 24px;
+    font-weight: lighter;
+    color: #edf5fc;
+}

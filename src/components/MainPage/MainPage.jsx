@@ -203,7 +203,6 @@ const MainPage = ({
 
     return (
         <div>
-            {/* <CursorProvider classNameTest='movable-transition'/> */}
             <video className="showreel" autoPlay loop muted>
                 <source src={videoPower} type="video/mp4" />
             </video>
