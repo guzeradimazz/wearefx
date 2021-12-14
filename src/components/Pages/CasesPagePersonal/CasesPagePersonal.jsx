@@ -1,12 +1,17 @@
 import React from 'react'
+import CursorProvider from '../../CursorProvider/CursorProvider'
 import './CasesPagePersonal.css'
 import { PersonalHeader } from './PersonalHeader'
+import { VideoPersonal } from './Video/VideoPersonal'
 
 const CasesPagePersonal = () => {
     return (
-        <div className='personal-page'>
-            <PersonalHeader/>
-        </div>
+        <CursorProvider>
+            <div className="personal-page">
+                <PersonalHeader />
+                <VideoPersonal />
+            </div>
+        </CursorProvider>
     )
 }
 
