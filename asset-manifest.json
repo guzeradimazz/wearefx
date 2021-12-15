@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/wearefx/static/css/main.803451f8.chunk.css",
-    "main.js": "/wearefx/static/js/main.cd3aa06a.chunk.js",
-    "main.js.map": "/wearefx/static/js/main.cd3aa06a.chunk.js.map",
+    "main.css": "/wearefx/static/css/main.533988d3.chunk.css",
+    "main.js": "/wearefx/static/js/main.52a0a5c8.chunk.js",
+    "main.js.map": "/wearefx/static/js/main.52a0a5c8.chunk.js.map",
     "runtime-main.js": "/wearefx/static/js/runtime-main.a95c827a.js",
     "runtime-main.js.map": "/wearefx/static/js/runtime-main.a95c827a.js.map",
     "static/css/2.8872faf8.chunk.css": "/wearefx/static/css/2.8872faf8.chunk.css",
-    "static/js/2.395f189b.chunk.js": "/wearefx/static/js/2.395f189b.chunk.js",
-    "static/js/2.395f189b.chunk.js.map": "/wearefx/static/js/2.395f189b.chunk.js.map",
+    "static/js/2.db3b3c9f.chunk.js": "/wearefx/static/js/2.db3b3c9f.chunk.js",
+    "static/js/2.db3b3c9f.chunk.js.map": "/wearefx/static/js/2.db3b3c9f.chunk.js.map",
     "index.html": "/wearefx/index.html",
     "static/css/2.8872faf8.chunk.css.map": "/wearefx/static/css/2.8872faf8.chunk.css.map",
-    "static/css/main.803451f8.chunk.css.map": "/wearefx/static/css/main.803451f8.chunk.css.map",
-    "static/js/2.395f189b.chunk.js.LICENSE.txt": "/wearefx/static/js/2.395f189b.chunk.js.LICENSE.txt",
+    "static/css/main.533988d3.chunk.css.map": "/wearefx/static/css/main.533988d3.chunk.css.map",
+    "static/js/2.db3b3c9f.chunk.js.LICENSE.txt": "/wearefx/static/js/2.db3b3c9f.chunk.js.LICENSE.txt",
     "static/media/StoryBottom.css": "/wearefx/static/media/storyEllipse.3aee60d4.svg",
     "static/media/HirePage.css": "/wearefx/static/media/CloseWhite.049dfdf0.svg",
     "static/media/CursorProvider.css": "/wearefx/static/media/CursorHovered.35c99e5a.svg",
     "static/media/CasesSlider.css": "/wearefx/static/media/Ellipse 33right.2c10d67c.svg",
+    "static/media/CasesPagePersonal.css": "/wearefx/static/media/personal.9b816d6c.svg",
     "static/media/stylesheet.css": "/wearefx/static/media/FuturaPTCond-MediumObl.f61a3fb9.woff",
     "static/media/Cases.css": "/wearefx/static/media/▼arrowTop.6f5ac776.svg",
     "static/media/MainPage.css": "/wearefx/static/media/bg-noise.1087c988.gif",
     "static/media/CasesPage.css": "/wearefx/static/media/Showreel.9f905eb1.svg",
     "static/media/StoryMain.css": "/wearefx/static/media/X.3b8edcf8.svg",
-    "static/media/CasesPagePersonal.css": "/wearefx/static/media/personal.9b816d6c.svg",
     "static/media/slick-theme.css": "/wearefx/static/media/slick.c94f7671.ttf",
     "static/media/MainPageMedia.css": "/wearefx/static/media/videoPower.4577a6fd.gif",
     "static/media/videoPower.46fefcbf.mp4": "/wearefx/static/media/videoPower.46fefcbf.mp4"
@@ -29,8 +29,8 @@
   "entrypoints": [
     "static/js/runtime-main.a95c827a.js",
     "static/css/2.8872faf8.chunk.css",
-    "static/js/2.395f189b.chunk.js",
-    "static/css/main.803451f8.chunk.css",
-    "static/js/main.cd3aa06a.chunk.js"
+    "static/js/2.db3b3c9f.chunk.js",
+    "static/css/main.533988d3.chunk.css",
+    "static/js/main.52a0a5c8.chunk.js"
   ]
 }
