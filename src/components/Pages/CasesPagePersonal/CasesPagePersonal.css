@@ -1,4 +1,5 @@
 .personal-page {
+    position: relative;
     width: 100vw;
     background-color: #071013;
 }
@@ -53,14 +54,24 @@
     justify-content: space-between;
     align-items: flex-start;
 }
-.text-block div {
+.text-block-div {
     display: flex;
     padding: 10% 0;
 }
-.text-block p {
+.text-block-p {
     width: 30%;
     margin: auto;
     font-size: 24px;
+}
+.desc{
+    width: 100%;
+    text-transform: none !important;
+    margin-top: 60px !important;
+}
+.desc p:nth-child(2){
+    font-weight: lighter;
+    font-weight: 15px;
+    color: #DAE0F2;
 }
 .text-block p:nth-child(2) {
     font-weight: lighter;
@@ -114,7 +125,7 @@
     height: 96px;
     border-radius: 50%;
     content: '';
-    background-color: rgba(237, 245, 252, 0.12);
+    background-color: rgba(237, 245, 252, 0.09);
 }
 .prev-slider,.next-slider{
     z-index: 2000;
@@ -141,4 +152,79 @@
     background-position: center right;
     right: 36px;
     background-image: url('../../../images/Ellipse\ 33slRIGHT.svg');
+}
+.contact-block{
+    width: 100vw;
+    background-color: #071013;
+    padding: 120px;
+    position: relative;
+}
+.contact-block .storyBtn{
+    top: 120px;
+    right: 120px;
+}
+.mt100{
+    margin-bottom: 100px;}
+.main-contact{
+    font-size: 40px;
+    color: #edf5fc;
+    text-transform: uppercase;
+}
+.position{
+    color: #dae0f270 !important;
+    font-size: 20px !important;
+    text-transform: none !important;
+    font-weight: lighter !important;
+}
+.line-block{
+    margin-bottom: 50px;
+    display: flex;
+}
+.line-block div{
+    margin-right: 3%;
+}
+.line-block div p{
+    font-size: 30px;
+    color: #edf5fc;
+    text-transform: uppercase;
+}
+.big-block{
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+.big-block p:nth-child(1){
+font-size: 45px !important;
+}
+.next-project{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../../images/Showreel.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.next-project .storyBtn{
+    position: absolute;
+    top: calc(60%);
+    right: 120px;
+}
+.info-block{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+    padding-top: 10%;
+    color: #DAE0F2;
+}
+.info-block h1{
+    font-size: 120px;
+}
+.info-block p{
+    font-size: 24px;
+}
+.next-proj{
+    padding-top: 16%;
+    color: #dae0f279;
 }

@@ -154,7 +154,6 @@ export const CasesPage = () => {
     }, [currentPage, setShowedCases, casesArray])
 
     return (
-        <CursorProvider>
             <div className={`cases-page`}>
                 <Cube />
                 <div className={`${isHoveredBackground}`}>
@@ -212,6 +211,5 @@ export const CasesPage = () => {
                     </div>
                 </div>
             </div>
-        </CursorProvider>
     )
 }
