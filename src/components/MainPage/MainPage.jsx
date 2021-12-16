@@ -209,9 +209,9 @@ const MainPage = ({
             <div className="showreel__mobile"></div>
             <div className="toner" />
             <div>
-                {/* <Link to="/story"> STORY PAGE </Link>
+                <Link to="/story"> STORY PAGE </Link>
                 <Link to="/cases"> CASES PAGE </Link>
-                <Link to="/hire"> HIRE PAGE </Link> */}
+                <Link to="/hire"> HIRE PAGE </Link>
                 <Link to='/pesonal'>VIDEO</Link>
                 <MainPageButton
                     canvas={canvas1}
