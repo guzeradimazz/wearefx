@@ -13,9 +13,11 @@ export const StoryPage = () => {
         document.getElementById('overlay3').classList.add('displayNone')
     }, [])
     return (
+        <CursorProvider>
             <div>
                 <StoryMain />
                 <StoryBottom />
             </div>
+        </CursorProvider>
     )
 }

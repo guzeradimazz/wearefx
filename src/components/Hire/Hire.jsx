@@ -94,10 +94,11 @@ export const Hire = ({
                         </div>
                     </div>
                 </div>
-                <Link to='/hire'>
+                <Link to="/hire">
                     <div className="hireBtn gradientBtn">
                         <p>
-                            chat with us
+                            chat
+                            with us
                             <br /> in telegram
                         </p>
                     </div>

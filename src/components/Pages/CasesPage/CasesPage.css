@@ -34,6 +34,20 @@
     margin-bottom: 15px;
     z-index: 2000;
     height: 36px;
+    transition: ease-out;
+    animation: fadeCasesItem;
+    animation-duration: .3s;
+
+}
+@keyframes fadeCasesItem {
+    from {
+        opacity: 0;
+        transform: translateX(30%) scale(.5);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
 }
 .casesArrayItem:hover {
     z-index: 2000;

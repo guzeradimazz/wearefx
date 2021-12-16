@@ -12,9 +12,9 @@ export const CasesSlider = ({ state, setState }) => {
     }
     return (
         <div className="cases-page-slider">
-            <p className="current-page">
+            <div className="current-page">
                 <p>{state}</p>/2
-            </p>
+            </div>
             <div className="slider-buttons">
                 <div onClick={decState} className="slider-back"></div>
                 <div onClick={incState} className="slider-next"></div>

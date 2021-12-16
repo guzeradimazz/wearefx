@@ -26,14 +26,14 @@ export const CasesPage = () => {
 
     const casesArray = [
         {
-            id: 1,
+            id: 12345,
             title: `McDonald's`,
             casesArrayItemBack: 'mcHoveredBack',
             personalClass: 'hush-MC',
             page: 1,
         },
         {
-            id: 2,
+            id: 4562,
             title: `Puma`,
             casesArrayItemBack: 'mcHoveredBack',
             personalClass: 'hush-Puma',
@@ -41,7 +41,7 @@ export const CasesPage = () => {
             page: 1,
         },
         {
-            id: 3,
+            id: 435673,
             title: `Flint`,
             casesArrayItemBack: 'mcHoveredBack',
             personalClass: 'hush-Flint',
@@ -49,7 +49,7 @@ export const CasesPage = () => {
             page: 1,
         },
         {
-            id: 4,
+            id: 498765432,
             title: `Little big`,
             casesArrayItemBack: 'mcHoveredBack',
             personalClass: 'hush-big',
@@ -57,7 +57,7 @@ export const CasesPage = () => {
             page: 1,
         },
         {
-            id: 5,
+            id: 55678,
             title: `Parimatch`,
             casesArrayItemBack: 'mcHoveredBack',
             personalClass: 'hush-Pm',
@@ -65,7 +65,7 @@ export const CasesPage = () => {
             page: 1,
         },
         {
-            id: 6,
+            id: 66743567,
             title: `Navi`,
             casesArrayItemBack: 'mcHoveredBack',
             personalClass: 'hush-Navi',
@@ -73,7 +73,7 @@ export const CasesPage = () => {
             page: 1,
         },
         {
-            id: 7,
+            id: 756789,
             title: `Tvorchi`,
             casesArrayItemBack: 'mcHoveredBack',
             personalClass: 'hush-Tvorchi',
@@ -81,7 +81,7 @@ export const CasesPage = () => {
             page: 1,
         },
         {
-            id: 8,
+            id: 8765438,
             title: `Bond Delivery`,
             casesArrayItemBack: 'mcHoveredBack',
             personalClass: 'hush-Bond',
@@ -89,7 +89,7 @@ export const CasesPage = () => {
             page: 1,
         },
         {
-            id: 9,
+            id: 567899,
             title: `Puma X FC Shaktar`,
             casesArrayItemBack: 'mcHoveredBack',
             personalClass: 'hush-Shaktar',
@@ -97,7 +97,7 @@ export const CasesPage = () => {
             page: 1,
         },
         {
-            id: 10,
+            id: 1890876540,
             title: `Kite`,
             casesArrayItemBack: 'mcHoveredBack',
             personalClass: 'hush-Kite',
@@ -105,7 +105,7 @@ export const CasesPage = () => {
             page: 1,
         },
         {
-            id: 11,
+            id: 1678908767541,
             title: `Chipsters`,
             casesArrayItemBack: 'mcHoveredBack',
             personalClass: 'hush-Chipsters',
@@ -113,35 +113,35 @@ export const CasesPage = () => {
             page: 1,
         },
         {
-            id: 12,
+            id: 1567892,
             title: `Hushme`,
             casesArrayItemBack: 'mcHoveredBack',
             personalClass: 'hush-item',
             page: 1,
         },
         {
-            id: 13,
+            id: 135555,
             title: `test test`,
             casesArrayItemBack: 'mcHoveredBack',
             personalClass: 'hush-item',
             page: 2,
         },
         {
-            id: 14,
+            id: 16786544,
             title: `test test`,
             casesArrayItemBack: 'mcHoveredBack',
             personalClass: 'hush-item',
             page: 2,
         },
         {
-            id: 15,
+            id: 567815,
             title: `test test`,
             casesArrayItemBack: 'mcHoveredBack',
             personalClass: 'hush-item',
             page: 2,
         },
         {
-            id: 15,
+            id: 1765435,
             title: `test test`,
             casesArrayItemBack: 'mcHoveredBack',
             personalClass: 'hush-item',
@@ -150,10 +150,11 @@ export const CasesPage = () => {
     ]
 
     useEffect(() => {
-        setShowedCases(casesArray.filter((e) => e.page === currentPage))
-    }, [currentPage, setShowedCases, casesArray])
+        setShowedCases([...casesArray].filter((e) => e.page == currentPage))
+    }, [currentPage])
 
     return (
+        <CursorProvider>
             <div className={`cases-page`}>
                 <Cube />
                 <div className={`${isHoveredBackground}`}>
@@ -211,5 +212,6 @@ export const CasesPage = () => {
                     </div>
                 </div>
             </div>
+        </CursorProvider>
     )
 }

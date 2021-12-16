@@ -13,6 +13,7 @@ const HirePage = () => {
     }, [])
 
     return (
+        <CursorProvider>
             <div>
                 <Cube />
                 <div className="story-header">
@@ -103,6 +104,7 @@ const HirePage = () => {
                     <div className="hireBtnViolet" />
                 </Link>
             </div>
+        </CursorProvider>
     )
 }
 

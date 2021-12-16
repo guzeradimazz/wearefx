@@ -10,7 +10,6 @@ import { StoryPage } from './components/Pages/StoryPage/StoryPage'
 import './font/stylesheet.css'
 
 ReactDOM.render(
-    <CursorProvider>
         <React.StrictMode>
             <BrowserRouter>
                 <Routes>
@@ -25,7 +24,7 @@ ReactDOM.render(
                     />
                 </Routes>
             </BrowserRouter>
-        </React.StrictMode>
-    </CursorProvider>,
+        </React.StrictMode>,
+    
     document.getElementById('root')
 )
