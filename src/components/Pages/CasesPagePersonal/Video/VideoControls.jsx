@@ -18,14 +18,22 @@ const VideoControls = ({
                     <p>Scroll down to view details</p>
                 </div>
                 <div className="video-center">
-                    <input
-                        type="range"
-                        value={playedSeconds}
-                        max={loadedSeconds}
-                        min={0}
-                        step={1}
-                        onChange={(e) => handleProgressTrack(e.target.value)}
-                    />
+                    <div className='full-progressbar'>
+                        <input
+                            type="range"
+                            value={playedSeconds}
+                            max={loadedSeconds}
+                            min={0}
+                            step={1}
+                            onChange={(e) =>
+                                handleProgressTrack(e.target.value)
+                            }
+                        />
+                        <progress
+                            value={playedSeconds}
+                            max={loadedSeconds}
+                        ></progress>
+                    </div>
                     <div className="play-mute">
                         <button
                             className="play-btn"

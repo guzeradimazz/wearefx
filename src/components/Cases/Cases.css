@@ -111,6 +111,9 @@
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
+    transition: ease-out;
+    animation: fadeCasesItem;
+    animation-duration: .3s;
 }
 .puma:hover {
     z-index: 2000;

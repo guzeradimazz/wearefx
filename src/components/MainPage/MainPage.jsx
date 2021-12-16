@@ -102,9 +102,9 @@ const MainPage = ({
         ctx.beginPath()
         ctx.moveTo(from.x, from.y)
 
-        if(isCasesEntered)ctx.lineTo(to.x+4, to.y-17)
-        if(isStoryEntered)ctx.lineTo(to.x-30, to.y+12)
-        if(isHireEntered)ctx.lineTo(to.x+40, to.y+12)
+        if (isCasesEntered) ctx.lineTo(to.x + 4, to.y - 17)
+        if (isStoryEntered) ctx.lineTo(to.x - 30, to.y + 12)
+        if (isHireEntered) ctx.lineTo(to.x + 40, to.y + 12)
         else ctx.lineTo(to.x, to.y)
         ctx.stroke()
     }

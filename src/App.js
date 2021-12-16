@@ -25,30 +25,34 @@ function App() {
         canvas.classList.add('displayNone')
         canvas = document.getElementById('overlay3')
         canvas.classList.add('displayNone')
-        return <Preloader />
+        return (<Preloader />)
     } else {
-        let canvas = document.getElementById('overlay1')
-        canvas.classList.remove('displayNone')
-        canvas = document.getElementById('overlay2')
-        canvas.classList.remove('displayNone')
-        canvas = document.getElementById('overlay3')
-        canvas.classList.remove('displayNone')
-        return (
-            <div className="App">
-                {
-                    <CursorProvider>
-                        <MainPage
-                            setIs1BtnHovered={setIs1BtnHovered}
-                            setIs2BtnHovered={setIs2BtnHovered}
-                            setIs3BtnHovered={setIs3BtnHovered}
-                            is1BtnHovered={is1BtnHovered}
-                            is2BtnHovered={is2BtnHovered}
-                            is3BtnHovered={is3BtnHovered}
-                        />
-                    </CursorProvider>
-                }
-            </div>
-        )
+    let canvas = document.getElementById('overlay1')
+    canvas.classList.remove('displayNone')
+    canvas = document.getElementById('overlay2')
+    canvas.classList.remove('displayNone')
+    canvas = document.getElementById('overlay3')
+    canvas.classList.remove('displayNone')
+    return (
+        <div className="App">
+            {
+                <CursorProvider
+                    hoveredCursor={is1BtnHovered}
+                    hoveredCursor1={is2BtnHovered}
+                    hoveredCursor2={is3BtnHovered}
+                >
+                    <MainPage
+                        setIs1BtnHovered={setIs1BtnHovered}
+                        setIs2BtnHovered={setIs2BtnHovered}
+                        setIs3BtnHovered={setIs3BtnHovered}
+                        is1BtnHovered={is1BtnHovered}
+                        is2BtnHovered={is2BtnHovered}
+                        is3BtnHovered={is3BtnHovered}
+                    />
+                </CursorProvider>
+            }
+        </div>
+    )
     }
 }
 
