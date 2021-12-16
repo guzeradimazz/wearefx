@@ -10,10 +10,14 @@
     animation-duration: 0.4s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
-    clip-path: polygon(50% 0%, 55% 5%, 51% 8%, 48% 9%, 43% 6%);
+    animation-delay: 0.3s;
+    clip-path: polygon(50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
 }
 @keyframes showLayout {
     0% {
+        clip-path: polygon(50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+    }
+    5% {
         clip-path: polygon(50% 0%, 64% 9%, 59% 12%, 36% 16%, 26% 11%);
     }
     100% {
@@ -113,7 +117,7 @@
     background-position: center;
     transition: ease-out;
     animation: fadeCasesItem;
-    animation-duration: .3s;
+    animation-duration: 0.3s;
 }
 .puma:hover {
     z-index: 2000;
@@ -216,7 +220,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 2000;
-    transition: background-image .3s ease;
+    transition: background-image 0.3s ease;
     transition: all ease-in;
 }
 .pumaBack {

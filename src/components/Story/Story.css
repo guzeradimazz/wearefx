@@ -4,15 +4,18 @@
     width: 100vw;
     height: 100vh;
     z-index: 2000;
-    clip-path: polygon(18% 0, 100% 0, 100% 100%, 7% 92%);
-    transition: ease-in-out;
-    background: #000;
     animation: storyShow;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
     animation-fill-mode: forwards;
-    animation-duration: 0.4s;
+    animation-delay: 0.3s;
+    clip-path: polygon(7% 92%, 7% 92%, 7% 92%, 7% 92%);
 }
 @keyframes storyShow {
     0% {
+        clip-path: polygon(7% 92%, 7% 92%, 7% 92%, 7% 92%);
+    }
+    5% {
         clip-path: polygon(18% 66%, 34% 76%, 41% 94%, 7% 92%);
     }
     100% {

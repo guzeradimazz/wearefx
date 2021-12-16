@@ -3,20 +3,24 @@
     bottom: 0;
     width: 100vw;
     height: 100vh;
-    clip-path: polygon(0 0, 85% 0, 94% 92%, 0 100%);
     z-index: 2000;
-    transition: ease-in-out;
     background-color: #000;
     animation: hireShow;
-    animation-fill-mode: forwards;
     animation-duration: 0.4s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: 0.3s;
+    clip-path: polygon(94% 92%, 94% 92%, 94% 92%, 94% 92%);
 }
 @keyframes hireShow {
     0% {
+        clip-path: polygon(94% 92%, 94% 92%, 94% 92%, 94% 92%);
+    }
+    5% {
         clip-path: polygon(51% 72%, 80% 71%, 94% 92%, 60% 93%);
     }
     100% {
-        clip-path: polygon(0 0, 85% 0, 94% 92%, 0 100%);
+        clip-path: polygon(0% 0%, 85% 0%, 94% 92%, 0% 100%);
     }
 }
 .gradientBtn {
