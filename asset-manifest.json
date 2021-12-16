@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/wearefx/static/css/main.213ef9fb.chunk.css",
-    "main.js": "/wearefx/static/js/main.70cb28a5.chunk.js",
-    "main.js.map": "/wearefx/static/js/main.70cb28a5.chunk.js.map",
+    "main.css": "/wearefx/static/css/main.cda46e57.chunk.css",
+    "main.js": "/wearefx/static/js/main.0fe867bf.chunk.js",
+    "main.js.map": "/wearefx/static/js/main.0fe867bf.chunk.js.map",
     "runtime-main.js": "/wearefx/static/js/runtime-main.a95c827a.js",
     "runtime-main.js.map": "/wearefx/static/js/runtime-main.a95c827a.js.map",
     "static/css/2.8872faf8.chunk.css": "/wearefx/static/css/2.8872faf8.chunk.css",
-    "static/js/2.57c3ced1.chunk.js": "/wearefx/static/js/2.57c3ced1.chunk.js",
-    "static/js/2.57c3ced1.chunk.js.map": "/wearefx/static/js/2.57c3ced1.chunk.js.map",
+    "static/js/2.1beaceba.chunk.js": "/wearefx/static/js/2.1beaceba.chunk.js",
+    "static/js/2.1beaceba.chunk.js.map": "/wearefx/static/js/2.1beaceba.chunk.js.map",
     "index.html": "/wearefx/index.html",
     "static/css/2.8872faf8.chunk.css.map": "/wearefx/static/css/2.8872faf8.chunk.css.map",
-    "static/css/main.213ef9fb.chunk.css.map": "/wearefx/static/css/main.213ef9fb.chunk.css.map",
-    "static/js/2.57c3ced1.chunk.js.LICENSE.txt": "/wearefx/static/js/2.57c3ced1.chunk.js.LICENSE.txt",
+    "static/css/main.cda46e57.chunk.css.map": "/wearefx/static/css/main.cda46e57.chunk.css.map",
+    "static/js/2.1beaceba.chunk.js.LICENSE.txt": "/wearefx/static/js/2.1beaceba.chunk.js.LICENSE.txt",
     "static/media/StoryBottom.css": "/wearefx/static/media/storyEllipse.3aee60d4.svg",
     "static/media/HirePage.css": "/wearefx/static/media/CloseWhite.049dfdf0.svg",
     "static/media/CursorProvider.css": "/wearefx/static/media/CursorHovered.35c99e5a.svg",
@@ -22,6 +22,7 @@
     "static/media/MainPage.css": "/wearefx/static/media/bg-noise.1087c988.gif",
     "static/media/CasesPage.css": "/wearefx/static/media/McDonalds.69b75487.svg",
     "static/media/StoryMain.css": "/wearefx/static/media/X.3b8edcf8.svg",
+    "static/media/Preloader.css": "/wearefx/static/media/preloader.72a8e865.svg",
     "static/media/slick-theme.css": "/wearefx/static/media/slick.c94f7671.ttf",
     "static/media/MainPageMedia.css": "/wearefx/static/media/videoPower.4577a6fd.gif",
     "static/media/videoPower.46fefcbf.mp4": "/wearefx/static/media/videoPower.46fefcbf.mp4"
@@ -29,8 +30,8 @@
   "entrypoints": [
     "static/js/runtime-main.a95c827a.js",
     "static/css/2.8872faf8.chunk.css",
-    "static/js/2.57c3ced1.chunk.js",
-    "static/css/main.213ef9fb.chunk.css",
-    "static/js/main.70cb28a5.chunk.js"
+    "static/js/2.1beaceba.chunk.js",
+    "static/css/main.cda46e57.chunk.css",
+    "static/js/main.0fe867bf.chunk.js"
   ]
 }
