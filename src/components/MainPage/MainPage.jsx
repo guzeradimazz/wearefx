@@ -88,8 +88,8 @@ const MainPage = ({
         if (isCasesEntered || isStoryEntered || isHireEntered) {
             stroke.addColorStop(0, 'rgba(255, 255, 255, 0)')
             stroke.addColorStop(0.4, 'rgba(255, 255, 255, 0.2)')
-            stroke.addColorStop(0.5, 'rgba(255, 255, 255, 0.9)')
-            stroke.addColorStop(1, 'rgba(255, 255, 255, 0)')
+            stroke.addColorStop(0.6, 'rgba(255, 255, 255, 0.9)')
+            stroke.addColorStop(0.9, 'rgba(255, 255, 255, 0.02)')
         } else {
             stroke.addColorStop(0, 'rgba(255, 255, 255, 0)')
             stroke.addColorStop(0.4, 'rgba(255, 255, 255, 0.2)')
@@ -102,9 +102,9 @@ const MainPage = ({
         ctx.beginPath()
         ctx.moveTo(from.x, from.y)
 
-        if (isCasesEntered) ctx.lineTo(to.x + 4, to.y - 17)
-        if (isStoryEntered) ctx.lineTo(to.x - 30, to.y + 12)
-        if (isHireEntered) ctx.lineTo(to.x + 40, to.y + 12)
+        if (isCasesEntered) ctx.lineTo(to.x + 4, to.y - 5)
+        if (isStoryEntered) ctx.lineTo(to.x - 50, to.y + 25)
+        if (isHireEntered) ctx.lineTo(to.x + 50, to.y + 25)
         else ctx.lineTo(to.x, to.y)
         ctx.stroke()
     }

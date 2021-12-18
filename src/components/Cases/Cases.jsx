@@ -197,7 +197,6 @@ export const Cases = ({
             <div
                 className={`${mcBack} ${pumaBack} ${flintBack} ${bigBack} ${pmBack} ${naviBack} casesLayout`}
             >
-                {/* <LineComp/> */}
                 <SwiperSLider />
                 <Cube showCube={`${showCube}`} />
                 <div className="casesTextBlock">
