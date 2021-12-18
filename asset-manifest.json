@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/wearefx/static/css/main.2f90364a.chunk.css",
-    "main.js": "/wearefx/static/js/main.b4b0a79c.chunk.js",
-    "main.js.map": "/wearefx/static/js/main.b4b0a79c.chunk.js.map",
+    "main.css": "/wearefx/static/css/main.830b23ef.chunk.css",
+    "main.js": "/wearefx/static/js/main.a79b20df.chunk.js",
+    "main.js.map": "/wearefx/static/js/main.a79b20df.chunk.js.map",
     "runtime-main.js": "/wearefx/static/js/runtime-main.a95c827a.js",
     "runtime-main.js.map": "/wearefx/static/js/runtime-main.a95c827a.js.map",
     "static/css/2.8872faf8.chunk.css": "/wearefx/static/css/2.8872faf8.chunk.css",
-    "static/js/2.1beaceba.chunk.js": "/wearefx/static/js/2.1beaceba.chunk.js",
-    "static/js/2.1beaceba.chunk.js.map": "/wearefx/static/js/2.1beaceba.chunk.js.map",
+    "static/js/2.b6875aee.chunk.js": "/wearefx/static/js/2.b6875aee.chunk.js",
+    "static/js/2.b6875aee.chunk.js.map": "/wearefx/static/js/2.b6875aee.chunk.js.map",
     "index.html": "/wearefx/index.html",
     "static/css/2.8872faf8.chunk.css.map": "/wearefx/static/css/2.8872faf8.chunk.css.map",
-    "static/css/main.2f90364a.chunk.css.map": "/wearefx/static/css/main.2f90364a.chunk.css.map",
-    "static/js/2.1beaceba.chunk.js.LICENSE.txt": "/wearefx/static/js/2.1beaceba.chunk.js.LICENSE.txt",
+    "static/css/main.830b23ef.chunk.css.map": "/wearefx/static/css/main.830b23ef.chunk.css.map",
+    "static/js/2.b6875aee.chunk.js.LICENSE.txt": "/wearefx/static/js/2.b6875aee.chunk.js.LICENSE.txt",
     "static/media/StoryBottom.css": "/wearefx/static/media/storyEllipse.3aee60d4.svg",
     "static/media/HirePage.css": "/wearefx/static/media/CloseWhite.049dfdf0.svg",
-    "static/media/CursorProvider.css": "/wearefx/static/media/CursorHovered.35c99e5a.svg",
+    "static/media/CursorProvider.css": "/wearefx/static/media/CursorHovered.184eff95.svg",
     "static/media/CasesSlider.css": "/wearefx/static/media/Ellipse 33right.2c10d67c.svg",
     "static/media/CasesPagePersonal.css": "/wearefx/static/media/personal.9b816d6c.svg",
     "static/media/stylesheet.css": "/wearefx/static/media/FuturaPTCond-MediumObl.f61a3fb9.woff",
@@ -30,8 +30,8 @@
   "entrypoints": [
     "static/js/runtime-main.a95c827a.js",
     "static/css/2.8872faf8.chunk.css",
-    "static/js/2.1beaceba.chunk.js",
-    "static/css/main.2f90364a.chunk.css",
-    "static/js/main.b4b0a79c.chunk.js"
+    "static/js/2.b6875aee.chunk.js",
+    "static/css/main.830b23ef.chunk.css",
+    "static/js/main.a79b20df.chunk.js"
   ]
 }
