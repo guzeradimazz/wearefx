@@ -3,7 +3,6 @@ import './Cases.css'
 import Cube from '../Cube/Cube'
 import { Link } from 'react-router-dom'
 import SwiperSLider from '../MainPage/Swiper/SwiperSLider'
-import LineComp from '../Line/LineComp'
 
 export const Cases = ({
     setisMc,

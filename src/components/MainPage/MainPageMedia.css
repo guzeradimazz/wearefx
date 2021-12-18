@@ -133,10 +133,16 @@
         height: 89vh;
     }
     .storyBlock {
-        margin-top: 17%;
+        margin-top: 15%;
     }
     .hireBLock {
-        margin-top: 17%;
+        margin-top: 15%;
+    }
+    .casesMain {
+        top: 0;
+    }
+    .hireBtn{
+        padding-top: 1.5%;
     }
 }
 @media (max-width: 1024px) {

@@ -18,21 +18,21 @@ function App() {
         }, 2000)
     }, [])
 
-    if (isLoading) {
-        let canvas = document.getElementById('overlay1')
-        canvas.classList.add('displayNone')
-        canvas = document.getElementById('overlay2')
-        canvas.classList.add('displayNone')
-        canvas = document.getElementById('overlay3')
-        canvas.classList.add('displayNone')
-        return (<Preloader />)
-    } else {
-    let canvas = document.getElementById('overlay1')
-    canvas.classList.remove('displayNone')
-    canvas = document.getElementById('overlay2')
-    canvas.classList.remove('displayNone')
-    canvas = document.getElementById('overlay3')
-    canvas.classList.remove('displayNone')
+    // if (isLoading) {
+    //     let canvas = document.getElementById('overlay1')
+    //     canvas.classList.add('displayNone')
+    //     canvas = document.getElementById('overlay2')
+    //     canvas.classList.add('displayNone')
+    //     canvas = document.getElementById('overlay3')
+    //     canvas.classList.add('displayNone')
+    //     return (<Preloader />)
+    // } else {
+    // let canvas = document.getElementById('overlay1')
+    // canvas.classList.remove('displayNone')
+    // canvas = document.getElementById('overlay2')
+    // canvas.classList.remove('displayNone')
+    // canvas = document.getElementById('overlay3')
+    // canvas.classList.remove('displayNone')
     return (
         <div className="App">
             {
@@ -53,7 +53,7 @@ function App() {
             }
         </div>
     )
-    }
+    // }
 }
 
 export default App

@@ -1,22 +1,25 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './StoryBottom.css'
 
 const StoryFooter = () => {
     return (
         <div className="story-footer">
             <div className="story-footer-left">
-                <a href="#">Home</a>
-                <a href="#">Cases</a>
-                <a href="#">Our story</a>
-                <a href="#">Hire us</a>
+                <Link to='/wearefx'>Home</Link>
+                <Link to='/cases'>Cases</Link>
+                <Link to='/story'>Our story</Link>
+                <Link to='/hire'>Hire us</Link>
             </div>
-            <div className="story-footer-middle" />
+            <Link to='/wearefx'>
+                <div className="story-footer-middle" />
+            </Link>
             <div className="story-footer-right">
                 <div>
                     <p>Wearefx © 2021 by </p>
-                    <p className='violet_on_hover'> Brāh lab ﹤</p>
+                    <p className="violet_on_hover"> Brāh lab ﹤</p>
                 </div>
-                <p className='violet_on_hover'>Privacy Policy ﹤</p>
+                <p className="violet_on_hover">Privacy Policy ﹤</p>
             </div>
         </div>
     )

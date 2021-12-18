@@ -7,6 +7,10 @@
     top: 0;
     object-fit: cover;
 }
+.no_overflow{
+    overflow-y: hidden !important;
+    overflow-x: hidden !important;
+}
 .toner {
     background: rgb(255, 255, 255, 0);
     background: radial-gradient(

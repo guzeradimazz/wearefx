@@ -9,8 +9,6 @@ import './MainPage.css'
 import './MainPageMedia.css'
 
 import videoPower from './video/videoPower.mp4'
-import LineComp from '../Line/LineComp'
-import CursorProvider from '../CursorProvider/CursorProvider'
 
 const applyLayout = (canvas) => {
     canvas.width = canvas.clientWidth
@@ -53,6 +51,8 @@ const MainPage = ({
 
     const [isCanvasesHidded, setIsCanvasesHidded] = useState(false)
 
+    const PlaceCursor = document.getElementsByClassName('movable')[0]
+
     const on1BtnEnter = () => {
         setIs1BtnHovered(true)
         setIsCasesEntered(true)
@@ -94,7 +94,7 @@ const MainPage = ({
             stroke.addColorStop(0, 'rgba(255, 255, 255, 0)')
             stroke.addColorStop(0.4, 'rgba(255, 255, 255, 0.2)')
             stroke.addColorStop(0.5, 'white')
-            stroke.addColorStop(1, 'rgba(255, 255, 255)')
+            stroke.addColorStop(1, 'rgba(255, 255, 255, 0.2)')
         }
         ctx.strokeStyle = stroke
         ctx.lineWidth = 1
@@ -118,6 +118,37 @@ const MainPage = ({
         }
         requestAnimationFrame(draw)
     }
+
+
+    const btnMove1 = (e) => {
+        if (
+            Math.abs(buttonsCoords[0].y - e.clientY) < 100 &&
+            Math.abs(buttonsCoords[0].x - e.clientX) < 100 
+            ||
+            Math.abs(buttonsCoords[1].y - e.clientY) < 100 &&
+            Math.abs(buttonsCoords[1].x - e.clientX) < 100
+            ||
+            Math.abs(buttonsCoords[2].y - e.clientY) < 100 &&
+            Math.abs(buttonsCoords[2].x - e.clientX) < 100            
+        )
+            PlaceCursor.style.transform = 'scale(2.5) translate(-20%, -10%)'
+        else if (
+            Math.abs(buttonsCoords[0].y - e.clientY) < 180 &&
+            Math.abs(buttonsCoords[0].x - e.clientX) < 180
+            ||
+            Math.abs(buttonsCoords[1].y - e.clientY) < 180 &&
+            Math.abs(buttonsCoords[1].x - e.clientX) < 180
+            ||
+            Math.abs(buttonsCoords[2].y - e.clientY) < 180 &&
+            Math.abs(buttonsCoords[2].x - e.clientX) < 180
+        )
+            PlaceCursor.style.transform = 'scale(1.7) translate(-30%, -20%)'
+        else {
+            PlaceCursor.style.transition = 'background 0.5s ease-in-out'
+            PlaceCursor.style.transform = 'scale(1) translate(-50%, -40%)'
+        }
+    }
+
     const onMove = (e) => {
         if (!buttonsCoords.length) return
         drawAnimLine(
@@ -159,8 +190,11 @@ const MainPage = ({
         }
         window.addEventListener('mousemove', onMove)
 
+        window.addEventListener('mousemove',btnMove1)
+
         return () => {
             window.removeEventListener('mousemove', onMove)
+            window.removeEventListener('mousemove', btnMove1)
 
             try {
                 btn1Ref.current.removeEventListener('mouseover', on1BtnEnter)
@@ -209,10 +243,10 @@ const MainPage = ({
             <div className="showreel__mobile"></div>
             <div className="toner" />
             <div>
-                <Link to="/story"> STORY PAGE </Link>
+                {/* <Link to="/story"> STORY PAGE </Link>
                 <Link to="/cases"> CASES PAGE </Link>
                 <Link to="/hire"> HIRE PAGE </Link>
-                <Link to='/pesonal'>VIDEO</Link>
+                <Link to='/pesonal'>VIDEO</Link> */}
                 <MainPageButton
                     canvas={canvas1}
                     onClick={casesClicked}

@@ -169,7 +169,9 @@ export const CasesPage = () => {
                                 <Link to="/hire">hire us</Link>
                             </div>
                         </div>
-                        <div className="header-right"></div>
+                        <Link to="/wearefx">
+                            <div className="header-right"></div>
+                        </Link>
                     </div>
                     <div className="cases-Array">
                         {showedCases.map((item) => (

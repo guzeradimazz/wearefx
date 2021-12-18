@@ -8,29 +8,14 @@
     position: absolute;
     z-index: 999999999;
     opacity: 0.9;
-    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.5s ease !important;
+    transform: translate(-40%, -0%) scale(1);
     pointer-events: none;
     animation: hoveredCurs 0.3s ease-in-out;
 }
-.movable-psevdo{
-    width: 40px;
-    height: 40px;
-    background-repeat: no-repeat;
-    background-image: url('../../images/Cursor.svg');
-    background-position: center;
-    background-size: 100%;
-    position: absolute;
-    z-index: 999999998;
-    opacity: 0.9;
-    transform: translate(-50%, -50%) scale(1);
-    pointer-events: none;
-    transition: .2s ease-out;
-    animation: hoveredCurs 0.3s ease-in;
-}
 .hoveredCursorClass {
-    /* animation: hoveredCurs .8s ease-in-out; */
-    transition: 0.2s ease;
-    transform: scale(4) translate(-10%, -10%);
+    transition: background 0.2s ease-in !important;
+    transform: scale(4) translate(-10%, -10%) !important;
     background-image: url('../../images/CursorHovered.svg');
 }
 @keyframes hoveredCurs {

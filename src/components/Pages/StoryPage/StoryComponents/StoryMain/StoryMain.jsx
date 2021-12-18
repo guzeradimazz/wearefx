@@ -17,7 +17,9 @@ const StoryMain = () => {
                         <Link to="/hire">hire us</Link>
                     </div>
                 </div>
-                <div className="header-right"></div>
+                <Link to='/wearefx'>
+                    <div className="header-right"></div>
+                </Link>
             </div>
             <div className="story-main-content">
                 <p>
