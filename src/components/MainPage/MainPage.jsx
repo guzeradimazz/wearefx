@@ -119,28 +119,23 @@ const MainPage = ({
         requestAnimationFrame(draw)
     }
 
-
     const btnMove1 = (e) => {
         if (
-            Math.abs(buttonsCoords[0].y - e.clientY) < 100 &&
-            Math.abs(buttonsCoords[0].x - e.clientX) < 100 
-            ||
-            Math.abs(buttonsCoords[1].y - e.clientY) < 100 &&
-            Math.abs(buttonsCoords[1].x - e.clientX) < 100
-            ||
-            Math.abs(buttonsCoords[2].y - e.clientY) < 100 &&
-            Math.abs(buttonsCoords[2].x - e.clientX) < 100            
+            (Math.abs(buttonsCoords[0].y - e.clientY) < 100 &&
+                Math.abs(buttonsCoords[0].x - e.clientX) < 100) ||
+            (Math.abs(buttonsCoords[1].y - e.clientY) < 100 &&
+                Math.abs(buttonsCoords[1].x - e.clientX) < 100) ||
+            (Math.abs(buttonsCoords[2].y - e.clientY) < 100 &&
+                Math.abs(buttonsCoords[2].x - e.clientX) < 100)
         )
             PlaceCursor.style.transform = 'scale(2.5) translate(-20%, -10%)'
         else if (
-            Math.abs(buttonsCoords[0].y - e.clientY) < 180 &&
-            Math.abs(buttonsCoords[0].x - e.clientX) < 180
-            ||
-            Math.abs(buttonsCoords[1].y - e.clientY) < 180 &&
-            Math.abs(buttonsCoords[1].x - e.clientX) < 180
-            ||
-            Math.abs(buttonsCoords[2].y - e.clientY) < 180 &&
-            Math.abs(buttonsCoords[2].x - e.clientX) < 180
+            (Math.abs(buttonsCoords[0].y - e.clientY) < 180 &&
+                Math.abs(buttonsCoords[0].x - e.clientX) < 180) ||
+            (Math.abs(buttonsCoords[1].y - e.clientY) < 180 &&
+                Math.abs(buttonsCoords[1].x - e.clientX) < 180) ||
+            (Math.abs(buttonsCoords[2].y - e.clientY) < 180 &&
+                Math.abs(buttonsCoords[2].x - e.clientX) < 180)
         )
             PlaceCursor.style.transform = 'scale(1.7) translate(-30%, -20%)'
         else {
@@ -190,7 +185,7 @@ const MainPage = ({
         }
         window.addEventListener('mousemove', onMove)
 
-        window.addEventListener('mousemove',btnMove1)
+        window.addEventListener('mousemove', btnMove1)
 
         return () => {
             window.removeEventListener('mousemove', onMove)
@@ -237,11 +232,11 @@ const MainPage = ({
 
     return (
         <div>
-            <video className="showreel" autoPlay loop muted>
+            <video className="showreel no_overflow" autoPlay loop muted>
                 <source src={videoPower} type="video/mp4" />
             </video>
             <div className="showreel__mobile"></div>
-            <div className="toner" />
+            <div className="toner " />
             <div>
                 {/* <Link to="/story"> STORY PAGE </Link>
                 <Link to="/cases"> CASES PAGE </Link>
@@ -319,9 +314,19 @@ const MainPage = ({
                     setIsClicked={setIsHireClicked}
                 />
                 <div
-                    className={` ${isMc} ${isPuma} ${isFlint} ${isBig} ${isPm} ${isNavi} main`}
+                    className={` ${isMc} ${isPuma} ${isFlint} ${isBig} ${isPm} ${isNavi} main no_overflow`}
                 >
-                    {/* <LineComp/> */}
+                    <div className="mobile__btns">
+                        <Link to="/storyMobile">
+                            <button>story</button>
+                        </Link>
+                        <Link to="/casesMobile">
+                            <button>cases</button>
+                        </Link>
+                        <Link to="/hireMobile">
+                            <button>hire us</button>
+                        </Link>
+                    </div>
                     <div className="main__top">
                         <TypingText isClicked={isCasesClicked} />
                         <div className="main__logo" />

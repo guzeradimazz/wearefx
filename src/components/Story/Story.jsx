@@ -3,6 +3,7 @@ import './Story.css'
 import 'animate.css'
 import Cube from '../Cube/Cube'
 import { Link } from 'react-router-dom'
+// import './StoryMedia. css'
 
 export const Story = ({
     isClicked,

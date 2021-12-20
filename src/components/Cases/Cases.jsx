@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import './Cases.css'
 import Cube from '../Cube/Cube'
 import { Link } from 'react-router-dom'
-import SwiperSLider from '../MainPage/Swiper/SwiperSLider'
 
 export const Cases = ({
     setisMc,
@@ -197,7 +196,6 @@ export const Cases = ({
             <div
                 className={`${mcBack} ${pumaBack} ${flintBack} ${bigBack} ${pmBack} ${naviBack} casesLayout`}
             >
-                <SwiperSLider />
                 <Cube showCube={`${showCube}`} />
                 <div className="casesTextBlock">
                     <div className="casesArrow" />

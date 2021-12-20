@@ -1,9 +1,9 @@
-.story-bottom{
+.story-bottom {
     height: 100vh;
     position: relative;
     background-color: #071013;
 }
-.story-bottom::before{
+.story-bottom::before {
     content: '';
     width: 100vw;
     height: 100vh;
@@ -14,7 +14,7 @@
     position: absolute;
     background-size: cover;
 }
-.story-ellipse{
+.story-ellipse {
     border-radius: 50%;
     position: absolute;
     right: 60px;
@@ -161,7 +161,7 @@
         transform: translate(0, 0);
     }
 }
-.story-footer{
+.story-footer {
     background: #000;
     height: 138px;
     position: absolute;
@@ -173,22 +173,22 @@
     flex-direction: row;
     justify-content: space-around;
 }
-.story-footer-left{
+.story-footer-left {
     display: flex;
     flex-direction: row;
 }
-.story-footer-left a{
+.story-footer-left a {
     color: #fff;
     margin-right: 30px;
     font-weight: 300;
     text-transform: uppercase;
-    transition: all .3s;
+    transition: all 0.3s;
 }
-.story-footer-left a:hover{
-    transition: all .3s;
-    border-bottom: 1px solid #EEBF1B;
+.story-footer-left a:hover {
+    transition: all 0.3s;
+    border-bottom: 1px solid #eebf1b;
 }
-.story-footer-middle{
+.story-footer-middle {
     content: '';
     background-image: url('../../../../../images/Logo.svg');
     width: 36px;
@@ -197,26 +197,48 @@
     background-position: center;
     background-size: 100%;
 }
-.story-footer-right{
+.story-footer-right {
     display: flex;
     flex-direction: row;
     font-weight: 300;
-    color: #DAE0F2;
-    opacity: .6;
+    color: #dae0f2;
+    opacity: 0.6;
 }
-.story-footer-right div{
+.story-footer-right div {
     display: flex;
     flex-direction: row;
 }
-.story-footer-right div p:nth-child(2){
+.story-footer-right div p:nth-child(2) {
     font-weight: normal;
     text-transform: uppercase;
     text-decoration: underline;
     margin-right: 60px;
     margin-left: 5px;
 }
-.story-footer-right p:nth-child(2){
+.story-footer-right p:nth-child(2) {
     font-weight: normal;
     text-transform: uppercase;
     text-decoration: underline;
 }
+@media (max-width: 425px) {
+    .story-footer {
+        position: relative;
+        flex-direction: column;
+        height: 350px;
+    }
+    .story-footer-left, .story-footer-right{
+        flex-direction:column;
+    }
+    .story-footer-left a{
+        margin: 0 !important;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    .violet_on_hover{
+        margin: 0 !important;
+    }
+    .story-footer-right{
+        text-align: center;
+    }
+}
+

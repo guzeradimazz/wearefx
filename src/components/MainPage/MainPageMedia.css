@@ -1,4 +1,7 @@
 @media (min-width: 2560px) {
+    .mobile__btns {
+        display: none;
+    }
     .showreel__mobile,
     .swiper__mobile {
         display: none;
@@ -65,7 +68,7 @@
         height: 30px;
     }
     .casesArray {
-        bottom: 80px;
+        bottom: 10%;
         font-size: 55px;
     }
     .casesArray div {
@@ -121,7 +124,10 @@
         font-size: 25px;
     }
 }
-@media (min-width: 1440px) {
+@media (max-width: 1440px) {
+    .mobile__btns {
+        display: none;
+    }
     .showreel__mobile,
     .swiper__mobile {
         display: none;
@@ -141,11 +147,14 @@
     .casesMain {
         top: 0;
     }
-    .hireBtn{
+    .hireBtn {
         padding-top: 1.5%;
     }
 }
 @media (max-width: 1024px) {
+    .mobile__btns {
+        display: none;
+    }
     .showreel__mobile,
     .swiper__mobile {
         display: none;
@@ -171,6 +180,9 @@
     }
 }
 @media (max-width: 768px) {
+    .mobile__btns {
+        display: none;
+    }
     .showreel__mobile,
     .swiper__mobile {
         display: none;
@@ -222,6 +234,30 @@
     }
 }
 @media (max-width: 425px) {
+
+    .mobile__btns button {
+        z-index:  20002;
+        width: 60px;
+        height: 30px;
+        color: #fff;
+        font-size: 18px;
+        border: none;
+        background: transparent;
+        text-transform: uppercase;
+    }
+    .mobile__btns button:nth-child(2) {
+        margin-top: -100px;
+    }
+    .mobile__btns {
+        z-index:  20002;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 60px;
+        bottom: 60px;
+        height: 350px;
+        justify-content: space-between;
+    }
     .showreel {
         display: none;
     }
@@ -241,15 +277,11 @@
     }
     .swiper__mobile {
         display: flex;
-        /* top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        position: absolute !important;
-        z-index: 1;
-        overflow-y: hidden; */
     }
-    .cube {
+    .cube,
+    .secondCircle,
+    .thirdCircle,
+    .firstCircle {
         display: none;
     }
     .casesLayout {
@@ -312,37 +344,20 @@
     }
     .main__bottom {
         position: absolute;
-        width: 170px;
+        width: 332px;
         content: '';
         height: 35px;
-        left: calc(-11%);
+        left: calc(-29%);
         bottom: 20px;
-        margin-bottom: 60px;
+        margin-bottom: 166px;
     }
     .progress-done {
         margin: 0;
-    }
-    .secondCircle,
-    .thirdCircle,
-    .firstCircle {
-        left: calc(77%);
-    }
-    .firstCircle {
-        top: 60%;
-    }
-    .secondCircle {
-        bottom: 45%;
     }
     .MainPageButton {
         border-radius: 0px;
         height: 36px;
         width: 90px;
-    }
-    .MainPageButton:hover::before,
-    .first__dot,
-    .second__dot,
-    .third__dot {
-        display: none !important;
     }
     .storyLayout,
     .hireLayout,
@@ -351,7 +366,7 @@
         top: 0;
         left: 0;
         height: 100vh;
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 0) !important;
     }
     .clickedStory,
     .clickedCases,
