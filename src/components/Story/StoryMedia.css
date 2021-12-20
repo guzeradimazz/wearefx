@@ -13,13 +13,15 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 60px;
+    padding: 60px 30px;
     text-transform: uppercase;
     color: #dae0f2;
     align-items: center;
 }
 .link {
     color: #dae0f2;
+    width: 100px;
+    text-align: center;
 }
 .to-home {
     content: '';
