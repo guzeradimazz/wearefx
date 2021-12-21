@@ -24,8 +24,7 @@ ReactDOM.render(
                 <Route exact path="/storyMobileFull" element={<StoryMobileFull />} />
                 <Route exact path="/hireMobile" element={<HireMobile />} />
                 <Route exact path="/casesMobile" element={<CasesMobile />} />
-                <Route exact path="/pesonal" element={<CasesPagePersonal />} />
-                
+                <Route exact path="/cases/:id" element={<CasesPagePersonal />} />
             </Routes>
         </BrowserRouter>
     </React.StrictMode>,

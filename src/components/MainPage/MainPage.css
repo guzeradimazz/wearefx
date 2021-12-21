@@ -33,6 +33,7 @@
     height: 100vh;
     pointer-events: none;
     z-index: 1000000;
+    overflow-y: hidden !important;
 }
 #overlay1 {
     position: fixed;
@@ -42,6 +43,7 @@
     height: 100vh;
     pointer-events: none;
     z-index: 9998;
+    overflow-y: hidden !important;
 }
 #overlay2 {
     position: fixed;
@@ -51,6 +53,7 @@
     height: 100vh;
     pointer-events: none;
     z-index: 9998;
+    overflow-y: hidden !important;
 }
 #overlay3 {
     position: fixed;
@@ -60,6 +63,7 @@
     height: 100vh;
     pointer-events: none;
     z-index: 9998;
+    overflow-y: hidden !important;
 }
 .displayNone {
     z-index: -10000;
@@ -81,6 +85,7 @@
     justify-content: space-between;
     height: 100vh;
     color: #fff;
+    overflow-y: hidden !important;
 }
 .main::before {
     content: '';

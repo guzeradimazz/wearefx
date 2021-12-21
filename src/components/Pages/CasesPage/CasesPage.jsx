@@ -5,11 +5,14 @@ import '../StoryPage/StoryComponents/StoryHeader/StoryHeader.css'
 import CursorProvider from '../../CursorProvider/CursorProvider'
 import { CasesSlider } from './CasesSlider/CasesSlider'
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export const CasesPage = () => {
     const [currentPage, setCurrentPage] = useState(1)
     const [isHoveredBackground, setIsHoveredBackground] = useState('')
     const [showedCases, setShowedCases] = useState([])
+
+    const navigate = useNavigate()
 
     const onMouseEnterCase = (element) => {
         setIsHoveredBackground(element.casesArrayItemBack)
@@ -150,8 +153,8 @@ export const CasesPage = () => {
     ]
 
     useEffect(() => {
-        setShowedCases([...casesArray].filter((e) => e.page == currentPage))
-    }, [currentPage])
+        setShowedCases([...casesArray].filter((e) => e.page === currentPage))
+    }, [currentPage,casesArray])
 
     return (
         <CursorProvider>
@@ -173,6 +176,7 @@ export const CasesPage = () => {
                             <div className="header-right"></div>
                         </Link>
                     </div>
+
                     <div className="cases-Array">
                         {showedCases.map((item) => (
                             <div
@@ -184,6 +188,7 @@ export const CasesPage = () => {
                                         : 'casesArrayItem'
                                 }
                                 key={item.id}
+                                onClick={()=>navigate(`/cases/${item.id}`)}
                             >
                                 {item.title}
                             </div>

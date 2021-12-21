@@ -34,7 +34,6 @@
     object-fit: cover;
 }
 .video-center {
-    align-items: center;
     display: flex;
     width: 70%;
     justify-content: space-between;
@@ -79,27 +78,35 @@
     font-weight: normal;
     font-size: 18px;
     line-height: 23.04px;
+    transition: all cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
+
 .full-progressbar {
-    width: 70%;
+    width: 100%;
     align-items: center;
 }
 progress{
     height: 3px;
     background: #edf5fc56;
-    transition: all ease;
+    transition: all cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.progress-bar-width{
+    width: 65%;
+    bottom: 15px !important;
+    transition: all cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 input[type='range'],
 progress {
     position: absolute;
     width: 40%;
     height: 5px;
+    bottom: 15px !important;
     appearance: none;
-    transition: all ease;
+    transition: all cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 progress[value] {
-    transition: all ease;
+    transition: all cubic-bezier(0.165, 0.84, 0.44, 1);
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -110,15 +117,17 @@ progress[value] {
     color: #eebf1b;
 }
 progress[value]::-webkit-progress-value {
-    transition: all ease;
+    transition: all cubic-bezier(0.165, 0.84, 0.44, 1);
     background-color: #eebf1b;
 }
 progress[value]::-moz-progress-bar {
+    transition: all cubic-bezier(0.165, 0.84, 0.44, 1);
     transition: all ease;
     background-color: #eebf1b;
 }
 
  input[type='range'] {
+    transition: all cubic-bezier(0.165, 0.84, 0.44, 1);
     -webkit-appearance: none;
     -webkit-tap-highlight-color: none;
     transition: all ease;
@@ -148,17 +157,18 @@ input[type='range']::-ms-track {
 }*/
 
 input[type='range']::-webkit-slider-thumb {
-    margin-top: 1px;
+    transition: all cubic-bezier(0.165, 0.84, 0.44, 1);
     -webkit-appearance: none;
     width: 15px;
     transition: all ease;
-    height: 7px;
+    height: 5px;
     border-radius: 0%;
     border: 0;
     background: #eebf1b;
 }
 
 input[type='range']::-moz-range-thumb {
+    transition: all cubic-bezier(0.165, 0.84, 0.44, 1);
     margin-top: 1px;
     transition: all ease;
     -moz-appearance: none;
@@ -170,6 +180,7 @@ input[type='range']::-moz-range-thumb {
 }
 
 input[type='range']::-ms-thumb {
+    transition: all cubic-bezier(0.165, 0.84, 0.44, 1);
     margin-top: 1px;
     width: 15px;
     height: 7px;
@@ -179,13 +190,6 @@ input[type='range']::-ms-thumb {
     background: #eebf1b;
 }
 
-input[type='range']::-ms-fill-lower{
-    transition: all ease;
-    background: lawngreen;
-}
-input[type='range']::-ms-fill-upper {background: khaki;
-    transition: all ease;
-}
 /* 
 input[type='range']::-ms-tooltip {
     display: none;

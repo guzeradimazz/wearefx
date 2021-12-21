@@ -1,5 +1,4 @@
 import React, { useEffect, forwardRef, useState } from 'react'
-import { useCursor } from '../CursorProvider/CursorProvider'
 import './MainPageButton.css'
 
 export const MainPageButton = forwardRef(

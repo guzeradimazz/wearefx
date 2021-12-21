@@ -32,9 +32,9 @@ const HirePage = () => {
                 <div className="hireBLock">
                     <div className="hireBLock__left">
                         <div className="hireBLock__left__top">
-                            <a href="#">Instagram</a>
-                            <a href="#">Facebook</a>
-                            <a href="#">behance</a>
+                            <Link to='/wearefx'>Instagram</Link>
+                            <Link to='/wearefx'>Facebook</Link>
+                            <Link to='/wearefx'>behance</Link>
                         </div>
                         <div className="hireBLock__left__middle">
                             <p>
@@ -56,14 +56,14 @@ const HirePage = () => {
                         <div className="hireBLock__right__top">
                             <p>
                                 Wearefx © 2021 by
-                                <a className="violet_on_hover" href="#">
+                                <Link className="violet_on_hover" to="/wearefx" > 
                                     {' '}
                                     Brāh lab
-                                </a>
+                                </Link>
                             </p>
-                            <a className="violet_on_hover" to="/wearefx">
+                            <Link className="violet_on_hover" to="/wearefx">
                                 Privacy Policy
-                            </a>
+                            </Link>
                         </div>
                         <div className="hireBLock__right__middle">
                             <p>For general inquiries & new projects </p>

@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import CursorProvider from '../../CursorProvider/CursorProvider'
 import StoryFooter from '../StoryPage/StoryComponents/StoryBottom/StoryFooter'
 import './CasesPagePersonal.css'

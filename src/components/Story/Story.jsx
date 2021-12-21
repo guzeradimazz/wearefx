@@ -20,13 +20,13 @@ export const Story = ({
     useEffect(() => {
         if (isCanvasesHidded) offCanvases()
         else onCanvases()
-    }, [isCanvasesHidded, offCanvases, onCanvases])
+    }, [isCanvasesHidded])
 
     useEffect(() => {
         if (!isStoryEntered && isCanvasesHidded)
             canvases[1].classList.add('displayNone')
         else canvases[1].classList.remove('displayNone')
-    }, [isStoryEntered, isCanvasesHidded])
+    }, [isStoryEntered, isCanvasesHidded,canvases])
 
     if (isClicked) {
         return (
@@ -39,8 +39,8 @@ export const Story = ({
                             potential of emerging technologies. 😎
                         </h3>
                         <div>
-                            <a href="#">our cases ﹤</a>
-                            <a href="#">hire us ﹤</a>
+                            <Link to='/cases'>our cases ﹤</Link>
+                            <Link to='/hire'>hire us ﹤</Link>
                             <div className="casesArrow" />
                             <p>
                                 As a wide collective of highly skilled

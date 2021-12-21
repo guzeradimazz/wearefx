@@ -12,8 +12,8 @@ li{
     list-style: none;
 }
 html{
-    overflow-x: hidden;
-    /* animation: unFocusFocus 2s; */
+    overflow-x: hidden !important;
+    animation: unFocusFocus 2s;
 }
 @keyframes unFocusFocus {
     0%{
@@ -30,7 +30,7 @@ html{
     }
 }
 body{
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 .cube{
     position: fixed;

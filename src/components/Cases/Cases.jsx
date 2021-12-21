@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './Cases.css'
 import Cube from '../Cube/Cube'
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export const Cases = ({
     setisMc,
@@ -53,6 +54,8 @@ export const Cases = ({
     const [bigBack, setBigBack] = useState('')
     const [pmBack, setPmBack] = useState('')
     const [naviBack, setNaviBack] = useState('')
+
+    const navigate = useNavigate()
 
     useEffect(() => {
         if (mcStateHovered) {
@@ -161,32 +164,32 @@ export const Cases = ({
     const casesArray = [
         {
             title: "McDonald's",
-            id: 1,
+            id: 576891,
             className: 'mcDonalds',
         },
         {
             title: 'Puma',
-            id: 2,
+            id: 20000,
             className: 'puma',
         },
         {
             title: 'Flint',
-            id: 3,
+            id: 9909090,
             className: 'flint',
         },
         {
             title: 'Little big',
-            id: 4,
+            id: 434,
             className: 'littleBig',
         },
         {
             title: 'Parimatch',
-            id: 5,
+            id: 4325355,
             className: 'parimatch',
         },
         {
             title: 'Navi',
-            id: 6,
+            id: 625435,
             className: 'navi',
         },
     ]
@@ -240,6 +243,7 @@ export const Cases = ({
                         onMouseEnter={onMcEnter}
                         onMouseLeave={onMcLeave}
                         className={casesArray[0].className}
+                        onClick={()=>navigate(`/cases/${casesArray[0].id}`)}
                     >
                         {casesArray[0].title}
                     </div>
@@ -247,6 +251,7 @@ export const Cases = ({
                         onMouseEnter={onPumaEnter}
                         onMouseLeave={onPumaLeave}
                         className={casesArray[1].className}
+                        onClick={()=>navigate(`/cases/${casesArray[1].id}`)}
                     >
                         {casesArray[1].title}
                     </div>
@@ -254,6 +259,7 @@ export const Cases = ({
                         onMouseEnter={onFlintEnter}
                         onMouseLeave={onFlintLeave}
                         className={casesArray[2].className}
+                        onClick={()=>navigate(`/cases/${casesArray[2].id}`)}
                     >
                         {casesArray[2].title}
                     </div>
@@ -261,6 +267,7 @@ export const Cases = ({
                         onMouseEnter={onBigEnter}
                         onMouseLeave={onBigLeave}
                         className={casesArray[3].className}
+                        onClick={()=>navigate(`/cases/${casesArray[3].id}`)}
                     >
                         {casesArray[3].title}
                     </div>
@@ -268,6 +275,7 @@ export const Cases = ({
                         onMouseEnter={onPMEnter}
                         onMouseLeave={onPMLeave}
                         className={casesArray[4].className}
+                        onClick={()=>navigate(`/cases/${casesArray[4].id}`)}
                     >
                         {casesArray[4].title}
                     </div>
@@ -275,6 +283,7 @@ export const Cases = ({
                         onMouseEnter={onNaviEnter}
                         onMouseLeave={onNaviLeave}
                         className={casesArray[5].className}
+                        onClick={()=>navigate(`/cases/${casesArray[5].id}`)}
                     >
                         {casesArray[5].title}
                     </div>

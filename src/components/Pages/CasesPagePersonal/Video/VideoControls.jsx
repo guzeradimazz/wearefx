@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './VideoPersonal.css'
 
 const VideoControls = ({
@@ -10,6 +10,7 @@ const VideoControls = ({
     playedSeconds,
     handleProgressTrack,
 }) => {
+    const [showElements, setShowElements] = useState(true)
     return (
         <>
             <div className="video-controls">
@@ -18,38 +19,53 @@ const VideoControls = ({
                     <p>Scroll down to view details</p>
                 </div>
                 <div className="video-center">
-                    <div className='full-progressbar'>
+                    <div className="full-progressbar">
                         <input
                             type="range"
                             value={playedSeconds}
                             max={loadedSeconds}
                             min={0}
                             step={1}
+                            className={
+                                showElements ? ` ` : 'progress-bar-width'
+                            }
                             onChange={(e) =>
                                 handleProgressTrack(e.target.value)
                             }
                         />
                         <progress
+                            className={
+                                showElements ? ` ` : 'progress-bar-width'
+                            }
                             value={playedSeconds}
                             max={loadedSeconds}
                         ></progress>
                     </div>
                     <div className="play-mute">
                         <button
-                            className="play-btn"
+                            className={
+                                showElements ? `play-btn` : 'displayNone'
+                            }
                             onClick={() => handlePlay()}
                         >
                             {!playing ? 'Play' : 'Pause'}
                         </button>
                         <button
-                            className="muted-btn"
+                            className={
+                                showElements ? `muted-btn` : 'displayNone'
+                            }
                             onClick={() => handleMuted()}
                         >
                             {!muted ? 'mute' : 'unmute'}
                         </button>
                     </div>
                 </div>
-                <div className="hide-controls">Hide elements</div>
+                <div
+                    className="hide-controls"
+                    onClick={() => setShowElements(!showElements)}
+                >
+                    Hide elements
+                </div>
             </div>
         </>
     )
