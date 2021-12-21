@@ -7,21 +7,23 @@
     z-index: 2000;
     background-color: #000;
     animation: showLayout;
-    animation-duration: 0.4s;
+    animation-duration: 0.5s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
     animation-delay: 0.3s;
-    clip-path: polygon(50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+    clip-path: polygon(49% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
 }
 @keyframes showLayout {
     0% {
-        clip-path: polygon(50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+        opacity: 0;
+        clip-path: polygon(49% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
     }
-    5% {
-        clip-path: polygon(50% 0%, 64% 9%, 59% 12%, 36% 16%, 26% 11%);
+    35% {
+        opacity: 1;
+        clip-path: polygon(49% 0%, 58% 74%, 61% 100%, 36% 100%, 40% 74%);
     }
     100% {
-        clip-path: polygon(50% 0%, 100% 15%, 100% 100%, 0 100%, 0 30%);
+        clip-path: polygon(49% 0%, 100% 15%, 100% 100%, 0 100%, 0 30%);
     }
 }
 .casesBtn {

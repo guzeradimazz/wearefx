@@ -94,7 +94,8 @@ const MainPage = ({
             stroke.addColorStop(0, 'rgba(255, 255, 255, 0)')
             stroke.addColorStop(0.4, 'rgba(255, 255, 255, 0.2)')
             stroke.addColorStop(0.5, 'white')
-            stroke.addColorStop(1, 'rgba(255, 255, 255, 0.2)')
+            stroke.addColorStop(0.9, 'rgba(255, 255, 255, 0.2)')
+            stroke.addColorStop(1, 'rgba(255, 255, 255, 0)')
         }
         ctx.strokeStyle = stroke
         ctx.lineWidth = 1
@@ -148,17 +149,17 @@ const MainPage = ({
         if (!buttonsCoords.length) return
         drawAnimLine(
             canvas1,
-            { x: e.clientX, y: e.clientY - 10 },
+            { x: e.clientX, y: e.clientY },
             buttonsCoords[0]
         )
         drawAnimLine(
             canvas2,
-            { x: e.clientX - 9, y: e.clientY + 4 },
+            { x: e.clientX, y: e.clientY },
             buttonsCoords[1]
         )
         drawAnimLine(
             canvas3,
-            { x: e.clientX + 8, y: e.clientY + 4 },
+            { x: e.clientX, y: e.clientY },
             buttonsCoords[2]
         )
     }
@@ -231,7 +232,7 @@ const MainPage = ({
     }
 
     return (
-        <div>
+        <div style={{'overflowY':'hidden !important'}}>
             <video className="showreel no_overflow" autoPlay loop muted>
                 <source src={videoPower} type="video/mp4" />
             </video>
@@ -283,6 +284,7 @@ const MainPage = ({
                     x
                 />
                 <Cases
+                    coords={buttonsCoords}
                     isMc={isMc}
                     setisMc={setisMc}
                     isPuma={isPuma}

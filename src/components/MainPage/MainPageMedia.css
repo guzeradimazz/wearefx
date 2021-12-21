@@ -28,7 +28,7 @@
         height: 120px;
     }
     .casesLayout {
-        height: 92vh;
+        height: 93vh !important;
     }
     .main {
         padding: 80px;
@@ -37,12 +37,12 @@
         top: 80px;
     }
     .secondCircle {
-        bottom: 80px;
-        left: 80px;
+        bottom: 100px;
+        left: 100px;
     }
     .thirdCircle {
-        bottom: 80px;
-        right: 80px;
+        bottom: 100px;
+        right: 100px;
     }
     .typing__text {
         font-size: 30px;
@@ -90,9 +90,6 @@
     .casesMain p:nth-child(2) {
         font-size: 35px;
     }
-    .storyLayout {
-        clip-path: polygon(18% 0, 100% 0, 100% 100%, 6% 93%);
-    }
     .storyBlock {
         margin-top: 20%;
     }
@@ -101,9 +98,6 @@
     }
     .storyBlock div {
         font-size: 22px;
-    }
-    .hireLayout {
-        clip-path: polygon(0 0, 85% 0, 95% 93%, 0 100%);
     }
     .hireBLock {
         width: 50%;
@@ -234,9 +228,8 @@
     }
 }
 @media (max-width: 425px) {
-
     .mobile__btns button {
-        z-index:  20002;
+        z-index: 20002;
         width: 60px;
         height: 30px;
         color: #fff;
@@ -249,7 +242,7 @@
         margin-top: -100px;
     }
     .mobile__btns {
-        z-index:  20002;
+        z-index: 20002;
         display: flex;
         flex-direction: column;
         position: absolute;

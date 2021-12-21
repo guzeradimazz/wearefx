@@ -3,8 +3,10 @@ import './Cases.css'
 import Cube from '../Cube/Cube'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
+import LineComp from '../Line/LineComp'
 
 export const Cases = ({
+    coords,
     setisMc,
     isMc,
     isPuma,
@@ -199,6 +201,7 @@ export const Cases = ({
             <div
                 className={`${mcBack} ${pumaBack} ${flintBack} ${bigBack} ${pmBack} ${naviBack} casesLayout`}
             >
+                {/* <LineComp coords={coords[0]}/> */}
                 <Cube showCube={`${showCube}`} />
                 <div className="casesTextBlock">
                     <div className="casesArrow" />
