@@ -33,13 +33,13 @@ const VideoControls = ({
                                 handleProgressTrack(e.target.value)
                             }
                         />
-                        <progress
+                        {/* <progress
                             className={
                                 showElements ? ` ` : 'progress-bar-width'
                             }
                             value={playedSeconds}
                             max={loadedSeconds}
-                        ></progress>
+                        ></progress> */}
                     </div>
                     <div className="play-mute">
                         <button
