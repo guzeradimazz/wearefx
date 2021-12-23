@@ -195,12 +195,10 @@ export const Cases = ({
             className: 'mcDonalds',
         },
     ]
-
-    if (isClicked) {
+    if (isClicked)
         return (
             <div className={` casesLayout`}>
                 <div
-                    
                     className={`${mcBack} ${pumaBack} ${flintBack} ${bigBack} ${pmBack} ${naviBack} universalBack`}
                 >
                     {/* <LineComp coords={coords[0]}/> */}
@@ -337,5 +335,6 @@ export const Cases = ({
                 </div>
             </div>
         )
-    } else return null
+
+    return null
 }
