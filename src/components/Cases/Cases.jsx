@@ -195,6 +195,7 @@ export const Cases = ({
             className: 'mcDonalds',
         },
     ]
+    
     return (
         <div className={isClicked ? 'casesLayout' : 'reversedLayout' }>
             <div
