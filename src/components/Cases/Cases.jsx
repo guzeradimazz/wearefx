@@ -195,146 +195,115 @@ export const Cases = ({
             className: 'mcDonalds',
         },
     ]
-    if (isClicked)
-        return (
-            <div className={` casesLayout`}>
+    return (
+        <div className={isClicked ? 'casesLayout' : 'reversedLayout' }>
+            <div
+                className={`${mcBack} ${pumaBack} ${flintBack} ${bigBack} ${pmBack} ${naviBack} universalBack`}
+            >
+                {/* <LineComp coords={coords[0]}/> */}
+                <Cube showCube={`${showCube}`} />
+                <div className="casesTextBlock">
+                    <div className="casesArrow" />
+                    <p>
+                        We’re always looking the truth about the brand we work
+                        with and tell it naturaly and gorgeous, like no one else
+                        before.
+                    </p>
+                </div>
+                <div className={mcStateHovered ? 'casesMain' : ' displayNone'}>
+                    <p>McDonald's</p>
+                    <p>Granding, VFX, motion</p>
+                </div>
                 <div
-                    className={`${mcBack} ${pumaBack} ${flintBack} ${bigBack} ${pmBack} ${naviBack} universalBack`}
+                    className={pumaStateHovered ? 'casesMain' : ' displayNone'}
                 >
-                    {/* <LineComp coords={coords[0]}/> */}
-                    <Cube showCube={`${showCube}`} />
-                    <div className="casesTextBlock">
-                        <div className="casesArrow" />
+                    <p>Puma Ukraine</p>
+                    <p>VFX, motion</p>
+                </div>
+                <div
+                    className={flintStateHovered ? 'casesMain' : ' displayNone'}
+                >
+                    <p>Flint</p>
+                    <p>Granding, VFX, motion</p>
+                </div>
+                <div className={bigStateHovered ? 'casesMain' : ' displayNone'}>
+                    <p>Little big</p>
+                    <p>Granding, VFX, motion</p>
+                </div>
+                <div className={pmStateHovered ? 'casesMain' : ' displayNone'}>
+                    <p>Parimatch</p>
+                    <p>Granding, VFX, motion</p>
+                </div>
+                <div
+                    className={naviStateHovered ? 'casesMain' : ' displayNone'}
+                >
+                    <p>Navi</p>
+                    <p>Granding, VFX, motion</p>
+                </div>
+                <div className="casesArray">
+                    <div
+                        onMouseEnter={onMcEnter}
+                        onMouseLeave={onMcLeave}
+                        className={casesArray[0].className}
+                        onClick={() => navigate(`/cases/${casesArray[0].id}`)}
+                    >
+                        {casesArray[0].title}
+                    </div>
+                    <div
+                        onMouseEnter={onPumaEnter}
+                        onMouseLeave={onPumaLeave}
+                        className={casesArray[1].className}
+                        onClick={() => navigate(`/cases/${casesArray[1].id}`)}
+                    >
+                        {casesArray[1].title}
+                    </div>
+                    <div
+                        onMouseEnter={onFlintEnter}
+                        onMouseLeave={onFlintLeave}
+                        className={casesArray[2].className}
+                        onClick={() => navigate(`/cases/${casesArray[2].id}`)}
+                    >
+                        {casesArray[2].title}
+                    </div>
+                    <div
+                        onMouseEnter={onBigEnter}
+                        onMouseLeave={onBigLeave}
+                        className={casesArray[3].className}
+                        onClick={() => navigate(`/cases/${casesArray[3].id}`)}
+                    >
+                        {casesArray[3].title}
+                    </div>
+                    <div
+                        onMouseEnter={onPMEnter}
+                        onMouseLeave={onPMLeave}
+                        className={casesArray[4].className}
+                        onClick={() => navigate(`/cases/${casesArray[4].id}`)}
+                    >
+                        {casesArray[4].title}
+                    </div>
+                    <div
+                        onMouseEnter={onNaviEnter}
+                        onMouseLeave={onNaviLeave}
+                        className={casesArray[5].className}
+                        onClick={() => navigate(`/cases/${casesArray[5].id}`)}
+                    >
+                        {casesArray[5].title}
+                    </div>
+                </div>
+                <Link to="/cases">
+                    <div className="casesBtn gradientBtn">
                         <p>
-                            We’re always looking the truth about the brand we
-                            work with and tell it naturaly and gorgeous, like no
-                            one else before.
+                            Explore
+                            <br />
+                            all
+                            <br />
+                            cases
                         </p>
                     </div>
-                    <div
-                        className={
-                            mcStateHovered ? 'casesMain' : ' displayNone'
-                        }
-                    >
-                        <p>McDonald's</p>
-                        <p>Granding, VFX, motion</p>
-                    </div>
-                    <div
-                        className={
-                            pumaStateHovered ? 'casesMain' : ' displayNone'
-                        }
-                    >
-                        <p>Puma Ukraine</p>
-                        <p>VFX, motion</p>
-                    </div>
-                    <div
-                        className={
-                            flintStateHovered ? 'casesMain' : ' displayNone'
-                        }
-                    >
-                        <p>Flint</p>
-                        <p>Granding, VFX, motion</p>
-                    </div>
-                    <div
-                        className={
-                            bigStateHovered ? 'casesMain' : ' displayNone'
-                        }
-                    >
-                        <p>Little big</p>
-                        <p>Granding, VFX, motion</p>
-                    </div>
-                    <div
-                        className={
-                            pmStateHovered ? 'casesMain' : ' displayNone'
-                        }
-                    >
-                        <p>Parimatch</p>
-                        <p>Granding, VFX, motion</p>
-                    </div>
-                    <div
-                        className={
-                            naviStateHovered ? 'casesMain' : ' displayNone'
-                        }
-                    >
-                        <p>Navi</p>
-                        <p>Granding, VFX, motion</p>
-                    </div>
-                    <div className="casesArray">
-                        <div
-                            onMouseEnter={onMcEnter}
-                            onMouseLeave={onMcLeave}
-                            className={casesArray[0].className}
-                            onClick={() =>
-                                navigate(`/cases/${casesArray[0].id}`)
-                            }
-                        >
-                            {casesArray[0].title}
-                        </div>
-                        <div
-                            onMouseEnter={onPumaEnter}
-                            onMouseLeave={onPumaLeave}
-                            className={casesArray[1].className}
-                            onClick={() =>
-                                navigate(`/cases/${casesArray[1].id}`)
-                            }
-                        >
-                            {casesArray[1].title}
-                        </div>
-                        <div
-                            onMouseEnter={onFlintEnter}
-                            onMouseLeave={onFlintLeave}
-                            className={casesArray[2].className}
-                            onClick={() =>
-                                navigate(`/cases/${casesArray[2].id}`)
-                            }
-                        >
-                            {casesArray[2].title}
-                        </div>
-                        <div
-                            onMouseEnter={onBigEnter}
-                            onMouseLeave={onBigLeave}
-                            className={casesArray[3].className}
-                            onClick={() =>
-                                navigate(`/cases/${casesArray[3].id}`)
-                            }
-                        >
-                            {casesArray[3].title}
-                        </div>
-                        <div
-                            onMouseEnter={onPMEnter}
-                            onMouseLeave={onPMLeave}
-                            className={casesArray[4].className}
-                            onClick={() =>
-                                navigate(`/cases/${casesArray[4].id}`)
-                            }
-                        >
-                            {casesArray[4].title}
-                        </div>
-                        <div
-                            onMouseEnter={onNaviEnter}
-                            onMouseLeave={onNaviLeave}
-                            className={casesArray[5].className}
-                            onClick={() =>
-                                navigate(`/cases/${casesArray[5].id}`)
-                            }
-                        >
-                            {casesArray[5].title}
-                        </div>
-                    </div>
-                    <Link to="/cases">
-                        <div className="casesBtn gradientBtn">
-                            <p>
-                                Explore
-                                <br />
-                                all
-                                <br />
-                                cases
-                            </p>
-                        </div>
-                    </Link>
-                </div>
+                </Link>
             </div>
-        )
+        </div>
+    )
 
     return null
 }

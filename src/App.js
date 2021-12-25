@@ -34,7 +34,7 @@ function App() {
     // canvas = document.getElementById('overlay3')
     // canvas.classList.remove('displayNone')
     return (
-        <div className="App">
+        <div className="App ">
             {
                 <CursorProvider
                     hoveredCursor={is1BtnHovered}

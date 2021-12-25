@@ -143,13 +143,13 @@
 }
 .prev-slider {
     background-position-y: bottom;
-    background-position: center left;
     left: 36px;
     background-image: url('../../../images/Ellipse\ 33slLEFT.svg');
 
 }
 .next-slider{
-    background-position: center right;
+    background-position-y: bottom;
+    background-position-x: right;
     right: 36px;
     background-image: url('../../../images/Ellipse\ 33slRIGHT.svg');
 }

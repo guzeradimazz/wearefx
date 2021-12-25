@@ -147,21 +147,9 @@ const MainPage = ({
 
     const onMove = (e) => {
         if (!buttonsCoords.length) return
-        drawAnimLine(
-            canvas1,
-            { x: e.clientX, y: e.clientY },
-            buttonsCoords[0]
-        )
-        drawAnimLine(
-            canvas2,
-            { x: e.clientX, y: e.clientY },
-            buttonsCoords[1]
-        )
-        drawAnimLine(
-            canvas3,
-            { x: e.clientX, y: e.clientY },
-            buttonsCoords[2]
-        )
+        drawAnimLine(canvas1, { x: e.clientX, y: e.clientY }, buttonsCoords[0])
+        drawAnimLine(canvas2, { x: e.clientX, y: e.clientY }, buttonsCoords[1])
+        drawAnimLine(canvas3, { x: e.clientX, y: e.clientY }, buttonsCoords[2])
     }
     useEffect(() => {
         applyLayout(canvas1)
@@ -232,110 +220,112 @@ const MainPage = ({
     }
 
     return (
-        <div style={{'overflowY':'hidden !important'}}>
-            <video className="showreel no_overflow" autoPlay loop muted>
-                <source src={videoPower} type="video/mp4" />
-            </video>
-            <div className="showreel__mobile"></div>
-            <div className="toner " />
-            <div>
-                {/* <Link to="/story"> STORY PAGE </Link>
+        <div className='mainPageSelector'>
+            <div className="no_overflow ">
+                <video className="showreel no_overflow" autoPlay loop muted>
+                    <source src={videoPower} type="video/mp4" />
+                </video>
+                <div className="showreel__mobile"></div>
+                <div className="toner " />
+                <div className="no_overflow">
+                    {/* <Link to="/story"> STORY PAGE </Link>
                 <Link to="/cases"> CASES PAGE </Link>
                 <Link to="/hire"> HIRE PAGE </Link>
                 <Link to='/pesonal'>VIDEO</Link> */}
-                <MainPageButton
-                    canvas={canvas1}
-                    onClick={casesClicked}
-                    isHovered={isCasesEntered}
-                    title="cases"
-                    isClicked={isCasesClicked}
-                    className={
-                        isCasesClicked
-                            ? 'clickedCases firstCircle '
-                            : 'firstCircle'
-                    }
-                    ref={btn1Ref}
-                />
-                <MainPageButton
-                    canvas={canvas2}
-                    onClick={storyClicked}
-                    isHovered={is2BtnHovered}
-                    title="story"
-                    ref={btn2Ref}
-                    isClicked={isStoryClicked}
-                    className={
-                        isStoryClicked
-                            ? 'clickedStory secondCircle'
-                            : 'secondCircle'
-                    }
-                />
-                <MainPageButton
-                    canvas={canvas3}
-                    onClick={hireClicked}
-                    isHovered={is3BtnHovered}
-                    title="hire us"
-                    ref={btn3Ref}
-                    isClicked={isHireClicked}
-                    className={
-                        isHireClicked
-                            ? 'clickedHire thirdCircle'
-                            : 'thirdCircle'
-                    }
-                    x
-                />
-                <Cases
-                    coords={buttonsCoords}
-                    isMc={isMc}
-                    setisMc={setisMc}
-                    isPuma={isPuma}
-                    setisPuma={setisPuma}
-                    isFlint={isFlint}
-                    setisFlint={setisFlint}
-                    isBig={isBig}
-                    setisBig={setisBig}
-                    isPm={isPm}
-                    setisPm={setisPm}
-                    isNavi={isNavi}
-                    setisNavi={setisNavi}
-                    isCasesEntered={isCasesEntered}
-                    isCanvasesHidded={isCanvasesHidded}
-                    canvases={[canvas1, canvas2, canvas3]}
-                    isClicked={isCasesClicked}
-                />
-                <Story
-                    isStoryEntered={isStoryEntered}
-                    isCanvasesHidded={isCanvasesHidded}
-                    canvases={[canvas1, canvas2, canvas3]}
-                    isClicked={isStoryClicked}
-                />
-                <Hire
-                    isHireEntered={isHireEntered}
-                    isCanvasesHidded={isCanvasesHidded}
-                    canvases={[canvas1, canvas2, canvas3]}
-                    isClicked={isHireClicked}
-                    setIsClicked={setIsHireClicked}
-                />
-                <div
-                    className={` ${isMc} ${isPuma} ${isFlint} ${isBig} ${isPm} ${isNavi} main no_overflow`}
-                >
-                    <div className="mobile__btns">
-                        <Link to="/storyMobile">
-                            <button>story</button>
-                        </Link>
-                        <Link to="/casesMobile">
-                            <button>cases</button>
-                        </Link>
-                        <Link to="/hireMobile">
-                            <button>hire us</button>
-                        </Link>
-                    </div>
-                    <div className="main__top">
-                        <TypingText isClicked={isCasesClicked} />
-                        <div className="main__logo" />
-                    </div>
-                    <div className="main__bottom">
-                        <div className="main__bottom__video">
-                            <div className="progress-done"></div>
+                    <MainPageButton
+                        canvas={canvas1}
+                        onClick={casesClicked}
+                        isHovered={isCasesEntered}
+                        title="cases"
+                        isClicked={isCasesClicked}
+                        className={
+                            isCasesClicked
+                                ? 'clickedCases firstCircle '
+                                : 'firstCircle'
+                        }
+                        ref={btn1Ref}
+                    />
+                    <MainPageButton
+                        canvas={canvas2}
+                        onClick={storyClicked}
+                        isHovered={is2BtnHovered}
+                        title="story"
+                        ref={btn2Ref}
+                        isClicked={isStoryClicked}
+                        className={
+                            isStoryClicked
+                                ? 'clickedStory secondCircle'
+                                : 'secondCircle'
+                        }
+                    />
+                    <MainPageButton
+                        canvas={canvas3}
+                        onClick={hireClicked}
+                        isHovered={is3BtnHovered}
+                        title="hire us"
+                        ref={btn3Ref}
+                        isClicked={isHireClicked}
+                        className={
+                            isHireClicked
+                                ? 'clickedHire thirdCircle'
+                                : 'thirdCircle'
+                        }
+                        x
+                    />
+                    <Cases
+                        coords={buttonsCoords}
+                        isMc={isMc}
+                        setisMc={setisMc}
+                        isPuma={isPuma}
+                        setisPuma={setisPuma}
+                        isFlint={isFlint}
+                        setisFlint={setisFlint}
+                        isBig={isBig}
+                        setisBig={setisBig}
+                        isPm={isPm}
+                        setisPm={setisPm}
+                        isNavi={isNavi}
+                        setisNavi={setisNavi}
+                        isCasesEntered={isCasesEntered}
+                        isCanvasesHidded={isCanvasesHidded}
+                        canvases={[canvas1, canvas2, canvas3]}
+                        isClicked={isCasesClicked}
+                    />
+                    <Story
+                        isStoryEntered={isStoryEntered}
+                        isCanvasesHidded={isCanvasesHidded}
+                        canvases={[canvas1, canvas2, canvas3]}
+                        isClicked={isStoryClicked}
+                    />
+                    <Hire
+                        isHireEntered={isHireEntered}
+                        isCanvasesHidded={isCanvasesHidded}
+                        canvases={[canvas1, canvas2, canvas3]}
+                        isClicked={isHireClicked}
+                        setIsClicked={setIsHireClicked}
+                    />
+                    <div
+                        className={` ${isMc} ${isPuma} ${isFlint} ${isBig} ${isPm} ${isNavi} main no_overflow`}
+                    >
+                        <div className="mobile__btns">
+                            <Link to="/storyMobile">
+                                <button>story</button>
+                            </Link>
+                            <Link to="/casesMobile">
+                                <button>cases</button>
+                            </Link>
+                            <Link to="/hireMobile">
+                                <button>hire us</button>
+                            </Link>
+                        </div>
+                        <div className="main__top">
+                            <TypingText isClicked={isCasesClicked} />
+                            <div className="main__logo" />
+                        </div>
+                        <div className="main__bottom">
+                            <div className="main__bottom__video">
+                                <div className="progress-done"></div>
+                            </div>
                         </div>
                     </div>
                 </div>

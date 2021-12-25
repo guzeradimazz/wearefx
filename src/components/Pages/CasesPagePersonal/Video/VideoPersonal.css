@@ -59,6 +59,10 @@
     line-height: 23.76px;
     letter-spacing: 1px;
     margin-right: 20px;
+    animation: fadeInRev;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    transition: 0.3s ease-out;
 }
 .muted-btn {
     background-color: #7344f4;
@@ -70,6 +74,10 @@
     font-size: 18px;
     line-height: 23.76px;
     letter-spacing: 1px;
+    animation: fadeInRev;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    transition: 0.3s ease-out;
 }
 .hide-controls {
     padding-bottom: 10px;
@@ -80,18 +88,42 @@
     line-height: 23.04px;
     transition: all cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-
-
+.fadeIn {
+    transform: translateY(0);
+    transition: 0.3s ease-out;
+    animation: fadeIn;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeIn {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        display: none !important;
+        opacity: 0;
+        transform: translateY(100%);
+    }
+}
+@keyframes fadeInRev {
+    from {
+        opacity: 0;
+    }
+    to {
+        display: block;
+        opacity: 1;
+    }
+}
 .full-progressbar {
     width: 100%;
     align-items: center;
 }
-progress{
+progress {
     height: 3px;
     background: #edf5fc56;
     transition: all cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-.progress-bar-width{
+.progress-bar-width {
     width: 65%;
     bottom: 15px !important;
     transition: all cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -126,7 +158,7 @@ progress[value]::-moz-progress-bar {
     background-color: #eebf1b;
 }
 
- input[type='range'] {
+input[type='range'] {
     transition: all cubic-bezier(0.165, 0.84, 0.44, 1);
     -webkit-appearance: none;
     -webkit-tap-highlight-color: none;

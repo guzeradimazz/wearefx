@@ -33,18 +33,18 @@ const VideoControls = ({
                                 handleProgressTrack(e.target.value)
                             }
                         />
-                        {/* <progress
+                        <progress
                             className={
                                 showElements ? ` ` : 'progress-bar-width'
                             }
                             value={playedSeconds}
                             max={loadedSeconds}
-                        ></progress> */}
+                        ></progress>
                     </div>
                     <div className="play-mute">
                         <button
                             className={
-                                showElements ? `play-btn` : 'displayNone'
+                                showElements ? `play-btn` : 'fadeIn play-btn'
                             }
                             onClick={() => handlePlay()}
                         >
@@ -52,7 +52,7 @@ const VideoControls = ({
                         </button>
                         <button
                             className={
-                                showElements ? `muted-btn` : 'displayNone'
+                                showElements ? `muted-btn` : 'fadeIn muted-btn'
                             }
                             onClick={() => handleMuted()}
                         >

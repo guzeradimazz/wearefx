@@ -7,11 +7,29 @@
     z-index: 2000;
     background-color: #000;
     animation: showLayout;
+    animation-timing-function: ease;
     animation-duration: 0.4s;
-    animation-timing-function: linear;
     animation-fill-mode: forwards;
+    transition: clip-path 0.4s;
     animation-delay: 0.3s;
     clip-path: polygon(49% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+}
+
+.reversedLayout {
+    animation: showLayoutBack;
+    animation-timing-function: ease;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+    clip-path: polygon(49% 0%, 100% 15%, 100% 100%, 0 100%, 0 30%);
+}
+
+@keyframes showLayoutBack {
+    from {
+        clip-path: polygon(49% 0%, 100% 15%, 100% 100%, 0 100%, 0 30%);
+    }
+    to {
+        clip-path: polygon(49% 0%, 54% 67%, 55% 100%, 43% 100%, 45% 66%);
+    }
 }
 @keyframes showLayout {
     0% {
