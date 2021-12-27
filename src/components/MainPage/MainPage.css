@@ -10,9 +10,7 @@
 .no_overflow {
     overflow-y: hidden !important;
 }
-.mainPageSelector > * {
-    overflow-y: hidden !important;
-}
+
 .toner {
     background: rgb(255, 255, 255, 0);
     background: radial-gradient(
@@ -33,10 +31,9 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    pointer-events: none;
     z-index: 1000000;
-    overflow-y: hidden !important;
 }
+
 #overlay1 {
     position: fixed;
     top: 0;

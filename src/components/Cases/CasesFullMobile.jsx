@@ -51,11 +51,9 @@ const CasesFullMobile = () => {
             <Link to="/storyMobileFull">
                 <div className="full-mobile casesBtn gradientBtn">
                     <p>
-                        We’re
-                        <br />
-                        ready
-                        <br />
-                        Hire us
+                        Explore<br />
+                        case<br />
+                        details
                     </p>
                 </div>
             </Link>

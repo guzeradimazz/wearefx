@@ -1,0 +1,88 @@
+import React from 'react'
+
+export default function Line({ coords, amount }) {
+    const canvas = document.getElementById('polyline')
+    let ctx = canvas.getContext('2d')
+
+    ctx.lineWidth = 1.3;
+
+    let dots = Array(amount + 1);
+    let dots1 = Array(amount + 1);
+
+    let mousePos = {x: 0, y : 0};
+
+    canvas.addEventListener('mousemove', (e) => {
+
+        if (Math.abs(e.pageX - mousePos.x) > 50 || Math.abs(e.pageY - mousePos.y) > 50) { // здесь можешь настроить чувствительность
+            mousePos = {x: e.pageX, y : e.pageY};
+            requestAnimationFrame(mix);
+        }
+    })
+
+    const stepX = Math.floor((coords.last.x - coords.first.x) / amount);
+    const stepY = Math.floor((coords.last.y - coords.first.y) / amount);
+
+    const getRandomInt = (min, max) => {
+        return Math.floor(min + Math.random() * (max + 1 - min))
+    }
+
+    dots[0] = dots1[0] = {x: coords.first.x, y: coords.first.y}
+
+    const set = (dots) => {
+        for (let i = 1; i < amount; ++i) {
+            dots[i] = {
+                x: coords.first.x + i * stepX + getRandomInt(-10, 10),
+                y: coords.first.y + i * stepY + getRandomInt(-20, 20)
+            }
+        }
+    }
+
+    const mix = () => {
+        for (let i = 1; i < amount; ++i) {
+            let randy = getRandomInt(-40, 40);
+            let randx = getRandomInt(-3, 3);
+            let newValY = coords.first.y + i * stepY + randy;
+            let newValX = coords.first.x + i * stepX + randx;
+            let newValY1 = coords.first.y + i * stepY - randy;
+            let newValX1 = coords.first.x + i * stepX - randx;
+            
+            let interval = setInterval(function(){
+                if(Math.abs(dots[i].y - newValY) <= 2.1 && Math.abs(dots1[i].y - newValY1) <= 2.1){
+                    clearInterval(interval);
+                }
+                moveLine(dots, i, newValY, newValX);
+                moveLine(dots1, i, newValY1, newValX1);
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                draw(dots);
+                draw(dots1)
+            }, 50);
+        }
+    }
+    set(dots);
+    set(dots1);
+    dots[amount] = dots1[amount] = {x: coords.last.x, y: coords.last.y}
+
+    const draw = (dots) => {
+        ctx.beginPath()
+        ctx.strokeStyle = 'red'
+        ctx.moveTo(dots[0].x, dots[0].y);
+        dots.forEach(dot => {
+            ctx.lineTo(dot.x, dot.y);
+            ctx.moveTo(dot.x, dot.y);
+        })
+        ctx.stroke();
+    }
+
+    draw(dots);
+    draw(dots1);
+
+    function moveLine (dots, i, val1, val2) {
+        if (dots[i].y > val1) dots[i].y -= 2;
+        else dots[i].y += 2;
+
+        // if (dots[i].x > val2) dots[i].x -= 0.5;
+        // else dots[i].x += 0.5;
+    }
+
+    return <div/>
+}

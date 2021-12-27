@@ -228,10 +228,6 @@ const MainPage = ({
                 <div className="showreel__mobile"></div>
                 <div className="toner " />
                 <div className="no_overflow">
-                    {/* <Link to="/story"> STORY PAGE </Link>
-                <Link to="/cases"> CASES PAGE </Link>
-                <Link to="/hire"> HIRE PAGE </Link>
-                <Link to='/pesonal'>VIDEO</Link> */}
                     <MainPageButton
                         canvas={canvas1}
                         onClick={casesClicked}
@@ -273,7 +269,8 @@ const MainPage = ({
                         x
                     />
                     <Cases
-                        coords={buttonsCoords}
+                        coordsToX={buttonsCoords[0]?.x}
+                        coordsToY={buttonsCoords[0]?.y}
                         isMc={isMc}
                         setisMc={setisMc}
                         isPuma={isPuma}

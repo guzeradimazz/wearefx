@@ -36,7 +36,7 @@
         opacity: 0.3;
         clip-path: polygon(49% 0%, 55% 100%, 55% 100%, 45% 100%, 45% 100%);
     }
-    50%{
+    50% {
         opacity: 1;
         clip-path: polygon(49% 0%, 100% 100%, 100% 100%, 0 100%, 0 100%);
     }
@@ -309,4 +309,24 @@
 }
 .mb100 {
     margin-bottom: 100px !important;
+}
+.caseBtnSlider {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    border: none;
+    text-align: center;
+    position: absolute;
+    top: 36px;
+    left: 36px;
+    background: #f1bb00;
+    color: #000;
+    z-index: 2000;
+    text-transform: uppercase;
+    font-weight: 500;font-size: 12px;
+}
+.caseBtnSlider p{
+    height: 100%;
+    width: 100%;
+    padding: 20px;
 }

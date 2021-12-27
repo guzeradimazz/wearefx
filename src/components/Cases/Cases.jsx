@@ -3,10 +3,11 @@ import './Cases.css'
 import Cube from '../Cube/Cube'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
-import LineComp from '../Line/LineComp'
+import Line from '../Line/Line'
 
 export const Cases = ({
-    coords,
+    coordsToX,
+    coordsToY,
     setisMc,
     isMc,
     isPuma,
@@ -195,13 +196,26 @@ export const Cases = ({
             className: 'mcDonalds',
         },
     ]
-    
+
     return (
-        <div className={isClicked ? 'casesLayout' : 'reversedLayout' }>
+        <div className={isClicked ? 'casesLayout' : ' reversedLayout'}>
             <div
                 className={`${mcBack} ${pumaBack} ${flintBack} ${bigBack} ${pmBack} ${naviBack} universalBack`}
             >
-                {/* <LineComp coords={coords[0]}/> */}
+                <Line
+                    coords={{
+                        first: {
+                            x: 0,
+                            y: window.clientHeight * 0.38,
+                        },
+                        last: {
+                            x: coordsToX,
+                            y: coordsToY,
+                        },
+                    }}
+                    amount={5}
+                />
+
                 <Cube showCube={`${showCube}`} />
                 <div className="casesTextBlock">
                     <div className="casesArrow" />
