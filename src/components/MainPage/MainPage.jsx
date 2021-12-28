@@ -9,6 +9,7 @@ import './MainPage.css'
 import './MainPageMedia.css'
 
 import videoPower from './video/videoPower.mp4'
+import Line from '../Line/Line'
 
 const applyLayout = (canvas) => {
     canvas.width = canvas.clientWidth
@@ -220,9 +221,9 @@ const MainPage = ({
     }
 
     return (
-        <div className='mainPageSelector'>
+        <div className="mainPageSelector">
             <div className="no_overflow ">
-                <video className="showreel no_overflow" autoPlay loop muted>
+                {/* <video className="showreel no_overflow" autoPlay loop muted>
                     <source src={videoPower} type="video/mp4" />
                 </video>
                 <div className="showreel__mobile"></div>
@@ -269,6 +270,7 @@ const MainPage = ({
                         x
                     />
                     <Cases
+                        canvas={canvas1}
                         coordsToX={buttonsCoords[0]?.x}
                         coordsToY={buttonsCoords[0]?.y}
                         isMc={isMc}
@@ -300,8 +302,21 @@ const MainPage = ({
                         canvases={[canvas1, canvas2, canvas3]}
                         isClicked={isHireClicked}
                         setIsClicked={setIsHireClicked}
+                    /> */}
+                    <Line
+                        coords={{
+                            first: {
+                                x: 50,
+                                y: 50,
+                            },
+                            last: {
+                                x: 200,
+                                y: 200
+                            },
+                        }}
+                        amount={7}
                     />
-                    <div
+                    {/* <div
                         className={` ${isMc} ${isPuma} ${isFlint} ${isBig} ${isPm} ${isNavi} main no_overflow`}
                     >
                         <div className="mobile__btns">
@@ -325,7 +340,7 @@ const MainPage = ({
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     )

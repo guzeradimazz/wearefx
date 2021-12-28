@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom'
 import Line from '../Line/Line'
 
 export const Cases = ({
+    canvas,
     coordsToX,
     coordsToY,
     setisMc,
@@ -202,19 +203,7 @@ export const Cases = ({
             <div
                 className={`${mcBack} ${pumaBack} ${flintBack} ${bigBack} ${pmBack} ${naviBack} universalBack`}
             >
-                <Line
-                    coords={{
-                        first: {
-                            x: 0,
-                            y: window.clientHeight * 0.38,
-                        },
-                        last: {
-                            x: coordsToX,
-                            y: coordsToY,
-                        },
-                    }}
-                    amount={5}
-                />
+
 
                 <Cube showCube={`${showCube}`} />
                 <div className="casesTextBlock">

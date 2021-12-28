@@ -4,7 +4,8 @@ export default function Line({ coords, amount }) {
     const canvas = document.getElementById('polyline')
     let ctx = canvas.getContext('2d')
 
-    ctx.lineWidth = 1.3;
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = 'red';
 
     let dots = Array(amount + 1);
     let dots1 = Array(amount + 1);
@@ -13,9 +14,9 @@ export default function Line({ coords, amount }) {
 
     canvas.addEventListener('mousemove', (e) => {
 
-        if (Math.abs(e.pageX - mousePos.x) > 50 || Math.abs(e.pageY - mousePos.y) > 50) { // здесь можешь настроить чувствительность
+        if (Math.sqrt(Math.abs(Math.pow(e.pageX - mousePos.x, 2) - Math.pow(e.pageY - mousePos.y, 2))) > 50) { // здесь можешь настроить чувствительность
             mousePos = {x: e.pageX, y : e.pageY};
-            requestAnimationFrame(mix);
+            mix();
         }
     })
 
@@ -39,23 +40,30 @@ export default function Line({ coords, amount }) {
 
     const mix = () => {
         for (let i = 1; i < amount; ++i) {
-            let randy = getRandomInt(-40, 40);
+            let randy = getRandomInt(-60, 60);
             let randx = getRandomInt(-3, 3);
             let newValY = coords.first.y + i * stepY + randy;
             let newValX = coords.first.x + i * stepX + randx;
             let newValY1 = coords.first.y + i * stepY - randy;
             let newValX1 = coords.first.x + i * stepX - randx;
-            
-            let interval = setInterval(function(){
-                if(Math.abs(dots[i].y - newValY) <= 2.1 && Math.abs(dots1[i].y - newValY1) <= 2.1){
-                    clearInterval(interval);
+            let anim = true;
+
+            var id = requestAnimationFrame(interval);
+            function interval(){
+                if(Math.abs(dots[i].y - newValY) <= 0.01){ //&& Math.abs(dots1[i].y - newValY1) <= 2.1){
+                    cancelAnimationFrame(id);
+                    anim = false;
                 }
                 moveLine(dots, i, newValY, newValX);
                 moveLine(dots1, i, newValY1, newValX1);
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.strokeStyle='red';
                 draw(dots);
+                ctx.strokeStyle='blue';
                 draw(dots1)
-            }, 50);
+                if (anim)
+                requestAnimationFrame(interval);
+            }
         }
     }
     set(dots);
@@ -64,7 +72,6 @@ export default function Line({ coords, amount }) {
 
     const draw = (dots) => {
         ctx.beginPath()
-        ctx.strokeStyle = 'red'
         ctx.moveTo(dots[0].x, dots[0].y);
         dots.forEach(dot => {
             ctx.lineTo(dot.x, dot.y);
@@ -77,8 +84,8 @@ export default function Line({ coords, amount }) {
     draw(dots1);
 
     function moveLine (dots, i, val1, val2) {
-        if (dots[i].y > val1) dots[i].y -= 2;
-        else dots[i].y += 2;
+        if (dots[i].y > val1) dots[i].y -= 1;
+        else dots[i].y += 1;
 
         // if (dots[i].x > val2) dots[i].x -= 0.5;
         // else dots[i].x += 0.5;
