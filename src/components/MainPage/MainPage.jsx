@@ -315,7 +315,9 @@ const MainPage = ({
                             },
                         }}
                         amount={7}
-                    />                    
+                    />            
+                    
+                            
                     <Line
                     coords={{
                         first: {
