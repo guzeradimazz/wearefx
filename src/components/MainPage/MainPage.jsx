@@ -223,7 +223,7 @@ const MainPage = ({
     return (
         <div className="mainPageSelector">
             <div className="no_overflow ">
-                {/* <video className="showreel no_overflow" autoPlay loop muted>
+                <video className="showreel no_overflow" autoPlay loop muted>
                     <source src={videoPower} type="video/mp4" />
                 </video>
                 <div className="showreel__mobile"></div>
@@ -302,7 +302,7 @@ const MainPage = ({
                         canvases={[canvas1, canvas2, canvas3]}
                         isClicked={isHireClicked}
                         setIsClicked={setIsHireClicked}
-                    /> */}
+                    />
                     <Line
                         coords={{
                             first: {
@@ -315,8 +315,21 @@ const MainPage = ({
                             },
                         }}
                         amount={7}
-                    />
-                    {/* <div
+                    />                    
+                    <Line
+                    coords={{
+                        first: {
+                            x: 500,
+                            y: 500,
+                        },
+                        last: {
+                            x: 200,
+                            y: 200
+                        },
+                    }}
+                    amount={7}
+                />
+                    <div
                         className={` ${isMc} ${isPuma} ${isFlint} ${isBig} ${isPm} ${isNavi} main no_overflow`}
                     >
                         <div className="mobile__btns">
@@ -340,7 +353,7 @@ const MainPage = ({
                             </div>
                         </div>
                     </div>
-                </div> */}
+                </div>
             </div>
         </div>
     )

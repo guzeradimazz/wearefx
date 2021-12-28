@@ -1,10 +1,17 @@
 import React from 'react'
 
+const applyLayout = (canvas) => {
+    canvas.width = canvas.clientWidth
+    canvas.height = canvas.clientHeight
+}
+
 export default function Line({ coords, amount }) {
     const canvas = document.getElementById('polyline')
+    applyLayout(canvas)
     let ctx = canvas.getContext('2d')
 
-    ctx.lineWidth = 1;
+
+    ctx.lineWidth = 1.3;
     ctx.strokeStyle = 'red';
 
     let dots = Array(amount + 1);
@@ -40,7 +47,7 @@ export default function Line({ coords, amount }) {
 
     const mix = () => {
         for (let i = 1; i < amount; ++i) {
-            let randy = getRandomInt(-60, 60);
+            let randy = getRandomInt(-20, 20);
             let randx = getRandomInt(-3, 3);
             let newValY = coords.first.y + i * stepY + randy;
             let newValX = coords.first.x + i * stepX + randx;
