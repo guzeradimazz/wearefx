@@ -24,6 +24,39 @@ const MainPage = ({
     setIs2BtnHovered,
     setIs1BtnHovered,
 }) => {
+    const casesArray = [
+        {
+            title: "McDonald's",
+            id: 576891,
+            className: 'mcDonalds',
+        },
+        {
+            title: 'Puma',
+            id: 20000,
+            className: 'mcDonalds',
+        },
+        {
+            title: 'Flint',
+            id: 9909090,
+            className: 'mcDonalds',
+        },
+        {
+            title: 'Little big',
+            id: 434,
+            className: 'mcDonalds',
+        },
+        {
+            title: 'Parimatch',
+            id: 4325355,
+            className: 'mcDonalds',
+        },
+        {
+            title: 'Navi',
+            id: 625435,
+            className: 'mcDonalds',
+        },
+    ]
+
     const [isMc, setisMc] = useState('')
     const [isPuma, setisPuma] = useState('')
     const [isFlint, setisFlint] = useState('')
@@ -40,6 +73,8 @@ const MainPage = ({
     const canvas1 = document.getElementById('overlay1')
     const canvas2 = document.getElementById('overlay2')
     const canvas3 = document.getElementById('overlay3')
+
+    const polylineCases = document.getElementById('polylineCases')
 
     const [isCasesClicked, setIsCasesClicked] = useState(false)
     const [isCasesEntered, setIsCasesEntered] = useState(false)
@@ -270,7 +305,8 @@ const MainPage = ({
                         x
                     />
                     <Cases
-                        canvas={canvas1}
+                        casesArray={casesArray}
+                        polyline={polylineCases}
                         coordsToX={buttonsCoords[0]?.x}
                         coordsToY={buttonsCoords[0]?.y}
                         isMc={isMc}
@@ -303,34 +339,6 @@ const MainPage = ({
                         isClicked={isHireClicked}
                         setIsClicked={setIsHireClicked}
                     />
-                    <Line
-                        coords={{
-                            first: {
-                                x: 50,
-                                y: 50,
-                            },
-                            last: {
-                                x: 200,
-                                y: 200
-                            },
-                        }}
-                        amount={7}
-                    />            
-                    
-                            
-                    <Line
-                    coords={{
-                        first: {
-                            x: 500,
-                            y: 500,
-                        },
-                        last: {
-                            x: 200,
-                            y: 200
-                        },
-                    }}
-                    amount={7}
-                />
                     <div
                         className={` ${isMc} ${isPuma} ${isFlint} ${isBig} ${isPm} ${isNavi} main no_overflow`}
                     >

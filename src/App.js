@@ -18,6 +18,8 @@ function App() {
         }, 2000)
     }, [])
 
+    
+
     // if (isLoading) {
     //     let canvas = document.getElementById('overlay1')
     //     canvas.classList.add('displayNone')

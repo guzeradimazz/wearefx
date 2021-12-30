@@ -5,8 +5,14 @@ import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import Line from '../Line/Line'
 
+const applyLayout = (canvas) => {
+    canvas.width = canvas.clientWidth
+    canvas.height = canvas.clientHeight
+}
+
 export const Cases = ({
-    canvas,
+    casesArray,
+    polyline,
     coordsToX,
     coordsToY,
     setisMc,
@@ -165,45 +171,37 @@ export const Cases = ({
         setNaviStateHovered(false)
     }
 
-    const casesArray = [
-        {
-            title: "McDonald's",
-            id: 576891,
-            className: 'mcDonalds',
-        },
-        {
-            title: 'Puma',
-            id: 20000,
-            className: 'mcDonalds',
-        },
-        {
-            title: 'Flint',
-            id: 9909090,
-            className: 'mcDonalds',
-        },
-        {
-            title: 'Little big',
-            id: 434,
-            className: 'mcDonalds',
-        },
-        {
-            title: 'Parimatch',
-            id: 4325355,
-            className: 'mcDonalds',
-        },
-        {
-            title: 'Navi',
-            id: 625435,
-            className: 'mcDonalds',
-        },
-    ]
 
+    applyLayout(polyline)
     return (
         <div className={isClicked ? 'casesLayout' : ' reversedLayout'}>
             <div
                 className={`${mcBack} ${pumaBack} ${flintBack} ${bigBack} ${pmBack} ${naviBack} universalBack`}
             >
-
+                <Line
+                    polyline={polyline}
+                    coords={{
+                        first: {
+                            x: 0,
+                            y: polyline.height * 0.38 ,
+                        },
+                        last: {
+                            x: coordsToX,
+                            y: coordsToY,
+                        },
+                    }}
+                    coords1={{
+                        first: {
+                            x: polyline.width,
+                            y: polyline.height * 0.30 ,
+                        },
+                        last: {
+                            x: coordsToX,
+                            y: coordsToY,
+                        },
+                    }}
+                    amount={7}
+                />
 
                 <Cube showCube={`${showCube}`} />
                 <div className="casesTextBlock">
