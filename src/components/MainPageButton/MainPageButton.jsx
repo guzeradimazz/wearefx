@@ -14,7 +14,7 @@ export const MainPageButton = forwardRef(
         useEffect(() => {
             if(hoverState)canvas.classList.add('displayNone')
             else canvas.classList.remove('displayNone')
-        }, [hoverState])
+        }, [hoverState,canvas.classList])
 
         return (
             <div>

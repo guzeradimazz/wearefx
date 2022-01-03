@@ -9,7 +9,6 @@ import './MainPage.css'
 import './MainPageMedia.css'
 
 import videoPower from './video/videoPower.mp4'
-import Line from '../Line/Line'
 
 const applyLayout = (canvas) => {
     canvas.width = canvas.clientWidth
@@ -327,12 +326,18 @@ const MainPage = ({
                         isClicked={isCasesClicked}
                     />
                     <Story
+                        polyline={polylineCases}
+                        coordsToX={buttonsCoords[1]?.x}
+                        coordsToY={buttonsCoords[1]?.y}
                         isStoryEntered={isStoryEntered}
                         isCanvasesHidded={isCanvasesHidded}
                         canvases={[canvas1, canvas2, canvas3]}
                         isClicked={isStoryClicked}
                     />
                     <Hire
+                        polyline={polylineCases}
+                        coordsToX={buttonsCoords[2]?.x}
+                        coordsToY={buttonsCoords[2]?.y}
                         isHireEntered={isHireEntered}
                         isCanvasesHidded={isCanvasesHidded}
                         canvases={[canvas1, canvas2, canvas3]}

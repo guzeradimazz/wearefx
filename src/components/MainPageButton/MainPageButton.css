@@ -188,7 +188,7 @@
     background-size: 35%;
     background-repeat: no-repeat;
     background-position: center;
-    z-index: 2002;
+    z-index: 10000011;
     position: absolute;
     border: none !important;
     bottom: 40px;
@@ -211,7 +211,7 @@
     background-size: 35%;
     background-repeat: no-repeat;
     background-position: center;
-    z-index: 2002;
+    z-index: 10000011;
     position: absolute;
     border: none !important;
     bottom: 40px;

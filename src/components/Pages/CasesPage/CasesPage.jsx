@@ -154,7 +154,7 @@ export const CasesPage = () => {
 
     useEffect(() => {
         setShowedCases([...casesArray].filter((e) => e.page === currentPage))
-    }, [currentPage])
+    }, [currentPage,casesArray])
 
     return (
         <CursorProvider>

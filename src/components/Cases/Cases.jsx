@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useCallback } from 'react'
 import './Cases.css'
 import Cube from '../Cube/Cube'
 import { Link } from 'react-router-dom'
@@ -32,22 +32,29 @@ export const Cases = ({
     isCanvasesHidded,
     isCasesEntered,
 }) => {
-    const offCanvases = () => {
-        canvases.map((i) => i.classList.add('displayNone'))
-    }
-    const onCanvases = () => {
-        canvases.map((i) => i.classList.remove('displayNone'))
-    }
+    const offCanvases = useCallback(
+        () => {
+            canvases.map((i) => i.classList.add('displayNone'))
+            polyline.classList.remove('displayNone')
+        },
+        [canvases,polyline.classList],
+    )
+
+    const onCanvases = useCallback(
+        () => {
+            canvases.map((i) => i.classList.remove('displayNone'))
+            polyline.classList.add('displayNone')
+        },
+        [canvases,polyline.classList],
+    )
+
     useEffect(() => {
         if (isCanvasesHidded) offCanvases()
         else onCanvases()
-    }, [isCanvasesHidded, offCanvases, onCanvases])
-
-    useEffect(() => {
         if (!isCasesEntered && isCanvasesHidded)
             canvases[0].classList.add('displayNone')
         else canvases[0].classList.remove('displayNone')
-    }, [isCasesEntered, isCanvasesHidded])
+    }, [isCanvasesHidded, offCanvases, onCanvases,isCasesEntered,canvases])
 
     const [mcStateHovered, setMcStateHovered] = useState(false)
     const [pumaStateHovered, setPumaStateHovered] = useState(false)
@@ -193,7 +200,7 @@ export const Cases = ({
                     coords1={{
                         first: {
                             x: polyline.width,
-                            y: polyline.height * 0.30 ,
+                            y: polyline.height * 0.25 ,
                         },
                         last: {
                             x: coordsToX,

@@ -1,41 +1,84 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useCallback } from 'react'
 import './Hire.css'
 import Cube from '../Cube/Cube'
 import { Link } from 'react-router-dom'
+import Line from '../Line/Line'
+
+const applyLayout = (canvas) => {
+    canvas.width = canvas.clientWidth
+    canvas.height = canvas.clientHeight
+}
 
 export const Hire = ({
+    coordsToX,
+    coordsToY,
+    polyline,
     isClicked,
     canvases,
     isCanvasesHidded,
     isHireEntered,
 }) => {
-    const offCanvases = () => {
-        canvases.map((i) => i.classList.add('displayNone'))
-    }
-    const onCanvases = () => {
-        canvases.map((i) => i.classList.remove('displayNone'))
-    }
+    const offCanvases = useCallback(
+        () => {
+            canvases.map((i) => i.classList.add('displayNone'))
+            polyline.classList.remove('displayNone')
+        },
+        [canvases,polyline.classList],
+    )
+
+    const onCanvases = useCallback(
+        () => {
+            canvases.map((i) => i.classList.remove('displayNone'))
+            polyline.classList.add('displayNone')
+        },
+        [canvases,polyline.classList],
+    )
+
     useEffect(() => {
         if (isCanvasesHidded) offCanvases()
         else onCanvases()
-    }, [isCanvasesHidded])
 
-    useEffect(() => {
         if (!isHireEntered && isCanvasesHidded)
             canvases[2].classList.add('displayNone')
         else canvases[2].classList.remove('displayNone')
-    }, [isHireEntered])
+    }, [isCanvasesHidded, isHireEntered,onCanvases, offCanvases, canvases])
+
+    applyLayout(polyline)
 
     if (isClicked) {
         return (
             <div className="hireLayout">
                 <Cube />
+                <Line
+                    polyline={polyline}
+                    coords={{
+                        first: {
+                            x: polyline.width * 0.85,
+                            y: 0,
+                        },
+                        last: {
+                            x: coordsToX+20,
+                            y: coordsToY,
+                        },
+                    }}
+                    coords1={{
+                        first: {
+                            x: 0,
+                            y: polyline.height,
+                        },
+                        last: {
+                            x: coordsToX+20,
+                            y: coordsToY+20,
+                        },
+                    }}
+                    amount={7}
+                />
                 <div className="hireBLock">
                     <div className="hireBLock__left">
                         <div className="hireBLock__left__top">
-                            <a href="#">Instagram</a>
-                            <a href="#">Facebook</a>
-                            <a href="#">behance</a>
+                            <Link to='/wearefx'>Instagram</Link>
+                            <Link to='/wearefx'>Facebook</Link>
+                            <Link to='/wearefx'>behance</Link>
                         </div>
                         <div className="hireBLock__left__middle">
                             <p>
@@ -57,14 +100,14 @@ export const Hire = ({
                         <div className="hireBLock__right__top">
                             <p>
                                 Wearefx © 2021 by
-                                <a className="violet_on_hover" href="#">
+                                <Link className="violet_on_hover" to='/wearefx'>
                                     {' '}
                                     Brāh lab ﹤
-                                </a>
+                                </Link>
                             </p>
-                            <a className="violet_on_hover" href="#">
+                            <Link className="violet_on_hover" to='/wearefx'>
                                 Privacy Policy ﹤
-                            </a>
+                            </Link>
                         </div>
                         <div className="hireBLock__right__middle">
                             <p>For general inquiries & new projects </p>
@@ -76,9 +119,9 @@ export const Hire = ({
                                 <p>Alex Dysenko</p>
                                 <div className="contact__tel">
                                     <p>a@wearefx.xyz</p>
-                                    <a href="tel:+380935925000">
+                                    <Link to="tel:+380935925000">
                                         +380935925000
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                             <div className="contact">
@@ -97,8 +140,7 @@ export const Hire = ({
                 <Link to="/hire">
                     <div className="hireBtn gradientBtn">
                         <p>
-                            chat
-                            with us
+                            chat with us
                             <br /> in telegram
                         </p>
                     </div>
