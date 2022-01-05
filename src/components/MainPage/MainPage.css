@@ -29,7 +29,7 @@
     position: fixed;
     width: 100vw !important;
     height: 100vh !important;
-    z-index: 100001;
+    z-index: 10;
 }
 #overlay1 {
     position: fixed;

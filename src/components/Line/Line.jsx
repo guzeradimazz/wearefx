@@ -19,12 +19,12 @@ export default function Line({polyline, coords, coords1, amount }) {
 
     let mousePos = {x: 0, y : 0};
 
-    canvas.addEventListener('mousemove', (e) => {
-        if (Math.sqrt(Math.abs(Math.pow(e.pageX - mousePos.x, 2) - Math.pow(e.pageY - mousePos.y, 2))) > 50) { // здесь можешь настроить чувствительность
-            mousePos = {x: e.pageX, y : e.pageY};
-            mix();
-        }
-    })
+    // canvas.addEventListener('mousemove', (e) => {
+    //     if (Math.sqrt(Math.abs(Math.pow(e.pageX - mousePos.x, 2) - Math.pow(e.pageY - mousePos.y, 2))) > 50) { // здесь можешь настроить чувствительность
+    //         mousePos = {x: e.pageX, y : e.pageY};
+    //         mix();
+    //     }
+    // })
 
     const stepX = Math.floor((coords.last.x - coords.first.x) / amount);
     const stepY = Math.floor((coords.last.y - coords.first.y) / amount);
@@ -82,8 +82,8 @@ export default function Line({polyline, coords, coords1, amount }) {
                 ctx.strokeStyle='#7344f4';
                 draw(dots1);
                 draw(dots3);
-                if (anim)
-                    requestAnimationFrame(interval);
+                // if (anim)
+                //     requestAnimationFrame(interval);
             }
         }
     }
