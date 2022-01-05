@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/wearefx/static/css/main.6c1a18ca.chunk.css",
-    "main.js": "/wearefx/static/js/main.c4b65b0c.chunk.js",
-    "main.js.map": "/wearefx/static/js/main.c4b65b0c.chunk.js.map",
+    "main.css": "/wearefx/static/css/main.a8cffe87.chunk.css",
+    "main.js": "/wearefx/static/js/main.36eadf6b.chunk.js",
+    "main.js.map": "/wearefx/static/js/main.36eadf6b.chunk.js.map",
     "runtime-main.js": "/wearefx/static/js/runtime-main.a95c827a.js",
     "runtime-main.js.map": "/wearefx/static/js/runtime-main.a95c827a.js.map",
     "static/css/2.8182d9c8.chunk.css": "/wearefx/static/css/2.8182d9c8.chunk.css",
-    "static/js/2.a2b059f4.chunk.js": "/wearefx/static/js/2.a2b059f4.chunk.js",
-    "static/js/2.a2b059f4.chunk.js.map": "/wearefx/static/js/2.a2b059f4.chunk.js.map",
+    "static/js/2.601e52bd.chunk.js": "/wearefx/static/js/2.601e52bd.chunk.js",
+    "static/js/2.601e52bd.chunk.js.map": "/wearefx/static/js/2.601e52bd.chunk.js.map",
     "index.html": "/wearefx/index.html",
     "static/css/2.8182d9c8.chunk.css.map": "/wearefx/static/css/2.8182d9c8.chunk.css.map",
-    "static/css/main.6c1a18ca.chunk.css.map": "/wearefx/static/css/main.6c1a18ca.chunk.css.map",
-    "static/js/2.a2b059f4.chunk.js.LICENSE.txt": "/wearefx/static/js/2.a2b059f4.chunk.js.LICENSE.txt",
+    "static/css/main.a8cffe87.chunk.css.map": "/wearefx/static/css/main.a8cffe87.chunk.css.map",
+    "static/js/2.601e52bd.chunk.js.LICENSE.txt": "/wearefx/static/js/2.601e52bd.chunk.js.LICENSE.txt",
     "static/media/StoryBottom.css": "/wearefx/static/media/Uberglovo.63103c6c.svg",
     "static/media/HirePage.css": "/wearefx/static/media/CloseWhite.049dfdf0.svg",
     "static/media/CursorProvider.css": "/wearefx/static/media/CursorHovered.184eff95.svg",
@@ -23,7 +23,6 @@
     "static/media/Cases.css": "/wearefx/static/media/gifcase.cf72bbae.svg",
     "static/media/HireMobile.css": "/wearefx/static/media/instagram.a61f3cfb.svg",
     "static/media/MainPage.css": "/wearefx/static/media/bg-noise.1087c988.gif",
-    "static/media/Preloader.css": "/wearefx/static/media/preloader.72a8e865.svg",
     "static/media/slick-theme.css": "/wearefx/static/media/slick.c94f7671.ttf",
     "static/media/MainPageMedia.css": "/wearefx/static/media/videoPower.4577a6fd.gif",
     "static/media/videoPower.46fefcbf.mp4": "/wearefx/static/media/videoPower.46fefcbf.mp4"
@@ -31,8 +30,8 @@
   "entrypoints": [
     "static/js/runtime-main.a95c827a.js",
     "static/css/2.8182d9c8.chunk.css",
-    "static/js/2.a2b059f4.chunk.js",
-    "static/css/main.6c1a18ca.chunk.css",
-    "static/js/main.c4b65b0c.chunk.js"
+    "static/js/2.601e52bd.chunk.js",
+    "static/css/main.a8cffe87.chunk.css",
+    "static/js/main.36eadf6b.chunk.js"
   ]
 }
