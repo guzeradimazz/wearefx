@@ -31,6 +31,7 @@
     position: absolute;
     color: #fff;
     font-size: 14px;
+    z-index: 1000001 !important;
     background: linear-gradient(125deg, #7344f4 10%, #eec01b 50%, #7344f4 90%);
     background-size: 600% 600%;
     box-shadow: 0 0 0 0 #eec01b;

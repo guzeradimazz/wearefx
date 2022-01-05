@@ -8,7 +8,6 @@
     align-items: center;
     border-radius: 50%;
     font-size: 18px;
-    z-index: 2001;
     color: #fff;
     transition: .3s ease-in-out;
     animation: showMainPageBtn 0.4s;
@@ -25,7 +24,7 @@
     position: absolute;
     top: 40px;
     left: calc(47%);
-    z-index: 10000011;
+    z-index: 1000;
 }
 .firstCircle:hover {
     transition: all 0.3s ease;
@@ -188,7 +187,7 @@
     background-size: 35%;
     background-repeat: no-repeat;
     background-position: center;
-    z-index: 10000011;
+    z-index: 100002;
     position: absolute;
     border: none !important;
     bottom: 40px;

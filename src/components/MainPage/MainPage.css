@@ -26,10 +26,10 @@
     top: 0;
 }
 #polylineCases{
-    position: absolute;
+    position: fixed;
     width: 100vw !important;
     height: 100vh !important;
-    z-index: 1000001;
+    z-index: 100001;
 }
 #overlay1 {
     position: fixed;

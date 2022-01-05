@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState,useMemo } from 'react'
 import Cube from '../../Cube/Cube'
 import './CasesPage.css'
 import '../StoryPage/StoryComponents/StoryHeader/StoryHeader.css'
@@ -27,6 +27,7 @@ export const CasesPage = () => {
         document.getElementById('overlay3').classList.add('displayNone')
     }, [])
 
+
     const casesArray = [
         {
             id: 12345,
@@ -40,7 +41,6 @@ export const CasesPage = () => {
             title: `Puma`,
             casesArrayItemBack: 'mcHoveredBack',
             personalClass: 'hush-Puma',
-
             page: 1,
         },
         {
