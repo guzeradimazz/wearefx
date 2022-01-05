@@ -108,8 +108,8 @@ export default function Line({polyline, coords, coords1, amount }) {
     draw(dots3);
 
     function moveLine (dots, i, val1, val2) {
-        if (dots[i].y > val1) dots[i].y -= 1;
-        else dots[i].y += 1;
+        if (dots[i].y > val1) dots[i].y -= 20;
+        else dots[i].y += 20;
 
         // if (dots[i].x > val2) dots[i].x -= 0.5;
         // else dots[i].x += 0.5;
