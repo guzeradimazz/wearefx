@@ -3,36 +3,29 @@ import './Hire.css'
 import Cube from '../Cube/Cube'
 import { Link } from 'react-router-dom'
 import Line from '../Line/Line'
-
-const applyLayout = (canvas) => {
-    canvas.width = canvas.clientWidth
-    canvas.height = canvas.clientHeight
-}
+import useWindowDimensions from '../useWindowDimension/useWindowDimensions'
 
 export const Hire = ({
+    polyline,
     coordsToX,
     coordsToY,
-    polyline,
     isClicked,
     canvases,
     isCanvasesHidded,
     isHireEntered,
 }) => {
-    const offCanvases = useCallback(
-        () => {
-            canvases.map((i) => i.classList.add('displayNone'))
-            polyline.classList.remove('displayNone')
-        },
-        [canvases,polyline.classList],
-    )
 
-    const onCanvases = useCallback(
-        () => {
-            canvases.map((i) => i.classList.remove('displayNone'))
-            polyline.classList.add('displayNone')
-        },
-        [canvases,polyline.classList],
-    )
+    const { width, height } = useWindowDimensions()
+
+    const offCanvases = useCallback(() => {
+        canvases.map((i) => i.classList.add('displayNone'))
+        polyline.classList.remove('displayNone')
+    }, [canvases, polyline.classList])
+
+    const onCanvases = useCallback(() => {
+        canvases.map((i) => i.classList.remove('displayNone'))
+        polyline.classList.add('displayNone')
+    }, [canvases, polyline.classList])
 
     useEffect(() => {
         if (isCanvasesHidded) offCanvases()
@@ -41,34 +34,33 @@ export const Hire = ({
         if (!isHireEntered && isCanvasesHidded)
             canvases[2].classList.add('displayNone')
         else canvases[2].classList.remove('displayNone')
-    }, [isCanvasesHidded, isHireEntered,onCanvases, offCanvases, canvases])
+    }, [isCanvasesHidded, isHireEntered, onCanvases, offCanvases, canvases])
 
-    applyLayout(polyline)
 
     if (isClicked) {
         return (
             <div className="hireLayout">
                 <Cube />
                 <Line
-                    polyline={polyline}
+                    isClicked={isClicked}
                     coords={{
                         first: {
-                            x: polyline.width * 0.85,
+                            x: width * 0.85,
                             y: 0,
                         },
                         last: {
-                            x: coordsToX+20,
+                            x: coordsToX + 20,
                             y: coordsToY,
                         },
                     }}
                     coords1={{
                         first: {
                             x: 0,
-                            y: polyline.height,
+                            y: height,
                         },
                         last: {
-                            x: coordsToX+20,
-                            y: coordsToY+20,
+                            x: coordsToX + 20,
+                            y: coordsToY + 20,
                         },
                     }}
                     amount={7}
@@ -76,9 +68,9 @@ export const Hire = ({
                 <div className="hireBLock">
                     <div className="hireBLock__left">
                         <div className="hireBLock__left__top">
-                            <Link to='/wearefx'>Instagram</Link>
-                            <Link to='/wearefx'>Facebook</Link>
-                            <Link to='/wearefx'>behance</Link>
+                            <Link to="/wearefx">Instagram</Link>
+                            <Link to="/wearefx">Facebook</Link>
+                            <Link to="/wearefx">behance</Link>
                         </div>
                         <div className="hireBLock__left__middle">
                             <p>
@@ -100,12 +92,12 @@ export const Hire = ({
                         <div className="hireBLock__right__top">
                             <p>
                                 Wearefx © 2021 by
-                                <Link className="violet_on_hover" to='/wearefx'>
+                                <Link className="violet_on_hover" to="/wearefx">
                                     {' '}
                                     Brāh lab ﹤
                                 </Link>
                             </p>
-                            <Link className="violet_on_hover" to='/wearefx'>
+                            <Link className="violet_on_hover" to="/wearefx">
                                 Privacy Policy ﹤
                             </Link>
                         </div>

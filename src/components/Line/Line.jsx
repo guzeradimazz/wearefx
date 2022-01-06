@@ -6,14 +6,14 @@ const applyLayout = (canvas) => {
 }
 
 export default function Line({isClicked, coords, amount, coords1 }) {
-    const canvas = document.getElementById('polylineCases')
+    const canvas = document.getElementById('polyline')
 
     let ctx = canvas.getContext('2d')
 
     applyLayout(canvas)
 
     ctx.lineWidth = 1.3
-    ctx.strokeStyle = 'red'
+    ctx.strokeStyle = '#f1bb00'
 
     let dots = Array(amount + 1)
     let dots1 = Array(amount + 1)
@@ -74,10 +74,10 @@ export default function Line({isClicked, coords, amount, coords1 }) {
                 moveLine(dots3, i, newValY3, newValX3)
 
                 ctx.clearRect(0, 0, canvas.width, canvas.height)
-                ctx.strokeStyle = 'red'
+                ctx.strokeStyle = '#f1bb00'
                 draw(dots)
                 draw(dots2)
-                ctx.strokeStyle = 'blue'
+                ctx.strokeStyle = '#7344f4'
                 draw(dots1)
                 draw(dots3)
                 if (anim) requestAnimationFrame(interval)

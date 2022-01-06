@@ -3,7 +3,7 @@
     bottom: 0;
     width: 100vw;
     height: 100vh;
-    z-index: 100000;
+    z-index: 2000;
     transition: clip-path 0.3s ease;
     animation: storyShow;
     animation-duration: 0.4s;

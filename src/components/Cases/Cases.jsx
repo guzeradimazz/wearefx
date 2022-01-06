@@ -4,13 +4,11 @@ import Cube from '../Cube/Cube'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import Line from '../Line/Line'
+import useWindowDimensions from '../useWindowDimension/useWindowDimensions'
 
-const applyLayout = (canvas) => {
-    canvas.width = canvas.clientWidth
-    canvas.height = canvas.clientHeight
-}
 
 export const Cases = ({
+    polyline,
     casesArray,
     coordsToX,
     coordsToY,
@@ -31,7 +29,9 @@ export const Cases = ({
     isCanvasesHidded,
     isCasesEntered,
 }) => {
-    const polyline = document.getElementById('polylineCases')
+
+
+    const {width,height} = useWindowDimensions()
 
     const offCanvases = useCallback(() => {
         canvases.map((i) => i.classList.add('displayNone'))
@@ -176,7 +176,7 @@ export const Cases = ({
     const toAllCases = () => {
         console.log('all')
     }
-    applyLayout(polyline)
+
     return (
         <div className={isClicked ? 'casesLayout' : ' reversedLayout'}>
             <div
@@ -186,22 +186,22 @@ export const Cases = ({
                     isClicked={isClicked}
                     coords={{
                         first: {
-                            x: 50,
-                            y: 500,
+                            x: 0,
+                            y: height*0.38,
                         },
                         last: {
-                            x: 500,
-                            y: 500,
+                            x: coordsToX,
+                            y: coordsToY,
                         },
                     }}
                     coords1={{
                         first: {
-                            x: 1000,
-                            y: 1000,
+                            x: width,
+                            y: height*0.24,
                         },
                         last: {
-                            x: 500,
-                            y: 500,
+                            x: coordsToX,
+                            y: coordsToY,
                         },
                     }}
                     amount={7}

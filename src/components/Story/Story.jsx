@@ -4,22 +4,19 @@ import 'animate.css'
 import Cube from '../Cube/Cube'
 import { Link } from 'react-router-dom'
 import Line from '../Line/Line'
-// import './StoryMedia. css'
-
-const applyLayout = (canvas) => {
-    canvas.width = canvas.clientWidth
-    canvas.height = canvas.clientHeight
-}
+import useWindowDimensions from '../useWindowDimension/useWindowDimensions'
 
 export const Story = ({
+    polyline,
     coordsToX,
     coordsToY,
-    polyline,
     isClicked,
     canvases,
     isCanvasesHidded,
     isStoryEntered,
 }) => {
+    const { width, height } = useWindowDimensions()
+
     const offCanvases = useCallback(() => {
         canvases.map((i) => i.classList.add('displayNone'))
         polyline.classList.remove('displayNone')
@@ -29,6 +26,7 @@ export const Story = ({
         canvases.map((i) => i.classList.remove('displayNone'))
         polyline.classList.add('displayNone')
     }, [canvases, polyline.classList])
+
     useEffect(() => {
         if (isCanvasesHidded) offCanvases()
         else onCanvases()
@@ -37,17 +35,15 @@ export const Story = ({
         else canvases[1].classList.remove('displayNone')
     }, [isCanvasesHidded, canvases, isStoryEntered, offCanvases, onCanvases])
 
-    applyLayout(polyline)
-
     if (isClicked) {
         return (
             <div className="storyLayout">
                 <Cube />
                 <Line
-                    polyline={polyline}
+                    isClicked={isClicked}
                     coords={{
                         first: {
-                            x: polyline.width * 0.18,
+                            x: width * 0.18,
                             y: 0,
                         },
                         last: {
@@ -57,12 +53,12 @@ export const Story = ({
                     }}
                     coords1={{
                         first: {
-                            x: polyline.width,
-                            y: polyline.height,
+                            x: width,
+                            y: height,
                         },
                         last: {
                             x: coordsToX,
-                            y: coordsToY + 24,
+                            y: coordsToY,
                         },
                     }}
                     amount={7}

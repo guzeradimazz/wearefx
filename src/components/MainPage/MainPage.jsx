@@ -73,7 +73,7 @@ const MainPage = ({
     const canvas2 = document.getElementById('overlay2')
     const canvas3 = document.getElementById('overlay3')
 
-    const polylineCases = document.getElementById('polylineCases')
+    const polyline = document.getElementById('polyline')
 
     const [isCasesClicked, setIsCasesClicked] = useState(false)
     const [isCasesEntered, setIsCasesEntered] = useState(false)
@@ -214,7 +214,7 @@ const MainPage = ({
         return () => {
             window.removeEventListener('mousemove', onMove)
             window.removeEventListener('mousemove', btnMove1)
-        
+
             try {
                 btn1Ref.current.removeEventListener('mouseover', on1BtnEnter)
                 btn1Ref.current.removeEventListener('mouseleave', on1BtnLeave)
@@ -304,8 +304,8 @@ const MainPage = ({
                         x
                     />
                     <Cases
+                        polyline={polyline}
                         casesArray={casesArray}
-                        polyline={polylineCases}
                         coordsToX={buttonsCoords[0]?.x}
                         coordsToY={buttonsCoords[0]?.y}
                         isMc={isMc}
@@ -326,7 +326,7 @@ const MainPage = ({
                         isClicked={isCasesClicked}
                     />
                     <Story
-                        polyline={polylineCases}
+                        polyline={polyline}
                         coordsToX={buttonsCoords[1]?.x}
                         coordsToY={buttonsCoords[1]?.y}
                         isStoryEntered={isStoryEntered}
@@ -335,7 +335,7 @@ const MainPage = ({
                         isClicked={isStoryClicked}
                     />
                     <Hire
-                        polyline={polylineCases}
+                        polyline={polyline}
                         coordsToX={buttonsCoords[2]?.x}
                         coordsToY={buttonsCoords[2]?.y}
                         isHireEntered={isHireEntered}

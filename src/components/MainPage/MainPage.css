@@ -25,7 +25,7 @@
     left: 0;
     top: 0;
 }
-#polylineCases{
+#polyline {
     position: absolute;
     width: 100vw !important;
     height: 100vh !important;
