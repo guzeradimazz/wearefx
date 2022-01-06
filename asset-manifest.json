@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/wearefx/static/css/main.8ceaffb0.chunk.css",
-    "main.js": "/wearefx/static/js/main.6774cfd7.chunk.js",
-    "main.js.map": "/wearefx/static/js/main.6774cfd7.chunk.js.map",
+    "main.css": "/wearefx/static/css/main.22585267.chunk.css",
+    "main.js": "/wearefx/static/js/main.7754d0f5.chunk.js",
+    "main.js.map": "/wearefx/static/js/main.7754d0f5.chunk.js.map",
     "runtime-main.js": "/wearefx/static/js/runtime-main.a95c827a.js",
     "runtime-main.js.map": "/wearefx/static/js/runtime-main.a95c827a.js.map",
     "static/css/2.8182d9c8.chunk.css": "/wearefx/static/css/2.8182d9c8.chunk.css",
-    "static/js/2.601e52bd.chunk.js": "/wearefx/static/js/2.601e52bd.chunk.js",
-    "static/js/2.601e52bd.chunk.js.map": "/wearefx/static/js/2.601e52bd.chunk.js.map",
+    "static/js/2.45fea041.chunk.js": "/wearefx/static/js/2.45fea041.chunk.js",
+    "static/js/2.45fea041.chunk.js.map": "/wearefx/static/js/2.45fea041.chunk.js.map",
     "index.html": "/wearefx/index.html",
     "static/css/2.8182d9c8.chunk.css.map": "/wearefx/static/css/2.8182d9c8.chunk.css.map",
-    "static/css/main.8ceaffb0.chunk.css.map": "/wearefx/static/css/main.8ceaffb0.chunk.css.map",
-    "static/js/2.601e52bd.chunk.js.LICENSE.txt": "/wearefx/static/js/2.601e52bd.chunk.js.LICENSE.txt",
+    "static/css/main.22585267.chunk.css.map": "/wearefx/static/css/main.22585267.chunk.css.map",
+    "static/js/2.45fea041.chunk.js.LICENSE.txt": "/wearefx/static/js/2.45fea041.chunk.js.LICENSE.txt",
     "static/media/StoryBottom.css": "/wearefx/static/media/Uberglovo.63103c6c.svg",
     "static/media/HirePage.css": "/wearefx/static/media/CloseWhite.049dfdf0.svg",
     "static/media/CursorProvider.css": "/wearefx/static/media/CursorHovered.184eff95.svg",
@@ -19,7 +19,7 @@
     "static/media/CasesPagePersonal.css": "/wearefx/static/media/personal.9b816d6c.svg",
     "static/media/stylesheet.css": "/wearefx/static/media/FuturaPTCond-MediumObl.f61a3fb9.woff",
     "static/media/StoryMedia.css": "/wearefx/static/media/▼arrowTop.6f5ac776.svg",
-    "static/media/CasesPage.css": "/wearefx/static/media/McDonalds.69b75487.svg",
+    "static/media/CasesPage.css": "/wearefx/static/media/Showreel.9f905eb1.svg",
     "static/media/Cases.css": "/wearefx/static/media/gifcase.cf72bbae.svg",
     "static/media/HireMobile.css": "/wearefx/static/media/instagram.a61f3cfb.svg",
     "static/media/MainPage.css": "/wearefx/static/media/bg-noise.1087c988.gif",
@@ -30,8 +30,8 @@
   "entrypoints": [
     "static/js/runtime-main.a95c827a.js",
     "static/css/2.8182d9c8.chunk.css",
-    "static/js/2.601e52bd.chunk.js",
-    "static/css/main.8ceaffb0.chunk.css",
-    "static/js/main.6774cfd7.chunk.js"
+    "static/js/2.45fea041.chunk.js",
+    "static/css/main.22585267.chunk.css",
+    "static/js/main.7754d0f5.chunk.js"
   ]
 }
