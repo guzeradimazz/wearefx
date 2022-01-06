@@ -214,7 +214,7 @@ const MainPage = ({
         return () => {
             window.removeEventListener('mousemove', onMove)
             window.removeEventListener('mousemove', btnMove1)
-
+        
             try {
                 btn1Ref.current.removeEventListener('mouseover', on1BtnEnter)
                 btn1Ref.current.removeEventListener('mouseleave', on1BtnLeave)

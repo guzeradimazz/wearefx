@@ -179,6 +179,9 @@ export const Cases = ({
     }
 
 
+    const toAllCases = () =>{
+        console.log('all');
+    }
     applyLayout(polyline)
     return (
         <div className={isClicked ? 'casesLayout' : ' reversedLayout'}>
@@ -299,7 +302,10 @@ export const Cases = ({
                         {casesArray[5].title}
                     </div>
                 </div>
-                <Link to="/cases">
+                <Link 
+                    to="/cases"
+                    onClick={()=>toAllCases}
+                >
                     <div className="casesBtn gradientBtn">
                         <p>
                             Explore
