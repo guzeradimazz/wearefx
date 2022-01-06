@@ -158,7 +158,7 @@ export const CasesPage = () => {
 
     return (
         <CursorProvider>
-            <div className={`cases-page`}>
+            <div className="cases-page">
                 <Cube />
                 <div className={`${isHoveredBackground}`}>
                     <div className="story-header">

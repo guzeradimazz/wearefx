@@ -10,6 +10,7 @@ import { VideoPersonal } from './Video/VideoPersonal'
 
 const CasesPagePersonal = () => {
     useEffect(() => {
+        document.getElementById('polyline').classList.add('displayNone')
         document.getElementById('overlay1').classList.add('displayNone')
         document.getElementById('overlay2').classList.add('displayNone')
         document.getElementById('overlay3').classList.add('displayNone')
@@ -40,7 +41,7 @@ const CasesPagePersonal = () => {
                 />
                 <ContactBlock />
                 <div className="next-project">
-                    <div className="storyBtn gradientBtn">
+                    <div className=" storyBtn gradientBtn">
                         <p>
                             Explore
                             <br />

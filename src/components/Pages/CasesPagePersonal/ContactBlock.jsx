@@ -1,9 +1,10 @@
 import React from 'react'
+import './CasesPagePersonal.css'
 
 const ContactBlock = () => {
     return (
         <div className="contact-block">
-            <div className="storyBtn gradientBtn">
+            <div className="fixedPersonalBtn storyBtn gradientBtn">
                 <p>
                     We’re
                     <br />

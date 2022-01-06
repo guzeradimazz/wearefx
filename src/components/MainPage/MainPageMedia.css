@@ -27,9 +27,6 @@
         width: 120px;
         height: 120px;
     }
-    .casesLayout {
-        height: 93vh !important;
-    }
     .main {
         padding: 80px;
     }
@@ -129,9 +126,6 @@
     .showreel {
         display: block;
     }
-    .casesLayout {
-        height: 89vh;
-    }
     .storyBlock {
         margin-top: 15%;
     }
@@ -157,7 +151,6 @@
         display: block;
     }
     .casesLayout {
-        height: 89vh;
         clip-path: polygon(51% 0%, 100% 15%, 100% 100%, 0 100%, 0 30%);
     }
     .casesArray {

@@ -25,17 +25,19 @@ const HirePage = () => {
                         </div>
                         <div>
                             <Link to="/cases">Cases</Link>
-                            <Link to="/hire">our story</Link>
+                            <Link to="/story">our story</Link>
                         </div>
                     </div>
-                    <div className="header-right"></div>
+                    <Link to='/wearefx'>
+                        <div className="header-right"></div>
+                    </Link>
                 </div>
                 <div className="hireBLock">
                     <div className="hireBLock__left">
                         <div className="hireBLock__left__top">
-                            <Link to='/wearefx'>Instagram</Link>
-                            <Link to='/wearefx'>Facebook</Link>
-                            <Link to='/wearefx'>behance</Link>
+                            <Link to="/wearefx">Instagram</Link>
+                            <Link to="/wearefx">Facebook</Link>
+                            <Link to="/wearefx">behance</Link>
                         </div>
                         <div className="hireBLock__left__middle">
                             <p>
@@ -57,7 +59,7 @@ const HirePage = () => {
                         <div className="hireBLock__right__top">
                             <p>
                                 Wearefx © 2021 by
-                                <Link className="violet_on_hover" to="/wearefx" > 
+                                <Link className="violet_on_hover" to="/wearefx">
                                     {' '}
                                     Brāh lab
                                 </Link>
@@ -94,7 +96,7 @@ const HirePage = () => {
                         </div>
                     </div>
                 </div>
-                <div className="casesBtn gradientBtn">
+                <div className="hireBtnPage casesBtn gradientBtn">
                     <p>
                         chat with us
                         <br />

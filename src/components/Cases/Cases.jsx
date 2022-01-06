@@ -174,11 +174,12 @@ export const Cases = ({
     }
 
     const toAllCases = () => {
-        console.log('all')
+        const casesLayoutElement = document.getElementById('casesLayoutElem')
+        casesLayoutElement.style.clipPath = 'polygon(0% 0%, 100% 0%, 100% 100%, 0 100%, 0 30%)'
     }
 
     return (
-        <div className={isClicked ? 'casesLayout' : ' reversedLayout'}>
+        <div id='casesLayoutElem' className={isClicked ? 'casesLayout' : ' reversedLayout'}>
             <div
                 className={`${mcBack} ${pumaBack} ${flintBack} ${bigBack} ${pmBack} ${naviBack} universalBack`}
             >
@@ -296,7 +297,7 @@ export const Cases = ({
                         {casesArray[5].title}
                     </div>
                 </div>
-                <Link to="/cases" onClick={() => toAllCases}>
+                <Link to="/cases" onClick={() => toAllCases()}>
                     <div className="casesBtn gradientBtn">
                         <p>
                             Explore

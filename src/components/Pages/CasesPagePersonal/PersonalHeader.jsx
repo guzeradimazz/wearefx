@@ -19,10 +19,12 @@ export const PersonalHeader = () => {
                         </Link>
                     </div>
                 </div>
-                <div className="personal-right"></div>
+                <Link to="/wearefx">
+                    <div className="personal-right"></div>
+                </Link>
             </div>
             <h1 className="header-title">NAVI X PUMA. OBSESSED WE.</h1>
-            <h6 className='header-desc'>Granding, VFX, motion, production</h6>
+            <h6 className="header-desc">Granding, VFX, motion, production</h6>
         </div>
     )
 }

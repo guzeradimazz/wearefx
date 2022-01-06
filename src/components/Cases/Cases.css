@@ -3,7 +3,7 @@
     position: absolute;
     bottom: 0;
     width: 100vw;
-    height: 86vh;
+    height: 100vh;
     z-index: 2000;
     background-color: #000;
     animation: showLayout;
@@ -41,7 +41,7 @@
         clip-path: polygon(49% 0%, 100% 100%, 100% 100%, 0 100%, 0 100%);
     }
     100% {
-        clip-path: polygon(49% 0%, 100% 15%, 100% 100%, 0 100%, 0 30%);
+        clip-path: polygon(50% 10%, 100% 24%, 100% 100%, 0 100%, 0 38%);
     }
 }
 .casesBtn {    

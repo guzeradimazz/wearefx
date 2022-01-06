@@ -12,8 +12,8 @@ li{
     list-style: none;
 }
 html{
+    background-color: #000;
     overflow-x: hidden !important;
-    animation: unFocusFocus 2s;
 }
 @keyframes unFocusFocus {
     0%{

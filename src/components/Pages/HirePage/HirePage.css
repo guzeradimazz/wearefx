@@ -4,6 +4,9 @@
     animation: pulseclicked 2s ease;
     background-image: url('../../../images/CloseBlack.svg');
 }
+.hireBtnPage p{
+    padding-top: 10%;
+}
 .hireBtnViolet{
     border-radius: 50%;
     transition: all 0.3s ease-in-out;

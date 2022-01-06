@@ -1,16 +1,24 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 
 const applyLayout = (canvas) => {
     canvas.width = canvas.clientWidth
     canvas.height = canvas.clientHeight
 }
 
-export default function Line({isClicked, coords, amount, coords1 }) {
+export default function Line({ isClicked, coords, amount, coords1 }) {
     const canvas = document.getElementById('polyline')
 
+    const idInterval = useRef(null)
     let ctx = canvas.getContext('2d')
 
     applyLayout(canvas)
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+    useEffect(() => {
+        ctx.restore()
+        ctx.clearRect(0, 0, canvas.width, canvas.height)
+        return () => idInterval.current && clearInterval(idInterval.current)
+    }, [])
 
     ctx.lineWidth = 1.3
     ctx.strokeStyle = '#f1bb00'
@@ -43,17 +51,12 @@ export default function Line({isClicked, coords, amount, coords1 }) {
     const mix = () => {
         for (let i = 1; i < amount; ++i) {
             let randy = getRandomInt(-60, 60)
-            let randx = getRandomInt(-3, 3)
 
             let newValY = coords.first.y + i * stepY + randy
-            let newValX = coords.first.x + i * stepX + randx
             let newValY1 = coords.first.y + i * stepY - randy
-            let newValX1 = coords.first.x + i * stepX - randx
 
             let newValY2 = coords1.first.y + i * stepY1 + randy
-            let newValX2 = coords1.first.x + i * stepX1 + randx
             let newValY3 = coords1.first.y + i * stepY1 - randy
-            let newValX3 = coords1.first.x + i * stepX1 - randx
 
             let anim = true
 
@@ -66,12 +69,11 @@ export default function Line({isClicked, coords, amount, coords1 }) {
                     cancelAnimationFrame(id)
                     anim = false
                 }
-                debugger
-                moveLine(dots, i, newValY, newValX)
-                moveLine(dots1, i, newValY1, newValX1)
+                moveLine(dots, i, newValY)
+                moveLine(dots1, i, newValY1)
 
-                moveLine(dots2, i, newValY2, newValX2)
-                moveLine(dots3, i, newValY3, newValX3)
+                moveLine(dots2, i, newValY2)
+                moveLine(dots3, i, newValY3)
 
                 ctx.clearRect(0, 0, canvas.width, canvas.height)
                 ctx.strokeStyle = '#f1bb00'
@@ -95,8 +97,6 @@ export default function Line({isClicked, coords, amount, coords1 }) {
         ctx.stroke()
     }
 
-    let idInterval
-
     useEffect(() => {
         set(dots, coords, stepX, stepY)
         set(dots1, coords, stepX, stepY)
@@ -108,18 +108,18 @@ export default function Line({isClicked, coords, amount, coords1 }) {
         draw(dots2)
         draw(dots3)
 
-        if(isClicked) idInterval = setInterval(mix, 2000)
-        if(!isClicked) clearInterval(idInterval)
+        if (isClicked) idInterval.current = setInterval(mix, 2000)
+        if (!isClicked) {
+            ctx.restore()
+            ctx.clearRect(0, 0, canvas.width, canvas.height)
+            idInterval.current && clearInterval(idInterval.current)
+        }
     }, [isClicked])
 
-    
-    function moveLine(dots, i, val1, val2) {
+    function moveLine(dots, i, val1) {
         if (dots[i].y > val1) dots[i].y -= 1
         else dots[i].y += 1
-
-        // if (dots[i].x > val2) dots[i].x -= 0.5;
-        // else dots[i].x += 0.5;
     }
 
-    return <div />
+    return null
 }

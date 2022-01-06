@@ -10,7 +10,10 @@
 .no_overflow {
     overflow-y: hidden !important;
 }
-
+.mainPageSelector{
+    animation-delay: 2s;
+    animation: unFocusFocus 2s;
+}
 .toner {
     background: rgb(255, 255, 255, 0);
     background: radial-gradient(
