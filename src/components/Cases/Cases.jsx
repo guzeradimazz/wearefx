@@ -12,7 +12,6 @@ const applyLayout = (canvas) => {
 
 export const Cases = ({
     casesArray,
-    polyline,
     coordsToX,
     coordsToY,
     setisMc,
@@ -32,21 +31,17 @@ export const Cases = ({
     isCanvasesHidded,
     isCasesEntered,
 }) => {
-    const offCanvases = useCallback(
-        () => {
-            canvases.map((i) => i.classList.add('displayNone'))
-            polyline.classList.remove('displayNone')
-        },
-        [canvases,polyline.classList],
-    )
+    const polyline = document.getElementById('polylineCases')
 
-    const onCanvases = useCallback(
-        () => {
-            canvases.map((i) => i.classList.remove('displayNone'))
-            polyline.classList.add('displayNone')
-        },
-        [canvases,polyline.classList],
-    )
+    const offCanvases = useCallback(() => {
+        canvases.map((i) => i.classList.add('displayNone'))
+        polyline.classList.remove('displayNone')
+    }, [canvases, polyline.classList])
+
+    const onCanvases = useCallback(() => {
+        canvases.map((i) => i.classList.remove('displayNone'))
+        polyline.classList.add('displayNone')
+    }, [canvases, polyline.classList])
 
     useEffect(() => {
         if (isCanvasesHidded) offCanvases()
@@ -54,7 +49,7 @@ export const Cases = ({
         if (!isCasesEntered && isCanvasesHidded)
             canvases[0].classList.add('displayNone')
         else canvases[0].classList.remove('displayNone')
-    }, [isCanvasesHidded, offCanvases, onCanvases,isCasesEntered,canvases])
+    }, [isCanvasesHidded, offCanvases, onCanvases, isCasesEntered, canvases])
 
     const [mcStateHovered, setMcStateHovered] = useState(false)
     const [pumaStateHovered, setPumaStateHovered] = useState(false)
@@ -178,9 +173,8 @@ export const Cases = ({
         setNaviStateHovered(false)
     }
 
-
-    const toAllCases = () =>{
-        console.log('all');
+    const toAllCases = () => {
+        console.log('all')
     }
     applyLayout(polyline)
     return (
@@ -189,25 +183,25 @@ export const Cases = ({
                 className={`${mcBack} ${pumaBack} ${flintBack} ${bigBack} ${pmBack} ${naviBack} universalBack`}
             >
                 <Line
-                    polyline={polyline}
+                    isClicked={isClicked}
                     coords={{
                         first: {
-                            x: 0,
-                            y: polyline.height * 0.38 ,
+                            x: 50,
+                            y: 500,
                         },
                         last: {
-                            x: coordsToX,
-                            y: coordsToY,
+                            x: 500,
+                            y: 500,
                         },
                     }}
                     coords1={{
                         first: {
-                            x: polyline.width,
-                            y: polyline.height * 0.25 ,
+                            x: 1000,
+                            y: 1000,
                         },
                         last: {
-                            x: coordsToX,
-                            y: coordsToY,
+                            x: 500,
+                            y: 500,
                         },
                     }}
                     amount={7}
@@ -302,10 +296,7 @@ export const Cases = ({
                         {casesArray[5].title}
                     </div>
                 </div>
-                <Link 
-                    to="/cases"
-                    onClick={()=>toAllCases}
-                >
+                <Link to="/cases" onClick={() => toAllCases}>
                     <div className="casesBtn gradientBtn">
                         <p>
                             Explore
