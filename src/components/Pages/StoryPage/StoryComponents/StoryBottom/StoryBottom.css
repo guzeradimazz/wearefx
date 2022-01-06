@@ -3,17 +3,6 @@
     position: relative;
     background-color: #071013;
 }
-.story-bottom::before {
-    content: '';
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    opacity: 0.02;
-    left: 0;
-    background-image: url('../../../../../images/bg-noise.gif');
-    position: absolute;
-    background-size: cover;
-}
 .story-ellipse {
     border-radius: 50%;
     position: absolute;

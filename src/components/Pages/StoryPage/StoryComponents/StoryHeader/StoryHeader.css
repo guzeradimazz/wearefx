@@ -34,6 +34,7 @@
     width: 200px;
 }
 .header-left div:nth-child(2) a {
+    width: 150px !important;
     color: #fff;
     text-transform: uppercase;
 }

@@ -28,26 +28,33 @@
     left: calc(50%);
 }
 .casesArrayItem {
-    font-size: 30px;
+    font-size: 36px;
     text-align: left;
-    width: 250px;
+    width: 70%;
     margin-top: 0;
     margin-bottom: 15px;
     z-index: 2000;
     height: 36px;
-    transition: ease-out;
-    animation: fadeCasesItem;
-    animation-duration: .3s;
-
+    overflow: hidden !important;
+    display: block;
 }
-@keyframes fadeCasesItem {
-    from {
+.casesArrayItem span {
+    position: relative;
+    display: inline-block;
+    transform: translateY(100%);
+    transition: 0.3s;
+    opacity: 0;
+    display: inline-block;
+    animation: spanSliderX 1s ease forwards;
+}
+@keyframes spanSliderX {
+    0% {
+        transform: translateX(500%);
         opacity: 0;
-        /* transform: translateX(100%); */
     }
-    to {
+    100% {
         opacity: 1;
-        /* transform: translateX(0); */
+        transform: translateX(0);
     }
 }
 .casesArrayItem:hover {
@@ -81,7 +88,7 @@
     background-repeat: no-repeat;
     background-position: center;
 }
-.mcHoveredBack2{
+.mcHoveredBack2 {
     position: absolute;
     bottom: 0;
     z-index: 2000;
@@ -93,6 +100,6 @@
     background-repeat: no-repeat;
     background-position: center;
 }
-.casesTextBlock p{
+.casesTextBlock p {
     max-width: 450px !important;
 }

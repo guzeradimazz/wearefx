@@ -1,4 +1,4 @@
-import React, { useEffect, useState,useMemo } from 'react'
+import React, { useEffect, useState, useMemo } from 'react'
 import Cube from '../../Cube/Cube'
 import './CasesPage.css'
 import '../StoryPage/StoryComponents/StoryHeader/StoryHeader.css'
@@ -22,11 +22,11 @@ export const CasesPage = () => {
     }
 
     useEffect(() => {
+        document.getElementById('polyline').classList.add('displayNone')
         document.getElementById('overlay1').classList.add('displayNone')
         document.getElementById('overlay2').classList.add('displayNone')
         document.getElementById('overlay3').classList.add('displayNone')
     }, [])
-
 
     const casesArray = [
         {
@@ -154,7 +154,7 @@ export const CasesPage = () => {
 
     useEffect(() => {
         setShowedCases([...casesArray].filter((e) => e.page === currentPage))
-    }, [currentPage,casesArray])
+    }, [currentPage])
 
     return (
         <CursorProvider>
@@ -188,9 +188,9 @@ export const CasesPage = () => {
                                         : 'casesArrayItem'
                                 }
                                 key={item.id}
-                                onClick={()=>navigate(`/cases/${item.id}`)}
+                                onClick={() => navigate(`/cases/${item.id}`)}
                             >
-                                {item.title}
+                                <span>{item.title}</span>
                             </div>
                         ))}
                     </div>
