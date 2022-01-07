@@ -213,7 +213,6 @@ export const Cases = ({
                 coordY = (coordYPara / parallaxHeigth) * 100
             })
         }
-        //fdgfbgs
     }, [])
     return (
         <div
