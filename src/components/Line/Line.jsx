@@ -102,7 +102,7 @@ export default function Line({ isClicked, coords, amount, coords1 }) {
         set(dots1, coords, stepX, stepY)
         set(dots2, coords1, stepX1, stepY1)
         set(dots3, coords1, stepX1, stepY1)
-
+        
         draw(dots)
         draw(dots1)
         draw(dots2)

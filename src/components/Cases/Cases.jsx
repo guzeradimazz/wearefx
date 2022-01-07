@@ -179,7 +179,7 @@ export const Cases = ({
     useEffect(() => {
         const parallax = document.getElementById('casesLayoutElem')
 
-        if (parallax) {
+        if (parallax && mcStateHovered) {
             const parallaxItem = document.getElementById('parallaxImageBlock')
 
             const SpeedPr = 10
@@ -206,22 +206,21 @@ export const Cases = ({
                 const parallaxWidth = parallax.offsetWidth
                 const parallaxHeigth = parallax.offsetHeight
 
-                const coordXPara = e.pageX - parallaxWidth*1.4 / 2
+                const coordXPara = e.pageX - (parallaxWidth * 1.3) / 2
                 const coordYPara = e.pageY - parallaxHeigth / 2
 
                 coordX = (coordXPara / parallaxWidth) * 100
                 coordY = (coordYPara / parallaxHeigth) * 100
             })
         }
-        //fdgfbgs
-    }, [])
+    }, [mcStateHovered])
     return (
         <div
             id="casesLayoutElem"
             className={isClicked ? 'casesLayout' : ' reversedLayout'}
         >
             <div
-                id="parallaxImageBlock"
+                // id="parallaxImageBlock"
                 className={`${mcBack} ${pumaBack} ${flintBack} ${bigBack} ${pmBack} ${naviBack} universalBack`}
             >
                 <Line

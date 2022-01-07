@@ -12,16 +12,19 @@
     animation-fill-mode: forwards;
     transition: clip-path 0.3s;
     animation-delay: 0.2s;
-    clip-path: polygon(49% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+    clip-path: polygon(50% 10%, 50% 10%, 50% 10%, 50% 10%, 50% 10%);
 }
-
 .reversedLayout {
-    z-index: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
     animation: showLayoutBack;
     animation-timing-function: ease;
     animation-duration: 0.2s;
     animation-fill-mode: forwards;
-    clip-path: polygon(50% 10%, 100% 24%, 100% 100%, 0 100%, 0 38%);
+    clip-path: polygon(50% 10%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
 }
 
 @keyframes showLayoutBack {
@@ -30,21 +33,22 @@
     }
     50% {
         opacity: 0.3;
-        clip-path: polygon(49% 0%, 100% 100%, 100% 100%, 0 100%, 0 100%);
+        clip-path: polygon(50% 10%, 100% 100%, 100% 100%, 0 100%, 0 100%);
     }
     100% {
         opacity: 0;
-        clip-path: polygon(49% 0%, 55% 100%, 55% 100%, 45% 100%, 45% 100%);
+        display: none;
+        clip-path: polygon(50% 10%, 55% 100%, 55% 100%, 45% 100%, 45% 100%);
     }
 }
 @keyframes showLayout {
     0% {
         opacity: 0.3;
-        clip-path: polygon(49% 0%, 55% 100%, 55% 100%, 45% 100%, 45% 100%);
+        clip-path: polygon(50% 10%, 55% 100%, 55% 100%, 45% 100%, 45% 100%);
     }
     50% {
         opacity: 1;
-        clip-path: polygon(49% 0%, 100% 100%, 100% 100%, 0 100%, 0 100%);
+        clip-path: polygon(50% 10%, 100% 100%, 100% 100%, 0 100%, 0 100%);
     }
     100% {
         clip-path: polygon(50% 10%, 100% 24%, 100% 100%, 0 100%, 0 38%);
@@ -52,17 +56,9 @@
 }
 #casesLayoutElem {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
 }
 #parallaxImageBlock {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
 }
 .casesBtn {
     z-index: 100000000001 !important;

@@ -35,69 +35,67 @@ export const Story = ({
         else canvases[1].classList.remove('displayNone')
     }, [isCanvasesHidded, canvases, isStoryEntered, offCanvases, onCanvases])
 
-    if (isClicked) {
-        return (
-            <div className="storyLayout">
-                <Cube />
-                <Line
-                    isClicked={isClicked}
-                    coords={{
-                        first: {
-                            x: width * 0.18,
-                            y: 0,
-                        },
-                        last: {
-                            x: coordsToX,
-                            y: coordsToY,
-                        },
-                    }}
-                    coords1={{
-                        first: {
-                            x: width,
-                            y: height,
-                        },
-                        last: {
-                            x: coordsToX,
-                            y: coordsToY,
-                        },
-                    }}
-                    amount={7}
-                />
-                <div className="storyBlock">
-                    <h3>
-                        We are full-service experiential VFX production studio
-                        based in Ukraine inspired by the creative potential of
-                        emerging technologies. 😎
-                    </h3>
-                    <div>
-                        <Link to="/cases">our cases ﹤</Link>
-                        <Link to="/hire">hire us ﹤</Link>
-                        <div className="casesArrow" />
-                        <p>
-                            As a wide collective of highly skilled creatives, we
-                            vizualize any content on any screen and any space.
-                            Create CG and VFX for Advertising, TV, Print,
-                            digital, series, short and now long format films,
-                            games, VR and AR experiences.
-                        </p>
-                        <p>
-                            A deeply collaborative approach and respect for
-                            every aspect and role in the creation process stands
-                            at our core.
-                        </p>
-                    </div>
+    return (
+        <div className={isClicked ? 'storyLayout' : 'reversedLayoutStory'}>
+            <Cube />
+            <Line
+                isClicked={isClicked}
+                coords={{
+                    first: {
+                        x: width * 0.18,
+                        y: 0,
+                    },
+                    last: {
+                        x: coordsToX,
+                        y: coordsToY,
+                    },
+                }}
+                coords1={{
+                    first: {
+                        x: width,
+                        y: height,
+                    },
+                    last: {
+                        x: coordsToX,
+                        y: coordsToY,
+                    },
+                }}
+                amount={7}
+            />
+            <div className="storyBlock">
+                <h3>
+                    We are full-service experiential VFX production studio based
+                    in Ukraine inspired by the creative potential of emerging
+                    technologies. 😎
+                </h3>
+                <div>
+                    <Link to="/cases">our cases ﹤</Link>
+                    <Link to="/hire">hire us ﹤</Link>
+                    <div className="casesArrow" />
+                    <p>
+                        As a wide collective of highly skilled creatives, we
+                        vizualize any content on any screen and any space.
+                        Create CG and VFX for Advertising, TV, Print, digital,
+                        series, short and now long format films, games, VR and
+                        AR experiences.
+                    </p>
+                    <p>
+                        A deeply collaborative approach and respect for every
+                        aspect and role in the creation process stands at our
+                        core.
+                    </p>
                 </div>
-                <Link to="/story">
-                    <div className="storyBtn gradientBtn">
-                        <p>
-                            View our
-                            <br />
-                            expertise &<br />
-                            technologies
-                        </p>
-                    </div>
-                </Link>
             </div>
-        )
-    } else return null
+            <Link to="/story">
+                <div className="storyBtn gradientBtn">
+                    <p>
+                        View our
+                        <br />
+                        expertise &<br />
+                        technologies
+                    </p>
+                </div>
+            </Link>
+        </div>
+    )
 }

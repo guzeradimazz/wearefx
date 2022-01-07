@@ -4,6 +4,8 @@
     width: 100vw;
     height: 100vh;
     z-index: 2000;
+    top: 0;
+    left: 0;
     transition: clip-path 0.3s ease;
     animation: storyShow;
     animation-duration: 0.4s;
@@ -12,13 +14,40 @@
     animation-delay: 0.1s;
     clip-path: polygon(94% 0, 100% 0, 100% 4%, 7% 92%);
 }
+.reversedLayoutStory {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    transition: clip-path 0.3s ease;
+    animation: storyShowBack;
+    animation-timing-function: linear;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    clip-path: polygon(94% 0, 100% 0, 100% 4%, 7% 92%);
+}
+@keyframes storyShowBack {
+    0% {
+        opacity: 1;
+        clip-path: polygon(18% 0, 100% 0, 100% 100%, 7% 92%);
+    }
+    35% {
+        opacity: 0.5;
+        clip-path: polygon(84% 0, 100% 0, 100% 14%, 7% 92%);
+    }
+    100% {
+        opacity: 0;
+        clip-path: polygon(94% 0, 100% 0, 100% 4%, 7% 92%);
+    }
+}
 @keyframes storyShow {
     0% {
         opacity: 0;
         clip-path: polygon(94% 0, 100% 0, 100% 4%, 7% 92%);
     }
     35% {
-        opacity: 0.8;
+        opacity: 0.5;
         clip-path: polygon(84% 0, 100% 0, 100% 14%, 7% 92%);
     }
     100% {

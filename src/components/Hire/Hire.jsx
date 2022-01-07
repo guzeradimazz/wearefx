@@ -37,9 +37,8 @@ export const Hire = ({
     }, [isCanvasesHidded, isHireEntered, onCanvases, offCanvases, canvases])
 
 
-    if (isClicked) {
         return (
-            <div className="hireLayout">
+            <div className={isClicked ? 'hireLayout' : 'hireLayoutReversed'}>
                 <Cube />
                 <Line
                     isClicked={isClicked}
@@ -139,5 +138,4 @@ export const Hire = ({
                 </Link>
             </div>
         )
-    } else return null
 }
