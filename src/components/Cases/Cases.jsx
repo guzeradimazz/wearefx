@@ -182,7 +182,7 @@ export const Cases = ({
         if (parallax) {
             const parallaxItem = document.getElementById('parallaxImageBlock')
 
-            const SpeedPr = 100
+            const SpeedPr = 10
             const speed = 0.5
             let posX = 0,
                 posY = 0,
@@ -206,13 +206,14 @@ export const Cases = ({
                 const parallaxWidth = parallax.offsetWidth
                 const parallaxHeigth = parallax.offsetHeight
 
-                const coordXPara = e.pageX - parallaxWidth / 2
+                const coordXPara = e.pageX - parallaxWidth*1.4 / 2
                 const coordYPara = e.pageY - parallaxHeigth / 2
 
                 coordX = (coordXPara / parallaxWidth) * 100
                 coordY = (coordYPara / parallaxHeigth) * 100
             })
         }
+        //fdgfbgs
     }, [])
     return (
         <div
