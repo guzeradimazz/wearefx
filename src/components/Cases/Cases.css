@@ -1,0 +1,355 @@
+.casesLayout {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2000;
+    background-color: #000;
+    animation: showLayout;
+    animation-timing-function: linear;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    transition: clip-path 0.3s;
+    animation-delay: 0.2s;
+    clip-path: polygon(49% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+}
+
+.reversedLayout {
+    z-index: 0;
+    animation: showLayoutBack;
+    animation-timing-function: ease;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    clip-path: polygon(50% 10%, 100% 24%, 100% 100%, 0 100%, 0 38%);
+}
+
+@keyframes showLayoutBack {
+    0% {
+        clip-path: polygon(50% 10%, 100% 24%, 100% 100%, 0 100%, 0 38%);
+    }
+    50% {
+        opacity: 0.3;
+        clip-path: polygon(49% 0%, 100% 100%, 100% 100%, 0 100%, 0 100%);
+    }
+    100% {
+        opacity: 0;
+        clip-path: polygon(49% 0%, 55% 100%, 55% 100%, 45% 100%, 45% 100%);
+    }
+}
+@keyframes showLayout {
+    0% {
+        opacity: 0.3;
+        clip-path: polygon(49% 0%, 55% 100%, 55% 100%, 45% 100%, 45% 100%);
+    }
+    50% {
+        opacity: 1;
+        clip-path: polygon(49% 0%, 100% 100%, 100% 100%, 0 100%, 0 100%);
+    }
+    100% {
+        clip-path: polygon(50% 10%, 100% 24%, 100% 100%, 0 100%, 0 38%);
+    }
+}
+#casesLayoutElem {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#parallaxImageBlock {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.casesBtn {
+    z-index: 100000000001 !important;
+    padding-top: 10px;
+    position: absolute;
+    bottom: 60px;
+    right: 60px;
+}
+.full-mobile {
+    margin-top: 100px !important;
+    bottom: 350px !important;
+    right: calc(37%) !important;
+}
+.casesTextBlock {
+    z-index: 2000;
+    position: absolute;
+    bottom: 60px;
+    left: 60px;
+    color: #fff;
+    width: 18%;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+.casesArray {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    position: absolute;
+    color: #fff;
+    width: 25%;
+    bottom: 60px;
+    left: calc(60%);
+    z-index: auto;
+    font-size: 36px;
+    font-weight: lighter;
+}
+.casesArray div {
+    display: flex;
+    margin-top: 15px;
+    height: 36px;
+    width: 210px;
+    z-index: auto;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+    padding-left: 5px;
+}
+.arrowToTop {
+    z-index: 2000;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+    width: 24px;
+    height: 24px;
+    background-image: url('../../images/▼arrowTop.svg');
+}
+.casesArrow {
+    z-index: 2000;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+    width: 24px;
+    height: 24px;
+    background-image: url('../../images/arrow.svg');
+    margin-bottom: 20px;
+}
+.casesMain {
+    position: relative;
+    margin-top: 300px;
+    font-weight: normal;
+    font-size: 40px;
+    z-index: 2000;
+    color: #fff;
+    left: 60px;
+    transition: 0.3s ease-in-out;
+}
+.casesMain p {
+    font-weight: lighter;
+    font-size: 25px;
+    transition: 0.3s ease-in-out;
+}
+.mcDonalds {
+    z-index: 10000010 !important;
+}
+.mcDonalds:hover {
+    background-color: #f1bb00;
+    color: #000;
+    transition: ease-in-out !important;
+}
+.mcDonalds:hover::before {
+    position: absolute;
+    transition: ease-in-out;
+    left: -36px;
+    content: '';
+    width: 36px;
+    height: 36px;
+    background-image: url('../../images/McDonalds.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    transition: ease-out !important;
+    animation: fadeCasesItem;
+    animation-duration: 0.3s;
+}
+@keyframes animBackground {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.mcBack {
+    background-image: url('../../images/Showreel.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2000;
+    animation: animBackground;
+    animation-timing-function: ease-in;
+    animation-duration: 0.6s;
+    width: 100%;
+    height: 100vh !important;
+    top: 0;
+    left: 0;
+    overflow: hidden !important;
+}
+.pumaBack {
+    background-image: url('../../images/Showreel.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2000;
+    animation: animBackground;
+    animation-timing-function: ease-in;
+    animation-duration: 0.6s;
+    width: 100%;
+    height: 100vh !important;
+    top: 0;
+    left: 0;
+    overflow: hidden !important;
+}
+.flintBack {
+    background-image: url('../../images/Showreel.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2000;
+    animation: animBackground;
+    animation-timing-function: ease-in;
+    animation-duration: 0.6s;
+    width: 100%;
+    height: 100vh !important;
+    top: 0;
+    left: 0;
+    overflow: hidden !important;
+}
+.bigBack {
+    background-image: url('../../images/Showreel.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2000;
+    animation: animBackground;
+    animation-timing-function: ease-in;
+    animation-duration: 0.6s;
+    width: 100%;
+    height: 100vh !important;
+    top: 0;
+    left: 0;
+    overflow: hidden !important;
+}
+.pmBack {
+    background-image: url('../../images/Showreel.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2000;
+    animation: animBackground;
+    animation-timing-function: ease-in;
+    animation-duration: 0.6s;
+    width: 100%;
+    height: 100vh !important;
+    top: 0;
+    left: 0;
+    overflow: hidden !important;
+}
+.naviBack {
+    background-image: url('../../images/Showreel.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2000;
+    animation: animBackground;
+    animation-timing-function: ease-in;
+    animation-duration: 0.6s;
+    width: 100%;
+    height: 100vh !important;
+    top: 0;
+    left: 0;
+    overflow: hidden !important;
+}
+.casesMain {
+    font-weight: 600;
+    animation: translateX 0.1s ease-in-out;
+}
+.casesMain p:nth-child(1) {
+    font-size: 70px;
+}
+@keyframes translateX {
+    0% {
+        transform: translateX(-300px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+.cases-full-array {
+    width: 100% !important;
+    font-size: 36px;
+    position: relative;
+}
+.cases-full-array div {
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    height: 158px !important;
+}
+.cases-full-array p {
+    padding-top: calc(10%);
+}
+.cases-full-array div:nth-child(1) {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../../images/gifcase.svg');
+}
+.cases-full-array div:nth-child(2) {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../../images/gifcase\ \(1\).svg');
+}
+.cases-full-array div:nth-child(3) {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../../images/gifcase\ \(2\).svg');
+}
+.cases-full-array div:nth-child(4) {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../../images/gifcase\ \(3\).svg');
+}
+.cases-full-array div:nth-child(5) {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../../images/gifcase\ \(4\).svg');
+}
+.cases-full-array div:nth-child(6) {
+    font-size: 20px;
+}
+.mb100 {
+    margin-bottom: 100px !important;
+}
+.caseBtnSlider {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    border: none;
+    text-align: center;
+    position: absolute;
+    top: 36px;
+    left: 36px;
+    background: #f1bb00;
+    color: #000;
+    z-index: 2000;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 12px;
+}
+.caseBtnSlider p {
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+}

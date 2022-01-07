@@ -1,0 +1,39 @@
+.movable {
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-image: url('../../images/Cursor.svg');
+    background-position: center;
+    background-size: 100%;
+    position: absolute;
+    z-index: 999999999;
+    opacity: 0.9;
+    transition: transform 0.5s ease !important;
+    transition: background 0.1s ease;
+    transform: translate(-40%, -0%) scale(1);
+    pointer-events: none;
+    animation: hoveredCurs 0.3s ease-in-out;
+}
+.hoveredCursorClass {
+    transition: background 0.3s ease !important;
+    transition: transform 0.3s ease !important;
+    transform: scale(4) translate(-10%, -10%) !important;
+    background-image: url('../../images/CursorHovered.svg');
+}
+@keyframes hoveredCurs {
+    0% {
+        opacity: 1;
+        transform: none;
+        transition: 0.2s ease;
+    }
+    75% {
+        transform: scale(2);
+        transition: 0.3s ease;
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(4);
+        transition: 0.2s ease;
+        opacity: 0;
+    }
+}

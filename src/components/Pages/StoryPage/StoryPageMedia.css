@@ -1,0 +1,32 @@
+@media (min-width: 2560px) {
+    .story-header {
+        padding: 80px;
+    }
+    .header-left div:nth-child(1) {
+        font-size: 40px;
+    }
+    .header-left div:nth-child(2) {
+        font-size: 25px;
+    }
+    .header-right {
+        width: 100px;
+        height: 100px;
+    }
+    .story-main-content {
+        padding: 20% 0 0 10%;
+    }
+    .story-main-content p:nth-child(1) {
+        font-size: 40px;
+        padding-bottom: 30px;
+    }
+    .story-main-content p:nth-child(3),
+    .story-main-content p:nth-child(2) {
+        font-size: 30px;
+    }
+    .story-ellipse {
+        right: 80px;top: -45%;width: 1000px;height: 1000px;
+    }
+    .story-main , .story-bottom{
+        height: 85vh;
+    }
+}

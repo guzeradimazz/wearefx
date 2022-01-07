@@ -1,0 +1,27 @@
+.hireBtnViolet:hover {
+    border: none !important;
+    background-color: #fff;
+    animation: pulseclicked 2s ease;
+    background-image: url('../../../images/CloseBlack.svg');
+}
+.hireBtnPage p{
+    padding-top: 10%;
+}
+.hireBtnViolet{
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    background-color: #7344f4;
+    width: 85px;
+    height: 85px;
+    background-image: url('../../../images/CloseWhite.svg');
+    background-size: 35%;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2002;
+    position: absolute;
+    border: none !important;
+    bottom: 40px;
+    left: 60px;
+    border: none;
+    animation: pulsebackground 2s ease;
+}

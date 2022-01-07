@@ -1,0 +1,66 @@
+.storyLayout {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2000;
+    transition: clip-path 0.3s ease;
+    animation: storyShow;
+    animation-duration: 0.4s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1s;
+    clip-path: polygon(94% 0, 100% 0, 100% 4%, 7% 92%);
+}
+@keyframes storyShow {
+    0% {
+        opacity: 0;
+        clip-path: polygon(94% 0, 100% 0, 100% 4%, 7% 92%);
+    }
+    35% {
+        opacity: 0.8;
+        clip-path: polygon(84% 0, 100% 0, 100% 14%, 7% 92%);
+    }
+    100% {
+        opacity: 1;
+        clip-path: polygon(18% 0, 100% 0, 100% 100%, 7% 92%);
+    }
+}
+.storyBtn {
+    font-size: 13px;
+    padding-top: 9px;
+    position: absolute;
+    top: 60px;
+    z-index: 2000;
+    right: 60px;
+}
+.storyBlock {
+    transition: 0.3s ease;
+    z-index: 2000;
+    margin: auto;
+    color: #fff;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-weight: 300;
+    margin-top: 10%;
+}
+.storyBlock h3 {
+    z-index: 2000;
+    font-size: 40px;
+    margin-right: 20px;
+    font-weight: 300;
+}
+.storyBlock a,
+.storyBlock p {
+    z-index: 2000;
+    margin: 20px 0 10px 0;
+    color: #fff;
+    text-transform: uppercase;
+}
+.storyBlock div {
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,25 @@
+.preloader{
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    background-image: url('../../images/X.svg');
+    background-repeat: space;
+    background-size: 8%;
+}
+.preloader:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.preloader__image{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 47%;
+    background-image: url('../../images/preloader.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 122px;
+    height: 171px;
+}

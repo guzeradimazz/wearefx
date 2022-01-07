@@ -1,0 +1,62 @@
+{
+  "homepage": "http://guzeradimazz.github.io/wearefx",
+  "name": "wearefx",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@psychobolt/react-paperjs": "^1.0.2",
+    "@react-three/cannon": "^4.2.0",
+    "@react-three/drei": "^7.26.1",
+    "@react-three/fiber": "^7.0.21",
+    "@react-yuki/ui": "^0.0.43",
+    "@testing-library/jest-dom": "^5.15.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "animate.css": "^4.1.1",
+    "classnames": "^2.3.1",
+    "paper": "^0.12.15",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-id-swiper": "^4.0.0",
+    "react-player": "^2.9.0",
+    "react-polyline": "^1.0.0",
+    "react-router-dom": "^6.0.2",
+    "react-scripts": "4.0.3",
+    "react-slick": "^0.28.1",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^7.3.1",
+    "typed.js": "^2.0.12",
+    "web-vitals": "^1.1.2"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3",
+    "prettier": "^2.5.0",
+    "three": "^0.135.0"
+  }
+}

@@ -1,0 +1,46 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    cursor: none;
+    font-family: 'Futura PT';
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+html{
+    background-color: #000;
+    overflow-x: hidden !important;
+}
+@keyframes unFocusFocus {
+    0%{
+        filter: blur(1.2rem);
+    }
+    25%{
+        filter: blur(.6rem);
+    }
+    50%{
+        filter: blur(1.2rem);
+    }
+    100%{
+        filter: blur(0px);
+    }
+}
+body{
+    overflow-x: hidden !important;
+}
+.cube{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+}
+.undefined{
+    color: #000;
+}
