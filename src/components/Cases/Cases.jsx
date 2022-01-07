@@ -213,6 +213,9 @@ export const Cases = ({
                 coordY = (coordYPara / parallaxHeigth) * 100
             })
         }
+
+
+        //fdgfbgs
     }, [])
     return (
         <div
@@ -247,7 +250,6 @@ export const Cases = ({
                     }}
                     amount={7}
                 />
-
                 <Cube showCube={`${showCube}`} />
                 <div className="casesTextBlock">
                     <div className="casesArrow" />
