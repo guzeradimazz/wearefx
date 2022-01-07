@@ -179,7 +179,9 @@ export const Cases = ({
     useEffect(() => {
         const parallax = document.getElementById('casesLayoutElem')
 
-        if (parallax && mcStateHovered) {
+        if (parallax) {
+            let isShowParallax = false
+            if (showCube === 'displayNone') isShowParallax = true
             const parallaxItem = document.getElementById('parallaxImageBlock')
 
             const SpeedPr = 10
@@ -201,8 +203,7 @@ export const Cases = ({
                 }%,${posY / SpeedPr}%);`
                 requestAnimationFrame(setMouseParallaxStyle)
             }
-            setMouseParallaxStyle()
-            parallax.addEventListener('mousemove', (e) => {
+            const onParallaxMouseMove = (e) => {
                 const parallaxWidth = parallax.offsetWidth
                 const parallaxHeigth = parallax.offsetHeight
 
@@ -211,16 +212,20 @@ export const Cases = ({
 
                 coordX = (coordXPara / parallaxWidth) * 100
                 coordY = (coordYPara / parallaxHeigth) * 100
-            })
+            }
+            setMouseParallaxStyle()
+            
+            if (isShowParallax) parallax.addEventListener('mousemove', onParallaxMouseMove)
+            else parallax.removeEventListener('mousemove', onParallaxMouseMove)
         }
-    }, [mcStateHovered])
+    }, [showCube])
     return (
         <div
             id="casesLayoutElem"
             className={isClicked ? 'casesLayout' : ' reversedLayout'}
         >
             <div
-                // id="parallaxImageBlock"
+                id="parallaxImageBlock"
                 className={`${mcBack} ${pumaBack} ${flintBack} ${bigBack} ${pmBack} ${naviBack} universalBack`}
             >
                 <Line
