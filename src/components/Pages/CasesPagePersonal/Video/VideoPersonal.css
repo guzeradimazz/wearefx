@@ -64,7 +64,22 @@
     animation-fill-mode: forwards;
     transition: 0.3s ease-out;
 }
+.fullscreen{
+    width: 36px;
+    height: 36px;
+    background-image: url('../Video/VideoSrc/fullscreen.png');
+    border: none;
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    animation: fadeInRev;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    transition: 0.3s ease-out;
+    background-color: #eebf1b;
+}
 .muted-btn {
+    margin-right: 20px;
     background-color: #7344f4;
     width: 86px;
     height: 36px;

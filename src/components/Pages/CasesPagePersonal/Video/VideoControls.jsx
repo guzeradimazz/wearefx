@@ -9,6 +9,7 @@ const VideoControls = ({
     loadedSeconds,
     playedSeconds,
     handleProgressTrack,
+    handleFullScreen,
 }) => {
     const [showElements, setShowElements] = useState(true)
     return (
@@ -58,6 +59,14 @@ const VideoControls = ({
                         >
                             {!muted ? 'mute' : 'unmute'}
                         </button>
+                        <button
+                            className={
+                                showElements
+                                    ? `fullscreen`
+                                    : 'fadeIn fullscreen'
+                            }
+                            onClick={() => handleFullScreen()}
+                        ></button>
                     </div>
                 </div>
                 <div

@@ -12,7 +12,8 @@ export const VideoPersonal = () => {
         playedSeconds: 0,
     })
 
-    const refPlayer = useRef()
+    const refPlayer = useRef(null)
+    const refPlayerScreenfull = useRef(null)
     const { playing, muted, loadedSeconds, playedSeconds } = videoState
     const handlePlay = () => {
         setVideoState({ ...videoState, playing: !videoState.playing })
@@ -26,8 +27,11 @@ export const VideoPersonal = () => {
     const handleProgressTrack = (e) => {
         refPlayer.current.seekTo(Number(e))
     }
+    const handleFullScreen = () => {
+        
+    }
     return (
-        <div className="video-object">
+        <div ref={refPlayerScreenfull} className="video-object">
             <div className="video-toner" />
             <ReactPlayer
                 className="video-video"
@@ -47,6 +51,7 @@ export const VideoPersonal = () => {
                 loadedSeconds={loadedSeconds}
                 playedSeconds={playedSeconds}
                 handleProgressTrack={handleProgressTrack}
+                handleFullScreen={handleFullScreen}
             />
         </div>
     )

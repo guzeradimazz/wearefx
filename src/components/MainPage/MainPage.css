@@ -10,7 +10,7 @@
 .no_overflow {
     overflow-y: hidden !important;
 }
-.mainPageSelector{
+.mainPageSelector {
     animation-delay: 2s;
     animation: unFocusFocus 2s;
 }
@@ -36,6 +36,19 @@
     top: 0;
     left: 0;
     pointer-events: none;
+    opacity: 0;
+    animation: polylineShowAnim linear 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+    animation-timing-function:  steps(100);
+}
+@keyframes polylineShowAnim {
+    0% {
+        opacity: 0 ;
+    }
+    100%{
+        opacity: 1 ;
+    }
 }
 #overlay1 {
     position: fixed;

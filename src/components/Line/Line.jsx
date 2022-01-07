@@ -108,7 +108,10 @@ export default function Line({ isClicked, coords, amount, coords1 }) {
         draw(dots2)
         draw(dots3)
 
-        if (isClicked) idInterval.current = setInterval(mix, 2000)
+        if (isClicked) idInterval.current = setTimeout(function tick() {
+            mix()
+            idInterval.current = setTimeout(tick, 2000);
+          }, 0);
         if (!isClicked) {
             ctx.restore()
             ctx.clearRect(0, 0, canvas.width, canvas.height)
