@@ -11,7 +11,6 @@
     animation-duration: 0.4s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
-    animation-delay: 0.1s;
     clip-path: polygon(94% 0, 100% 0, 100% 4%, 7% 92%);
 }
 .reversedLayoutStory {
@@ -25,7 +24,7 @@
     animation-timing-function: linear;
     animation-duration: 0.2s;
     animation-fill-mode: forwards;
-    clip-path: polygon(94% 0, 100% 0, 100% 4%, 7% 92%);
+    /* clip-path: polygon(94% 0, 100% 0, 100% 4%, 7% 92%); */
 }
 @keyframes storyShowBack {
     0% {

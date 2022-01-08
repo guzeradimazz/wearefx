@@ -12,7 +12,7 @@
     animation-fill-mode: forwards;
     clip-path: polygon(7% 0, 0 0, 0 7%, 94% 92%);
 }
-.hireLayoutReversed{
+.hireLayoutReversed {
     position: absolute;
     left: 0;
     top: 0;
@@ -22,7 +22,6 @@
     animation-timing-function: ease;
     animation-duration: 0.2s;
     animation-fill-mode: forwards;
-    clip-path: polygon(7% 0, 0 0, 0 7%, 94% 92%);
 }
 @keyframes hireShowBack {
     0% {
@@ -30,19 +29,19 @@
         clip-path: polygon(0% 0%, 85% 0%, 94% 92%, 0% 100%);
     }
     35% {
-        clip-path: polygon(0 0, 16% 0, 94% 92%, 0 15%);
+        clip-path: polygon(0 0, 15% 0, 94% 92%, 0 15%);
         opacity: 0.5;
     }
     100% {
         opacity: 0;
         display: none;
-        clip-path: polygon(7% 0, 0 0, 0 7%, 94% 92%);
+        clip-path: polygon(0 0, 3% 0, 94% 92%, 0 3%);
     }
 }
 @keyframes hireShow {
     0% {
         opacity: 0;
-        clip-path: polygon(7% 0, 0 0, 0 7%, 94% 92%);
+        clip-path: polygon(0 0, 3% 0, 94% 92%, 0 3%);
     }
     35% {
         clip-path: polygon(0 0, 16% 0, 94% 92%, 0 15%);
