@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect, useCallback } from 'react'
 import './VideoPersonal.css'
 import ReactPlayer from 'react-player'
 import Video from './VideoSrc/videoPower.mp4'
@@ -49,15 +49,23 @@ export const VideoPersonal = () => {
         else if (document.msExitFullscreen)
             /* IE11 */ document.msExitFullscreen()
     }
-    const onEscPress = (e) => {
-        console.log(e.key)
-        if (e.key === 'Escape') setFullscreen(false)
-        else return
-    }
+
+    const escFunction = useCallback((event) => {
+        if (event.keyCode === 27) {
+            setFullscreen(false)
+        }
+    }, [])
+
+    useEffect(() => {
+        document.addEventListener('keydown', escFunction, false)
+
+        return () => {
+            document.removeEventListener('keydown', escFunction, false)
+        }
+    }, [])
+
     return (
         <div
-            onKeyDown={onEscPress}
-            tabIndex={1}
             id="player"
             ref={refPlayerScreenfull}
             className={
