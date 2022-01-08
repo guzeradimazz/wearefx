@@ -12,6 +12,8 @@ export const CasesPage = () => {
     const [isHoveredBackground, setIsHoveredBackground] = useState('')
     const [showedCases, setShowedCases] = useState([])
 
+    const [showCube, setShowCube] = useState('')
+
     const navigate = useNavigate()
 
     const onMouseEnterCase = (element) => {
@@ -156,11 +158,15 @@ export const CasesPage = () => {
         setShowedCases([...casesArray].filter((e) => e.page === currentPage))
     }, [currentPage])
 
+    useEffect(() => {
+        if(isHoveredBackground) setShowCube('displayNone')
+        else setShowCube('')
+    }, [isHoveredBackground])
     return (
         <CursorProvider>
             <div className="cases-page">
-                <Cube />
-                <div className={`${isHoveredBackground}`}>
+                <Cube showCube={`${showCube}`} />
+                <div className={`${isHoveredBackground} universalBack`}>
                     <div className="story-header">
                         <div className="header-left">
                             <div>

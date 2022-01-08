@@ -57,78 +57,73 @@ export const Cases = ({
 
     const [showCube, setShowCube] = useState('')
 
-    const [mcBack, setMcBack] = useState('')
-    const [pumaBack, setPumaBack] = useState('')
-    const [flintBack, setFlintBack] = useState('')
-    const [bigBack, setBigBack] = useState('')
-    const [pmBack, setPmBack] = useState('')
-    const [naviBack, setNaviBack] = useState('')
+    const [universalBack, setUniversalBack] = useState('')
 
     const navigate = useNavigate()
 
     useEffect(() => {
         if (mcStateHovered) {
             setisMc('black')
-            setMcBack('mcBack')
+            setUniversalBack('mcBack')
             setShowCube('displayNone')
         } else {
             setisMc('')
-            setMcBack('')
+            setUniversalBack('')
             setShowCube('')
         }
     }, [mcStateHovered, isMc])
     useEffect(() => {
         if (pumaStateHovered) {
             setisPuma('black')
-            setPumaBack('pumaBack')
+            setUniversalBack('pumaBack')
             setShowCube('displayNone')
         } else {
             setisPuma('')
-            setPumaBack('')
+            setUniversalBack('')
             setShowCube('')
         }
     }, [pumaStateHovered, isPuma])
     useEffect(() => {
         if (flintStateHovered) {
             setisFlint('black')
-            setFlintBack('flintBack')
+            setUniversalBack('flintBack')
             setShowCube('displayNone')
         } else {
             setisFlint('')
-            setFlintBack('')
+            setUniversalBack('')
             setShowCube('')
         }
     }, [flintStateHovered, isFlint])
     useEffect(() => {
         if (bigStateHovered) {
             setisBig('black')
-            setBigBack('bigBack')
+            setUniversalBack('bigBack')
             setShowCube('displayNone')
         } else {
             setisBig('')
-            setBigBack('')
+            setUniversalBack('')
             setShowCube('')
         }
     }, [bigStateHovered, isBig])
     useEffect(() => {
         if (pmStateHovered) {
             setisPm('black')
-            setPmBack('pmBack')
+            setUniversalBack('pmBack')
             setShowCube('displayNone')
         } else {
             setisPm('')
-            setPmBack('')
+            setUniversalBack('')
             setShowCube('')
         }
     }, [pmStateHovered, isPm])
     useEffect(() => {
         if (naviStateHovered) {
             setisNavi('black')
-            setNaviBack('naviBack')
+            setUniversalBack('naviBack')
             setShowCube('displayNone')
         } else {
             setisNavi('')
-            setNaviBack('')
+            setUniversalBack('')
             setShowCube('')
         }
     }, [naviStateHovered, isNavi])
@@ -222,11 +217,11 @@ export const Cases = ({
     return (
         <div
             id="casesLayoutElem"
-            className={isClicked ? 'casesLayout' : ' reversedLayout'}
+            className={isClicked ? ' casesLayout' : ' reversedLayout'}
         >
             <div
                 id="parallaxImageBlock"
-                className={`${mcBack} ${pumaBack} ${flintBack} ${bigBack} ${pmBack} ${naviBack} universalBack`}
+                className={`${universalBack} universalBack`}
             >
                 <Line
                     isClicked={isClicked}

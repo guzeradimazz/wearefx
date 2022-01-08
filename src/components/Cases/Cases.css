@@ -122,6 +122,7 @@
     height: 24px;
     background-image: url('../../images/▼arrowTop.svg');
 }
+
 .casesArrow {
     z-index: 2000;
     background-repeat: no-repeat;
@@ -170,12 +171,15 @@
     animation: fadeCasesItem;
     animation-duration: 0.3s;
 }
+.universalBack {
+    transition: background 0.4s ease !important;
+}
 @keyframes animBackground {
     0% {
         opacity: 0;
     }
     30% {
-        opacity: 0.5;
+        opacity: 0.1;
     }
     100% {
         opacity: 1;
@@ -187,90 +191,15 @@
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 2000;
-    animation: animBackground;
-    animation-timing-function: ease-in;
-    animation-duration: 0.6s;
+    animation: animBackground 0.4s linear;
     width: 100%;
     height: 100vh !important;
     top: 0;
     left: 0;
     overflow: hidden !important;
+    transition: all 0.4s ease !important;
 }
-.pumaBack {
-    background-image: url('../../images/Showreel.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 2000;
-    animation: animBackground;
-    animation-timing-function: ease-in;
-    animation-duration: 0.6s;
-    width: 100%;
-    height: 100vh !important;
-    top: 0;
-    left: 0;
-    overflow: hidden !important;
-}
-.flintBack {
-    background-image: url('../../images/Showreel.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 2000;
-    animation: animBackground;
-    animation-timing-function: ease-in;
-    animation-duration: 0.6s;
-    width: 100%;
-    height: 100vh !important;
-    top: 0;
-    left: 0;
-    overflow: hidden !important;
-}
-.bigBack {
-    background-image: url('../../images/Showreel.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 2000;
-    animation: animBackground;
-    animation-timing-function: ease-in;
-    animation-duration: 0.6s;
-    width: 100%;
-    height: 100vh !important;
-    top: 0;
-    left: 0;
-    overflow: hidden !important;
-}
-.pmBack {
-    background-image: url('../../images/Showreel.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 2000;
-    animation: animBackground;
-    animation-timing-function: ease-in;
-    animation-duration: 0.6s;
-    width: 100%;
-    height: 100vh !important;
-    top: 0;
-    left: 0;
-    overflow: hidden !important;
-}
-.naviBack {
-    background-image: url('../../images/Showreel.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 2000;
-    animation: animBackground;
-    animation-timing-function: ease-in;
-    animation-duration: 0.6s;
-    width: 100%;
-    height: 100vh !important;
-    top: 0;
-    left: 0;
-    overflow: hidden !important;
-}
+
 .casesMain {
     font-weight: 600;
     animation: translateX 0.1s ease-in-out;

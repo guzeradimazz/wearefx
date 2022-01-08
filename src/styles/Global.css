@@ -33,10 +33,12 @@ body{
     overflow-x: hidden !important;
 }
 .cube{
+    transition: all .3s ease !important;
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
+    animation: animBackground 0.4s linear;
     height: 100vh;
     pointer-events: none;
     z-index: 0;

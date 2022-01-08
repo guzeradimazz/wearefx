@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import  { useEffect, useRef } from 'react'
 
 const applyLayout = (canvas) => {
     canvas.width = canvas.clientWidth
@@ -17,7 +17,7 @@ export default function Line({ isClicked, coords, amount, coords1 }) {
     useEffect(() => {
         ctx.restore()
         ctx.clearRect(0, 0, canvas.width, canvas.height)
-        return () => idInterval.current && clearInterval(idInterval.current)
+        return () => idInterval.current && clearTimeout(idInterval.current)
     }, [])
 
     ctx.lineWidth = 1.3
@@ -115,7 +115,7 @@ export default function Line({ isClicked, coords, amount, coords1 }) {
         if (!isClicked) {
             ctx.restore()
             ctx.clearRect(0, 0, canvas.width, canvas.height)
-            idInterval.current && clearInterval(idInterval.current)
+            idInterval.current && clearTimeout(idInterval.current)
         }
     }, [isClicked])
 

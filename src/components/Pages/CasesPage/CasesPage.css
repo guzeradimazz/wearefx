@@ -101,27 +101,27 @@
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0;
-    animation: showMcHoveredBack .2s forwards linear;
+    animation: showMcHoveredBack 0.2s forwards linear;
+    transition: all 0.4s ease-out !important;
 }
-@keyframes  showMcHoveredBack {
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
-.mcHoveredBack2 {
+.transition-background {
     position: absolute;
-    bottom: 0;
-    z-index: 2000;
+    top: 0;
+    z-index: 22000;
     left: 0;
     width: 100vw;
-    height: 89vh;
-    background-image: url('../../../images/Showreel.svg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    height: 100vh;
+    opacity: 0;
+    animation: showMcHoveredBack 0.2s forwards linear;
+    transition: all 0.4s ease-out !important;
+}
+@keyframes showMcHoveredBack {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 .casesTextBlock p {
     max-width: 450px !important;
