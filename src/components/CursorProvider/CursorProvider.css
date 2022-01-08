@@ -10,7 +10,7 @@
     opacity: 0.9;
     transition: transform 0.5s ease !important;
     transition: background 0.1s ease;
-    transform: translate(-40%, -0%) scale(1);
+    transform: translate(-50%, -30%) scale(1);
     pointer-events: none;
     animation: hoveredCurs 0.3s ease-in-out;
 }
