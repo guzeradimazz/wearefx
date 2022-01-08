@@ -3,6 +3,7 @@
     width: 100vw;
     height: 100vh;
     position: relative;
+    z-index: 1000;
 }
 .video-toner {
     background: rgb(255, 255, 255, 0);
@@ -11,12 +12,15 @@
         rgba(255, 255, 255, 0) 0%,
         rgba(0, 0, 0, 0.8432948179271709) 100%
     );
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    z-index: 9;
-    left: 0;
-    top: 0;
+    position: absolute !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 9 !important;
+    left: 0 !important;
+    top: 0 !important;
+}
+.visibleCursor *{
+    cursor: default !important;
 }
 .video-controls {
     z-index: 10;
@@ -64,12 +68,16 @@
     animation-fill-mode: forwards;
     transition: 0.3s ease-out;
 }
-.fullscreen{
+.fullscreen-rev{
+    background-image: url('../Video/VideoSrc/fullscreen-back.png') !important;
+}
+.fullscreen, .fullscreen-rev{
     width: 36px;
     height: 36px;
     background-image: url('../Video/VideoSrc/fullscreen.png');
     border: none;
     background-position: center;
+    transition: all .3s ease !important;
     background-size: 80%;
     background-repeat: no-repeat;
     animation: fadeInRev;

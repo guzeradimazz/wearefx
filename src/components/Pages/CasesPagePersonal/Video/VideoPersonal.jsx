@@ -12,8 +12,11 @@ export const VideoPersonal = () => {
         playedSeconds: 0,
     })
 
+    const [fullscreen, setFullscreen] = useState(false)
+
     const refPlayer = useRef(null)
     const refPlayerScreenfull = useRef(null)
+
     const { playing, muted, loadedSeconds, playedSeconds } = videoState
     const handlePlay = () => {
         setVideoState({ ...videoState, playing: !videoState.playing })
@@ -28,11 +31,27 @@ export const VideoPersonal = () => {
         refPlayer.current.seekTo(Number(e))
     }
     const handleFullScreen = () => {
-        
+        setFullscreen(true)
+
+        if (refPlayerScreenfull.current.requestFullscreen)
+            refPlayerScreenfull.current.requestFullscreen()
+        else if (refPlayerScreenfull.current.webkitRequestFullscreen)
+            /* Safari */ refPlayerScreenfull.current.webkitRequestFullscreen()
+        else if (refPlayerScreenfull.current.msRequestFullscreen)
+            /* IE11 */ refPlayerScreenfull.current.msRequestFullscreen()
+    }
+    const handleFullScreenClose = () => {
+        setFullscreen(false)
+
+        if (document.exitFullscreen) document.exitFullscreen()
+        else if (document.webkitExitFullscreen)
+            /* Safari */ document.webkitExitFullscreen()
+        else if (document.msExitFullscreen)
+            /* IE11 */ document.msExitFullscreen()
     }
     return (
-        <div ref={refPlayerScreenfull} className="video-object">
-            <div className="video-toner" />
+        <div ref={refPlayerScreenfull} className={fullscreen ? "visibleCursor video-object" : "video-object"}>
+            <div className={fullscreen ? "visibleCursor video-toner" :"video-toner"} />
             <ReactPlayer
                 className="video-video"
                 width={'100vw'}
@@ -42,16 +61,20 @@ export const VideoPersonal = () => {
                 muted={muted}
                 ref={refPlayer}
                 onProgress={handleProgress}
+                
             />
             <VideoControls
                 playing={playing}
                 handlePlay={handlePlay}
                 muted={muted}
+                fullscreen={fullscreen}
+                setFullscreen={setFullscreen}
                 handleMuted={handleMuted}
                 loadedSeconds={loadedSeconds}
                 playedSeconds={playedSeconds}
                 handleProgressTrack={handleProgressTrack}
                 handleFullScreen={handleFullScreen}
+                handleFullScreenClose={handleFullScreenClose}
             />
         </div>
     )

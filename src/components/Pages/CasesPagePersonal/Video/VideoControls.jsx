@@ -9,12 +9,14 @@ const VideoControls = ({
     loadedSeconds,
     playedSeconds,
     handleProgressTrack,
+    fullscreen,
     handleFullScreen,
+    handleFullScreenClose,
 }) => {
     const [showElements, setShowElements] = useState(true)
     return (
         <>
-            <div className="video-controls">
+            <div className={fullscreen ? "visibleCursor video-controls": 'video-controls'}>
                 <div className="video-text">
                     <div className="casesArrow" />
                     <p>Scroll down to view details</p>
@@ -61,11 +63,23 @@ const VideoControls = ({
                         </button>
                         <button
                             className={
-                                showElements
-                                    ? `fullscreen`
-                                    : 'fadeIn fullscreen'
+                                !fullscreen
+                                    ? showElements
+                                        ? `fullscreen`
+                                        : 'fadeIn fullscreen'
+                                    : 'displayNone'
                             }
                             onClick={() => handleFullScreen()}
+                        ></button>
+                        <button
+                            className={
+                                fullscreen
+                                    ? showElements
+                                        ? `fullscreen-rev`
+                                        : 'fadeIn fullscreen-rev'
+                                    : 'displayNone'
+                            }
+                            onClick={() => handleFullScreenClose()}
                         ></button>
                     </div>
                 </div>
