@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './VideoPersonal.css'
 
 const VideoControls = ({
@@ -14,15 +14,48 @@ const VideoControls = ({
     handleFullScreenClose,
 }) => {
     const [showElements, setShowElements] = useState(true)
+    const [Btn1, setBtn1] = useState('')
+    const [Btn2, setBtn2] = useState('')
+
+    useEffect(() => {
+        if (fullscreen) {
+            setBtn1('displayNone')
+            setBtn2('')
+        }
+        if (!fullscreen) {
+            setBtn2('displayNone')
+            setBtn1('')
+        }
+    }, [fullscreen])
+
+    useEffect(() => {
+        const fillBar = document.getElementById('fill')
+        fillBar.style.width = `${(playedSeconds / loadedSeconds) * 100}%`
+    }, [playedSeconds, loadedSeconds])
     return (
         <>
-            <div className={fullscreen ? "visibleCursor video-controls": 'video-controls'}>
+            <div
+                className={
+                    fullscreen
+                        ? 'visibleCursor video-controls'
+                        : 'video-controls'
+                }
+            >
                 <div className="video-text">
                     <div className="casesArrow" />
                     <p>Scroll down to view details</p>
                 </div>
                 <div className="video-center">
-                    <div className="full-progressbar">
+                    <div
+                        className={
+                            showElements
+                                ? 'full-progressbar'
+                                : 'full-progressbar progress-bar-width'
+                        }
+                    >
+                        <span className={'bar'}>
+                            <span id="fill" className="fill"></span>
+                        </span>
                         <input
                             type="range"
                             value={playedSeconds}
@@ -30,19 +63,14 @@ const VideoControls = ({
                             min={0}
                             step={1}
                             className={
-                                showElements ? ` ` : 'progress-bar-width'
+                                showElements
+                                    ? ` inputProgress`
+                                    : 'inputProgress progress-bar-width'
                             }
                             onChange={(e) =>
                                 handleProgressTrack(e.target.value)
                             }
                         />
-                        <progress
-                            className={
-                                showElements ? ` ` : 'progress-bar-width'
-                            }
-                            value={playedSeconds}
-                            max={loadedSeconds}
-                        ></progress>
                     </div>
                     <div className="play-mute">
                         <button
@@ -65,8 +93,8 @@ const VideoControls = ({
                             className={
                                 !fullscreen
                                     ? showElements
-                                        ? `fullscreen`
-                                        : 'fadeIn fullscreen'
+                                        ? ` fullscreen`
+                                        : ` fadeIn fullscreen`
                                     : 'displayNone'
                             }
                             onClick={() => handleFullScreen()}
@@ -75,8 +103,8 @@ const VideoControls = ({
                             className={
                                 fullscreen
                                     ? showElements
-                                        ? `fullscreen-rev`
-                                        : 'fadeIn fullscreen-rev'
+                                        ? ` fullscreen-rev`
+                                        : ` fadeIn fullscreen-rev`
                                     : 'displayNone'
                             }
                             onClick={() => handleFullScreenClose()}

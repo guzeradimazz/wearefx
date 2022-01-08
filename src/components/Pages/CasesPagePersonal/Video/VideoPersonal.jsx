@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import './VideoPersonal.css'
 import ReactPlayer from 'react-player'
 import Video from './VideoSrc/videoPower.mp4'
@@ -49,9 +49,26 @@ export const VideoPersonal = () => {
         else if (document.msExitFullscreen)
             /* IE11 */ document.msExitFullscreen()
     }
+    const onEscPress = (e) => {
+        console.log(e.key)
+        if (e.key === 'Escape') setFullscreen(false)
+        else return
+    }
     return (
-        <div ref={refPlayerScreenfull} className={fullscreen ? "visibleCursor video-object" : "video-object"}>
-            <div className={fullscreen ? "visibleCursor video-toner" :"video-toner"} />
+        <div
+            onKeyDown={onEscPress}
+            tabIndex={1}
+            id="player"
+            ref={refPlayerScreenfull}
+            className={
+                fullscreen ? 'visibleCursor video-object' : 'video-object'
+            }
+        >
+            <div
+                className={
+                    fullscreen ? 'visibleCursor video-toner' : 'video-toner'
+                }
+            />
             <ReactPlayer
                 className="video-video"
                 width={'100vw'}
@@ -61,14 +78,12 @@ export const VideoPersonal = () => {
                 muted={muted}
                 ref={refPlayer}
                 onProgress={handleProgress}
-                
             />
             <VideoControls
                 playing={playing}
                 handlePlay={handlePlay}
                 muted={muted}
                 fullscreen={fullscreen}
-                setFullscreen={setFullscreen}
                 handleMuted={handleMuted}
                 loadedSeconds={loadedSeconds}
                 playedSeconds={playedSeconds}
