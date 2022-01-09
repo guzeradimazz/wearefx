@@ -8,6 +8,8 @@ import '../StoryPage/StoryComponents/StoryHeader/StoryHeader.css'
 const HirePage = () => {
     useEffect(() => {
         document.getElementById('polyline').classList.add('displayNone')
+        document.getElementById('polyline1').classList.add('displayNone')
+        document.getElementById('polyline2').classList.add('displayNone')
         document.getElementById('overlay1').classList.add('displayNone')
         document.getElementById('overlay2').classList.add('displayNone')
         document.getElementById('overlay3').classList.add('displayNone')

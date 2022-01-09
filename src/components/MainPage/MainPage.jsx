@@ -74,6 +74,8 @@ const MainPage = ({
     const canvas3 = document.getElementById('overlay3')
 
     const polyline = document.getElementById('polyline')
+    const polyline1 =polyline
+    const polyline2 =polyline
 
     const [isCasesClicked, setIsCasesClicked] = useState(false)
     const [isCasesEntered, setIsCasesEntered] = useState(false)
@@ -326,7 +328,7 @@ const MainPage = ({
                         isClicked={isCasesClicked}
                     />
                     <Story
-                        polyline={polyline}
+                        polyline={polyline1}
                         coordsToX={buttonsCoords[1]?.x}
                         coordsToY={buttonsCoords[1]?.y}
                         isStoryEntered={isStoryEntered}
@@ -335,7 +337,7 @@ const MainPage = ({
                         isClicked={isStoryClicked}
                     />
                     <Hire
-                        polyline={polyline}
+                        polyline={polyline2}
                         coordsToX={buttonsCoords[2]?.x}
                         coordsToY={buttonsCoords[2]?.y}
                         isHireEntered={isHireEntered}

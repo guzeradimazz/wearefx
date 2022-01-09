@@ -31,6 +31,11 @@ export const Cases = ({
 }) => {
     const { width, height } = useWindowDimensions()
 
+    useEffect(() => {
+        document.getElementById('polyline1').classList.add('displayNone')
+        document.getElementById('polyline2').classList.add('displayNone')
+    }, [])
+
     const offCanvases = useCallback(() => {
         canvases.map((i) => i.classList.add('displayNone'))
         polyline.classList.remove('displayNone')
@@ -226,6 +231,7 @@ export const Cases = ({
                 className={`${universalBack} universalBack`}
             >
                 <Line
+                    polyline={polyline}
                     isClicked={isClicked}
                     coords={{
                         first: {
@@ -338,10 +344,7 @@ export const Cases = ({
                         {casesArray[5].title}
                     </div>
                 </div>
-                <Link
-                    to="/cases"
-                    delay={3000}
-                >
+                <Link to="/cases" delay={3000}>
                     <div className="casesBtn gradientBtn">
                         <p>
                             Explore

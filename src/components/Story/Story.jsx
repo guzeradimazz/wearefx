@@ -17,6 +17,11 @@ export const Story = ({
 }) => {
     const { width, height } = useWindowDimensions()
 
+    useEffect(() => {
+        document.getElementById('polyline').classList.add('displayNone')
+        document.getElementById('polyline2').classList.add('displayNone')
+    }, [])
+
     const offCanvases = useCallback(() => {
         canvases.map((i) => i.classList.add('displayNone'))
         polyline.classList.remove('displayNone')
@@ -39,6 +44,7 @@ export const Story = ({
         <div className={isClicked ? 'storyLayout' : 'reversedLayoutStory'}>
             <Cube />
             <Line
+                polyline={polyline}
                 isClicked={isClicked}
                 coords={{
                     first: {
@@ -47,13 +53,13 @@ export const Story = ({
                     },
                     last: {
                         x: coordsToX,
-                        y: coordsToY+23,
+                        y: coordsToY + 23,
                     },
                 }}
                 coords1={{
                     first: {
                         x: coordsToX,
-                        y: coordsToY+23,
+                        y: coordsToY + 23,
                     },
                     last: {
                         x: width,

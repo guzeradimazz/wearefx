@@ -15,9 +15,8 @@ export default function Line({ isClicked, coords, amount, coords1 }) {
 
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     useEffect(() => {
-        ctx.restore()
         ctx.clearRect(0, 0, canvas.width, canvas.height)
-        return () => idInterval.current && clearTimeout(idInterval.current)
+        return () => idInterval.current && clearInterval(idInterval.current)
     }, [])
 
     ctx.lineWidth = 1.3
@@ -101,7 +100,6 @@ export default function Line({ isClicked, coords, amount, coords1 }) {
     const length = dots.length - 1
 
     function draw2() {
-        debugger
         draw1(
             dots[length].x,
             dots[length].y,
@@ -112,14 +110,6 @@ export default function Line({ isClicked, coords, amount, coords1 }) {
             dots3[0].x,
             dots3[0].y
         )
-
-        setTimeout(() => {
-            if (isClicked)
-                idInterval.current = setTimeout(function tick() {
-                    mix()
-                    idInterval.current = setTimeout(tick, 2000)
-                }, 0)
-        }, 2500)
     }
 
     function draw1(x1, y1, x2, y2, x3, y3, x4, y4) {
@@ -131,18 +121,17 @@ export default function Line({ isClicked, coords, amount, coords1 }) {
                 (dots[length - i].x - dots[length - i + 1].x) / smoothFactor
             const smallStepY =
                 (dots[length - i].y - dots[length - i + 1].y) / smoothFactor
+
             const smallStepX1 =
                 (dots1[length - i].x - dots1[length - i + 1].x) / smoothFactor
             const smallStepY1 =
                 (dots1[length - i].y - dots1[length - i + 1].y) / smoothFactor
-
             const smallStepX2 = (dots2[i].x - dots2[i - 1].x) / smoothFactor
             const smallStepY2 = (dots2[i].y - dots2[i - 1].y) / smoothFactor
 
             const smallStepX3 = (dots3[i].x - dots3[i - 1].x) / smoothFactor
             const smallStepY3 = (dots3[i].y - dots3[i - 1].y) / smoothFactor
 
-            debugger
 
             let flag = true
 
@@ -158,21 +147,25 @@ export default function Line({ isClicked, coords, amount, coords1 }) {
 
                 if (flag) {
                     ctx.beginPath()
+                    ctx.strokeStyle = '#f1bb00'
                     ctx.moveTo(x1, y1)
                     ctx.lineTo(x1 + smallStepX, y1 + smallStepY)
                     ctx.stroke()
 
                     ctx.beginPath()
+                    ctx.strokeStyle = '#7344f4'
                     ctx.moveTo(x2, y2)
                     ctx.lineTo(x2 + smallStepX1, y2 + smallStepY1)
                     ctx.stroke()
 
                     ctx.beginPath()
+                    ctx.strokeStyle = '#f1bb00'
                     ctx.moveTo(x3, y3)
                     ctx.lineTo(x3 + smallStepX2, y3 + smallStepY2)
                     ctx.stroke()
 
                     ctx.beginPath()
+                    ctx.strokeStyle = '#7344f4'
                     ctx.moveTo(x4, y4)
                     ctx.lineTo(x4 + smallStepX3, y4 + smallStepY3)
                     ctx.stroke()
@@ -204,6 +197,15 @@ export default function Line({ isClicked, coords, amount, coords1 }) {
                             dots3[i - 1].x,
                             dots3[i - 1].y
                         )
+                    } else {
+                        if (isClicked)
+                            idInterval.current = setInterval(mix,2000)
+
+                        if (!isClicked) {
+                            ctx.clearRect(0, 0, canvas.width, canvas.height)
+                            idInterval.current &&
+                                clearInterval(idInterval.current)
+                        }
                     }
                 }
             }
@@ -217,12 +219,6 @@ export default function Line({ isClicked, coords, amount, coords1 }) {
         set(dots1, coords, stepX, stepY)
         set(dots2, coords1, stepX1, stepY1)
         set(dots3, coords1, stepX1, stepY1)
-
-        if (!isClicked) {
-            ctx.restore()
-            ctx.clearRect(0, 0, canvas.width, canvas.height)
-            idInterval.current && clearTimeout(idInterval.current)
-        }
 
         draw2()
     }, [isClicked])
