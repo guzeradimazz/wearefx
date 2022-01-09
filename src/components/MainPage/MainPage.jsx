@@ -74,8 +74,8 @@ const MainPage = ({
     const canvas3 = document.getElementById('overlay3')
 
     const polyline = document.getElementById('polyline')
-    const polyline1 =polyline
-    const polyline2 =polyline
+    const polyline1 = document.getElementById('polyline1')
+    const polyline2 = document.getElementById('polyline2')
 
     const [isCasesClicked, setIsCasesClicked] = useState(false)
     const [isCasesEntered, setIsCasesEntered] = useState(false)
@@ -245,15 +245,15 @@ const MainPage = ({
 
     const casesClicked = () => {
         setIsCanvasesHidded(!isCanvasesHidded)
-        setIsCasesClicked(!isCasesClicked)
+        setIsCasesClicked((isCasesClicked) => !isCasesClicked)
     }
     const storyClicked = () => {
         setIsCanvasesHidded(!isCanvasesHidded)
-        setIsStoryClicked(!isStoryClicked)
+        setIsStoryClicked((isStoryClicked) => !isStoryClicked)
     }
     const hireClicked = () => {
         setIsCanvasesHidded(!isCanvasesHidded)
-        setIsHireClicked(!isHireClicked)
+        setIsHireClicked((isHireClicked) => !isHireClicked)
     }
 
     return (

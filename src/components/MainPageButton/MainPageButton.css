@@ -69,7 +69,7 @@
     top: 40px;
     left: calc(47%);
     border: none !important;
-    animation: showMainPageBtn 0.4s;
+    /* animation: showMainPageBtn 0.4s; */
 }
 .clickedCases:hover::before {
     border: none !important;
@@ -101,7 +101,7 @@
     bottom: 40px;
     left: 60px;
     border: none;
-    animation: pulsebackground 2s ease;
+    /* animation: pulsebackground 2s ease; */
 }
 .clickedStory:hover {
     border: none;

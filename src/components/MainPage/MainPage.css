@@ -28,11 +28,29 @@
     left: 0;
     top: 0;
 }
-#polyline,#polyline1,#polyline2 {
+#polyline{
     position: absolute;
     width: 100vw !important;
     height: 100vh !important;
     z-index: 100000;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+#polyline1{
+    position: absolute;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 10000032;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+#polyline2{
+    position: absolute;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 1000012;
     top: 0;
     left: 0;
     pointer-events: none;
@@ -62,7 +80,7 @@
     width: 100vw;
     height: 100vh;
     pointer-events: none;
-    z-index: 9998;
+    z-index: 9999;
     overflow-y: hidden !important;
 }
 #overlay3 {
@@ -72,7 +90,7 @@
     width: 100vw;
     height: 100vh;
     pointer-events: none;
-    z-index: 9998;
+    z-index: 9997;
     overflow-y: hidden !important;
 }
 .displayNone {

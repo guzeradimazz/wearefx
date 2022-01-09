@@ -20,6 +20,9 @@ export const Story = ({
     useEffect(() => {
         document.getElementById('polyline').classList.add('displayNone')
         document.getElementById('polyline2').classList.add('displayNone')
+        return ()=>{
+            document.getElementById('polyline1').classList.add('displayNone')
+        }
     }, [])
 
     const offCanvases = useCallback(() => {

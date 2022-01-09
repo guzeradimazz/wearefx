@@ -5,8 +5,13 @@ const applyLayout = (canvas) => {
     canvas.height = canvas.clientHeight
 }
 
-export default function Line({ isClicked, coords, amount, coords1 }) {
-    const canvas = document.getElementById('polyline')
+export default function Line({ polyline, isClicked, coords, amount, coords1 }) {
+    const canvas = polyline
+    useEffect(() => {
+        return () => {
+            polyline.style.cssText = 'display:none;'
+        }
+    }, [])
 
     const idInterval = useRef(null)
     let ctx = canvas.getContext('2d')
@@ -132,7 +137,6 @@ export default function Line({ isClicked, coords, amount, coords1 }) {
             const smallStepX3 = (dots3[i].x - dots3[i - 1].x) / smoothFactor
             const smallStepY3 = (dots3[i].y - dots3[i - 1].y) / smoothFactor
 
-
             let flag = true
 
             let id = requestAnimationFrame(() =>
@@ -199,13 +203,7 @@ export default function Line({ isClicked, coords, amount, coords1 }) {
                         )
                     } else {
                         if (isClicked)
-                            idInterval.current = setInterval(mix,2000)
-
-                        if (!isClicked) {
-                            ctx.clearRect(0, 0, canvas.width, canvas.height)
-                            idInterval.current &&
-                                clearInterval(idInterval.current)
-                        }
+                            idInterval.current = setInterval(mix, 2000)
                     }
                 }
             }
@@ -219,8 +217,12 @@ export default function Line({ isClicked, coords, amount, coords1 }) {
         set(dots1, coords, stepX, stepY)
         set(dots2, coords1, stepX1, stepY1)
         set(dots3, coords1, stepX1, stepY1)
-
-        draw2()
+        if (isClicked) draw2()
+        if (!isClicked) {
+            ctx.restore()
+            ctx.clearRect(0, 0, canvas.width, canvas.height)
+            idInterval.current && clearInterval(idInterval.current)
+        }
     }, [isClicked])
 
     function moveLine(dots, i, val1) {
