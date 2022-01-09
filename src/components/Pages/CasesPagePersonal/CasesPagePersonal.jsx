@@ -7,6 +7,7 @@ import { PersonalHeader } from './PersonalHeader'
 import { PersonalSlider } from './PersonalSlider'
 import TextBlock from './TextBlock'
 import { VideoPersonal } from './Video/VideoPersonal'
+import '../../../styles/Global.css'
 
 const CasesPagePersonal = () => {
     useEffect(() => {
@@ -17,7 +18,7 @@ const CasesPagePersonal = () => {
     }, [])
     return (
         <CursorProvider>
-            <div className="personal-page">
+            <div className=" personal-page">
                 <PersonalHeader />
                 <VideoPersonal />
                 <TextBlock

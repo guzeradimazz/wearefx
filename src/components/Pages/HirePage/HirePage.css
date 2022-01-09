@@ -25,3 +25,7 @@
     border: none;
     animation: pulsebackground 2s ease;
 }
+.hireBloack{
+    width: 100vw;
+    height: 100vh;
+}

@@ -20,10 +20,6 @@
     top: 0;
     left: 90%;
 }
-.contact-block {
-    overflow: scroll;
-    position: relative !important;
-}
 .personal-left {
     justify-content: space-between;
     width: 50%;
@@ -249,4 +245,27 @@
 .next-proj {
     padding-top: 16%;
     color: #dae0f279;
+}
+.contact-block{
+    overflow: visible !important;
+}
+.gradientBtnContact{
+    width: 110px;
+    height: 110px;
+    left: 90%;
+    border-radius: 50%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 40px;
+    background: linear-gradient(125deg, #7344f4 10%, #eec01b 50%, #7344f4 90%);
+    background-size: 600% 600%;
+    box-shadow: 0 0 0 0 #eec01b;
+    animation: gradient 5s ease infinite;
+}
+.gradientBtnContact p{
+    position: relative;text-align: center;
+    text-transform: uppercase;
+    color: #dae0f2;
+    font-size: 14px;
+    top: 20%;
 }

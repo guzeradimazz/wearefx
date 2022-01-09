@@ -31,7 +31,6 @@
 .header-left div:nth-child(2) {
     display: flex;
     justify-content: space-between;
-    width: 200px;
 }
 .header-left div:nth-child(2) a {
     width: 150px !important;

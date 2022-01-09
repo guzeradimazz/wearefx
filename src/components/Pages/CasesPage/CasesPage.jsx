@@ -164,7 +164,7 @@ export const CasesPage = () => {
     }, [isHoveredBackground])
     return (
         <CursorProvider>
-            <div className="cases-page">
+            <div className=" animationFocus cases-page">
                 <Cube showCube={`${showCube}`} />
                 <div className={`${isHoveredBackground} universalBack`}>
                     <div className="story-header">

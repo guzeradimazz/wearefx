@@ -13,7 +13,11 @@ li{
 }
 html{
     background-color: #000;
-    overflow-x: hidden !important;
+    animation-delay: 2s;
+    animation: unFocusFocus 2s;
+}
+.animationFocus{
+    animation: unFocusFocus 2s;
 }
 @keyframes unFocusFocus {
     0%{
@@ -29,9 +33,6 @@ html{
         filter: blur(0px);
     }
 }
-body{
-    overflow-x: hidden !important;
-}
 .cube{
     transition: all .3s ease !important;
     position: fixed;
@@ -45,4 +46,7 @@ body{
 }
 .undefined{
     color: #000;
+}
+.slick-arrow{
+    display: none !important;
 }

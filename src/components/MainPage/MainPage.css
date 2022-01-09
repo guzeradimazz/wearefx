@@ -36,11 +36,7 @@
     top: 0;
     left: 0;
     pointer-events: none;
-    opacity: 0;
-    animation: polylineShowAnim linear 2s;
-    animation-fill-mode: forwards;
-    animation-delay: 0s;
-    animation-timing-function:  steps(100);
+    
 }
 @keyframes polylineShowAnim {
     0% {

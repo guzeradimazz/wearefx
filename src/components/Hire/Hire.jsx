@@ -54,12 +54,12 @@ export const Hire = ({
                     }}
                     coords1={{
                         first: {
-                            x: 0,
-                            y: height,
-                        },
-                        last: {
                             x: coordsToX + 20,
                             y: coordsToY + 20,
+                        },
+                        last: {
+                            x: 0,
+                            y: height,
                         },
                     }}
                     amount={7}

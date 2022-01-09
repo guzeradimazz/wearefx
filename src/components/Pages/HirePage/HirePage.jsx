@@ -15,7 +15,7 @@ const HirePage = () => {
 
     return (
         <CursorProvider>
-            <div>
+            <div className="">
                 <Cube />
                 <div className="story-header">
                     <div className="header-left">
@@ -28,7 +28,7 @@ const HirePage = () => {
                             <Link to="/story">our story</Link>
                         </div>
                     </div>
-                    <Link to='/wearefx'>
+                    <Link to="/wearefx">
                         <div className="header-right"></div>
                     </Link>
                 </div>

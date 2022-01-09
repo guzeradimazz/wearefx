@@ -1,4 +1,4 @@
-import  { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 
 const applyLayout = (canvas) => {
     canvas.width = canvas.clientWidth
@@ -97,26 +97,134 @@ export default function Line({ isClicked, coords, amount, coords1 }) {
         ctx.stroke()
     }
 
+    let i = 1
+    const length = dots.length - 1
+
+    function draw2() {
+        debugger
+        draw1(
+            dots[length].x,
+            dots[length].y,
+            dots1[length].x,
+            dots1[length].y,
+            dots2[0].x,
+            dots2[0].y,
+            dots3[0].x,
+            dots3[0].y
+        )
+
+        setTimeout(() => {
+            if (isClicked)
+                idInterval.current = setTimeout(function tick() {
+                    mix()
+                    idInterval.current = setTimeout(tick, 2000)
+                }, 0)
+        }, 2500)
+    }
+
+    function draw1(x1, y1, x2, y2, x3, y3, x4, y4) {
+        function run() {
+            let j = 0
+            const smoothFactor = 20
+
+            const smallStepX =
+                (dots[length - i].x - dots[length - i + 1].x) / smoothFactor
+            const smallStepY =
+                (dots[length - i].y - dots[length - i + 1].y) / smoothFactor
+            const smallStepX1 =
+                (dots1[length - i].x - dots1[length - i + 1].x) / smoothFactor
+            const smallStepY1 =
+                (dots1[length - i].y - dots1[length - i + 1].y) / smoothFactor
+
+            const smallStepX2 = (dots2[i].x - dots2[i - 1].x) / smoothFactor
+            const smallStepY2 = (dots2[i].y - dots2[i - 1].y) / smoothFactor
+
+            const smallStepX3 = (dots3[i].x - dots3[i - 1].x) / smoothFactor
+            const smallStepY3 = (dots3[i].y - dots3[i - 1].y) / smoothFactor
+
+            debugger
+
+            let flag = true
+
+            let id = requestAnimationFrame(() =>
+                smooth(x1, y1, x2, y2, x3, y3, x4, y4)
+            )
+
+            function smooth(x1, y1, x2, y2, x3, y3, x4, y4) {
+                if (j === smoothFactor) {
+                    cancelAnimationFrame(id)
+                    flag = false
+                }
+
+                if (flag) {
+                    ctx.beginPath()
+                    ctx.moveTo(x1, y1)
+                    ctx.lineTo(x1 + smallStepX, y1 + smallStepY)
+                    ctx.stroke()
+
+                    ctx.beginPath()
+                    ctx.moveTo(x2, y2)
+                    ctx.lineTo(x2 + smallStepX1, y2 + smallStepY1)
+                    ctx.stroke()
+
+                    ctx.beginPath()
+                    ctx.moveTo(x3, y3)
+                    ctx.lineTo(x3 + smallStepX2, y3 + smallStepY2)
+                    ctx.stroke()
+
+                    ctx.beginPath()
+                    ctx.moveTo(x4, y4)
+                    ctx.lineTo(x4 + smallStepX3, y4 + smallStepY3)
+                    ctx.stroke()
+
+                    j++
+
+                    requestAnimationFrame(() =>
+                        smooth(
+                            x1 + smallStepX,
+                            y1 + smallStepY,
+                            x2 + smallStepX1,
+                            y2 + smallStepY1,
+                            x3 + smallStepX2,
+                            y3 + smallStepY2,
+                            x4 + smallStepX3,
+                            y4 + smallStepY3
+                        )
+                    )
+                } else {
+                    i++
+                    if (i < dots.length) {
+                        draw1(
+                            dots[length - i + 1].x,
+                            dots[length - i + 1].y,
+                            dots1[length - i + 1].x,
+                            dots1[length - i + 1].y,
+                            dots2[i - 1].x,
+                            dots2[i - 1].y,
+                            dots3[i - 1].x,
+                            dots3[i - 1].y
+                        )
+                    }
+                }
+            }
+        }
+
+        run()
+    }
+
     useEffect(() => {
         set(dots, coords, stepX, stepY)
         set(dots1, coords, stepX, stepY)
         set(dots2, coords1, stepX1, stepY1)
         set(dots3, coords1, stepX1, stepY1)
-        
-        draw(dots)
-        draw(dots1)
-        draw(dots2)
-        draw(dots3)
 
-        if (isClicked) idInterval.current = setTimeout(function tick() {
-            mix()
-            idInterval.current = setTimeout(tick, 2000);
-          }, 0);
         if (!isClicked) {
             ctx.restore()
             ctx.clearRect(0, 0, canvas.width, canvas.height)
             idInterval.current && clearTimeout(idInterval.current)
         }
+
+        draw2()
     }, [isClicked])
 
     function moveLine(dots, i, val1) {

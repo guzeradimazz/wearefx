@@ -47,17 +47,17 @@ export const Story = ({
                     },
                     last: {
                         x: coordsToX,
-                        y: coordsToY,
+                        y: coordsToY+23,
                     },
                 }}
                 coords1={{
                     first: {
-                        x: width,
-                        y: height,
+                        x: coordsToX,
+                        y: coordsToY+23,
                     },
                     last: {
-                        x: coordsToX,
-                        y: coordsToY,
+                        x: width,
+                        y: height,
                     },
                 }}
                 amount={7}

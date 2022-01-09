@@ -4,7 +4,7 @@ import './CasesPagePersonal.css'
 const ContactBlock = () => {
     return (
         <div className="contact-block">
-            <div className="fixedPersonalBtn storyBtn gradientBtn">
+            <div className="gradientBtnContact">
                 <p>
                     We’re
                     <br />

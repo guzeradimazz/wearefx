@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import Line from '../Line/Line'
 import useWindowDimensions from '../useWindowDimension/useWindowDimensions'
+import DelayLink from '../DelayLink'
 
 export const Cases = ({
     polyline,
@@ -209,8 +210,9 @@ export const Cases = ({
                 coordY = (coordYPara / parallaxHeigth) * 100
             }
             setMouseParallaxStyle()
-            
-            if (isShowParallax) parallax.addEventListener('mousemove', onParallaxMouseMove)
+
+            if (isShowParallax)
+                parallax.addEventListener('mousemove', onParallaxMouseMove)
             else parallax.removeEventListener('mousemove', onParallaxMouseMove)
         }
     }, [showCube])
@@ -237,12 +239,12 @@ export const Cases = ({
                     }}
                     coords1={{
                         first: {
-                            x: width,
-                            y: height * 0.24,
-                        },
-                        last: {
                             x: coordsToX,
                             y: coordsToY,
+                        },
+                        last: {
+                            x: width,
+                            y: height * 0.24,
                         },
                     }}
                     amount={7}
@@ -336,7 +338,10 @@ export const Cases = ({
                         {casesArray[5].title}
                     </div>
                 </div>
-                <Link to="/cases" onClick={() => toAllCases()}>
+                <Link
+                    to="/cases"
+                    delay={3000}
+                >
                     <div className="casesBtn gradientBtn">
                         <p>
                             Explore
@@ -350,6 +355,4 @@ export const Cases = ({
             </div>
         </div>
     )
-
-    return null
 }

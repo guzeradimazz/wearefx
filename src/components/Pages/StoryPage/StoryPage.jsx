@@ -15,7 +15,7 @@ export const StoryPage = () => {
     }, [])
     return (
         <CursorProvider>
-            <div>
+            <div className='animationFocus'>
                 <StoryMain />
                 <StoryBottom />
             </div>
