@@ -28,7 +28,7 @@
     left: 0;
     top: 0;
 }
-#polyline{
+#polyline {
     position: absolute;
     width: 100vw !important;
     height: 100vh !important;
@@ -37,31 +37,23 @@
     left: 0;
     pointer-events: none;
 }
-#polyline1{
+#polyline1 {
     position: absolute;
     width: 100vw !important;
     height: 100vh !important;
-    z-index: 10000032;
+    z-index: 100000;
     top: 0;
     left: 0;
     pointer-events: none;
 }
-#polyline2{
+#polyline2 {
     position: absolute;
     width: 100vw !important;
     height: 100vh !important;
-    z-index: 1000012;
+    z-index: 100000;
     top: 0;
     left: 0;
     pointer-events: none;
-}
-@keyframes polylineShowAnim {
-    0% {
-        opacity: 0 ;
-    }
-    100%{
-        opacity: 1 ;
-    }
 }
 #overlay1 {
     position: fixed;
@@ -71,7 +63,6 @@
     height: 100vh;
     pointer-events: none;
     z-index: 9998;
-    overflow-y: hidden !important;
 }
 #overlay2 {
     position: fixed;
@@ -80,8 +71,7 @@
     width: 100vw;
     height: 100vh;
     pointer-events: none;
-    z-index: 9999;
-    overflow-y: hidden !important;
+    z-index: 9998;
 }
 #overlay3 {
     position: fixed;
@@ -90,8 +80,7 @@
     width: 100vw;
     height: 100vh;
     pointer-events: none;
-    z-index: 9997;
-    overflow-y: hidden !important;
+    z-index: 9998;
 }
 .displayNone {
     z-index: -10000;

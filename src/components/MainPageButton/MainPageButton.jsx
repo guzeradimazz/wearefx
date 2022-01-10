@@ -23,13 +23,6 @@ export const MainPageButton = forwardRef(
                     ref={ref}
                     className={`${className} MainPageButton`}
                 >
-                    {isHovered && (
-                        <>
-                            <span className="first__dot"></span>
-                            <span className="second__dot"></span>
-                            <span className="third__dot"></span>
-                        </>
-                    )}
                     {isClicked ? ' ' : title}
                 </div>
             </div>

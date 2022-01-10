@@ -4,6 +4,7 @@ import Cube from '../../Cube/Cube'
 import CursorProvider from '../../CursorProvider/CursorProvider'
 import './HirePage.css'
 import '../StoryPage/StoryComponents/StoryHeader/StoryHeader.css'
+import HirePageHeader from './HirePageHeader'
 
 const HirePage = () => {
     useEffect(() => {
@@ -19,21 +20,7 @@ const HirePage = () => {
         <CursorProvider>
             <div className="">
                 <Cube />
-                <div className="story-header">
-                    <div className="header-left">
-                        <div>
-                            <h1>Hire</h1>
-                            <h1>us</h1>
-                        </div>
-                        <div>
-                            <Link to="/cases">Cases</Link>
-                            <Link to="/story">our story</Link>
-                        </div>
-                    </div>
-                    <Link to="/wearefx">
-                        <div className="header-right"></div>
-                    </Link>
-                </div>
+                <HirePageHeader/>
                 <div className="hireBLock">
                     <div className="hireBLock__left">
                         <div className="hireBLock__left__top">

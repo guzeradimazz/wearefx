@@ -34,9 +34,6 @@ export const Cases = ({
     useEffect(() => {
         document.getElementById('polyline1').classList.add('displayNone')
         document.getElementById('polyline2').classList.add('displayNone')
-        return ()=>{
-            document.getElementById('polyline').classList.add('displayNone')
-        }
     }, [])
 
     const offCanvases = useCallback(() => {

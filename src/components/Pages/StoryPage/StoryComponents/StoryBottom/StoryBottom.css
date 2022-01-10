@@ -53,7 +53,7 @@
     background-image: url('../../../../../images/firstMarquee/NAVI.svg');
 }
 .marquee-6 {
-    width: 285px;
+    width: 265px !important;
     height: 144px;
     background-image: url('../../../../../images/firstMarquee/McDonalds.svg');
 }

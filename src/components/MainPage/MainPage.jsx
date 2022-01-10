@@ -10,6 +10,7 @@ import './MainPageMedia.css'
 
 import videoPower from './video/videoPower.mp4'
 
+
 const applyLayout = (canvas) => {
     canvas.width = canvas.clientWidth
     canvas.height = canvas.clientHeight
@@ -217,18 +218,14 @@ const MainPage = ({
             window.removeEventListener('mousemove', onMove)
             window.removeEventListener('mousemove', btnMove1)
 
-            try {
-                btn1Ref.current.removeEventListener('mouseover', on1BtnEnter)
-                btn1Ref.current.removeEventListener('mouseleave', on1BtnLeave)
+            btn1Ref.current?.removeEventListener('mouseover', on1BtnEnter)
+            btn1Ref.current?.removeEventListener('mouseleave', on1BtnLeave)
 
-                btn2Ref.current.removeEventListener('mouseover', on2BtnEnter)
-                btn2Ref.current.removeEventListener('mouseleave', on2BtnLeave)
+            btn2Ref.current?.removeEventListener('mouseover', on2BtnEnter)
+            btn2Ref.current?.removeEventListener('mouseleave', on2BtnLeave)
 
-                btn3Ref.current.removeEventListener('mouseover', on3BtnEnter)
-                btn3Ref.current.removeEventListener('mouseleave', on3BtnLeave)
-            } catch (error) {
-                console.error(error)
-            }
+            btn3Ref.current?.removeEventListener('mouseover', on3BtnEnter)
+            btn3Ref.current?.removeEventListener('mouseleave', on3BtnLeave)
         }
     }, [
         buttonsCoords.length,

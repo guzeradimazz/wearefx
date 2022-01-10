@@ -1,40 +1,40 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     cursor: none;
     font-family: 'Futura PT';
 }
-a{
+a {
     text-decoration: none;
 }
-li{
+li {
     list-style: none;
 }
-html{
+html {
     background-color: #000;
     animation-delay: 2s;
     animation: unFocusFocus 2s;
 }
-.animationFocus{
+.animationFocus {
     animation: unFocusFocus 2s;
 }
 @keyframes unFocusFocus {
-    0%{
+    0% {
         filter: blur(1.2rem);
     }
-    25%{
-        filter: blur(.6rem);
+    25% {
+        filter: blur(0.6rem);
     }
-    50%{
+    50% {
         filter: blur(1.2rem);
     }
-    100%{
+    100% {
         filter: blur(0px);
     }
 }
-.cube{
-    transition: all .3s ease !important;
+.cube {
+    transition: all 0.3s ease !important;
     position: fixed;
     top: 0;
     left: 0;
@@ -44,9 +44,42 @@ html{
     pointer-events: none;
     z-index: 0;
 }
-.undefined{
+.undefined {
     color: #000;
 }
-.slick-arrow{
+.slick-arrow {
     display: none !important;
+}
+.page {
+    position: absolute;
+}
+@keyframes page-fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes page-fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+.fade-enter {
+    opacity: 0;
+}
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity ease-out;
+}
+.fade-exit {
+    opacity: 0;
+}
+.fade-exit.fade-exit-active {
+    opacity: 0;
+    transition: opacity 1s ease-out;
 }

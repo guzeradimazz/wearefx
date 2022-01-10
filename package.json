@@ -24,7 +24,9 @@
     "react-scripts": "4.0.3",
     "react-slick": "^0.28.1",
     "react-spring": "^9.4.1",
+    "react-transition-group": "^4.4.2",
     "slick-carousel": "^1.8.1",
+    "styled-components": "^5.3.3",
     "swiper": "^7.3.1",
     "typed.js": "^2.0.12",
     "web-vitals": "^1.1.2"

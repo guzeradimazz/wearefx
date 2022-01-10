@@ -6,9 +6,11 @@ export const PersonalHeader = () => {
         <div>
             <div className="personal-header">
                 <div className="personal-left">
-                    <div>
-                        <h1>our</h1>
-                        <h1>cases</h1>
+                    <div >
+                        <Link className='personal-left-div' to="/cases">
+                            <h1>our</h1>
+                            <h1>cases</h1>
+                        </Link>
                     </div>
                     <div>
                         <Link className="link" to="/story">

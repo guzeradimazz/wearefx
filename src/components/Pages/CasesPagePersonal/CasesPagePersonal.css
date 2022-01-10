@@ -14,6 +14,10 @@
     align-items: center;
     text-transform: uppercase;
 }
+.personal-left-div {
+    width: 150px;
+    display: flex;
+}
 .fixedPersonalBtn {
     position: sticky;
     position: -webkit-sticky;
