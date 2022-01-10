@@ -13,6 +13,20 @@
     animation-fill-mode: forwards;
     clip-path: polygon(94% 0, 100% 0, 100% 4%, 7% 92%);
 }
+.storyFullScreen {
+    clip-path: polygon(18% 0, 100% 0, 100% 100%, 7% 92%);
+    transition: clip-path 0.3s;
+    animation: toFullScreenStory 0.4s linear forwards;
+    transition: clip-path 0.3s;
+}
+@keyframes toFullScreenStory {
+    0% {
+        clip-path: polygon(18% 0, 100% 0, 100% 100%, 7% 92%);
+    }
+    100% {
+        clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+}
 .reversedLayoutStory {
     position: absolute;
     top: 0;
@@ -28,29 +42,29 @@
 }
 @keyframes storyShowBack {
     0% {
-        opacity: 1;
+        /* opacity: 1; */
         clip-path: polygon(18% 0, 100% 0, 100% 100%, 7% 92%);
     }
     35% {
-        opacity: 0.5;
+        /* opacity: 0.5; */
         clip-path: polygon(84% 0, 100% 0, 100% 14%, 7% 92%);
     }
     100% {
-        opacity: 0;
-        clip-path: polygon(94% 0, 100% 0, 100% 4%, 7% 92%);
+        /* opacity: 0; */
+        clip-path: polygon(100% 0, 100% 0, 100% 0, 7% 92%);
     }
 }
 @keyframes storyShow {
     0% {
-        opacity: 0;
-        clip-path: polygon(94% 0, 100% 0, 100% 4%, 7% 92%);
+        /* opacity: 0; */
+        clip-path: polygon(100% 0, 100% 0, 100% 0, 7% 92%);
     }
     35% {
-        opacity: 0.5;
+        /* opacity: 0.5; */
         clip-path: polygon(84% 0, 100% 0, 100% 14%, 7% 92%);
     }
     100% {
-        opacity: 1;
+        /* opacity: 1; */
         clip-path: polygon(18% 0, 100% 0, 100% 100%, 7% 92%);
     }
 }

@@ -171,56 +171,55 @@ export const Cases = ({
         setNaviStateHovered(false)
     }
 
-    const toAllCases = () => {
-        const casesLayoutElement = document.getElementById('casesLayoutElem')
-        casesLayoutElement.style.clipPath =
-            'polygon(0% 0%, 100% 0%, 100% 100%, 0 100%, 0 30%)'
+    // useEffect(() => {
+    //     const parallax = document.getElementById('casesLayoutElem')
+
+    //     if (parallax) {
+    //         let isShowParallax = false
+    //         if (showCube === 'displayNone') isShowParallax = true
+    //         const parallaxItem = document.getElementById('parallaxImageBlock')
+
+    //         const SpeedPr = 10
+    //         const speed = 0.5
+    //         let posX = 0,
+    //             posY = 0,
+    //             coordX = 0,
+    //             coordY = 0
+
+    //         const setMouseParallaxStyle = () => {
+    //             const distX = coordX - posX
+    //             const distY = coordY - posY
+
+    //             posX = posX + distX * speed
+    //             posY = posY + distY * speed
+
+    //             parallaxItem.style.cssText = `transform: translate(${
+    //                 posX / SpeedPr
+    //             }%,${posY / SpeedPr}%);`
+    //             requestAnimationFrame(setMouseParallaxStyle)
+    //         }
+    //         const onParallaxMouseMove = (e) => {
+    //             const parallaxWidth = parallax.offsetWidth
+    //             const parallaxHeigth = parallax.offsetHeight
+
+    //             const coordXPara = e.pageX - (parallaxWidth * 1.3) / 2
+    //             const coordYPara = e.pageY - parallaxHeigth / 2
+
+    //             coordX = (coordXPara / parallaxWidth) * 100
+    //             coordY = (coordYPara / parallaxHeigth) * 100
+    //         }
+    //         setMouseParallaxStyle()
+
+    //         if (isShowParallax)
+    //             parallax.addEventListener('mousemove', onParallaxMouseMove)
+    //         else parallax.removeEventListener('mousemove', onParallaxMouseMove)
+    //     }
+    // }, [showCube])
+
+    const ToFullScreen = () => {
+        const elem = document.getElementById('casesLayoutElem')
+        elem.classList.add('casesFullScreen')
     }
-
-    useEffect(() => {
-        const parallax = document.getElementById('casesLayoutElem')
-
-        if (parallax) {
-            let isShowParallax = false
-            if (showCube === 'displayNone') isShowParallax = true
-            const parallaxItem = document.getElementById('parallaxImageBlock')
-
-            const SpeedPr = 10
-            const speed = 0.5
-            let posX = 0,
-                posY = 0,
-                coordX = 0,
-                coordY = 0
-
-            const setMouseParallaxStyle = () => {
-                const distX = coordX - posX
-                const distY = coordY - posY
-
-                posX = posX + distX * speed
-                posY = posY + distY * speed
-
-                parallaxItem.style.cssText = `transform: translate(${
-                    posX / SpeedPr
-                }%,${posY / SpeedPr}%);`
-                requestAnimationFrame(setMouseParallaxStyle)
-            }
-            const onParallaxMouseMove = (e) => {
-                const parallaxWidth = parallax.offsetWidth
-                const parallaxHeigth = parallax.offsetHeight
-
-                const coordXPara = e.pageX - (parallaxWidth * 1.3) / 2
-                const coordYPara = e.pageY - parallaxHeigth / 2
-
-                coordX = (coordXPara / parallaxWidth) * 100
-                coordY = (coordYPara / parallaxHeigth) * 100
-            }
-            setMouseParallaxStyle()
-
-            if (isShowParallax)
-                parallax.addEventListener('mousemove', onParallaxMouseMove)
-            else parallax.removeEventListener('mousemove', onParallaxMouseMove)
-        }
-    }, [showCube])
     return (
         <div
             id="casesLayoutElem"
@@ -344,7 +343,7 @@ export const Cases = ({
                         {casesArray[5].title}
                     </div>
                 </div>
-                <Link to="/cases" delay={3000}>
+                <Link to="/cases" onClick={()=>ToFullScreen()}>
                     <div className="casesBtn gradientBtn">
                         <p>
                             Explore

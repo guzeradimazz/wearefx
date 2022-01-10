@@ -15,6 +15,7 @@ import { CSSTransition } from 'react-transition-group'
 
 const Routerelement = () => {
     const location = useLocation()
+    const sleep = (t) => new Promise((res) => setTimeout(res, t))
     const transitions = useTransition(location, {
         from: {
             position: 'absolute',
@@ -23,18 +24,22 @@ const Routerelement = () => {
             opacity: 0,
             transform: 'translatesY(0%)',
         },
-        enter: {
-            position: 'absolute',
-            width: '100vw',
-            heigth: '100vh',
-            opacity: 1,
-            transform: 'translatesY(0%)',
+        enter: (i) => async (next) => {
+            await sleep(1000)
+            await next({
+                position: 'absolute',
+                width: '100vw',
+                heigth: '100vh',
+                opacity: 1,
+                transform: 'translatesY(0%)',
+            })
         },
         leave: {
             position: 'absolute',
             width: '100vw',
             heigth: '100vh',
             opacity: 0,
+            transition:'ease',
             transform: 'translatesY(100%)',
         },
     })

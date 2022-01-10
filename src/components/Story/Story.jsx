@@ -40,8 +40,16 @@ export const Story = ({
         else canvases[1].classList.remove('displayNone')
     }, [isCanvasesHidded, canvases, isStoryEntered, offCanvases, onCanvases])
 
+    const ToFullScreen = () => {
+        const elem = document.getElementById('storyLayoutElem')
+        elem.classList.add('storyFullScreen')
+    }
+
     return (
-        <div className={isClicked ? 'storyLayout' : 'reversedLayoutStory'}>
+        <div
+            id="storyLayoutElem"
+            className={isClicked ? 'storyLayout' : 'reversedLayoutStory'}
+        >
             <Cube />
             <Line
                 polyline={polyline}
@@ -92,7 +100,7 @@ export const Story = ({
                     </p>
                 </div>
             </div>
-            <Link to="/story">
+            <Link to="/story" onClick={() => ToFullScreen()}>
                 <div className="storyBtn gradientBtn">
                     <p>
                         View our

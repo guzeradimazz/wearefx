@@ -40,8 +40,15 @@ export const Hire = ({
         else canvases[2].classList.remove('displayNone')
     }, [isCanvasesHidded, isHireEntered, onCanvases, offCanvases, canvases])
 
+    const ToFullScreen = () => {
+        const elem = document.getElementById('hireLayoutElem')
+        elem.classList.add('hireFullScreen')
+    }
     return (
-        <div className={isClicked ? 'hireLayout' : 'hireLayoutReversed'}>
+        <div
+            id="hireLayoutElem"
+            className={isClicked ? 'hireLayout' : 'hireLayoutReversed'}
+        >
             <Cube />
             <Line
                 polyline={polyline}
@@ -130,7 +137,7 @@ export const Hire = ({
                     </div>
                 </div>
             </div>
-            <Link to="/hire">
+            <Link to="/hire" onClick={()=>ToFullScreen()}>
                 <div className="hireBtn gradientBtn">
                     <p>
                         chat with us
