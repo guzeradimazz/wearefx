@@ -16,9 +16,27 @@ import { CSSTransition } from 'react-transition-group'
 const Routerelement = () => {
     const location = useLocation()
     const transitions = useTransition(location, {
-        // from: { life: '0%', opacity: 0, transform: 'translate(0%, 0%)' },
-        // enter: { opacity: 1, life: '100%', transform: 'translate(0%, 0%)' },
-        // leave: { opacity: 0 },
+        from: {
+            position: 'absolute',
+            width: '100vw',
+            heigth: '100vh',
+            opacity: 0,
+            transform: 'translatesY(0%)',
+        },
+        enter: {
+            position: 'absolute',
+            width: '100vw',
+            heigth: '100vh',
+            opacity: 1,
+            transform: 'translatesY(0%)',
+        },
+        leave: {
+            position: 'absolute',
+            width: '100vw',
+            heigth: '100vh',
+            opacity: 0,
+            transform: 'translatesY(100%)',
+        },
     })
     return transitions((props, item) => (
         <animated.div style={props}>

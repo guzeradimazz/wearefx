@@ -12,11 +12,11 @@
     transition: background 0.1s ease;
     transform: translate(-50%, -30%) scale(1);
     pointer-events:none;
+    overflow-y: hidden !important;
     animation: hoveredCurs 0.3s ease-in-out;
 }
 .hoveredCursorClass {
-    transition: background 0.3s ease !important;
-    transition: transform 0.3s ease !important;
+    transition: background 0.3s ease,transform 0.3s ease !important;
     transform: scale(4) translate(-10%, -10%) !important;
     background-image: url('../../images/CursorHovered.svg');
 }
