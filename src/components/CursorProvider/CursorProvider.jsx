@@ -55,6 +55,7 @@ const CursorProvider = ({
             value={{ onCursor, onHideCursor, onVisibleCursor }}
         >
             <ins
+                id="cursorId"
                 className={
                     classBulean
                         ? cx(cursor && ` hoveredCursorClass movable`, {

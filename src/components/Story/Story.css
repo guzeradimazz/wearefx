@@ -16,8 +16,8 @@
 .storyFullScreen {
     clip-path: polygon(18% 0, 100% 0, 100% 100%, 7% 92%);
     transition: clip-path 0.3s;
-    animation: toFullScreenStory 0.4s linear forwards;
-    transition: clip-path 0.3s;
+    animation: toFullScreenStory 0.3s linear forwards;
+    transition: clip-path 0.2s;
 }
 @keyframes toFullScreenStory {
     0% {

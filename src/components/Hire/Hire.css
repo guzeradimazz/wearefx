@@ -16,7 +16,7 @@
 .hireFullScreen {
     clip-path: polygon(0% 0%, 85% 0%, 94% 92%, 0% 100%);
     transition: clip-path 0.3s;
-    animation: toFullScreenHire 0.4s linear forwards;
+    animation: toFullScreenHire 0.3s linear forwards;
     transition: clip-path 0.3s;
 }
 @keyframes toFullScreenHire {

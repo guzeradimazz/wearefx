@@ -10,7 +10,6 @@ import './MainPageMedia.css'
 
 import videoPower from './video/videoPower.mp4'
 
-
 const applyLayout = (canvas) => {
     canvas.width = canvas.clientWidth
     canvas.height = canvas.clientHeight
@@ -159,6 +158,7 @@ const MainPage = ({
     }
 
     const btnMove1 = (e) => {
+        if (!buttonsCoords.length) return
         if (
             (Math.abs(buttonsCoords[0].y - e.clientY) < 100 &&
                 Math.abs(buttonsCoords[0].x - e.clientX) < 100) ||

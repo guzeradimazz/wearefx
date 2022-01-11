@@ -298,7 +298,10 @@ export const Cases = ({
                         onMouseEnter={onMcEnter}
                         onMouseLeave={onMcLeave}
                         className={casesArray[0].className}
-                        onClick={() => navigate(`/cases/${casesArray[0].id}`)}
+                        onClick={() => {
+                            navigate(`/cases/${casesArray[0].id}`)
+                            ToFullScreen()
+                        }}
                     >
                         {casesArray[0].title}
                     </div>
@@ -306,7 +309,10 @@ export const Cases = ({
                         onMouseEnter={onPumaEnter}
                         onMouseLeave={onPumaLeave}
                         className={casesArray[1].className}
-                        onClick={() => navigate(`/cases/${casesArray[1].id}`)}
+                        onClick={() => {
+                            navigate(`/cases/${casesArray[1].id}`)
+                            ToFullScreen()
+                        }}
                     >
                         {casesArray[1].title}
                     </div>
@@ -314,7 +320,10 @@ export const Cases = ({
                         onMouseEnter={onFlintEnter}
                         onMouseLeave={onFlintLeave}
                         className={casesArray[2].className}
-                        onClick={() => navigate(`/cases/${casesArray[2].id}`)}
+                        onClick={() => {
+                            navigate(`/cases/${casesArray[2].id}`)
+                            ToFullScreen()
+                        }}
                     >
                         {casesArray[2].title}
                     </div>
@@ -322,7 +331,10 @@ export const Cases = ({
                         onMouseEnter={onBigEnter}
                         onMouseLeave={onBigLeave}
                         className={casesArray[3].className}
-                        onClick={() => navigate(`/cases/${casesArray[3].id}`)}
+                        onClick={() => {
+                            navigate(`/cases/${casesArray[3].id}`)
+                            ToFullScreen()
+                        }}
                     >
                         {casesArray[3].title}
                     </div>
@@ -330,7 +342,10 @@ export const Cases = ({
                         onMouseEnter={onPMEnter}
                         onMouseLeave={onPMLeave}
                         className={casesArray[4].className}
-                        onClick={() => navigate(`/cases/${casesArray[4].id}`)}
+                        onClick={() => {
+                            navigate(`/cases/${casesArray[4].id}`)
+                            ToFullScreen()
+                        }}
                     >
                         {casesArray[4].title}
                     </div>
@@ -338,12 +353,15 @@ export const Cases = ({
                         onMouseEnter={onNaviEnter}
                         onMouseLeave={onNaviLeave}
                         className={casesArray[5].className}
-                        onClick={() => navigate(`/cases/${casesArray[5].id}`)}
+                        onClick={() => {
+                            navigate(`/cases/${casesArray[5].id}`)
+                            ToFullScreen()
+                        }}
                     >
                         {casesArray[5].title}
                     </div>
                 </div>
-                <Link to="/cases" onClick={()=>ToFullScreen()}>
+                <Link to="/cases" onClick={() => ToFullScreen()}>
                     <div className="casesBtn gradientBtn">
                         <p>
                             Explore

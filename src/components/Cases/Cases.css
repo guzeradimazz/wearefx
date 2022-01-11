@@ -19,7 +19,7 @@
     transition: clip-path 0.3s;
     animation: toFullScreen;
     animation-timing-function: linear;
-    animation-duration: 0.4s;
+    animation-duration: 0.3s;
     animation-fill-mode: forwards;
     transition: clip-path 0.3s;
 }

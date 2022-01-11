@@ -83,8 +83,8 @@ export const Story = ({
                     technologies. 😎
                 </h3>
                 <div>
-                    <Link to="/cases">our cases ﹤</Link>
-                    <Link to="/hire">hire us ﹤</Link>
+                    <Link to="/cases" onClick={() => ToFullScreen()}>our cases ﹤</Link>
+                    <Link to="/hire" onClick={() => ToFullScreen()}>hire us ﹤</Link>
                     <div className="casesArrow" />
                     <p>
                         As a wide collective of highly skilled creatives, we

@@ -250,10 +250,10 @@
     padding-top: 16%;
     color: #dae0f279;
 }
-.contact-block{
+.contact-block {
     overflow: visible !important;
 }
-.gradientBtnContact{
+.gradientBtnContact {
     width: 110px;
     height: 110px;
     left: 90%;
@@ -266,10 +266,14 @@
     box-shadow: 0 0 0 0 #eec01b;
     animation: gradient 5s ease infinite;
 }
-.gradientBtnContact p{
-    position: relative;text-align: center;
+.gradientBtnContact p {
+    position: relative;
+    text-align: center;
     text-transform: uppercase;
     color: #dae0f2;
     font-size: 14px;
     top: 20%;
+}
+.pStoryBtn p {
+    padding-top: 10%;
 }

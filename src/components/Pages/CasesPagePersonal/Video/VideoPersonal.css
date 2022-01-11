@@ -119,12 +119,21 @@
     animation: fadeIn;
     animation-duration: 0.3s;
     animation-fill-mode: forwards;
+    -webkit-transform: translateY(0);
+    -webkit-transition: 0.3s ease-out;
+    -webkit-animation: fadeIn;
+    -webkit-animation-duration: 0.3s;
+    -webkit-animation-fill-mode: forwards;
 }
 @keyframes fadeIn {
     from {
+        -webkit-transform: translateY(0);
         transform: translateY(0);
     }
     to {
+        -webkit-display: none !important;
+        -webkit-opacity: 0;
+        -webkit-transform: translateY(100%);
         display: none !important;
         opacity: 0;
         transform: translateY(100%);
@@ -132,11 +141,14 @@
 }
 @keyframes fadeInRev {
     from {
+        -webkit-opacity: 0;
         opacity: 0;
     }
     to {
-        display: block;
+        -webkit-display: block;
+        -webkit-opacity: 1;
         opacity: 1;
+        display: block;
     }
 }
 .full-progressbar {
@@ -145,8 +157,15 @@
     align-items: center;
     margin-bottom: 7px;
     transition: all 0.3s ease;
+    -webkit-position: relative;
+    -webkit-width: 100%;
+    -webkit-align-items: center;
+    -webkit-margin-bottom: 7px;
+    -webkit-transition: all 0.3s ease;
 }
 .progress-bar-width {
+    -webkit-width: 60vw !important;
+    -webkit-transition: all 0.3s ease;
     width: 60vw !important;
     transition: all 0.3s ease;
 }
@@ -162,6 +181,14 @@
     border-radius: 0px;
     outline: none;
     background-color: rgba(238, 245, 252, 0.24);
+    -webkit-transition: all 0.3s ease;
+    -webkit-position: relative;
+    -webkit-z-index: 3;
+    -webkit-width: 95%;
+    -webkit-height: 10px;
+    -webkit-border-radius: 0px;
+    -webkit-outline: none;
+    -webkit-background-color: rgba(238, 245, 252, 0.24);
 }
 .bar {
     position: absolute;
@@ -173,6 +200,16 @@
     height: 10px;
     background-color: transparent;
     overflow: hidden;
+
+    -webkit-position: absolute;
+    -webkit-border-radius: 0px;
+    -webkit-z-index: 2;
+    -webkit-left: 0px;
+    -webkit-top: 6px;
+    -webkit-width: 95%;
+    -webkit-height: 10px;
+    -webkit-background-color: transparent;
+    -webkit-overflow: hidden;
 }
 .fill {
     position: absolute;
@@ -182,6 +219,14 @@
     height: 100%;
     background-color: #e4b50b;
     transition: all 1.8s ease !important;
+
+    -webkit-position: absolute;
+    -webkit-z-index: 5;
+    -webkit-display: block;
+    -webkit-width: 0;
+    -webkit-height: 100%;
+    -webkit-background-color: #e4b50b;
+    -webkit-transition: all 1.8s ease !important;
 }
 .inputProgress::-webkit-slider-thumb {
     height: 10px;
@@ -191,4 +236,11 @@
     outline: none;
     box-shadow: 0 0 0 0 rgba(238, 245, 252, 0.24);
     transition: 0.3s ease-in-out;
+
+    -webkit-height: 10px;
+    -webkit-width: 1px;
+    -webkit-background-color: #ffffff00;
+    -webkit-outline: none;
+    -webkit-box-shadow: 0 0 0 0 rgba(238, 245, 252, 0.24);
+    -webkit-transition: 0.3s ease-in-out;
 }

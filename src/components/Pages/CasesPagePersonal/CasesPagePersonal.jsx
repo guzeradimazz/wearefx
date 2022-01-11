@@ -44,7 +44,7 @@ const CasesPagePersonal = () => {
                 />
                 <ContactBlock />
                 <div className="next-project">
-                    <div className=" storyBtn gradientBtn">
+                    <div className="pStoryBtn storyBtn gradientBtn">
                         <p>
                             Explore
                             <br />
