@@ -56,7 +56,6 @@
     pointer-events: none;
 }
 #overlay1 {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -66,7 +65,6 @@
     z-index: 9998;
 }
 #overlay2 {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -76,7 +74,6 @@
     z-index: 9998;
 }
 #overlay3 {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;

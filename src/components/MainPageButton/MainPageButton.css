@@ -26,9 +26,9 @@
     left: calc(47%);
     z-index: 1000;
 }
-/* .firstCircle:hover {
+.firstCircle:hover {
     transition: all 0.3s ease;
-} */
+}
 .secondCircle:hover {
     transition: all 0.3s ease;
 }
@@ -69,23 +69,23 @@
     top: 40px;
     left: calc(47%);
     border: none !important;
-    /* animation: showMainPageBtn 0.4s; */
+    animation: showMainPageBtn 0.4s;
 }
-/* .clickedCases:hover::before {
+.clickedCases:hover::before {
     border: none !important;
-} */
+}
 .clickedStory:hover::before {
     border: none !important;
 }
 .clickedHire:hover::before {
     border: none !important;
 }
-/* .clickedCases:hover {
+.clickedCases:hover {
     border: none !important;
     background-color: #fff;
     animation: pulseclicked 2s ease;
     background-image: url('../../images/CloseBlack.svg');
-} */
+}
 .clickedStory {
     transition: all 0.3s ease-in-out;
     background-color: #7344f4;
@@ -103,12 +103,12 @@
     border: none;
     animation: pulsebackground 2s ease;
 }
-/* .clickedStory:hover {
+.clickedStory:hover {
     border: none;
     animation: pulseclicked 2s ease;
     background-color: #fff !important;
     background-image: url('../../images/CloseBlack.svg');
-} */
+}
 .clickedHire {
     transition: all 0.3s ease-in-out;
     background-color: #7344f4;
@@ -132,7 +132,7 @@
     background-image: url('../../images/CloseBlack.svg');
 }
 @keyframes pulsebackground {
-    /* 0% {
+    0% {
         box-shadow: 0 0 0 0 #7344f4a9;
     }
     70% {
@@ -140,10 +140,10 @@
     }
     100% {
         box-shadow: 0 0 0 0 #7344f400;
-    } */
+    }
 }
 @keyframes pulseclicked {
-    /* 0% {
+    0% {
         box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.699);
     }
     70% {
@@ -151,5 +151,5 @@
     }
     100% {
         box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
-    } */
+    }
 }

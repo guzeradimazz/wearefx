@@ -1,10 +1,12 @@
 @media (min-width: 2560px) {
     .mobile__btns {
         display: none;
+        -webkit-display: none;
     }
     .showreel__mobile,
     .swiper__mobile {
         display: none;
+        -webkit-display: none;
     }
     .showreel {
         display: block;
@@ -119,10 +121,12 @@
 @media (max-width: 1440px) {
     .mobile__btns {
         display: none;
+        -webkit-display: none;
     }
     .showreel__mobile,
     .swiper__mobile {
         display: none;
+        -webkit-display: none;
     }
     .showreel {
         display: block;
@@ -143,10 +147,12 @@
 @media (max-width: 1024px) {
     .mobile__btns {
         display: none;
+        -webkit-display: none;
     }
     .showreel__mobile,
     .swiper__mobile {
         display: none;
+        -webkit-display: none;
     }
     .showreel {
         display: block;
@@ -170,10 +176,12 @@
 @media (max-width: 768px) {
     .mobile__btns {
         display: none;
+        -webkit-display: none;
     }
     .showreel__mobile,
     .swiper__mobile {
         display: none;
+        -webkit-display: none;
     }
     .showreel {
         display: block;
@@ -237,7 +245,8 @@
     }
     .mobile__btns {
         z-index: 20002;
-        display: flex;
+        display: flex ;
+        -webkit-display: flex ;
         flex-direction: column;
         position: absolute;
         right: 60px;
@@ -247,6 +256,7 @@
     }
     .showreel {
         display: none;
+        -webkit-display: none;
     }
     .showreel__mobile {
         display: block;

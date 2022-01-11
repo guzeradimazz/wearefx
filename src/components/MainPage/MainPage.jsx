@@ -56,6 +56,7 @@ const MainPage = ({
         },
     ]
 
+    
     const [isMc, setisMc] = useState('')
     const [isPuma, setisPuma] = useState('')
     const [isFlint, setisFlint] = useState('')
@@ -74,7 +75,7 @@ const MainPage = ({
     const canvas3 = document.getElementById('overlay3')
 
     const polyline = document.getElementById('polyline')
-    const polyline1 = document.getElementById('polyline1')
+    const polyline1 =  document.getElementById('polyline1')
     const polyline2 = document.getElementById('polyline2')
 
     const [isCasesClicked, setIsCasesClicked] = useState(false)
@@ -158,29 +159,29 @@ const MainPage = ({
     }
 
     const btnMove1 = (e) => {
-        // if (!buttonsCoords.length) return
-        // if (
-        //     (Math.abs(buttonsCoords[0].y - e.clientY) < 100 &&
-        //         Math.abs(buttonsCoords[0].x - e.clientX) < 100) ||
-        //     (Math.abs(buttonsCoords[1].y - e.clientY) < 100 &&
-        //         Math.abs(buttonsCoords[1].x - e.clientX) < 100) ||
-        //     (Math.abs(buttonsCoords[2].y - e.clientY) < 100 &&
-        //         Math.abs(buttonsCoords[2].x - e.clientX) < 100)
-        // )
-        //     PlaceCursor.style.transform = 'scale(2.5) translate(-20%, -10%)'
-        // else if (
-        //     (Math.abs(buttonsCoords[0].y - e.clientY) < 180 &&
-        //         Math.abs(buttonsCoords[0].x - e.clientX) < 180) ||
-        //     (Math.abs(buttonsCoords[1].y - e.clientY) < 180 &&
-        //         Math.abs(buttonsCoords[1].x - e.clientX) < 180) ||
-        //     (Math.abs(buttonsCoords[2].y - e.clientY) < 180 &&
-        //         Math.abs(buttonsCoords[2].x - e.clientX) < 180)
-        // )
-        //     PlaceCursor.style.transform = 'scale(1.7) translate(-30%, -20%)'
-        // else {
-        //     PlaceCursor.style.transition = 'background 0.5s ease-in-out'
-        //     PlaceCursor.style.transform = 'scale(1) translate(-50%, -40%)'
-        // }
+        if (!buttonsCoords.length) return
+        if (
+            (Math.abs(buttonsCoords[0].y - e.clientY) < 100 &&
+                Math.abs(buttonsCoords[0].x - e.clientX) < 100) ||
+            (Math.abs(buttonsCoords[1].y - e.clientY) < 100 &&
+                Math.abs(buttonsCoords[1].x - e.clientX) < 100) ||
+            (Math.abs(buttonsCoords[2].y - e.clientY) < 100 &&
+                Math.abs(buttonsCoords[2].x - e.clientX) < 100)
+        )
+            PlaceCursor.style.transform = 'scale(2.5) translate(-20%, -10%)'
+        else if (
+            (Math.abs(buttonsCoords[0].y - e.clientY) < 180 &&
+                Math.abs(buttonsCoords[0].x - e.clientX) < 180) ||
+            (Math.abs(buttonsCoords[1].y - e.clientY) < 180 &&
+                Math.abs(buttonsCoords[1].x - e.clientX) < 180) ||
+            (Math.abs(buttonsCoords[2].y - e.clientY) < 180 &&
+                Math.abs(buttonsCoords[2].x - e.clientX) < 180)
+        )
+            PlaceCursor.style.transform = 'scale(1.7) translate(-30%, -20%)'
+        else {
+            PlaceCursor.style.transition = 'background 0.5s ease-in-out'
+            PlaceCursor.style.transform = 'scale(1) translate(-50%, -40%)'
+        }
     }
 
     const onMove = (e) => {
