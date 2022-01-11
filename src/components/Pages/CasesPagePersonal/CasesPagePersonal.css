@@ -235,7 +235,7 @@
 .info-block {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 82%;
     margin: auto;
     padding-top: 10%;
     color: #dae0f2;
@@ -276,4 +276,19 @@
 }
 .pStoryBtn p {
     padding-top: 10%;
+}
+@media (min-width: 1920px) {
+    .header-title {
+        font-size: 120px;
+    }
+    .text-block-p {
+        font-size: 36px;
+    }
+    .contact-block {
+        width: 89vw;
+        margin: auto;
+    }
+    .info-block {
+        width: 80%;
+    }
 }

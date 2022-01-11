@@ -26,12 +26,13 @@
         background-size: 50%;
         width: 120px;
         height: 120px;
+        left: calc(47.5%);
     }
     .main {
         padding: 80px;
     }
     .firstCircle {
-        top: 80px;
+        top: 100px;
     }
     .secondCircle {
         bottom: 100px;

@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 export const PersonalHeader = () => {
+    let arr = '<'
     return (
         <div>
             <div className="personal-header">
@@ -9,7 +10,7 @@ export const PersonalHeader = () => {
                     <div >
                         <Link className='personal-left-div' to="/cases">
                             <h1>our</h1>
-                            <h1>cases</h1>
+                            <h1>cases {arr}</h1>
                         </Link>
                     </div>
                     <div>
