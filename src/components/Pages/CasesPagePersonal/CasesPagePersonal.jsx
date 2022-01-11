@@ -18,9 +18,39 @@ const CasesPagePersonal = () => {
         document.getElementById('overlay2').classList.add('displayNone')
         document.getElementById('overlay3').classList.add('displayNone')
     }, [])
+    useEffect(() => {
+        document
+            .getElementById('personalPageId')
+            .addEventListener('mouseout', () => {
+                document.getElementById('cursorId').classList.add('displayNone')
+            })
+        document
+            .getElementById('personalPageId')
+            .addEventListener('mousemove', () => {
+                document
+                    .getElementById('cursorId')
+                    .classList.remove('displayNone')
+            })
+        return () => {
+            document
+                .getElementById('personalPageId')
+                .removeEventListener('mouseout', () => {
+                    document
+                        .getElementById('cursorId')
+                        .classList.add('displayNone')
+                })
+            document
+                .getElementById('personalPageId')
+                .removeEventListener('mousemove', () => {
+                    document
+                        .getElementById('cursorId')
+                        .classList.remove('displayNone')
+                })
+        }
+    }, [])
     return (
         <CursorProvider>
-            <div className=" personal-page">
+            <div id="personalPageId" className=" personal-page">
                 <PersonalHeader />
                 <VideoPersonal />
                 <TextBlock
