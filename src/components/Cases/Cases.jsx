@@ -224,168 +224,168 @@ export const Cases = ({
         elem.classList.add('casesFullScreen')
     }
     return (
-        <Tilt
-            options={{
-                max: 25,
-                reverse: false,
-                scale: 1,
-                speed: 300,
-                transition: true,
-                easing: 'cubic-bezier(.03,.98,.52,.99)',
-                reset: true,
-                axis: null,
-            }}
-            // id="casesLayoutElem"
+        <div
+            id="casesLayoutElem"
             className={isClicked ? ' casesLayout' : ' reversedLayout'}
         >
-            <div
-                // id="parallaxImageBlock"
-                className={`${universalBack} universalBack`}
-            >
-                <Line
-                    polyline={polyline}
-                    isClicked={isClicked}
-                    coords={{
-                        first: {
-                            x: 0,
-                            y: height * 0.38,
-                        },
-                        last: {
-                            x: coordsToX,
-                            y: coordsToY,
-                        },
-                    }}
-                    coords1={{
-                        first: {
-                            x: coordsToX,
-                            y: coordsToY,
-                        },
-                        last: {
-                            x: width,
-                            y: height * 0.24,
-                        },
-                    }}
-                    amount={7}
-                />
-                <Cube showCube={`${showCube}`} />
-                <div className="casesTextBlock">
-                    <div className="casesArrow" />
+            <div className="casesTextBlock">
+                <div className="casesArrow" />
+                <p>
+                    We’re always looking the truth about the brand we work with
+                    and tell it naturaly and gorgeous, like no one else before.
+                </p>
+            </div>
+            <Link to="/cases" onClick={() => ToFullScreen()}>
+                <div className="casesBtn gradientBtn">
                     <p>
-                        We’re always looking the truth about the brand we work
-                        with and tell it naturaly and gorgeous, like no one else
-                        before.
+                        Explore
+                        <br />
+                        all
+                        <br />
+                        cases
                     </p>
                 </div>
-                <div className={mcStateHovered ? 'casesMain' : ' displayNone'}>
-                    <p>McDonald's</p>
-                    <p>Granding, VFX, motion</p>
-                </div>
-                <div
-                    className={pumaStateHovered ? 'casesMain' : ' displayNone'}
-                >
-                    <p>Puma Ukraine</p>
-                    <p>VFX, motion</p>
-                </div>
-                <div
-                    className={flintStateHovered ? 'casesMain' : ' displayNone'}
-                >
-                    <p>Flint</p>
-                    <p>Granding, VFX, motion</p>
-                </div>
-                <div className={bigStateHovered ? 'casesMain' : ' displayNone'}>
-                    <p>Little big</p>
-                    <p>Granding, VFX, motion</p>
-                </div>
-                <div className={pmStateHovered ? 'casesMain' : ' displayNone'}>
-                    <p>Parimatch</p>
-                    <p>Granding, VFX, motion</p>
-                </div>
-                <div
-                    className={naviStateHovered ? 'casesMain' : ' displayNone'}
-                >
-                    <p>Navi</p>
-                    <p>Granding, VFX, motion</p>
-                </div>
-                <div className="casesArray">
-                    <div
-                        onMouseEnter={onMcEnter}
-                        onMouseLeave={onMcLeave}
-                        className={casesArray[0].className}
-                        onClick={() => {
-                            navigate(`/cases/${casesArray[0].id}`)
-                            ToFullScreen()
-                        }}
-                    >
-                        {casesArray[0].title}
-                    </div>
-                    <div
-                        onMouseEnter={onPumaEnter}
-                        onMouseLeave={onPumaLeave}
-                        className={casesArray[1].className}
-                        onClick={() => {
-                            navigate(`/cases/${casesArray[1].id}`)
-                            ToFullScreen()
-                        }}
-                    >
-                        {casesArray[1].title}
-                    </div>
-                    <div
-                        onMouseEnter={onFlintEnter}
-                        onMouseLeave={onFlintLeave}
-                        className={casesArray[2].className}
-                        onClick={() => {
-                            navigate(`/cases/${casesArray[2].id}`)
-                            ToFullScreen()
-                        }}
-                    >
-                        {casesArray[2].title}
-                    </div>
-                    <div
-                        onMouseEnter={onBigEnter}
-                        onMouseLeave={onBigLeave}
-                        className={casesArray[3].className}
-                        onClick={() => {
-                            navigate(`/cases/${casesArray[3].id}`)
-                            ToFullScreen()
-                        }}
-                    >
-                        {casesArray[3].title}
-                    </div>
-                    <div
-                        onMouseEnter={onPMEnter}
-                        onMouseLeave={onPMLeave}
-                        className={casesArray[4].className}
-                        onClick={() => {
-                            navigate(`/cases/${casesArray[4].id}`)
-                            ToFullScreen()
-                        }}
-                    >
-                        {casesArray[4].title}
-                    </div>
-                    <div
-                        onMouseEnter={onNaviEnter}
-                        onMouseLeave={onNaviLeave}
-                        className={casesArray[5].className}
-                        onClick={() => {
-                            navigate(`/cases/${casesArray[5].id}`)
-                            ToFullScreen()
-                        }}
-                    >
-                        {casesArray[5].title}
-                    </div>
-                </div>
-                <Link to="/cases" onClick={() => ToFullScreen()}>
-                    <div className="casesBtn gradientBtn">
-                        <p>
-                            Explore
-                            <br />
-                            all
-                            <br />
-                            cases
-                        </p>
-                    </div>
-                </Link>
+            </Link>
+            <div className={mcStateHovered ? 'casesMain' : ' displayNone'}>
+                <p>McDonald's</p>
+                <p>Granding, VFX, motion</p>
             </div>
-        </Tilt>
+            <div className={pumaStateHovered ? 'casesMain' : ' displayNone'}>
+                <p>Puma Ukraine</p>
+                <p>VFX, motion</p>
+            </div>
+            <div className={flintStateHovered ? 'casesMain' : ' displayNone'}>
+                <p>Flint</p>
+                <p>Granding, VFX, motion</p>
+            </div>
+            <div className={bigStateHovered ? 'casesMain' : ' displayNone'}>
+                <p>Little big</p>
+                <p>Granding, VFX, motion</p>
+            </div>
+            <div className={pmStateHovered ? 'casesMain' : ' displayNone'}>
+                <p>Parimatch</p>
+                <p>Granding, VFX, motion</p>
+            </div>
+            <div className={naviStateHovered ? 'casesMain' : ' displayNone'}>
+                <p>Navi</p>
+                <p>Granding, VFX, motion</p>
+            </div>
+            <Tilt
+                options={{
+                    max: 40,
+                    reverse: false,
+                    scale: 1,
+                    perspective: 2000,
+                    speed: 400,
+                    transition: true,
+                    easing: 'cubic-bezier(.03,.98,.52,.99)',
+                    reset: true,
+                    axis: null,
+                }}
+                className="Tilt"
+            >
+                <div
+                    id="parallaxImageBlock"
+                    className={`${universalBack} universalBack`}
+                >
+                    <Line
+                        polyline={polyline}
+                        isClicked={isClicked}
+                        coords={{
+                            first: {
+                                x: 0,
+                                y: height * 0.38,
+                            },
+                            last: {
+                                x: coordsToX,
+                                y: coordsToY,
+                            },
+                        }}
+                        coords1={{
+                            first: {
+                                x: coordsToX,
+                                y: coordsToY,
+                            },
+                            last: {
+                                x: width,
+                                y: height * 0.24,
+                            },
+                        }}
+                        amount={7}
+                    />
+                    <Cube showCube={`${showCube}`} />
+
+                    <div className="casesArray">
+                        <div
+                            // id="cases,ArrayItemId"
+                            onMouseEnter={onMcEnter}
+                            onMouseLeave={onMcLeave}
+                            className={casesArray[0].className}
+                            onClick={() => {
+                                navigate(`/cases/${casesArray[0].id}`)
+                                ToFullScreen()
+                            }}
+                        >
+                            {casesArray[0].title}
+                        </div>
+                        <div
+                            onMouseEnter={onPumaEnter}
+                            onMouseLeave={onPumaLeave}
+                            className={casesArray[1].className}
+                            onClick={() => {
+                                navigate(`/cases/${casesArray[1].id}`)
+                                ToFullScreen()
+                            }}
+                        >
+                            {casesArray[1].title}
+                        </div>
+                        <div
+                            onMouseEnter={onFlintEnter}
+                            onMouseLeave={onFlintLeave}
+                            className={casesArray[2].className}
+                            onClick={() => {
+                                navigate(`/cases/${casesArray[2].id}`)
+                                ToFullScreen()
+                            }}
+                        >
+                            {casesArray[2].title}
+                        </div>
+                        <div
+                            onMouseEnter={onBigEnter}
+                            onMouseLeave={onBigLeave}
+                            className={casesArray[3].className}
+                            onClick={() => {
+                                navigate(`/cases/${casesArray[3].id}`)
+                                ToFullScreen()
+                            }}
+                        >
+                            {casesArray[3].title}
+                        </div>
+                        <div
+                            onMouseEnter={onPMEnter}
+                            onMouseLeave={onPMLeave}
+                            className={casesArray[4].className}
+                            onClick={() => {
+                                navigate(`/cases/${casesArray[4].id}`)
+                                ToFullScreen()
+                            }}
+                        >
+                            {casesArray[4].title}
+                        </div>
+                        <div
+                            onMouseEnter={onNaviEnter}
+                            onMouseLeave={onNaviLeave}
+                            className={casesArray[5].className}
+                            onClick={() => {
+                                navigate(`/cases/${casesArray[5].id}`)
+                                ToFullScreen()
+                            }}
+                        >
+                            {casesArray[5].title}
+                        </div>
+                    </div>
+                </div>
+            </Tilt>
+        </div>
     )
 }

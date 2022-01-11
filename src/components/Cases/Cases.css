@@ -78,6 +78,16 @@
         clip-path: polygon(50% 10%, 100% 24%, 100% 100%, 0 100%, 0 38%);
     }
 }
+.Tilt {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+#casesArrayItemId{
+position: absolute !important;
+}
 #casesLayoutElem {
     position: fixed;
     top: 0;
@@ -86,11 +96,12 @@
     height: 100vh;
 }
 #parallaxImageBlock {
-    position: absolute;
+    position: absolute !important;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
+    z-index: 20000 !important;
 }
 .casesBtn {
     z-index: 100000000001 !important;
@@ -106,7 +117,7 @@
 }
 .casesTextBlock {
     z-index: 2000;
-    position: absolute;
+    position:absolute;
     bottom: 60px;
     left: 60px;
     color: #fff;
@@ -196,12 +207,11 @@
     animation-duration: 0.3s;
 }
 .universalBack {
-    
     animation: animUniversal 2s linear forwards;
     transition: background 2s ease !important;
 }
 @keyframes animUniversal {
-    to{
+    to {
         background: transparent;
     }
 }
