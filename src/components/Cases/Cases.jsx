@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import Line from '../Line/Line'
 import useWindowDimensions from '../useWindowDimension/useWindowDimensions'
+import Tilt from 'react-tilt'
 
 export const Cases = ({
     polyline,
@@ -192,22 +193,20 @@ export const Cases = ({
     //             posX = posX + distX * speed
     //             posY = posY + distY * speed
 
-    //             // parallaxItem.style.cssText = `transform: translate(${
-    //             //     posX / SpeedPr
-    //             // }%,${posY / SpeedPr}%);`
-    //             parallaxItem.style.cssText = `clip-path: polygon(
-    //                 ${0 + posX / SpeedPr} ${0 + posY / SpeedPr}, 
-    //                 ${100 % +(posX / SpeedPr)} ${0 + posY / SpeedPr}, 
-    //                 ${100 % +(posX / SpeedPr)} ${100 % +(posY / SpeedPr)},
-    //                 ${0 + posX / SpeedPr} ${100 % -(posY / SpeedPr)});`
+    //             parallaxItem.style.cssText = `transform: translate(${
+    //                 posX / SpeedPr
+    //             }%,${posY / SpeedPr}%);`
+    //             parallaxItem.style.cssText = `transform: skew(${
+    //                 posX / SpeedPr
+    //             }deg,${posY / SpeedPr}deg);`
     //             requestAnimationFrame(setMouseParallaxStyle)
     //         }
     //         const onParallaxMouseMove = (e) => {
     //             const parallaxWidth = parallax.offsetWidth
     //             const parallaxHeigth = parallax.offsetHeight
 
-    //             const coordXPara = e.pageX - (parallaxWidth * 1.3) / 2
-    //             const coordYPara = e.pageY - parallaxHeigth / 2
+    //             const coordXPara = e.pageX - (parallaxWidth * 1.5) / 2
+    //             const coordYPara = e.pageY - (parallaxHeigth * 1.5) / 2
 
     //             coordX = (coordXPara / parallaxWidth) * 100
     //             coordY = (coordYPara / parallaxHeigth) * 100
@@ -225,12 +224,22 @@ export const Cases = ({
         elem.classList.add('casesFullScreen')
     }
     return (
-        <div
-            id="casesLayoutElem"
+        <Tilt
+            options={{
+                max: 25,
+                reverse: false,
+                scale: 1,
+                speed: 300,
+                transition: true,
+                easing: 'cubic-bezier(.03,.98,.52,.99)',
+                reset: true,
+                axis: null,
+            }}
+            // id="casesLayoutElem"
             className={isClicked ? ' casesLayout' : ' reversedLayout'}
         >
             <div
-                id="parallaxImageBlock"
+                // id="parallaxImageBlock"
                 className={`${universalBack} universalBack`}
             >
                 <Line
@@ -377,6 +386,6 @@ export const Cases = ({
                     </div>
                 </Link>
             </div>
-        </div>
+        </Tilt>
     )
 }

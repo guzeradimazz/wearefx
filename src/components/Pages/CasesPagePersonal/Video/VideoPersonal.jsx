@@ -1,10 +1,15 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import './VideoPersonal.css'
 import ReactPlayer from 'react-player'
 import Video from './VideoSrc/videoPower.mp4'
 import VideoControls from './VideoControls'
 
-export const VideoPersonal = () => {
+export const VideoPersonal = ({
+    refPlayer,
+    refPlayerScreenfull,
+    fullscreen,
+    setFullscreen,
+}) => {
     const [videoState, setVideoState] = useState({
         playing: false,
         muted: false,
@@ -12,12 +17,8 @@ export const VideoPersonal = () => {
         playedSeconds: 0,
     })
 
-    const [fullscreen, setFullscreen] = useState(false)
-
-    const refPlayer = useRef(null)
-    const refPlayerScreenfull = useRef(null)
-
     const { playing, muted, loadedSeconds, playedSeconds } = videoState
+
     const handlePlay = () => {
         setVideoState({ ...videoState, playing: !videoState.playing })
     }
