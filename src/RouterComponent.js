@@ -11,7 +11,6 @@ import { StoryPage } from './components/Pages/StoryPage/StoryPage'
 import StoryMobile from './components/Story/StoryMobile'
 import StoryMobileFull from './components/Story/StoryMobileFull'
 import { useTransition, animated } from 'react-spring'
-import { CSSTransition } from 'react-transition-group'
 
 const Routerelement = () => {
     const location = useLocation()
@@ -25,7 +24,7 @@ const Routerelement = () => {
             transform: 'translatesY(0%)',
         },
         enter: (i) => async (next) => {
-            await sleep(1000)
+            await sleep(500)
             await next({
                 position: 'absolute',
                 width: '100vw',
