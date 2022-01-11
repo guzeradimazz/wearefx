@@ -34,14 +34,14 @@ const CasesPagePersonal = () => {
         return () => {
             document
                 .getElementById('personalPageId')
-                .removeEventListener('mouseout', () => {
+                ?.removeEventListener('mouseout', () => {
                     document
                         .getElementById('cursorId')
                         .classList.add('displayNone')
                 })
             document
                 .getElementById('personalPageId')
-                .removeEventListener('mousemove', () => {
+                ?.removeEventListener('mousemove', () => {
                     document
                         .getElementById('cursorId')
                         .classList.remove('displayNone')

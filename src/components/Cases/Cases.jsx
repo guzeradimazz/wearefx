@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import Line from '../Line/Line'
 import useWindowDimensions from '../useWindowDimension/useWindowDimensions'
-import DelayLink from '../DelayLink'
 
 export const Cases = ({
     polyline,
@@ -179,7 +178,7 @@ export const Cases = ({
     //         if (showCube === 'displayNone') isShowParallax = true
     //         const parallaxItem = document.getElementById('parallaxImageBlock')
 
-    //         const SpeedPr = 10
+    //         const SpeedPr = 5
     //         const speed = 0.5
     //         let posX = 0,
     //             posY = 0,
@@ -193,9 +192,14 @@ export const Cases = ({
     //             posX = posX + distX * speed
     //             posY = posY + distY * speed
 
-    //             parallaxItem.style.cssText = `transform: translate(${
-    //                 posX / SpeedPr
-    //             }%,${posY / SpeedPr}%);`
+    //             // parallaxItem.style.cssText = `transform: translate(${
+    //             //     posX / SpeedPr
+    //             // }%,${posY / SpeedPr}%);`
+    //             parallaxItem.style.cssText = `clip-path: polygon(
+    //                 ${0 + posX / SpeedPr} ${0 + posY / SpeedPr}, 
+    //                 ${100 % +(posX / SpeedPr)} ${0 + posY / SpeedPr}, 
+    //                 ${100 % +(posX / SpeedPr)} ${100 % +(posY / SpeedPr)},
+    //                 ${0 + posX / SpeedPr} ${100 % -(posY / SpeedPr)});`
     //             requestAnimationFrame(setMouseParallaxStyle)
     //         }
     //         const onParallaxMouseMove = (e) => {

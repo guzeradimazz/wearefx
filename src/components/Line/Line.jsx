@@ -18,9 +18,7 @@ export default function Line({ polyline, isClicked, coords, amount, coords1 }) {
 
     applyLayout(canvas)
 
-    ctx.clearRect(0, 0, canvas.width, canvas.height)
     useEffect(() => {
-        ctx.clearRect(0, 0, canvas.width, canvas.height)
         return () => idInterval.current && clearInterval(idInterval.current)
     }, [])
 
@@ -103,19 +101,6 @@ export default function Line({ polyline, isClicked, coords, amount, coords1 }) {
 
     let i = 1
     const length = dots.length - 1
-
-    function draw2() {
-        draw1(
-            dots[length].x,
-            dots[length].y,
-            dots1[length].x,
-            dots1[length].y,
-            dots2[0].x,
-            dots2[0].y,
-            dots3[0].x,
-            dots3[0].y
-        )
-    }
 
     function draw1(x1, y1, x2, y2, x3, y3, x4, y4) {
         function run() {
@@ -217,7 +202,18 @@ export default function Line({ polyline, isClicked, coords, amount, coords1 }) {
         set(dots1, coords, stepX, stepY)
         set(dots2, coords1, stepX1, stepY1)
         set(dots3, coords1, stepX1, stepY1)
-        if (isClicked) draw2()
+        if (isClicked) {
+            draw1(
+                dots[length].x,
+                dots[length].y,
+                dots1[length].x,
+                dots1[length].y,
+                dots2[0].x,
+                dots2[0].y,
+                dots3[0].x,
+                dots3[0].y
+            )
+        }
         if (!isClicked) {
             ctx.restore()
             ctx.clearRect(0, 0, canvas.width, canvas.height)

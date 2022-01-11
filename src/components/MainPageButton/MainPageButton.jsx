@@ -4,17 +4,18 @@ import './MainPageButton.css'
 export const MainPageButton = forwardRef(
     ({ title, className, isHovered, onClick, isClicked, canvas}, ref) => {
 
-        const [hoverState, setHoverState] = useState(isHovered)
-        useEffect(() => {
-            if(isHovered)setHoverState(true)
-            else setHoverState(false)
-        }, [isHovered])
+        // const [hoverState, setHoverState] = useState(isHovered)
+
+        // useEffect(() => {
+        //     if(isHovered)setHoverState(true)
+        //     else setHoverState(false)
+        // }, [isHovered])
 
 
-        useEffect(() => {
-            if(hoverState)canvas.classList.add('displayNone')
-            else canvas.classList.remove('displayNone')
-        }, [hoverState,canvas.classList])
+        // useEffect(() => {
+        //     if(hoverState)canvas.classList.add('displayNone')
+        //     else canvas.classList.remove('displayNone')
+        // }, [hoverState,canvas.classList])
 
         return (
             <div>
