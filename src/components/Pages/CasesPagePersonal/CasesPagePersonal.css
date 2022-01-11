@@ -292,3 +292,23 @@
         width: 80%;
     }
 }
+
+@media (min-width: 1920px) {
+    .cases-Array{
+        width: 550px;
+        height: 430px;
+    }
+    .casesArrayItem{
+        height: 53px;
+        font-size: 50px;
+    }
+    .casesArrayItem:hover::before {
+        z-index: 2000;
+        position: absolute;
+        transition: 0.3s ease-in-out;
+        left: -53px;
+        content: '';
+        width: 53px;
+        height: 53px;
+    }
+}
