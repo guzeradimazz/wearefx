@@ -8,13 +8,13 @@
     z-index: 2000;
     position: absolute;
 }
-.current-page{
+.current-page {
     display: flex;
     color: #dae0f28c;
     padding-bottom: 20px;
     padding-left: 10px;
 }
-.current-page p{
+.current-page p {
     color: #fff;
 }
 .slider-buttons {
@@ -32,21 +32,21 @@
     background-color: rgba(255, 255, 255, 0.13);
     background-repeat: no-repeat;
     background-size: 90%;
-    transition: .3s ease-in all;
+    transition: 0.3s ease-in all;
 }
-.slider-back:hover{
-    transition: .3s ease-in all;
-    background-color: #EEBF1B;
+.slider-back:hover {
+    transition: 0.3s ease-in all;
+    background-color: #eebf1b;
     background-size: 110%;
     background-position-x: -4px;
-    animation: showSliderBtn .2s ease-in;
+    animation: showSliderBtn 0.2s ease-in;
     background-position-y: -2px;
     background-image: url('../images/Cursorblackleft.svg');
 }
-.slider-next:hover{
-    animation: showSliderBtn .2s ease-in;
-    transition: .3s ease-in all;
-    background-color: #EEBF1B;
+.slider-next:hover {
+    animation: showSliderBtn 0.2s ease-in;
+    transition: 0.3s ease-in all;
+    background-color: #eebf1b;
     background-size: 110%;
     background-position-x: 0px;
     background-position-y: 0px;
@@ -63,10 +63,29 @@
     background-image: url('../images/Ellipse\ 33right.svg');
 }
 @keyframes showSliderBtn {
-    from{
+    from {
         opacity: 0;
     }
-    to{
+    to {
         opacity: 1;
+    }
+}
+.casesSliderActive {
+    box-shadow: 0 0 0 0px rgba(250, 253, 62, 0) ;
+    animation: slideBtnYellow 1s ease-in-out ;
+}
+.casesSliderActive:hover {
+    box-shadow: 0 0 0 0px rgba(250, 253, 62, 0) ;
+    animation: slideBtnYellow 1s ease-in-out ;
+}
+@keyframes slideBtnYellow {
+    0% {
+        box-shadow: 0 0 0 0px rgba(238, 192, 27, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 0 30px rgba(238, 192, 27, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0px rgba(238, 192, 27, 0);
     }
 }

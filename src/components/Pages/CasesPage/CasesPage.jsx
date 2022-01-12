@@ -6,6 +6,7 @@ import CursorProvider from '../../CursorProvider/CursorProvider'
 import { CasesSlider } from './CasesSlider/CasesSlider'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
+import Tilt from 'react-parallax-tilt'
 
 export const CasesPage = () => {
     const [currentPage, setCurrentPage] = useState(1)
@@ -161,70 +162,83 @@ export const CasesPage = () => {
     }, [currentPage])
 
     useEffect(() => {
-        if(isHoveredBackground) setShowCube('displayNone')
+        if (isHoveredBackground) setShowCube('displayNone')
         else setShowCube('')
     }, [isHoveredBackground])
     return (
         <CursorProvider>
             <div className=" animationFocus cases-page">
                 <Cube showCube={`${showCube}`} />
-                <div className={`${isHoveredBackground} universalBack`}>
-                    <div className="story-header">
-                        <div className="header-left">
-                            <div>
-                                <h1>our</h1>
-                                <h1>cases</h1>
-                            </div>
-                            <div>
-                                <Link to="/story">our story</Link>
-                                <Link to="/hire">hire us</Link>
-                            </div>
+                <div className="story-header">
+                    <div className="header-left">
+                        <div>
+                            <h1>our</h1>
+                            <h1>cases</h1>
                         </div>
-                        <Link to="/wearefx">
-                            <div className="animated-logo header-right"></div>
-                        </Link>
+                        <div>
+                            <Link to="/story">our story</Link>
+                            <Link to="/hire">hire us</Link>
+                        </div>
                     </div>
+                    <Link to="/wearefx">
+                        <div className="animated-logo header-right"></div>
+                    </Link>
+                </div>
+                <Tilt
+                    options={{
+                        max: 40,
+                        reverse: false,
+                        scale: 1,
+                        perspective: 1000,
+                        speed: 400,
+                        transition: true,
+                        easing: 'cubic-bezier(.03,.98,.52,.99)',
+                        reset: true,
+                        axis: null,
+                    }}
+                    className="Tilt"
+                >
+                    <div className={`${isHoveredBackground} universalBack`}>
+                        <div className="cases-Array">
+                            {showedCases.map((item) => (
+                                <div
+                                    onMouseEnter={() => onMouseEnterCase(item)}
+                                    onMouseLeave={() => onMouseLeaveCase()}
+                                    className={
+                                        item.isHovered
+                                            ? `${item.personalClass} casesArrayItem`
+                                            : 'casesArrayItem'
+                                    }
+                                    key={item.id}
+                                    onClick={() =>
+                                        navigate(`/cases/${item.id}`)
+                                    }
+                                >
+                                    <span>{item.title}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </Tilt>
 
-                    <div className="cases-Array">
-                        {showedCases.map((item) => (
-                            <div
-                                onMouseEnter={() => onMouseEnterCase(item)}
-                                onMouseLeave={() => onMouseLeaveCase()}
-                                className={
-                                    item.isHovered
-                                        ? `${item.personalClass} casesArrayItem`
-                                        : 'casesArrayItem'
-                                }
-                                key={item.id}
-                                onClick={() => navigate(`/cases/${item.id}`)}
-                            >
-                                <span>{item.title}</span>
-                            </div>
-                        ))}
-                    </div>
+                <CasesSlider state={currentPage} setState={setCurrentPage} />
 
-                    <CasesSlider
-                        state={currentPage}
-                        setState={setCurrentPage}
-                    />
-
-                    <div className="casesTextBlock">
-                        <div className="casesArrow" />
-                        <p>
-                            We’re always looking the truth about the brand we
-                            work with and tell it naturaly and gorgeous, like no
-                            one else before.
-                        </p>
-                    </div>
-                    <div className="casesBtn gradientBtn">
-                        <p>
-                            We’re
-                            <br />
-                            ready
-                            <br />
-                            Hire us
-                        </p>
-                    </div>
+                <div className="casesTextBlock">
+                    <div className="casesArrow" />
+                    <p>
+                        We’re always looking the truth about the brand we work
+                        with and tell it naturaly and gorgeous, like no one else
+                        before.
+                    </p>
+                </div>
+                <div className="casesBtn gradientBtn">
+                    <p>
+                        We’re
+                        <br />
+                        ready
+                        <br />
+                        Hire us
+                    </p>
                 </div>
             </div>
         </CursorProvider>

@@ -47,27 +47,28 @@
     margin-bottom: 15px;
     z-index: 2000;
     height: 36px;
-    overflow: hidden !important;
+    overflow: hidden;
     display: block;
 }
 .casesArrayItem span {
+    display: block;
     margin: 0 0 5px 5px;
-    position: relative;
-    display: inline-block;
     transform: translateY(100%);
     transition: 0.3s;
-    opacity: 0;
-    display: inline-block;
-    animation: spanSliderX 1s ease forwards;
+    animation: spanSliderItem;
+    animation-direction: normal;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
 }
-@keyframes spanSliderX {
-    0% {
-        transform: translateX(500%);
+ @keyframes spanSliderItem {
+    from{
         opacity: 0;
+        transform: translateY(100%);
     }
-    100% {
+    to{
         opacity: 1;
-        transform: translateX(0);
+        transform: translateY(0%);
     }
 }
 .casesArrayItem:hover {

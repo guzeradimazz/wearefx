@@ -23,9 +23,8 @@ html {
     border-radius: 50%;
     width: 10px;
     height: 10px;
-    background: transparent;
     transform: translate(100%, 100%);
-    animation: pulseBtnSlider 2s infinite;
+    animation: pulseBtnSlider 2s linear infinite;
 }
 .animationFocus {
     animation: unFocusFocus 2s;
