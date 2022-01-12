@@ -152,6 +152,7 @@
     bottom: 40%;
     background-color: #071013;
     animation: pulseBtnSlider 2s infinite;
+    transition: transform ease 0.1s;
 }
 @keyframes pulseBtnSlider {
     0% {
@@ -174,6 +175,10 @@
     background-position-x: right;
     right: 36px;
     background-image: url('../../../images/Ellipse\ 33slRIGHT.svg');
+}
+.activeBtn {
+    transform: scale(1.5);
+    transition: transform ease 0.2s;
 }
 .contact-block {
     width: 100vw;
@@ -220,12 +225,13 @@
 }
 .next-project {
     position: relative;
-    width: 100vw;
-    height: 100vh;
+    width: 100vw !important;
+    height: 100vh ;
     background-image: url('../../../images/Showreel.svg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    overflow-x: hidden !important;
 }
 .next-project .storyBtn {
     position: absolute;
@@ -294,11 +300,11 @@
 }
 
 @media (min-width: 1920px) {
-    .cases-Array{
+    .cases-Array {
         width: 550px;
         height: 430px;
     }
-    .casesArrayItem{
+    .casesArrayItem {
         height: 53px;
         font-size: 50px;
     }

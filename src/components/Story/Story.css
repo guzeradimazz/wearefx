@@ -38,7 +38,6 @@
     animation-timing-function: linear;
     animation-duration: 0.2s;
     animation-fill-mode: forwards;
-    /* clip-path: polygon(94% 0, 100% 0, 100% 4%, 7% 92%); */
 }
 @keyframes storyShowBack {
     0% {
@@ -67,6 +66,9 @@
         /* opacity: 1; */
         clip-path: polygon(18% 0, 100% 0, 100% 100%, 7% 92%);
     }
+}
+@media (max-width:1920px) {
+    
 }
 .storyBtn {
     font-size: 13px;

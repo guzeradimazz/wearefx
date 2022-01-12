@@ -4,6 +4,7 @@
     padding: 0;
     cursor: none;
     font-family: 'Futura PT';
+    /* overflow-x: hidden !important; */
 }
 a {
     text-decoration: none;
@@ -15,6 +16,16 @@ html {
     background-color: #000;
     animation-delay: 2s;
     animation: unFocusFocus 2s;
+}
+.animated-logo::before {
+    position: absolute;
+    content: '';
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    transform: translate(100%, 100%);
+    animation: pulseBtnSlider 2s infinite;
 }
 .animationFocus {
     animation: unFocusFocus 2s;

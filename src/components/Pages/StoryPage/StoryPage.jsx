@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import './StoryPage.css'
 import StoryMain from './StoryComponents/StoryMain/StoryMain'
 import StoryBottom from './StoryComponents/StoryBottom/StoryBottom'
 import CursorProvider from '../../CursorProvider/CursorProvider'

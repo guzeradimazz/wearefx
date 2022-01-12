@@ -209,7 +209,7 @@
     text-transform: uppercase;
     text-decoration: underline;
 }
-@media (max-width: 425px) {
+@media (max-width: 800px) {
     .story-footer {
         position: relative;
         flex-direction: column;

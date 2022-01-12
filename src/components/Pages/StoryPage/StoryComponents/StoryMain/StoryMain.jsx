@@ -18,7 +18,7 @@ const StoryMain = () => {
                     </div>
                 </div>
                 <Link to='/wearefx'>
-                    <div className="header-right"></div>
+                    <div className="animated-logo header-right"></div>
                 </Link>
             </div>
             <div className="story-main-content">

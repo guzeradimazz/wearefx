@@ -1,7 +1,7 @@
 @media (min-width: 2560px) {
     .mobile__btns {
-        display: none;
-        -webkit-display: none;
+        display: none ;
+        -webkit-display: none ;
     }
     .showreel__mobile,
     .swiper__mobile {
@@ -35,14 +35,6 @@
     }
     .firstCircle {
         top: 100px;
-    }
-    .secondCircle {
-        bottom: 100px;
-        left: 100px;
-    }
-    .thirdCircle {
-        bottom: 100px;
-        right: 100px;
     }
     .typing__text {
         font-size: 30px;
@@ -116,6 +108,37 @@
     }
     .hireBLock__right__bottom {
         font-size: 25px;
+    }
+    .secondCircle {
+        bottom: 111px;
+        left: 129px;
+        -webkit-bottom: 111px;
+        -webkit-left: 129px;
+    }
+    .thirdCircle {
+        bottom: 111px;
+        right: 120px;
+        -webkit-bottom: 111px;
+        -webkit-right: 120px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .secondCircle {
+        bottom: 111px;
+        left: 129px;
+        -webkit-bottom: 111px;
+        -webkit-left: 129px;
+    }
+    .thirdCircle {
+        bottom: 111px;
+        right: 120px;
+        -webkit-bottom: 111px;
+        -webkit-right: 120px;
+    }
+    .mobile__btns {
+        display: none;
+        -webkit-display: none;
     }
 }
 @media (max-width: 1440px) {
@@ -245,8 +268,8 @@
     }
     .mobile__btns {
         z-index: 20002;
-        display: flex ;
-        -webkit-display: flex ;
+        display: flex;
+        -webkit-display: flex;
         flex-direction: column;
         position: absolute;
         right: 60px;

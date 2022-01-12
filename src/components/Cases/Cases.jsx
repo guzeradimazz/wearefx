@@ -7,6 +7,8 @@ import Line from '../Line/Line'
 import useWindowDimensions from '../useWindowDimension/useWindowDimensions'
 import Tilt from 'react-tilt'
 
+// import Tilt from 'react-parallax-tilt'
+
 export const Cases = ({
     polyline,
     casesArray,
@@ -170,55 +172,6 @@ export const Cases = ({
     const onNaviLeave = () => {
         setNaviStateHovered(false)
     }
-
-    // useEffect(() => {
-    //     const parallax = document.getElementById('casesLayoutElem')
-
-    //     if (parallax) {
-    //         let isShowParallax = false
-    //         if (showCube === 'displayNone') isShowParallax = true
-    //         const parallaxItem = document.getElementById('parallaxImageBlock')
-
-    //         const SpeedPr = 5
-    //         const speed = 0.5
-    //         let posX = 0,
-    //             posY = 0,
-    //             coordX = 0,
-    //             coordY = 0
-
-    //         const setMouseParallaxStyle = () => {
-    //             const distX = coordX - posX
-    //             const distY = coordY - posY
-
-    //             posX = posX + distX * speed
-    //             posY = posY + distY * speed
-
-    //             parallaxItem.style.cssText = `transform: translate(${
-    //                 posX / SpeedPr
-    //             }%,${posY / SpeedPr}%);`
-    //             parallaxItem.style.cssText = `transform: skew(${
-    //                 posX / SpeedPr
-    //             }deg,${posY / SpeedPr}deg);`
-    //             requestAnimationFrame(setMouseParallaxStyle)
-    //         }
-    //         const onParallaxMouseMove = (e) => {
-    //             const parallaxWidth = parallax.offsetWidth
-    //             const parallaxHeigth = parallax.offsetHeight
-
-    //             const coordXPara = e.pageX - (parallaxWidth * 1.5) / 2
-    //             const coordYPara = e.pageY - (parallaxHeigth * 1.5) / 2
-
-    //             coordX = (coordXPara / parallaxWidth) * 100
-    //             coordY = (coordYPara / parallaxHeigth) * 100
-    //         }
-    //         setMouseParallaxStyle()
-
-    //         if (isShowParallax)
-    //             parallax.addEventListener('mousemove', onParallaxMouseMove)
-    //         else parallax.removeEventListener('mousemove', onParallaxMouseMove)
-    //     }
-    // }, [showCube])
-
     const ToFullScreen = () => {
         const elem = document.getElementById('casesLayoutElem')
         elem.classList.add('casesFullScreen')
@@ -270,12 +223,13 @@ export const Cases = ({
                 <p>Navi</p>
                 <p>Granding, VFX, motion</p>
             </div>
+
             <Tilt
                 options={{
                     max: 40,
                     reverse: false,
                     scale: 1,
-                    perspective: 2000,
+                    perspective: 1000,
                     speed: 400,
                     transition: true,
                     easing: 'cubic-bezier(.03,.98,.52,.99)',
@@ -288,36 +242,8 @@ export const Cases = ({
                     id="parallaxImageBlock"
                     className={`${universalBack} universalBack`}
                 >
-                    <Line
-                        polyline={polyline}
-                        isClicked={isClicked}
-                        coords={{
-                            first: {
-                                x: 0,
-                                y: height * 0.38,
-                            },
-                            last: {
-                                x: coordsToX,
-                                y: coordsToY,
-                            },
-                        }}
-                        coords1={{
-                            first: {
-                                x: coordsToX,
-                                y: coordsToY,
-                            },
-                            last: {
-                                x: width,
-                                y: height * 0.24,
-                            },
-                        }}
-                        amount={7}
-                    />
-                    <Cube showCube={`${showCube}`} />
-
                     <div className="casesArray">
                         <div
-                            // id="cases,ArrayItemId"
                             onMouseEnter={onMcEnter}
                             onMouseLeave={onMcLeave}
                             className={casesArray[0].className}
@@ -385,6 +311,32 @@ export const Cases = ({
                         </div>
                     </div>
                 </div>
+                <Line
+                    polyline={polyline}
+                    isClicked={isClicked}
+                    coords={{
+                        first: {
+                            x: 0,
+                            y: height * 0.38,
+                        },
+                        last: {
+                            x: coordsToX,
+                            y: coordsToY,
+                        },
+                    }}
+                    coords1={{
+                        first: {
+                            x: coordsToX,
+                            y: coordsToY,
+                        },
+                        last: {
+                            x: width,
+                            y: height * 0.24,
+                        },
+                    }}
+                    amount={7}
+                />
+                <Cube showCube={`${showCube}`} />
             </Tilt>
         </div>
     )

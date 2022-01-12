@@ -22,6 +22,7 @@ const Routerelement = () => {
             heigth: '100vh',
             opacity: 0,
             transform: 'translatesY(0%)',
+            filter: 'blur(1.2rem)'
         },
         enter: (i) => async (next) => {
             await sleep(500)
@@ -31,6 +32,7 @@ const Routerelement = () => {
                 heigth: '100vh',
                 opacity: 1,
                 transform: 'translatesY(0%)',
+                filter: 'blur(0rem)'
             })
         },
         leave: {
@@ -40,6 +42,7 @@ const Routerelement = () => {
             opacity: 0,
             transition:'ease',
             transform: 'translatesY(100%)',
+            filter: 'blur(0.6rem)'
         },
     })
     return transitions((props, item) => (

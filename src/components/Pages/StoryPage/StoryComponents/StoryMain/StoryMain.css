@@ -10,6 +10,7 @@
     padding: 150px 0 0 20%;
     width: 80%;
     color: #fff;
+    z-index: 2000;
 }
 .story-main-content p:nth-child(1) {
     text-align: left;
