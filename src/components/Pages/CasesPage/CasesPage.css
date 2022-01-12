@@ -6,6 +6,7 @@
     overflow-x: hidden !important;
     transition: all ease 0.3s;
     opacity: 0;
+    overflow-x: hidden !;
     animation: showCasesPage 0.4s ease forwards;
 }
 @keyframes showCasesPage {

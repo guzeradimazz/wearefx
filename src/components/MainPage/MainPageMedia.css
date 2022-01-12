@@ -1,7 +1,25 @@
-@media (min-width: 2560px) {
+@media (min-width: 1919px) {
+    .secondCircle {
+        bottom: 80px !important;
+        left: 99px !important;
+        -webkit-bottom: 80px !important;
+        -webkit-left: 99px !important;
+    }
+    .thirdCircle {
+        bottom: 80px !important;
+        right: 85px !important;
+        -webkit-bottom: 85px !important;
+        -webkit-right: 90px !important;
+    }
     .mobile__btns {
-        display: none ;
-        -webkit-display: none ;
+        display: none;
+        -webkit-display: none;
+    }
+}
+@media (min-width: 2550px) {
+    .mobile__btns {
+        display: none;
+        -webkit-display: none;
     }
     .showreel__mobile,
     .swiper__mobile {
@@ -110,37 +128,20 @@
         font-size: 25px;
     }
     .secondCircle {
-        bottom: 111px;
-        left: 129px;
-        -webkit-bottom: 111px;
-        -webkit-left: 129px;
+        bottom: 75px !important;
+        left: 129px !important;
+        -webkit-bottom: 75px !important;
+        -webkit-left: 129px !important;
     }
     .thirdCircle {
-        bottom: 111px;
-        right: 120px;
-        -webkit-bottom: 111px;
-        -webkit-right: 120px;
+        bottom: 75px !important;
+        right: 120px !important;
+        -webkit-bottom: 75px !important;
+        -webkit-right: 120px !important;
     }
 }
 
-@media (min-width: 1920px) {
-    .secondCircle {
-        bottom: 111px;
-        left: 129px;
-        -webkit-bottom: 111px;
-        -webkit-left: 129px;
-    }
-    .thirdCircle {
-        bottom: 111px;
-        right: 120px;
-        -webkit-bottom: 111px;
-        -webkit-right: 120px;
-    }
-    .mobile__btns {
-        display: none;
-        -webkit-display: none;
-    }
-}
+
 @media (max-width: 1440px) {
     .mobile__btns {
         display: none;
