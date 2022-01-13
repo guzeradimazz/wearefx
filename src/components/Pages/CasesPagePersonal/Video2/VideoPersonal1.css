@@ -5,7 +5,7 @@
     width: 0;
     height: 100%;
     background-color: #e4b50b;
-    transition: all .5s linear !important;
+    transition: all 1s linear !important;
 
     -webkit-position: absolute;
     -webkit-z-index: 5;
@@ -13,5 +13,5 @@
     -webkit-width: 0;
     -webkit-height: 100%;
     -webkit-background-color: #e4b50b;
-    -webkit-transition: all .5s linear !important;
+    -webkit-transition: all 1s linear !important;
 }

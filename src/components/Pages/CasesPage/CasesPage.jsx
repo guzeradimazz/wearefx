@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from 'react'
+import React, { useEffect, useState } from 'react'
 import Cube from '../../Cube/Cube'
 import './CasesPage.css'
 import '../StoryPage/StoryComponents/StoryHeader/StoryHeader.css'

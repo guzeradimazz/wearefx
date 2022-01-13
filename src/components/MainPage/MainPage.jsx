@@ -337,7 +337,7 @@ const MainPage = ({
                         setIsClicked={setIsHireClicked}
                     />
                     <div
-                        className={` ${isMc} ${isPuma} ${isFlint} ${isBig} ${isPm} ${isNavi} main no_overflow`}
+                        className={` main no_overflow`}
                     >
                         <div className="mobile__btns">
                             <Link to="/storyMobile">

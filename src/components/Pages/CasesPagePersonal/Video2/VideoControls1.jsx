@@ -14,19 +14,6 @@ const VideoControls1 = ({
     handleFullScreenClose,
 }) => {
     const [showElements, setShowElements] = useState(true)
-    const [Btn1, setBtn1] = useState('')
-    const [Btn2, setBtn2] = useState('')
-
-    useEffect(() => {
-        if (fullscreen) {
-            setBtn1('displayNone')
-            setBtn2('')
-        }
-        if (!fullscreen) {
-            setBtn2('displayNone')
-            setBtn1('')
-        }
-    }, [fullscreen])
 
     useEffect(() => {
         const fillBar = document.getElementById('fill2')

@@ -42,6 +42,7 @@ const StoryMain = () => {
                     Resolve, Adobe Premiere Pro and Avid Media Composer suites.
                 </p>
             </div>
+            <div className="story-ellipse" />
         </div>
     )
 }

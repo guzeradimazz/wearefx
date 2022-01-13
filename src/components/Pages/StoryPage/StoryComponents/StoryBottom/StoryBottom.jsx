@@ -5,7 +5,6 @@ import StoryFooter from './StoryFooter'
 const StoryBottom = () => {
     return (
         <div className="story-bottom">
-            <div className="story-ellipse" />
             <div className="story-main-content">
                 <p>
                     We pushing the boundaries of visual effects and work with
