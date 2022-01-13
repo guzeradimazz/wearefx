@@ -62,14 +62,6 @@ const MainPage = ({
         },
     ]
 
-    
-    const [isMc, setisMc] = useState('')
-    const [isPuma, setisPuma] = useState('')
-    const [isFlint, setisFlint] = useState('')
-    const [isBig, setisBig] = useState('')
-    const [isPm, setisPm] = useState('')
-    const [isNavi, setisNavi] = useState('')
-
     const [buttonsCoords, setButtonsCoords] = useState([])
 
     const btn1Ref = useRef(null)
@@ -320,18 +312,6 @@ const MainPage = ({
                         casesArray={casesArray}
                         coordsToX={buttonsCoords[0]?.x}
                         coordsToY={buttonsCoords[0]?.y}
-                        isMc={isMc}
-                        setisMc={setisMc}
-                        isPuma={isPuma}
-                        setisPuma={setisPuma}
-                        isFlint={isFlint}
-                        setisFlint={setisFlint}
-                        isBig={isBig}
-                        setisBig={setisBig}
-                        isPm={isPm}
-                        setisPm={setisPm}
-                        isNavi={isNavi}
-                        setisNavi={setisNavi}
                         isCasesEntered={isCasesEntered}
                         isCanvasesHidded={isCanvasesHidded}
                         canvases={[canvas1, canvas2, canvas3]}
