@@ -26,33 +26,39 @@ const MainPage = ({
     const casesArray = [
         {
             title: "McDonald's",
-            id: 576891,
+            id: 1,
             className: 'mcDonalds',
+            background: 'mcBack'
         },
         {
             title: 'Puma',
-            id: 20000,
+            id: 2,
             className: 'mcDonalds',
+            background: 'pBack'
         },
         {
             title: 'Flint',
-            id: 9909090,
+            id: 3,
             className: 'mcDonalds',
+            background: 'fBack'
         },
         {
             title: 'Little big',
-            id: 434,
+            id: 4,
             className: 'mcDonalds',
+            background: 'lBack'
         },
         {
             title: 'Parimatch',
-            id: 4325355,
+            id: 5,
             className: 'mcDonalds',
+            background: 'pmBack'
         },
         {
             title: 'Navi',
-            id: 625435,
+            id: 6,
             className: 'mcDonalds',
+            background: 'nBack'
         },
     ]
 

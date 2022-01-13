@@ -14,18 +14,6 @@ export const Cases = ({
     casesArray,
     coordsToX,
     coordsToY,
-    setisMc,
-    isMc,
-    isPuma,
-    setisPuma,
-    isFlint,
-    setisFlint,
-    isBig,
-    setisBig,
-    isPm,
-    setisPm,
-    isNavi,
-    setisNavi,
     isClicked,
     canvases,
     isCanvasesHidded,
@@ -70,107 +58,27 @@ export const Cases = ({
     const navigate = useNavigate()
 
     useEffect(() => {
-        if (mcStateHovered) {
-            setisMc('black')
-            setUniversalBack('mcBack')
-            setShowCube('displayNone')
-        } else {
-            setisMc('')
-            setUniversalBack('')
-            setShowCube('')
-        }
-    }, [mcStateHovered, isMc])
-    useEffect(() => {
-        if (pumaStateHovered) {
-            setisPuma('black')
-            setUniversalBack('pumaBack')
-            setShowCube('displayNone')
-        } else {
-            setisPuma('')
-            setUniversalBack('')
-            setShowCube('')
-        }
-    }, [pumaStateHovered, isPuma])
-    useEffect(() => {
-        if (flintStateHovered) {
-            setisFlint('black')
-            setUniversalBack('flintBack')
-            setShowCube('displayNone')
-        } else {
-            setisFlint('')
-            setUniversalBack('')
-            setShowCube('')
-        }
-    }, [flintStateHovered, isFlint])
-    useEffect(() => {
-        if (bigStateHovered) {
-            setisBig('black')
-            setUniversalBack('bigBack')
-            setShowCube('displayNone')
-        } else {
-            setisBig('')
-            setUniversalBack('')
-            setShowCube('')
-        }
-    }, [bigStateHovered, isBig])
-    useEffect(() => {
-        if (pmStateHovered) {
-            setisPm('black')
-            setUniversalBack('pmBack')
-            setShowCube('displayNone')
-        } else {
-            setisPm('')
-            setUniversalBack('')
-            setShowCube('')
-        }
-    }, [pmStateHovered, isPm])
-    useEffect(() => {
-        if (naviStateHovered) {
-            setisNavi('black')
-            setUniversalBack('naviBack')
-            setShowCube('displayNone')
-        } else {
-            setisNavi('')
-            setUniversalBack('')
-            setShowCube('')
-        }
-    }, [naviStateHovered, isNavi])
+        if(universalBack === 'mcBack') setMcStateHovered(true)
+        else setMcStateHovered(false)
+        if(universalBack === 'pBack') setPumaStateHovered(true)
+        else setPumaStateHovered(false)
+        if(universalBack === 'fBack') setFlintStateHovered(true)
+        else setFlintStateHovered(false)
+        if(universalBack === 'lBack') setBigStateHovered(true)
+        else setBigStateHovered(false)
+        if(universalBack === 'pmBack') setPMStateHovered(true)
+        else setPMStateHovered(false)
+        if(universalBack === 'nBack') setNaviStateHovered(true)
+        else setNaviStateHovered(false)
+    }, [universalBack])
 
-    const onMcEnter = () => {
-        setMcStateHovered(true)
+    const onCaseEnter = (item) => {
+        setUniversalBack(item.background)
+        setShowCube('displayNone')
     }
-    const onMcLeave = () => {
-        setMcStateHovered(false)
-    }
-    const onPumaEnter = () => {
-        setPumaStateHovered(true)
-    }
-    const onPumaLeave = () => {
-        setPumaStateHovered(false)
-    }
-    const onFlintEnter = () => {
-        setFlintStateHovered(true)
-    }
-    const onFlintLeave = () => {
-        setFlintStateHovered(false)
-    }
-    const onBigEnter = () => {
-        setBigStateHovered(true)
-    }
-    const onBigLeave = () => {
-        setBigStateHovered(false)
-    }
-    const onPMEnter = () => {
-        setPMStateHovered(true)
-    }
-    const onPMLeave = () => {
-        setPMStateHovered(false)
-    }
-    const onNaviEnter = () => {
-        setNaviStateHovered(true)
-    }
-    const onNaviLeave = () => {
-        setNaviStateHovered(false)
+    const onCaseLeave = () => {
+        setUniversalBack('')
+        setShowCube('')
     }
     const ToFullScreen = () => {
         const elem = document.getElementById('casesLayoutElem')
@@ -243,72 +151,20 @@ export const Cases = ({
                     className={`${universalBack} universalBack`}
                 >
                     <div className="casesArray">
-                        <div
-                            onMouseEnter={onMcEnter}
-                            onMouseLeave={onMcLeave}
-                            className={casesArray[0].className}
-                            onClick={() => {
-                                navigate(`/cases/${casesArray[0].id}`)
-                                ToFullScreen()
-                            }}
-                        >
-                            {casesArray[0].title}
-                        </div>
-                        <div
-                            onMouseEnter={onPumaEnter}
-                            onMouseLeave={onPumaLeave}
-                            className={casesArray[1].className}
-                            onClick={() => {
-                                navigate(`/cases/${casesArray[1].id}`)
-                                ToFullScreen()
-                            }}
-                        >
-                            {casesArray[1].title}
-                        </div>
-                        <div
-                            onMouseEnter={onFlintEnter}
-                            onMouseLeave={onFlintLeave}
-                            className={casesArray[2].className}
-                            onClick={() => {
-                                navigate(`/cases/${casesArray[2].id}`)
-                                ToFullScreen()
-                            }}
-                        >
-                            {casesArray[2].title}
-                        </div>
-                        <div
-                            onMouseEnter={onBigEnter}
-                            onMouseLeave={onBigLeave}
-                            className={casesArray[3].className}
-                            onClick={() => {
-                                navigate(`/cases/${casesArray[3].id}`)
-                                ToFullScreen()
-                            }}
-                        >
-                            {casesArray[3].title}
-                        </div>
-                        <div
-                            onMouseEnter={onPMEnter}
-                            onMouseLeave={onPMLeave}
-                            className={casesArray[4].className}
-                            onClick={() => {
-                                navigate(`/cases/${casesArray[4].id}`)
-                                ToFullScreen()
-                            }}
-                        >
-                            {casesArray[4].title}
-                        </div>
-                        <div
-                            onMouseEnter={onNaviEnter}
-                            onMouseLeave={onNaviLeave}
-                            className={casesArray[5].className}
-                            onClick={() => {
-                                navigate(`/cases/${casesArray[5].id}`)
-                                ToFullScreen()
-                            }}
-                        >
-                            {casesArray[5].title}
-                        </div>
+                        {casesArray.slice(0, 6).map((item) => (
+                            <div
+                                key={item.id}
+                                onMouseEnter={() => onCaseEnter(item)}
+                                onMouseLeave={() => onCaseLeave()}
+                                className={item.className}
+                                onClick={() => {
+                                    navigate(`/cases/${item.id}`)
+                                    ToFullScreen()
+                                }}
+                            >
+                                {item.title}
+                            </div>
+                        ))}
                     </div>
                 </div>
                 <Line
