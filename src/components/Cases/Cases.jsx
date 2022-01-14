@@ -5,9 +5,7 @@ import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import Line from '../Line/Line'
 import useWindowDimensions from '../useWindowDimension/useWindowDimensions'
-import Tilt from 'react-tilt'
 
-// import Tilt from 'react-parallax-tilt'
 
 export const Cases = ({
     polyline,
@@ -54,21 +52,30 @@ export const Cases = ({
     const [showCube, setShowCube] = useState('')
 
     const [universalBack, setUniversalBack] = useState('')
+    const [prevUniversalBack, setPrevUniversalBack] = useState('')
 
     const navigate = useNavigate()
 
+
     useEffect(() => {
-        if(universalBack === 'mcBack') setMcStateHovered(true)
-        else setMcStateHovered(false)
-        if(universalBack === 'pBack') setPumaStateHovered(true)
-        else setPumaStateHovered(false)
-        if(universalBack === 'fBack') setFlintStateHovered(true)
+        if (universalBack === 'mcBack') {
+            setMcStateHovered(true)
+            setUniversalBack()
+        } else {
+            setMcStateHovered(false)
+        }
+        if (universalBack === 'pBack') {
+            setPumaStateHovered(true)
+        } else {
+            setPumaStateHovered(false)
+        }
+        if (universalBack === 'fBack') setFlintStateHovered(true)
         else setFlintStateHovered(false)
-        if(universalBack === 'lBack') setBigStateHovered(true)
+        if (universalBack === 'lBack') setBigStateHovered(true)
         else setBigStateHovered(false)
-        if(universalBack === 'pmBack') setPMStateHovered(true)
+        if (universalBack === 'pmBack') setPMStateHovered(true)
         else setPMStateHovered(false)
-        if(universalBack === 'nBack') setNaviStateHovered(true)
+        if (universalBack === 'nBack') setNaviStateHovered(true)
         else setNaviStateHovered(false)
     }, [universalBack])
 
@@ -77,36 +84,79 @@ export const Cases = ({
         setShowCube('displayNone')
     }
     const onCaseLeave = () => {
-        setUniversalBack('')
+        setUniversalBack('destroyBack')
         setShowCube('')
     }
+
     const ToFullScreen = () => {
         const elem = document.getElementById('casesLayoutElem')
         elem.classList.add('casesFullScreen')
+    }
+
+    const parallaxHandler = (e) => {
+        const x = (e.clientX - window.innerWidth / 1.6) / 45
+        const y = (e.clientY - window.innerHeight / 1.6) / 55
+        document.getElementById(
+            'parallaxImageBlock'
+        ).style.cssText = `transform:
+        skew(${x / 2}deg,${y *2}deg)
+        rotateY(${x * 5}deg)
+        rotateX(${y * 5}deg)
+        `
     }
     return (
         <div
             id="casesLayoutElem"
             className={isClicked ? ' casesLayout' : ' reversedLayout'}
         >
-            <div className="casesTextBlock">
-                <div className="casesArrow" />
-                <p>
-                    We’re always looking the truth about the brand we work with
-                    and tell it naturaly and gorgeous, like no one else before.
-                </p>
+            <div
+                id="parallaxImageBlock"
+                className={`${universalBack} ${prevUniversalBack} universalBack`}
+            ></div>
+            <div className="casesArray">
+                {casesArray.slice(0, 6).map((item) => (
+                    <div
+                        onMouseMove={parallaxHandler}
+                        id="parallaxCase"
+                        key={item.id}
+                        onMouseEnter={() => onCaseEnter(item)}
+                        onMouseLeave={() => onCaseLeave()}
+                        className={item.className}
+                        onClick={() => {
+                            navigate(`/cases/${item.id}`)
+                            ToFullScreen()
+                        }}
+                    >
+                        {item.title}
+                    </div>
+                ))}
             </div>
-            <Link to="/cases" onClick={() => ToFullScreen()}>
-                <div className="casesBtn gradientBtn">
-                    <p>
-                        Explore
-                        <br />
-                        all
-                        <br />
-                        cases
-                    </p>
-                </div>
-            </Link>
+            <Line
+                polyline={polyline}
+                isClicked={isClicked}
+                coords={{
+                    first: {
+                        x: 0,
+                        y: height * 0.38,
+                    },
+                    last: {
+                        x: coordsToX,
+                        y: coordsToY,
+                    },
+                }}
+                coords1={{
+                    first: {
+                        x: coordsToX,
+                        y: coordsToY,
+                    },
+                    last: {
+                        x: width,
+                        y: height * 0.24,
+                    },
+                }}
+                amount={7}
+            />
+            <Cube showCube={`${showCube}`} />
             <div className={mcStateHovered ? 'casesMain' : ' displayNone'}>
                 <p>McDonald's</p>
                 <p>Granding, VFX, motion</p>
@@ -131,69 +181,24 @@ export const Cases = ({
                 <p>Navi</p>
                 <p>Granding, VFX, motion</p>
             </div>
-
-            <Tilt
-                options={{
-                    max: 40,
-                    reverse: false,
-                    scale: 1,
-                    perspective: 1000,
-                    speed: 400,
-                    transition: true,
-                    easing: 'cubic-bezier(.03,.98,.52,.99)',
-                    reset: true,
-                    axis: null,
-                }}
-                className="Tilt"
-            >
-                <div
-                    id="parallaxImageBlock"
-                    className={`${universalBack} universalBack`}
-                >
-                    <div className="casesArray">
-                        {casesArray.slice(0, 6).map((item) => (
-                            <div
-                                key={item.id}
-                                onMouseEnter={() => onCaseEnter(item)}
-                                onMouseLeave={() => onCaseLeave()}
-                                className={item.className}
-                                onClick={() => {
-                                    navigate(`/cases/${item.id}`)
-                                    ToFullScreen()
-                                }}
-                            >
-                                {item.title}
-                            </div>
-                        ))}
-                    </div>
+            <div className="casesTextBlock">
+                <div className="casesArrow" />
+                <p>
+                    We’re always looking the truth about the brand we work with
+                    and tell it naturaly and gorgeous, like no one else before.
+                </p>
+            </div>
+            <Link to="/cases" onClick={() => ToFullScreen()}>
+                <div className="casesBtn gradientBtn">
+                    <p>
+                        Explore
+                        <br />
+                        all
+                        <br />
+                        cases
+                    </p>
                 </div>
-                <Line
-                    polyline={polyline}
-                    isClicked={isClicked}
-                    coords={{
-                        first: {
-                            x: 0,
-                            y: height * 0.38,
-                        },
-                        last: {
-                            x: coordsToX,
-                            y: coordsToY,
-                        },
-                    }}
-                    coords1={{
-                        first: {
-                            x: coordsToX,
-                            y: coordsToY,
-                        },
-                        last: {
-                            x: width,
-                            y: height * 0.24,
-                        },
-                    }}
-                    amount={7}
-                />
-                <Cube showCube={`${showCube}`} />
-            </Tilt>
+            </Link>
         </div>
     )
 }

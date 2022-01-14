@@ -9,6 +9,9 @@
     overflow-x: hidden !;
     animation: showCasesPage 0.4s ease forwards;
 }
+.cases-page .story-header{
+    z-index: 20001;
+}
 @keyframes showCasesPage {
     from {
         opacity: 0;
@@ -36,6 +39,7 @@
     align-items: center;
     width: 420px;
     bottom: 60px;
+    z-index: 100000;
     font-weight: 300;
     left: calc(50%);
 }
@@ -52,7 +56,8 @@
 }
 .casesArrayItem span {
     display: block;
-    margin: 0 0 5px 5px;
+    padding-top: 0 !important;
+    padding: 5px;
     transform: translateY(100%) ;
     transition: all 0.3s ease;
     animation: spanSliderItem;

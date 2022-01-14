@@ -165,6 +165,17 @@ export const CasesPage = () => {
         if (isHoveredBackground) setShowCube('displayNone')
         else setShowCube('')
     }, [isHoveredBackground])
+    const parallaxHandler = (e) => {
+        const x = (e.clientX - window.innerWidth / 1.6) / 45
+        const y = (e.clientY - window.innerHeight / 1.3) / 55
+        document.getElementById(
+            'parallaxImageBlock'
+        ).style.cssText = `transform:  
+        skew(${x / 2}deg,${y / 3}deg) 
+        rotateY(${x * 5}deg) 
+        rotateX(${y * 5}deg)
+        `
+    }
     return (
         <CursorProvider>
             <div className=" animationFocus cases-page">
@@ -184,42 +195,29 @@ export const CasesPage = () => {
                         <div className="animated-logo header-right"></div>
                     </Link>
                 </div>
-                <Tilt
-                    options={{
-                        max: 40,
-                        reverse: false,
-                        scale: 1,
-                        perspective: 1000,
-                        speed: 400,
-                        transition: true,
-                        easing: 'cubic-bezier(.03,.98,.52,.99)',
-                        reset: true,
-                        axis: null,
-                    }}
-                    className="Tilt"
-                >
-                    <div className={`${isHoveredBackground} universalBack`}>
-                        <div className="cases-Array">
-                            {showedCases.map((item) => (
-                                <div
-                                    onMouseEnter={() => onMouseEnterCase(item)}
-                                    onMouseLeave={() => onMouseLeaveCase()}
-                                    className={
-                                        item.isHovered
-                                            ? `${item.personalClass} casesArrayItem`
-                                            : 'casesArrayItem'
-                                    }
-                                    key={item.id}
-                                    onClick={() =>
-                                        navigate(`/cases/${item.id}`)
-                                    }
-                                >
-                                    <span>{item.title}</span>
-                                </div>
-                            ))}
+                <div
+                    id="parallaxImageBlock"
+                    className={`${isHoveredBackground} universalBack`}
+                ></div>
+
+                <div className="cases-Array">
+                    {showedCases.map((item) => (
+                        <div
+                            onMouseMove={parallaxHandler}
+                            onMouseEnter={() => onMouseEnterCase(item)}
+                            onMouseLeave={() => onMouseLeaveCase()}
+                            className={
+                                item.isHovered
+                                    ? `${item.personalClass} casesArrayItem`
+                                    : 'casesArrayItem'
+                            }
+                            key={item.id}
+                            onClick={() => navigate(`/cases/${item.id}`)}
+                        >
+                            <span>{item.title}</span>
                         </div>
-                    </div>
-                </Tilt>
+                    ))}
+                </div>
 
                 <CasesSlider state={currentPage} setState={setCurrentPage} />
 

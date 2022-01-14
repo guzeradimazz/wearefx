@@ -5,7 +5,7 @@
     width: 140px;
     bottom: 60px;
     left: calc(30%);
-    z-index: 2000;
+    z-index: 20001;
     position: absolute;
 }
 .current-page {
