@@ -6,7 +6,6 @@ import { useNavigate } from 'react-router-dom'
 import Line from '../Line/Line'
 import useWindowDimensions from '../useWindowDimension/useWindowDimensions'
 
-
 export const Cases = ({
     polyline,
     casesArray,
@@ -56,27 +55,24 @@ export const Cases = ({
 
     const navigate = useNavigate()
 
-
     useEffect(() => {
         if (universalBack === 'mcBack') {
             setMcStateHovered(true)
             setUniversalBack()
-        } else {
+        } else if (universalBack === 'pBack') setPumaStateHovered(true)
+        else if (universalBack === 'fBack') setFlintStateHovered(true)
+        else if (universalBack === 'lBack') setBigStateHovered(true)
+        else if (universalBack === 'pmBack') setPMStateHovered(true)
+        else if (universalBack === 'nBack') setNaviStateHovered(true)
+        else {
             setMcStateHovered(false)
-        }
-        if (universalBack === 'pBack') {
-            setPumaStateHovered(true)
-        } else {
+            setFlintStateHovered(false)
             setPumaStateHovered(false)
+            setBigStateHovered(false)
+            setPMStateHovered(false)
+            setNaviStateHovered(false)
         }
-        if (universalBack === 'fBack') setFlintStateHovered(true)
-        else setFlintStateHovered(false)
-        if (universalBack === 'lBack') setBigStateHovered(true)
-        else setBigStateHovered(false)
-        if (universalBack === 'pmBack') setPMStateHovered(true)
-        else setPMStateHovered(false)
-        if (universalBack === 'nBack') setNaviStateHovered(true)
-        else setNaviStateHovered(false)
+        
     }, [universalBack])
 
     const onCaseEnter = (item) => {
@@ -99,7 +95,7 @@ export const Cases = ({
         document.getElementById(
             'parallaxImageBlock'
         ).style.cssText = `transform:
-        skew(${x / 2}deg,${y *2}deg)
+        skew(${x / 2}deg,${y * 2}deg)
         rotateY(${x * 5}deg)
         rotateX(${y * 5}deg)
         `
