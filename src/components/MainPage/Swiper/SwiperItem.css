@@ -1,0 +1,14 @@
+.caseLinkIMP{
+    position: absolute;
+    z-index: 120390 !important;
+}
+.caseLinkIMP .casesBtn{
+    font-size: 12px !important;
+}
+.btm0{
+    bottom: -10px !important;
+}
+.swiper-item-p{
+    position: relative;
+    top: 23%;
+}

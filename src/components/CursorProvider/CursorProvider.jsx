@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState, useRef } from 'react'
 import './CursorProvider.css'
 import cx from 'classnames'
 export const CursorContext = React.createContext('cursorContext')
@@ -22,14 +22,18 @@ const CursorProvider = ({
     }
     const onVisibleCursor = () => setCursor(true)
 
+    const mouseRef = useRef(null)
     const onMouseMove = (event) => {
         const { pageX: x, pageY: y } = event
         setMousePosition({ x, y })
+        mouseRef.current.classList.remove('displayNone')
     }
 
     useEffect(() => {
         document.addEventListener('mousemove', onMouseMove)
-
+        document.addEventListener('mouseout',()=>{
+            mouseRef.current.classList.add('displayNone')
+        })
         return () => {
             document.removeEventListener('mousemove', onMouseMove)
         }
@@ -55,6 +59,7 @@ const CursorProvider = ({
             value={{ onCursor, onHideCursor, onVisibleCursor }}
         >
             <ins
+                ref={mouseRef}
                 id="cursorId"
                 className={
                     classBulean

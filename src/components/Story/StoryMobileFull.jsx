@@ -112,7 +112,7 @@ const StoryMobileFull = () => {
             </div>
             <div className="story-mobile-ellipse"/>
             <Link to="/storyMobileFull">
-                <div className="casesBtn gradientBtn">
+                <div className="casesBtn gradientBtn violetMobileMarg">
                     <p>
                         View our
                         <br />
@@ -122,7 +122,7 @@ const StoryMobileFull = () => {
                 </div>
             </Link>
             <Link to="/hire">
-                <div className="violetBtn">
+                <div className="violetBtn mt150px">
                     <p>
                         we’re ready
                         <br />

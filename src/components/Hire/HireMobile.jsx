@@ -58,7 +58,7 @@ const HireMobile = () => {
                 <p className="violet_on_hove fw_norm">Privacy Policy ﹤</p>
             </div>
             <Link to="/storyMobileFull">
-                <div className="casesBtn gradientBtn">
+                <div className="casesBtn gradientBtn violetMobileMarg">
                     <p>
                         View our
                         <br />
@@ -68,7 +68,7 @@ const HireMobile = () => {
                 </div>
             </Link>
             <Link to="/hire">
-                <div className="violetBtn">
+                <div className="violetBtn mt150px">
                     <p>
                         we’re ready
                         <br />

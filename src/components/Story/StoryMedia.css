@@ -116,3 +116,12 @@
     background-size: 100%;
     margin-left: -15%;
 }
+@media (max-width:375px) {
+    .violetBtn{
+        margin-left: calc(37%);
+        margin-top: 150px;
+    }
+    .story-mobile .casesBtn{
+        bottom: 463px;
+    }
+}

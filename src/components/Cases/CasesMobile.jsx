@@ -18,17 +18,7 @@ const CasesMobile = () => {
                 </div>
             </Link>
             <SwiperSLider />
-            <Link to="/casesfullmobile">
-                <div className="casesBtn gradientBtn">
-                    <p>
-                        Explore
-                        <br />
-                        all
-                        <br />
-                        cases
-                    </p>
-                </div>
-            </Link>
+
         </div>
     )
 }

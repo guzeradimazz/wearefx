@@ -103,7 +103,7 @@
     height: 100vh;
     z-index: 20000 !important;
     perspective: 1000px;
-    transition: transform ease .2s !important;
+    transition: transform ease 0.2s !important;
 }
 .casesBtn {
     z-index: 100000000001 !important;
@@ -352,15 +352,23 @@
     100% {
         background-image: none;
         opacity: 0.000000001;
-        transform: translate(20%, 0) scale(150%);
+        transform: translateX(-2%);
     }
 }
-.destroyBack {
-    position: absolute;
-    transition: background 0.3s ease;
+.mcBackdestroyed,
+.pBackdestroyed {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    transition: all 0.3s ease !important;
     opacity: 1;
-    transform: translate(0, 0);
     backdrop-filter: none;
-    transition: transform 0.4s linear;
-    animation: destroyBack 1s ease forwards !important;
+    animation: destroyBack 1s ease forwards;
+}
+.mcBackdestroyed {
+    background-image: url('../../images/Showreel.svg');
+}
+.pBackdestroyed {
+    background-image: url('../../images/pumaback.svg');
 }

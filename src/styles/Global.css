@@ -18,6 +18,9 @@ html {
     animation-delay: 2s;
     animation: unFocusFocus 2s;
 }
+.slick-arrow{
+    display: none;
+}
 .animated-logo::before {
     position: absolute;
     content: '';

@@ -8,17 +8,17 @@
     color: #eec01b65;
     text-transform: uppercase;
 }
-.story-contact{
+.story-contact {
     padding-left: 20px;
 }
-.norm{
+.norm {
     text-transform: lowercase !important;
     font-size: 24px !important;
     padding-top: 30px !important;
     padding-bottom: 10px !important;
     padding-left: 20px !important;
 }
-.hire-social{
+.hire-social {
     display: flex;
     max-width: 300px;
     flex-direction: row;
@@ -26,7 +26,7 @@
     padding-left: 20px;
     padding-top: 20px;
 }
-.hire-social div:nth-child(1){
+.hire-social div:nth-child(1) {
     background-size: 100%;
     background-position: center;
     background-image: url('../../images/fb.svg');
@@ -35,7 +35,7 @@
     width: 48px;
     height: 48px;
 }
-.hire-social div:nth-child(2){
+.hire-social div:nth-child(2) {
     background-size: 100%;
     background-position: center;
     background-image: url('../../images/instagram.svg');
@@ -44,7 +44,7 @@
     width: 48px;
     height: 48px;
 }
-.hire-social div:nth-child(3){
+.hire-social div:nth-child(3) {
     background-size: 100%;
     background-position: center;
     background-image: url('../../images/behance.svg');
@@ -53,20 +53,26 @@
     width: 48px;
     height: 48px;
 }
-.hire-footer-right{
+.hire-footer-right {
     display: flex;
     flex-direction: column;
-    color: hsla(225, 48%, 90%, 0.384) ;
+    color: hsla(225, 48%, 90%, 0.384);
     padding-left: 20px;
 }
-.hire-footer-right div{
+.hire-footer-right div {
     display: flex;
 }
-.hire-footer-right div p:nth-child(1){
+.hire-footer-right div p:nth-child(1) {
     margin-right: 10px;
 }
-.fw_norm{
+.fw_norm {
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: underline;
+}
+.mt150px {
+    margin-top: 150px !important;
+}
+.violetMobileMarg {
+    bottom: 463px !important;
 }

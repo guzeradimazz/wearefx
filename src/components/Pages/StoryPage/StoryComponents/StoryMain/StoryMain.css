@@ -38,8 +38,8 @@
     position: absolute;
     right: 100px;
     content: '';
-    width: 1300px;
-    height: 1300px;
+    width: 1000px;
+    height: 1000px;
     background-image: url('../../../../../images/storyEllipse.svg');
     background-position: center;
     background-repeat: no-repeat;

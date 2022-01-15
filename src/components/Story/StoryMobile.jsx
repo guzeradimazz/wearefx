@@ -52,7 +52,7 @@ const StoryMobile = () => {
                     </p>
                 </div>
             </Link>
-            <Link to="/hire">
+            <Link to="/hireMobile">
                 <div className="violetBtn">
                     <p>
                         we’re ready

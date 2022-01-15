@@ -56,27 +56,78 @@ export const Cases = ({
     const navigate = useNavigate()
 
     useEffect(() => {
-        if (universalBack === 'mcBack') {
-            setMcStateHovered(true)
-            setUniversalBack()
-        } else if (universalBack === 'pBack') setPumaStateHovered(true)
-        else if (universalBack === 'fBack') setFlintStateHovered(true)
-        else if (universalBack === 'lBack') setBigStateHovered(true)
-        else if (universalBack === 'pmBack') setPMStateHovered(true)
-        else if (universalBack === 'nBack') setNaviStateHovered(true)
-        else {
-            setMcStateHovered(false)
-            setFlintStateHovered(false)
+        if (prevUniversalBack === 'mcBackdestroyed') {
             setPumaStateHovered(false)
             setBigStateHovered(false)
             setPMStateHovered(false)
             setNaviStateHovered(false)
+            setFlintStateHovered(false)
+            if (universalBack === 'mcBack') setMcStateHovered(true)
+            else {
+                setUniversalBack('')
+                setMcStateHovered(false)
+            }
+        }
+
+        if (prevUniversalBack === 'pBackdestroyed') {
+            setMcStateHovered(false)
+            setBigStateHovered(false)
+            setPMStateHovered(false)
+            setNaviStateHovered(false)
+            setFlintStateHovered(false)
+            if (universalBack === 'pBack') setPumaStateHovered(true)
+            else {
+                setUniversalBack('')
+                setPumaStateHovered(false)
+            }
+        }
+
+        if (prevUniversalBack === 'fBackdestroyed') {
+            setMcStateHovered(false)
+            setBigStateHovered(false)
+            setPMStateHovered(false)
+            setNaviStateHovered(false)
+            setPumaStateHovered(false)
+            if (universalBack === 'fBack') setFlintStateHovered(true)
+            else setFlintStateHovered(false)
+        }
+
+
+        if (prevUniversalBack === 'lBackdestroyed') {
+            setFlintStateHovered(false)
+            setMcStateHovered(false)
+            setPMStateHovered(false)
+            setNaviStateHovered(false)
+            setPumaStateHovered(false)
+            if (universalBack === 'lBack') setBigStateHovered(true)
+            else setBigStateHovered(false)
         }
         
-    }, [universalBack])
+
+        if (prevUniversalBack === 'pmBackdestroyed') {
+            setFlintStateHovered(false)
+            setMcStateHovered(false)
+            setNaviStateHovered(false)
+            setPumaStateHovered(false)
+            setBigStateHovered(false)
+            if (universalBack === 'pmBack') setPMStateHovered(true)
+            else setPMStateHovered(false)
+        }
+        
+        if (prevUniversalBack === 'pmBackdestroyed') {
+            setPMStateHovered(false)
+            setFlintStateHovered(false)
+            setMcStateHovered(false)
+            setPumaStateHovered(false)
+            setBigStateHovered(false)
+            if (universalBack === 'nBack') setNaviStateHovered(true)
+            else setNaviStateHovered(false)
+        }
+    }, [universalBack,prevUniversalBack])
 
     const onCaseEnter = (item) => {
         setUniversalBack(item.background)
+        setPrevUniversalBack(item.background + 'destroyed')
         setShowCube('displayNone')
     }
     const onCaseLeave = () => {
@@ -107,7 +158,9 @@ export const Cases = ({
         >
             <div
                 id="parallaxImageBlock"
-                className={`${universalBack} ${prevUniversalBack} universalBack`}
+                className={
+                    universalBack ? `${universalBack}` : `${prevUniversalBack}`
+                }
             ></div>
             <div className="casesArray">
                 {casesArray.slice(0, 6).map((item) => (
