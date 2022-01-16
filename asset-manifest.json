@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/wearefx/static/css/main.c8bd444a.chunk.css",
-    "main.js": "/wearefx/static/js/main.c4757c4d.chunk.js",
-    "main.js.map": "/wearefx/static/js/main.c4757c4d.chunk.js.map",
+    "main.js": "/wearefx/static/js/main.add69166.chunk.js",
+    "main.js.map": "/wearefx/static/js/main.add69166.chunk.js.map",
     "runtime-main.js": "/wearefx/static/js/runtime-main.a95c827a.js",
     "runtime-main.js.map": "/wearefx/static/js/runtime-main.a95c827a.js.map",
     "static/css/2.8182d9c8.chunk.css": "/wearefx/static/css/2.8182d9c8.chunk.css",
@@ -32,6 +32,6 @@
     "static/css/2.8182d9c8.chunk.css",
     "static/js/2.8931e246.chunk.js",
     "static/css/main.c8bd444a.chunk.css",
-    "static/js/main.c4757c4d.chunk.js"
+    "static/js/main.add69166.chunk.js"
   ]
 }
