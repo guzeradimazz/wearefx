@@ -33,3 +33,8 @@
     width: 100vw;
     height: 100vh;
 }
+.hireBtnPoA{
+    position: absolute;
+    bottom: -120px;
+    right: 0px;
+}

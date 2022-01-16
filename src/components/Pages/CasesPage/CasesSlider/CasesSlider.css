@@ -72,7 +72,7 @@
 }
 .casesSliderActive {
     box-shadow: 0 0 0 0px rgba(250, 253, 62, 0) ;
-    animation: slideBtnYellow 1s ease-in-out ;
+    animation: slideBtnYellow 1s ease-in-out;
 }
 .casesSliderActive:hover {
     box-shadow: 0 0 0 0px rgba(250, 253, 62, 0) ;

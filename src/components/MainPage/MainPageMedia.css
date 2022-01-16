@@ -15,6 +15,18 @@
         display: none;
         -webkit-display: none;
     }
+    .storyBlock h3 {
+        font-size: 48px;
+        margin-right: 80px;
+        line-height: 57px;
+    }
+    .storyBlock div {
+        font-size: 22px;
+        padding-left: 170px;
+    }
+    .casesArrow{
+        margin: 0; padding: 0 !important;
+    }
 }
 @media (min-width: 2550px) {
     .mobile__btns {
@@ -104,10 +116,16 @@
         margin-top: 20%;
     }
     .storyBlock h3 {
-        font-size: 55px;
+        font-size: 48px;
+        margin-right: 100px;
+        line-height: 57px;
     }
     .storyBlock div {
         font-size: 22px;
+        padding-left: 200px;
+    }
+    .casesArrow{
+        margin: 0; padding: 0 !important;
     }
     .hireBLock {
         width: 50%;
@@ -140,7 +158,6 @@
         -webkit-right: 120px !important;
     }
 }
-
 
 @media (max-width: 1440px) {
     .mobile__btns {

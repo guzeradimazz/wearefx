@@ -31,14 +31,27 @@ const CursorProvider = ({
 
     useEffect(() => {
         document.addEventListener('mousemove', onMouseMove)
-        document.addEventListener('mouseout',()=>{
-            mouseRef.current.classList.add('displayNone')
-        })
+
         return () => {
             document.removeEventListener('mousemove', onMouseMove)
         }
     })
-
+    useEffect(() => {
+        if (cursor) {
+            try {
+                document.addEventListener('mouseout', () => {
+                    mouseRef.current?.classList.add('displayNone')
+                })
+            } catch (error) {
+                console.error(error)
+            }
+        }
+        return () => {
+            document.removeEventListener('mouseout', () => {
+                mouseRef.current.classList.add('displayNone')
+            })
+        }
+    }, [cursor])
     const { x, y } = mousePosition
 
     const onCursor = (cursorType) => {

@@ -208,13 +208,13 @@ export const CasesPage = () => {
                             onMouseLeave={() => onMouseLeaveCase()}
                             className={
                                 item.isHovered
-                                    ? `${item.personalClass} casesArrayItem`
-                                    : 'casesArrayItem'
+                                    ? `${item.personalClass} casesArrayItem focus-in-expand`
+                                    : 'casesArrayItem focus-in-expand'
                             }
                             key={item.id}
                             onClick={() => navigate(`/cases/${item.id}`)}
                         >
-                            <span>{item.title}</span>
+                            <span className='focus-in-expand'>{item.title}</span>
                         </div>
                     ))}
                 </div>

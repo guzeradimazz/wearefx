@@ -20,7 +20,7 @@ const HirePage = () => {
         <CursorProvider>
             <div className="">
                 <Cube />
-                <HirePageHeader/>
+                <HirePageHeader />
                 <div className="hireBLock">
                     <div className="hireBLock__left">
                         <div className="hireBLock__left__top">
@@ -85,6 +85,13 @@ const HirePage = () => {
                         </div>
                     </div>
                 </div>
+
+                {/* <Link to="/wearefx">
+                    <div className="hireBtnViolet" />
+                </Link> */}
+            </div>
+            <div className="hireBtnPoA">
+                {' '}
                 <div className="hireBtnPage casesBtn gradientBtn">
                     <p>
                         chat with us
@@ -92,9 +99,6 @@ const HirePage = () => {
                         in telegram
                     </p>
                 </div>
-                <Link to="/wearefx">
-                    <div className="hireBtnViolet" />
-                </Link>
             </div>
         </CursorProvider>
     )
