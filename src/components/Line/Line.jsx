@@ -204,20 +204,20 @@ export default function Line({ polyline, isClicked, coords, amount, coords1 }) {
         set(dots3, coords1, stepX1, stepY1)
         if (isClicked) {
             draw1(
-                dots[length].x,
-                dots[length].y,
-                dots1[length].x,
-                dots1[length].y,
-                dots2[0].x,
-                dots2[0].y,
-                dots3[0].x,
-                dots3[0].y
+                // dots[length].x,
+                // dots[length].y,
+                // dots1[length].x,
+                // dots1[length].y,
+                // dots2[0].x,
+                // dots2[0].y,
+                // dots3[0].x,
+                // dots3[0].y
             )
         }
         if (!isClicked) {
-            ctx.restore()
-            ctx.clearRect(0, 0, canvas.width, canvas.height)
-            idInterval.current && clearInterval(idInterval.current)
+            // ctx.restore()
+            // ctx.clearRect(0, 0, canvas.width, canvas.height)
+            // idInterval.current && clearInterval(idInterval.current)
         }
     }, [isClicked])
 
