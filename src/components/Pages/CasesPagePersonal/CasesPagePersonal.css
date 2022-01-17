@@ -54,6 +54,7 @@
     color: #edf5fc;
 }
 .text-block {
+    height: 100vh;
     width: 100vw;
     background-image: url('../../../images/X.svg');
     background-repeat: space;

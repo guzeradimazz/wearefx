@@ -11,8 +11,26 @@
     overflow-y: hidden !important;
 }
 .mainPageSelector {
-    animation-delay: 2s;
+    animation-delay: 3s !important;
     animation: unFocusFocus 2s;
+    overflow-y: hidden !important;
+}
+@keyframes unFocusFocus {
+    0% {
+        filter: blur(1.2rem);
+    }
+    25% {
+        filter: blur(0.6rem);
+    }
+    50% {
+        filter: blur(1.2rem);
+    }
+    100% {
+        filter: blur(0px);
+    }
+}
+.mainPageSelector * {
+    overflow-y: hidden !important;
 }
 .toner {
     background: rgb(255, 255, 255, 0);

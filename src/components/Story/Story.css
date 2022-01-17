@@ -8,15 +8,18 @@
     left: 0;
     transition: clip-path 0.3s ease;
     animation: storyShow;
+    animation-timing-function: cubic-bezier(0.53, 0.57, 0.34, 0.98);
     animation-duration: 0.4s;
-    animation-timing-function: linear;
     animation-fill-mode: forwards;
+    transition: clip-path 0.4s;
     clip-path: polygon(94% 0, 100% 0, 100% 4%, 7% 92%);
 }
 .storyFullScreen {
+    z-index: 2000;
     clip-path: polygon(18% 0, 100% 0, 100% 100%, 7% 92%);
     transition: clip-path 0.3s;
-    animation: toFullScreenStory 0.3s linear forwards;
+    animation: toFullScreenStory 0.3s cubic-bezier(0.53, 0.57, 0.34, 0.98)
+        forwards;
     transition: clip-path 0.2s;
 }
 @keyframes toFullScreenStory {
@@ -32,6 +35,7 @@
     top: 0;
     width: 100vw;
     height: 100vh;
+    z-index: 2000;
     left: 0;
     transition: clip-path 0.3s ease;
     animation: storyShowBack;
@@ -67,8 +71,7 @@
         clip-path: polygon(18% 0, 100% 0, 100% 100%, 7% 92%);
     }
 }
-@media (max-width:1920px) {
-    
+@media (max-width: 1920px) {
 }
 .storyBtn {
     font-size: 13px;

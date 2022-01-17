@@ -40,6 +40,7 @@ export const CasesPage = () => {
             casesArrayItemBack: 'mcHoveredBack',
             personalClass: 'hush-MC',
             page: 1,
+            delay:'0.2s'
         },
         {
             id: 4562,
@@ -47,62 +48,63 @@ export const CasesPage = () => {
             casesArrayItemBack: 'mcHoveredBack',
             personalClass: 'hush-Puma',
             page: 1,
+            delay:'0.3s'
         },
         {
             id: 435673,
             title: `Flint`,
             casesArrayItemBack: 'mcHoveredBack',
             personalClass: 'hush-Flint',
-
             page: 1,
+            delay:'0.4s'
         },
         {
             id: 498765432,
             title: `Little big`,
             casesArrayItemBack: 'mcHoveredBack',
             personalClass: 'hush-big',
-
             page: 1,
+            delay:'0.5s'
         },
         {
             id: 55678,
             title: `Parimatch`,
             casesArrayItemBack: 'mcHoveredBack',
             personalClass: 'hush-Pm',
-
             page: 1,
+            delay:'0.6s'
         },
         {
             id: 66743567,
             title: `Navi`,
             casesArrayItemBack: 'mcHoveredBack',
             personalClass: 'hush-Navi',
-
             page: 1,
+            delay:'0.7s'
         },
         {
             id: 756789,
             title: `Tvorchi`,
             casesArrayItemBack: 'mcHoveredBack',
             personalClass: 'hush-Tvorchi',
-
             page: 1,
+            delay:'0.8s'
         },
         {
             id: 8765438,
             title: `Bond Delivery`,
             casesArrayItemBack: 'mcHoveredBack',
             personalClass: 'hush-Bond',
-
             page: 1,
+            delay:'0.9s'
         },
         {
             id: 567899,
             title: `Puma X FC Shaktar`,
             casesArrayItemBack: 'mcHoveredBack',
             personalClass: 'hush-Shaktar',
-
             page: 1,
+            delay:'1s'
         },
         {
             id: 1890876540,
@@ -110,6 +112,7 @@ export const CasesPage = () => {
             casesArrayItemBack: 'mcHoveredBack',
             personalClass: 'hush-Kite',
 
+            delay:'1.1s',
             page: 1,
         },
         {
@@ -118,6 +121,7 @@ export const CasesPage = () => {
             casesArrayItemBack: 'mcHoveredBack',
             personalClass: 'hush-Chipsters',
 
+            delay:'1.2s',
             page: 1,
         },
         {
@@ -125,6 +129,7 @@ export const CasesPage = () => {
             title: `Hushme`,
             casesArrayItemBack: 'mcHoveredBack',
             personalClass: 'hush-item',
+            delay:'1.3s',
             page: 1,
         },
         {
@@ -192,6 +197,7 @@ export const CasesPage = () => {
                         </div>
                     </div>
                     <Link to="/wearefx">
+                        <div className="animated-logo-X">X</div>
                         <div className="animated-logo header-right"></div>
                     </Link>
                 </div>
@@ -208,13 +214,13 @@ export const CasesPage = () => {
                             onMouseLeave={() => onMouseLeaveCase()}
                             className={
                                 item.isHovered
-                                    ? `${item.personalClass} casesArrayItem focus-in-expand`
-                                    : 'casesArrayItem focus-in-expand'
+                                    ? `${item.personalClass} casesArrayItem`
+                                    : 'casesArrayItem'
                             }
                             key={item.id}
                             onClick={() => navigate(`/cases/${item.id}`)}
                         >
-                            <span className='focus-in-expand'>{item.title}</span>
+                            <span style={{animationDelay:`${item.delay}`}} >{item.title}</span>
                         </div>
                     ))}
                 </div>

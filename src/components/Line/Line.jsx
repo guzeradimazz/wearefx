@@ -9,7 +9,7 @@ export default function Line({ polyline, isClicked, coords, amount, coords1 }) {
     const canvas = polyline
     useEffect(() => {
         return () => {
-            polyline.style.cssText = 'display:none;'
+            // polyline.style.cssText = 'display:none;'
         }
     }, [])
 
@@ -19,7 +19,7 @@ export default function Line({ polyline, isClicked, coords, amount, coords1 }) {
     applyLayout(canvas)
 
     useEffect(() => {
-        return () => idInterval.current && clearInterval(idInterval.current)
+        // return () => idInterval.current && clearInterval(idInterval.current)
     }, [])
 
     ctx.lineWidth = 1.3
@@ -203,16 +203,16 @@ export default function Line({ polyline, isClicked, coords, amount, coords1 }) {
         set(dots2, coords1, stepX1, stepY1)
         set(dots3, coords1, stepX1, stepY1)
         if (isClicked) {
-            draw1(
-                // dots[length].x,
-                // dots[length].y,
-                // dots1[length].x,
-                // dots1[length].y,
-                // dots2[0].x,
-                // dots2[0].y,
-                // dots3[0].x,
-                // dots3[0].y
-            )
+            // draw1(
+            //     dots[length].x,
+            //     dots[length].y,
+            //     dots1[length].x,
+            //     dots1[length].y,
+            //     dots2[0].x,
+            //     dots2[0].y,
+            //     dots3[0].x,
+            //     dots3[0].y
+            // )
         }
         if (!isClicked) {
             // ctx.restore()

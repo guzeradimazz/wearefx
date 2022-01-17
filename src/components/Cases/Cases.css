@@ -7,21 +7,22 @@
     z-index: 2000;
     background-color: #000;
     animation: showLayout;
-    animation-timing-function: linear;
-    animation-duration: 0.2s;
+    animation-timing-function: cubic-bezier(.53,.57,.34,.98);
+    animation-duration: 0.4s;
     animation-fill-mode: forwards;
-    transition: clip-path 0.3s;
+    transition: clip-path 0.4s;
     animation-delay: 0.2s;
     clip-path: polygon(50% 10%, 50% 93%, 50% 100%, 50% 100%, 50% 93%);
 }
 .casesFullScreen {
+    z-index: 2000;
     clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 0%);
     transition: clip-path 0.3s;
     animation: toFullScreen;
-    animation-timing-function: linear;
-    animation-duration: 0.3s;
+    animation-timing-function: cubic-bezier(.53,.57,.34,.98);
+    animation-duration: 0.4s;
     animation-fill-mode: forwards;
-    transition: clip-path 0.3s;
+    transition: clip-path 0.4s;
 }
 @keyframes toFullScreen {
     0% {
@@ -46,10 +47,12 @@
     top: 0;
     width: 100vw;
     height: 100vh;
+    z-index: 2000;
     animation: showLayoutBack;
-    animation-timing-function: ease;
-    animation-duration: 0.2s;
+    animation-timing-function: cubic-bezier(.53,.57,.34,.98);
+    animation-duration: 0.4s;
     animation-fill-mode: forwards;
+    transition: clip-path 0.4s;
     clip-path: polygon(50% 10%, 50% 93%, 50% 100%, 50% 100%, 50% 93%);
 }
 
@@ -173,7 +176,10 @@
     width: 24px;
     height: 24px;
     background-image: url('../../images/arrow.svg');
-    margin-bottom: 20px;
+    margin-bottom: 20px !important;
+}
+.arrowToTop{
+    margin-top: 20px;
 }
 .casesMain {
     position: relative;
@@ -363,6 +369,9 @@
     transform: none;
     transition: all 0.3s ease !important;
     opacity: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     backdrop-filter: none;
     animation: destroyBack 1s ease forwards;
 }

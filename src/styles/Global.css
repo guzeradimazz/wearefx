@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    cursor: none;
+    /* cursor: none; */
     font-family: 'Futura PT';
     /* overflow-x: hidden !important; */
 }
@@ -15,36 +15,56 @@ li {
 html {
     overflow-x: hidden !important;
     background-color: #000;
-    animation-delay: 2s;
-    animation: unFocusFocus 2s;
 }
-.slick-arrow{
+.slick-arrow {
     display: none;
 }
-.animated-logo::before {
+
+.header-right, .personal-right{
+    right: 50px !important;
+}
+.animated-logo-X {
     position: absolute;
-    content: '';
-    border-radius: 50%;
-    width: 10px;
-    height: 10px;
-    transform: translate(100%, 100%);
-    animation: pulseBtnSlider 2s linear infinite;
+    z-index: 1999;
+    top: 60px;
+    right: 60px;
+    width: 36px;
+    height: 36px;
+    color: transparent;
+    background: linear-gradient(90deg, #5703f4, #ecb130, #cf5feb, #5703f4);
+    background-size: 400%;
+    transition: 0.5s;
+    filter: blur(20px);
+    opacity: 1;
+    animation: animate 8s linear infinite;
 }
-.animationFocus {
-    animation: unFocusFocus 2s;
+.animated-logo-X:hover{
+    filter: blur(30px);
+    width: 45px;height: 45px;
+    background-position: center;
 }
-@keyframes unFocusFocus {
+@keyframes animate {
     0% {
-        filter: blur(1.2rem);
-    }
-    25% {
-        filter: blur(0.6rem);
-    }
-    50% {
-        filter: blur(1.2rem);
+        background-position: 0%;
     }
     100% {
-        filter: blur(0px);
+        background-position: 400%;
+    }
+}
+@keyframes neon {
+    from {
+        text-shadow: 0 0 6px rgba(250, 169, 239, 0.98),
+            0 0 54px rgba(250, 169, 239, 0.98),
+            0 0 1px rgba(158, 110, 247, 0.52),
+            0 0 35px rgba(158, 110, 247, 0.52), 0 0 3px rgba(245, 169, 29, 1),
+            0 0 54px rgba(245, 169, 29, 1);
+    }
+    to {
+        text-shadow: 0 0 6px rgba(250, 169, 239, 0.98),
+            0 0 54px rgba(250, 169, 239, 0.98),
+            0 0 12px rgba(158, 110, 247, 0.52),
+            0 0 44px rgba(158, 110, 247, 0.52),
+            0 0 38px rgba(245, 169, 29, 0.88), 0 0 100px rgba(245, 169, 29, 1);
     }
 }
 .cube {

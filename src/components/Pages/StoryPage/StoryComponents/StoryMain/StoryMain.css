@@ -47,6 +47,8 @@
     top: 30%;
     z-index: 2000;
 }
+@media (max-width: 2560px) {
+}
 @media (max-width: 1920px) {
     .story-main-content p:nth-child(1) {
         font-size: 36px;
@@ -58,9 +60,6 @@
     .story-ellipse {
         width: 900px;
         height: 900px;
-    }
-    .story-bottom {
-        height: 100vh;
     }
 }
 
@@ -74,9 +73,6 @@
     .story-ellipse {
         width: 550px;
         height: 550px;
-    }
-    .story-bottom {
-        height: 120vh;
     }
 }
 @media (max-width: 1024px) {

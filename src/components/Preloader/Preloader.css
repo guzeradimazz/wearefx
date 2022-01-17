@@ -1,25 +1,9 @@
-.preloader{
+.preloader {
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 100vw;
+    z-index: 1000203920392092039023;
     height: 100vh;
-    background-color: #000;
-    background-image: url('../../images/X.svg');
-    background-repeat: space;
-    background-size: 8%;
-}
-.preloader:before {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-}
-.preloader__image{
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 47%;
-    background-image: url('../../images/preloader.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-    width: 122px;
-    height: 171px;
+    object-fit: cover;
 }

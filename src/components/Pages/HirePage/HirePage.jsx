@@ -18,7 +18,7 @@ const HirePage = () => {
 
     return (
         <CursorProvider>
-            <div className="">
+            <div>
                 <Cube />
                 <HirePageHeader />
                 <div className="hireBLock">
@@ -86,9 +86,6 @@ const HirePage = () => {
                     </div>
                 </div>
 
-                {/* <Link to="/wearefx">
-                    <div className="hireBtnViolet" />
-                </Link> */}
             </div>
             <div className="hireBtnPoA">
                 {' '}

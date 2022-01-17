@@ -35,6 +35,7 @@
     background-color: transparent;
 }
 .video-video video {
+    height: 100vh;
     object-fit: cover;
 }
 .video-center {

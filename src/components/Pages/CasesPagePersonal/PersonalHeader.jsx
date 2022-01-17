@@ -23,6 +23,7 @@ export const PersonalHeader = () => {
                     </div>
                 </div>
                 <Link to="/wearefx">
+                        <div className="animated-logo-X">X</div>
                     <div className="animated-logo personal-right"></div>
                 </Link>
             </div>

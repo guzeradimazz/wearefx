@@ -1,7 +1,12 @@
 .story-bottom {
-    height: 140vh !important;
-    position: relative;
+    height: 170vh !important;
     background-color: #071013;
+}
+.marques{
+    width: 100vw;
+    height: 50vh;
+    margin-top: 10vh;
+    margin-bottom: -20vh;
 }
 .marquee-img,
 .marquee-img-reverse {
@@ -110,7 +115,7 @@
     background: rgb(0, 0, 0);
     height: 138px;
     position:absolute;
-    bottom: 0;
+    bottom: 0 !important;
     left: 0;
     width: 100vw;
     align-items: center;

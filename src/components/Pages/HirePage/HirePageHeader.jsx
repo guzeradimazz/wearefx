@@ -15,6 +15,7 @@ const HirePageHeader = () => {
                 </div>
             </div>
             <Link to="/wearefx">
+                        <div className="animated-logo-X">X</div>
                 <div className="animated-logo header-right"></div>
             </Link>
         </div>

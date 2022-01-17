@@ -1,12 +1,15 @@
-import React from 'react';
+import React from 'react'
 import './Preloader.css'
+import preloader from './X_A2.mp4'
 
-const Preloader = () => {
+const Preloader = ({isLoading}) => {
     return (
-        <div className='preloader'>
-            <div className='preloader__image'/>
+        <div className={isLoading ?``:'displayNone'}>
+            <video className="preloader" autoPlay loop muted>
+                <source src={preloader} type="video/mp4" />
+            </video>
         </div>
-    );
-};
+    )
+}
 
-export default Preloader;
+export default Preloader
