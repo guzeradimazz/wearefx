@@ -188,10 +188,7 @@
         -webkit-display: none;
     }
     .showreel__mobile,
-    .swiper__mobile {
-        display: none;
-        -webkit-display: none;
-    }
+
     .showreel {
         display: block;
     }
@@ -481,4 +478,8 @@
         margin-top: 40%;
         flex-direction: column;
     }
+}
+.swiper__mobile {
+    display: none !important;
+    -webkit-display: none !important;
 }
