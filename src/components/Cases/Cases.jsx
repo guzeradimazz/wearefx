@@ -141,14 +141,15 @@ export const Cases = ({
     }
 
     const parallaxHandler = (e) => {
-        const x = (e.clientX - window.innerWidth / 1.6) / 45
-        const y = (e.clientY - window.innerHeight / 1.6) / 55
+        const x = (e.clientX - window.innerWidth / 1.5) / 26
+        const y = (e.clientY - window.innerHeight / 1.5) / 10
         document.getElementById(
             'parallaxImageBlock'
         ).style.cssText = `transform:
-        skew(${x / 2}deg,${y * 2}deg)
-        rotateY(${x * 5}deg)
-        rotateX(${y * 5}deg)
+        perspective(1000px) 
+        rotateY(${x }deg) 
+        rotateX(${y }deg) 
+        scale3d(1,1,1)
         `
     }
     return (
@@ -238,6 +239,7 @@ export const Cases = ({
                 </p>
             </div>
             <Link to="/cases" onClick={() => ToFullScreen()}>
+                <span className="shape pos3"/>
                 <div className="casesBtn gradientBtn">
                     <p>
                         Explore

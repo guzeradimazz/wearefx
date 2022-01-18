@@ -81,6 +81,10 @@
     z-index: 2000;
     right: 60px;
 }
+.pos2{
+    top: 70px;
+    right: 70px;
+}
 .storyBlock {
     transition: 0.3s ease;
     z-index: 2000;

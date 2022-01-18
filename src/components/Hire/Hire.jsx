@@ -102,12 +102,20 @@ export const Hire = ({
                     <div className="hireBLock__right__top">
                         <p>
                             Wearefx © 2021 by
-                            <Link className="violet_on_hover" to="/wearefx" onClick={()=>ToFullScreen()}>
+                            <Link
+                                className="violet_on_hover"
+                                to="/wearefx"
+                                onClick={() => ToFullScreen()}
+                            >
                                 {' '}
                                 Brāh lab ﹤
                             </Link>
                         </p>
-                        <Link className="violet_on_hover" to="/wearefx" onClick={()=>ToFullScreen()}>
+                        <Link
+                            className="violet_on_hover"
+                            to="/wearefx"
+                            onClick={() => ToFullScreen()}
+                        >
                             Privacy Policy ﹤
                         </Link>
                     </div>
@@ -137,8 +145,9 @@ export const Hire = ({
                     </div>
                 </div>
             </div>
-            <Link to="/hire" onClick={()=>ToFullScreen()}>
-                <div className="hireBtn gradientBtn">
+            <Link to="/hire" onClick={() => ToFullScreen()}>
+                <span className="shape pos1"/>
+                <div className="hireBtn gradientBtn ">
                     <p>
                         chat with us
                         <br /> in telegram

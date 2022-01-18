@@ -171,8 +171,8 @@ export const CasesPage = () => {
         else setShowCube('')
     }, [isHoveredBackground])
     const parallaxHandler = (e) => {
-        const x = (e.clientX - window.innerWidth / 1.6) / 45
-        const y = (e.clientY - window.innerHeight / 1.3) / 55
+        const x = (e.clientX - window.innerWidth / 1.5) / 45
+        const y = (e.clientY - window.innerHeight / 1.5) / 13
         document.getElementById(
             'parallaxImageBlock'
         ).style.cssText = `transform: 
@@ -182,8 +182,6 @@ export const CasesPage = () => {
         scale3d(1,1,1)
         `
     }
-
-    // skew(${x / 2}deg,${y / 3}deg) 
     return (
         <CursorProvider>
             <div className=" animationFocus cases-page">

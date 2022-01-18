@@ -11,7 +11,7 @@ const TypingText = ({ isClicked }) => {
             strings: [
                 "Welcome\nto\nWeareFX,\ncreative\nstudio\rwith\nbig\nideas",
                 "Where\nbeauty\nand\nfunction\nare\ncrafted\ntogether",
-                "Working\nacross\nall\nmedia\nchannels\n&\nplatforms",
+                "Working\nacross\nall\nmedia\nchannels\nplatforms",
             ],
             startDelay: 1000,
             typeSpeed: 24,

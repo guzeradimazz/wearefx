@@ -55,6 +55,10 @@
     transition: clip-path 0.4s;
     clip-path: polygon(50% 10%, 50% 93%, 50% 100%, 50% 100%, 50% 93%);
 }
+.pos3{
+    bottom: 70px;
+    right: 70px;
+}
 
 @keyframes showLayoutBack {
     0% {

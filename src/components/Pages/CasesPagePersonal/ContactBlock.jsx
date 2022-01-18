@@ -5,6 +5,7 @@ const ContactBlock = () => {
     return (
         <div className="contact-block">
             <div className="gradientBtnContact">
+                <span className="shape " />
                 <p>
                     We’re
                     <br />
