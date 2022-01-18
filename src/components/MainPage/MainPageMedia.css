@@ -280,8 +280,8 @@
     }
     .mobile__btns {
         z-index: 20002;
-        display: flex;
-        -webkit-display: flex;
+        display: flex !important;
+        -webkit-display: flex !important;
         flex-direction: column;
         position: absolute;
         right: 60px;
@@ -479,7 +479,7 @@
         flex-direction: column;
     }
 }
-.swiper__mobile {
-    display: none !important;
-    -webkit-display: none !important;
+.mobile__btns {
+    display: none ;
+    -webkit-display: none ;
 }
