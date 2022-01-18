@@ -4,7 +4,7 @@ import './StoryBottom.css'
 
 const StoryFooter = () => {
     return (
-        <div className="story-footer">
+        <div className="story-footer mForFooter">
             <div className="story-footer-left">
                 <Link to='/wearefx'>Home</Link>
                 <Link to='/cases'>Cases</Link>

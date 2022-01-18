@@ -175,12 +175,15 @@ export const CasesPage = () => {
         const y = (e.clientY - window.innerHeight / 1.3) / 55
         document.getElementById(
             'parallaxImageBlock'
-        ).style.cssText = `transform:  
-        skew(${x / 2}deg,${y / 3}deg) 
-        rotateY(${x * 5}deg) 
-        rotateX(${y * 5}deg)
+        ).style.cssText = `transform: 
+        perspective(1000px) 
+        rotateY(${x}deg) 
+        rotateX(${y}deg) 
+        scale3d(1,1,1)
         `
     }
+
+    // skew(${x / 2}deg,${y / 3}deg) 
     return (
         <CursorProvider>
             <div className=" animationFocus cases-page">

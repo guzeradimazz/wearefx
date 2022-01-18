@@ -1,12 +1,12 @@
 .story-bottom {
-    height: 170vh !important;
+    /* height: 150vh; */
     background-color: #071013;
 }
 .marques{
     width: 100vw;
     height: 50vh;
     margin-top: 10vh;
-    margin-bottom: -20vh;
+    margin-bottom: 10vh;
 }
 .marquee-img,
 .marquee-img-reverse {
@@ -110,11 +110,13 @@
         transform: translate(0, 0);
     }
 }
-
+.mForFooter{
+    margin-top: 300px;
+}
 .story-footer {
     background: rgb(0, 0, 0);
     height: 138px;
-    position:absolute;
+    position:relative;
     bottom: 0 !important;
     left: 0;
     width: 100vw;
