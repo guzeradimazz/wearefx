@@ -4,6 +4,8 @@ import MainPage from './components/MainPage/MainPage'
 import './styles/Global.css'
 import CursorProvider from './components/CursorProvider/CursorProvider'
 
+import preloader from './components/Preloader/X_A2.mp4'
+
 function App() {
     const [isLoading, setIsLoading] = useState(false)
 
@@ -37,25 +39,28 @@ function App() {
 
     return (
         <div className="App">
-            {
-                <div>
-                    <Preloader isLoading={isLoading} />
-                    <CursorProvider
-                        hoveredCursor={is1BtnHovered}
-                        hoveredCursor1={is2BtnHovered}
-                        hoveredCursor2={is3BtnHovered}
-                    >
-                        <MainPage
-                            setIs1BtnHovered={setIs1BtnHovered}
-                            setIs2BtnHovered={setIs2BtnHovered}
-                            setIs3BtnHovered={setIs3BtnHovered}
-                            is1BtnHovered={is1BtnHovered}
-                            is2BtnHovered={is2BtnHovered}
-                            is3BtnHovered={is3BtnHovered}
-                        />
-                    </CursorProvider>
+            <div>
+                {/* <Preloader isLoading={isLoading} /> */}
+                <div className={isLoading ? `` : 'displayNone'}>
+                    <video className="preloader" autoPlay muted>
+                        <source src={preloader} type="video/mp4" />
+                    </video>
                 </div>
-            }
+                <CursorProvider
+                    hoveredCursor={is1BtnHovered}
+                    hoveredCursor1={is2BtnHovered}
+                    hoveredCursor2={is3BtnHovered}
+                >
+                    <MainPage
+                        setIs1BtnHovered={setIs1BtnHovered}
+                        setIs2BtnHovered={setIs2BtnHovered}
+                        setIs3BtnHovered={setIs3BtnHovered}
+                        is1BtnHovered={is1BtnHovered}
+                        is2BtnHovered={is2BtnHovered}
+                        is3BtnHovered={is3BtnHovered}
+                    />
+                </CursorProvider>
+            </div>
         </div>
     )
 }
