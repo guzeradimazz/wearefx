@@ -236,6 +236,7 @@ export const CasesPage = () => {
                         before.
                     </p>
                 </div>
+                <span className="shape pos3"/>
                 <div className="casesBtn gradientBtn">
                     <p>
                         We’re

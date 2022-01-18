@@ -89,6 +89,7 @@ const HirePage = () => {
             </div>
             <div className="hireBtnPoA">
                 {' '}
+                <span className="shape pos3"/>
                 <div className="hireBtnPage casesBtn gradientBtn">
                     <p>
                         chat with us

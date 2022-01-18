@@ -59,7 +59,7 @@ const StoryBottom = () => {
                     </div>
                 </div>
             </div>
-            <StoryFooter />
+            <StoryFooter mForFooter={'mForFooter'}/>
         </div>
     )
 }

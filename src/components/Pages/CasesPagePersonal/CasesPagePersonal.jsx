@@ -1,4 +1,4 @@
-import React, { useEffect,useRef,useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import CursorProvider from '../../CursorProvider/CursorProvider'
 import StoryFooter from '../StoryPage/StoryComponents/StoryBottom/StoryFooter'
 import './CasesPagePersonal.css'
@@ -63,13 +63,23 @@ const CasesPagePersonal = () => {
         <CursorProvider>
             <div id="personalPageId" className=" personal-page">
                 <PersonalHeader />
-                <VideoPersonal fullscreen={fullscreen} setFullscreen={setFullscreen} refPlayer={refPlayer} refPlayerScreenfull={refPlayerScreenfull} />
+                <VideoPersonal
+                    fullscreen={fullscreen}
+                    setFullscreen={setFullscreen}
+                    refPlayer={refPlayer}
+                    refPlayerScreenfull={refPlayerScreenfull}
+                />
                 <TextBlock
                     text={
                         'we wanted to show the duality of the life that a child with kidney disease faces everyday. We came up with a technique commonly used in photography, but not as often used in films.'
                     }
                 />
-                <VideoPersonal1 fullscreen={fullscreen1} setFullscreen={setFullscreen1} refPlayer={refPlayer1} refPlayerScreenfull={refPlayerScreenfull1}/>
+                <VideoPersonal1
+                    fullscreen={fullscreen1}
+                    setFullscreen={setFullscreen1}
+                    refPlayer={refPlayer1}
+                    refPlayerScreenfull={refPlayerScreenfull1}
+                />
                 <TextBlock
                     text={
                         'The key to pulling of the multiplicity effect was a piece of camera equipment know as a Technodolly. This computer controlled camera crane, can be pre-programmed to make the same camera movement over and over again. As it follows the same predefined path we shoot the kids in different positions. This allows to overlay and stitch the shots so we end up with the same child twice in one shot'
@@ -85,6 +95,7 @@ const CasesPagePersonal = () => {
                 />
                 <ContactBlock />
                 <div className="next-project">
+                    <span className="shape pos5" />
                     <div className="pStoryBtn storyBtn gradientBtn">
                         <p>
                             Explore

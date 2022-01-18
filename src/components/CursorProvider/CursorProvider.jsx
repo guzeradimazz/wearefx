@@ -36,20 +36,15 @@ const CursorProvider = ({
             document.removeEventListener('mousemove', onMouseMove)
         }
     })
+    const addDNToCursor = () => {
+        mouseRef.current?.classList.add('displayNone')
+    }
     useEffect(() => {
         if (cursor) {
-            try {
-                document.addEventListener('mouseout', () => {
-                    mouseRef.current?.classList.add('displayNone')
-                })
-            } catch (error) {
-                console.error(error)
-            }
+            document.addEventListener('mouseout', addDNToCursor)
         }
         return () => {
-            document.removeEventListener('mouseout', () => {
-                mouseRef.current.classList.add('displayNone')
-            })
+            document.removeEventListener('mouseout', addDNToCursor)
         }
     }, [cursor])
     const { x, y } = mousePosition

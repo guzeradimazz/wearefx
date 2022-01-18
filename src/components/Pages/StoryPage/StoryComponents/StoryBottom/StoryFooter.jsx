@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './StoryBottom.css'
 
-const StoryFooter = () => {
+const StoryFooter = ({mForFooter}) => {
     return (
-        <div className="story-footer mForFooter">
+        <div className={`story-footer ${mForFooter}`}>
             <div className="story-footer-left">
                 <Link to='/wearefx'>Home</Link>
                 <Link to='/cases'>Cases</Link>

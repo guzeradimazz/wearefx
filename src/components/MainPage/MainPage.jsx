@@ -28,37 +28,37 @@ const MainPage = ({
             title: "McDonald's",
             id: 1,
             className: 'mcDonalds',
-            background: 'mcBack'
+            background: 'mcBack',
         },
         {
             title: 'Puma',
             id: 2,
             className: 'mcDonalds',
-            background: 'pBack'
+            background: 'pBack',
         },
         {
             title: 'Flint',
             id: 3,
             className: 'mcDonalds',
-            background: 'fBack'
+            background: 'fBack',
         },
         {
             title: 'Little big',
             id: 4,
             className: 'mcDonalds',
-            background: 'lBack'
+            background: 'lBack',
         },
         {
             title: 'Parimatch',
             id: 5,
             className: 'mcDonalds',
-            background: 'pmBack'
+            background: 'pmBack',
         },
         {
             title: 'Navi',
             id: 6,
             className: 'mcDonalds',
-            background: 'nBack'
+            background: 'nBack',
         },
     ]
 
@@ -73,7 +73,7 @@ const MainPage = ({
     const canvas3 = document.getElementById('overlay3')
 
     const polyline = document.getElementById('polyline')
-    const polyline1 =  document.getElementById('polyline1')
+    const polyline1 = document.getElementById('polyline1')
     const polyline2 = document.getElementById('polyline2')
 
     const [isCasesClicked, setIsCasesClicked] = useState(false)
@@ -251,6 +251,21 @@ const MainPage = ({
         setIsCanvasesHidded(!isCanvasesHidded)
         setIsHireClicked((isHireClicked) => !isHireClicked)
     }
+    useEffect(() => {
+        if (
+            (isCasesClicked && isCasesEntered) ||
+            (isStoryClicked && isStoryEntered) ||
+            (isHireClicked && isHireEntered)
+        )
+            PlaceCursor.classList.add('standartCursor')
+    }, [
+        isCasesClicked,
+        isCasesEntered,
+        isStoryClicked,
+        isStoryEntered,
+        isHireClicked,
+        isHireEntered,
+    ])
 
     return (
         <div className="mainPageSelector">
@@ -258,12 +273,9 @@ const MainPage = ({
                 <video className="showreel no_overflow" autoPlay loop muted>
                     <source src={videoPower} type="video/mp4" />
                 </video>
-                <div className="showreel__mobile"></div>
+                <div className="showreel__mobile" />
                 <div className="toner " />
                 <div className="no_overflow">
-
-
-
                     <MainPageButton
                         canvas={canvas1}
                         onClick={casesClicked}
@@ -277,8 +289,6 @@ const MainPage = ({
                         }
                         ref={btn1Ref}
                     />
-
-
 
                     <MainPageButton
                         canvas={canvas2}
@@ -336,9 +346,7 @@ const MainPage = ({
                         isClicked={isHireClicked}
                         setIsClicked={setIsHireClicked}
                     />
-                    <div
-                        className={` main no_overflow`}
-                    >
+                    <div className={` main no_overflow`}>
                         <div className="mobile__btns">
                             <Link to="/storyMobile">
                                 <button>story</button>

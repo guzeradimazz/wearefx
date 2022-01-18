@@ -1,39 +1,55 @@
 .movable {
-    width: 40px ;
-    height: 40px ;
-    background-repeat: no-repeat ;
-    background-image: url('../../images/Cursor.svg') ;
-    background-position: center ;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-image: url('../../images/Cursor.svg');
+    background-position: center;
     background-size: 100%;
-    position: fixed !important;
+    position: absolute !important;
     z-index: 999999999 !important;
     opacity: 0.9;
     transition: transform 0.5s ease !important;
     transition: background 0.1s ease;
-    transform: translate(-50%, -30%) scale(1);
-    pointer-events:none;
+    transform:  scale(1) translate(-40%,-40%);
+    pointer-events: none;
     overflow-y: hidden !important;
-    /* animation: hoveredCurs 0.3s ease-in-out; */
+    animation: backCursor .5s ease-in-out;
+}
+@keyframes backCursor {
+    from{
+        transform: scale(4);
+    }
+    to{
+        transform: scale(2.5) translate(-20%, -10%);
+    }
 }
 .hoveredCursorClass {
-    transition: background 0.3s ease,transform 0.3s ease !important;
-    transform: scale(4) translate(-10%, -10%) !important;
+    pointer-events: none;
+    transition: transform 0.5s ease !important;
+    transition: background 0.1s ease;
+    transform: scale(4) translate(-10%,-10%);
     background-image: url('../../images/CursorHovered.svg');
+    animation: hoveredCurs .5s ease forwards;
 }
 @keyframes hoveredCurs {
-    0% {
-        opacity: 1;
-        transform: none;
-        transition: 0.2s ease;
+    from {
+        transform: scale(2.5) ;
     }
-    75% {
-        transform: scale(2);
-        transition: 0.3s ease;
-        opacity: 0.7;
+    to {
+        transform: scale(4) translate(-10%,-10%) ;
     }
-    100% {
-        transform: scale(4);
-        transition: 0.2s ease;
-        opacity: 0;
+}
+@keyframes toStandartCursor {
+    from{
+        transform: scale(2.5);
     }
+    to{
+        transform: scale(1);
+    }
+}
+.standartCursor{
+    transition: transform 0.5s ease !important;
+    transform:  scale(2.5) translate(-40%,-40%) ;
+    background-image: none !important;
+    animation: toStandartCursor .3s linear forwards;
 }
