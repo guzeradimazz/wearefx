@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/wearefx/static/css/main.77db60e9.chunk.css",
-    "main.js": "/wearefx/static/js/main.e5f463e2.chunk.js",
-    "main.js.map": "/wearefx/static/js/main.e5f463e2.chunk.js.map",
+    "main.js": "/wearefx/static/js/main.fa8ccb03.chunk.js",
+    "main.js.map": "/wearefx/static/js/main.fa8ccb03.chunk.js.map",
     "runtime-main.js": "/wearefx/static/js/runtime-main.a95c827a.js",
     "runtime-main.js.map": "/wearefx/static/js/runtime-main.a95c827a.js.map",
     "static/css/2.8182d9c8.chunk.css": "/wearefx/static/css/2.8182d9c8.chunk.css",
@@ -25,6 +25,7 @@
     "static/media/HireMobile.css": "/wearefx/static/media/instagram.a61f3cfb.svg",
     "static/media/MainPage.css": "/wearefx/static/media/bg-noise.1087c988.gif",
     "static/media/slick-theme.css": "/wearefx/static/media/slick.c94f7671.ttf",
+    "static/media/videoPower.173bd456.webm": "/wearefx/static/media/videoPower.173bd456.webm",
     "static/media/MainPageMedia.css": "/wearefx/static/media/videoPower.4577a6fd.gif",
     "static/media/videoPower.46fefcbf.mp4": "/wearefx/static/media/videoPower.46fefcbf.mp4"
   },
@@ -33,6 +34,6 @@
     "static/css/2.8182d9c8.chunk.css",
     "static/js/2.8e3aeb15.chunk.js",
     "static/css/main.77db60e9.chunk.css",
-    "static/js/main.e5f463e2.chunk.js"
+    "static/js/main.fa8ccb03.chunk.js"
   ]
 }
